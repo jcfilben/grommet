@@ -1,6 +1,10 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
+import 'jest-axe/extend-expect';
+import 'regenerator-runtime/runtime';
+
+import { axe } from 'jest-axe';
 import { cleanup, render, fireEvent } from '@testing-library/react';
 
 import { Grommet } from '../../Grommet';
@@ -8,6 +12,18 @@ import { RangeSelector } from '..';
 
 describe('RangeSelector', () => {
   afterEach(cleanup);
+
+  test('should have no accessibility violations', async () => {
+    const { container } = render(
+      <Grommet>
+        <RangeSelector values={[20, 30]} />
+      </Grommet>,
+    );
+
+    const results = await axe(container);
+    expect(results).toHaveNoViolations();
+    expect(container).toMatchSnapshot();
+  });
 
   test('basic', () => {
     const component = renderer.create(
