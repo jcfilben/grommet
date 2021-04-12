@@ -98,11 +98,14 @@ const Anchor = forwardRef(
 
 Anchor.displayName = 'Anchor';
 
-let AnchorDoc;
-if (process.env.NODE_ENV !== 'production') {
-  // eslint-disable-next-line global-require
-  AnchorDoc = require('./doc').doc(Anchor);
-}
+// let AnchorDoc;
+// if (process.env.NODE_ENV !== 'production') {
+//   // eslint-disable-next-line global-require
+//   AnchorDoc = require('./doc').doc(Anchor);
+// }
+const AnchorDoc =
+  process.env.NODE_ENV !== 'production' ? require('./doc').doc(Anchor) : null;
+
 const AnchorWrapper = AnchorDoc || Anchor;
 
 export { AnchorWrapper as Anchor };
