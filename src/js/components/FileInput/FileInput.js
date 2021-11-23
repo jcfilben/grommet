@@ -1,6 +1,6 @@
 import React, { forwardRef, useContext, useRef, useState } from 'react';
 import styled, { ThemeContext } from 'styled-components';
-import { CircleAlert } from 'grommet-icons/icons/CircleAlert';
+import { AddCircle } from 'grommet-icons/icons/AddCircle';
 import { MessageContext } from '../../contexts/MessageContext';
 
 import { defaultProps } from '../../default-props';
@@ -404,7 +404,7 @@ const FileInput = forwardRef(
                     direction="row"
                   >
                     {((maxSize && file.size > maxSize) ||
-                      (max && index >= max)) && <CircleAlert />}
+                      (max && index >= max)) && <AddCircle />}
                     <Label
                       weight={
                         theme.global.input.weight ||
