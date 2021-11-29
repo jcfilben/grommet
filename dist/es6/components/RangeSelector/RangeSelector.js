@@ -1,8 +1,12 @@
 var _excluded = ["color", "direction", "invert", "max", "messages", "min", "onChange", "opacity", "round", "size", "step", "values"];
 
+var _templateObject;
+
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
 
 import React, { forwardRef, useCallback, useContext, useEffect, useRef, useState } from 'react';
 import styled, { ThemeContext } from 'styled-components';
@@ -11,10 +15,7 @@ import { EdgeControl } from './EdgeControl';
 import { parseMetricToNum } from '../../utils';
 import { MessageContext } from '../../contexts/MessageContext';
 import { RangeSelectorPropTypes } from './propTypes';
-var Container = styled(Box).withConfig({
-  displayName: "RangeSelector__Container",
-  componentId: "siof5p-0"
-})(["user-select:none;"]);
+var Container = styled(Box)(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n  user-select: none;\n"])));
 var RangeSelector = /*#__PURE__*/forwardRef(function (_ref, ref) {
   var color = _ref.color,
       _ref$direction = _ref.direction,

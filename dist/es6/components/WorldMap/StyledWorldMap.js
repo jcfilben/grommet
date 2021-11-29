@@ -1,3 +1,7 @@
+var _templateObject;
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
 import styled from 'styled-components';
 import { genericStyles } from '../../utils';
 import { defaultProps } from '../../default-props';
@@ -19,10 +23,7 @@ var fillStyle = function fillStyle(fillProp) {
 }; // undefined fillProp has width for backwards compatibility
 
 
-var StyledWorldMap = styled.svg.withConfig({
-  displayName: "StyledWorldMap",
-  componentId: "had4c3-0"
-})(["", " ", " ", ";"], genericStyles, function (props) {
+var StyledWorldMap = styled.svg(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n  ", "\n  ", "\n  ", ";\n"])), genericStyles, function (props) {
   return props.fillProp !== undefined ? fillStyle(props.fillProp) : 'width: 100%;';
 }, function (props) {
   return props.theme.worldMap && props.theme.worldMap.extend;

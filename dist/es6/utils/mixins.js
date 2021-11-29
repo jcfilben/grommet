@@ -1,3 +1,7 @@
+var _templateObject, _templateObject2;
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
 import { css } from 'styled-components';
 export var parseMetricToNum = function parseMetricToNum(metric) {
   if (typeof metric === 'number') return metric;
@@ -9,14 +13,14 @@ export var parseMetricToNum = function parseMetricToNum(metric) {
   return parseFloat(metric.match(/\d+(\.\d+)?/), 10);
 };
 export var fontSize = function fontSize(size, lineHeight) {
-  return css(["font-size:", ";line-height:", ";"], function (props) {
+  return css(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n  font-size: ", ";\n  line-height: ", ";\n"])), function (props) {
     return parseMetricToNum(size) / parseMetricToNum(props.theme.global.font.size) * 1 + "rem";
   }, function (props) {
     return lineHeight || Math.ceil(parseMetricToNum(size) / parseMetricToNum(props.theme.global.lineHeight)) * (parseMetricToNum(props.theme.global.lineHeight) / parseMetricToNum(size)) + "px";
   });
 };
 export var breakpointStyle = function breakpointStyle(breakpoint, content) {
-  return css(["@media only screen ", "{", ";}"], breakpoint.value && "and (max-width: " + breakpoint.value + "px)", content);
+  return css(_templateObject2 || (_templateObject2 = _taggedTemplateLiteralLoose(["\n  @media only screen ", " {\n    ", ";\n  }\n"])), breakpoint.value && "and (max-width: " + breakpoint.value + "px)", content);
 };
 export var findAllByType = function findAllByType(component, type) {
   var matches = [];

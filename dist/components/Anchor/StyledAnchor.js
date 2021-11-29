@@ -9,9 +9,13 @@ var _utils = require("../../utils");
 
 var _defaultProps = require("../../default-props");
 
+var _templateObject, _templateObject2, _templateObject3, _templateObject4;
+
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
 
 var disabledStyle = "\n  opacity: 0.3;\n  cursor: default;\n  text-decoration: none;\n";
 
@@ -19,10 +23,10 @@ var sizeStyle = function sizeStyle(props) {
   if (props.size) {
     var size = props.size || 'medium';
     var data = props.theme.text[size];
-    return (0, _styledComponents.css)(["font-size:", ";line-height:", ";"], data ? data.size : size, data ? data.height : 'normal');
+    return (0, _styledComponents.css)(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n      font-size: ", ";\n      line-height: ", ";\n    "])), data ? data.size : size, data ? data.height : 'normal');
   }
 
-  return (0, _styledComponents.css)(["font-size:inherit;line-height:inherit;"]);
+  return (0, _styledComponents.css)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteralLoose(["\n    font-size: inherit;\n    line-height: inherit;\n  "])));
 };
 
 var StyledAnchor = _styledComponents["default"].a.withConfig({
@@ -31,10 +35,7 @@ var StyledAnchor = _styledComponents["default"].a.withConfig({
   shouldForwardProp: function shouldForwardProp(prop, defaultValidatorFn) {
     return !['as', 'colorProp', 'focus', 'hasIcon', 'hasLabel', 'reverse'].includes(prop) && defaultValidatorFn(prop);
   }
-}).withConfig({
-  displayName: "StyledAnchor",
-  componentId: "sc-1rp7lwl-0"
-})(["box-sizing:border-box;", " color:", ";", " text-decoration:", ";cursor:pointer;", " ", " ", " ", " ", " ", ""], function (props) {
+})(_templateObject3 || (_templateObject3 = _taggedTemplateLiteralLoose(["\n  box-sizing: border-box;\n  ", "\n  color: ", ";\n  ", "\n  text-decoration: ", ";\n  cursor: pointer;\n  ", "\n\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n"])), function (props) {
   return sizeStyle(props);
 }, function (props) {
   return (0, _utils.normalizeColor)(props.colorProp || props.theme.anchor.color, props.theme);
@@ -43,7 +44,7 @@ var StyledAnchor = _styledComponents["default"].a.withConfig({
 }, function (props) {
   return props.hasIcon ? 'none' : props.theme.anchor.textDecoration;
 }, _utils.genericStyles, function (props) {
-  return !props.disabled && props.theme.anchor.hover && (0, _styledComponents.css)(["&:hover{", " ", " ", "}"], props.theme.anchor.hover.textDecoration && "text-decoration: " + props.theme.anchor.hover.textDecoration + ";", props.theme.anchor.hover.fontWeight && "font-weight: " + props.theme.anchor.hover.fontWeight + ";", props.theme.anchor.hover.extend);
+  return !props.disabled && props.theme.anchor.hover && (0, _styledComponents.css)(_templateObject4 || (_templateObject4 = _taggedTemplateLiteralLoose(["\n      &:hover {\n        ", "\n        ", "\n      ", "\n      }\n    "])), props.theme.anchor.hover.textDecoration && "text-decoration: " + props.theme.anchor.hover.textDecoration + ";", props.theme.anchor.hover.fontWeight && "font-weight: " + props.theme.anchor.hover.fontWeight + ";", props.theme.anchor.hover.extend);
 }, function (props) {
   return props.hasIcon && !props.hasLabel && "\n    padding: " + props.theme.global.edgeSize.small + ";\n  ";
 }, function (props) {

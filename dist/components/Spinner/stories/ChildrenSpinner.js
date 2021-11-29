@@ -11,12 +11,13 @@ var _grommetIcons = require("grommet-icons");
 
 var _grommet = require("grommet");
 
+var _templateObject;
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-var FavoriteFilled = (0, _styledComponents["default"])(_grommetIcons.Favorite).withConfig({
-  displayName: "ChildrenSpinner__FavoriteFilled",
-  componentId: "o9wy2d-0"
-})(["path[fill='none']{fill:red;}"]);
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
+var FavoriteFilled = (0, _styledComponents["default"])(_grommetIcons.Favorite)(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n  path[fill='none'] {\n    fill: red;\n  }\n"])));
 
 var Children = function Children() {
   return /*#__PURE__*/_react["default"].createElement(_grommet.Box, {

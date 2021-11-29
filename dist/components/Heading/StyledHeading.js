@@ -9,9 +9,13 @@ var _utils = require("../../utils");
 
 var _defaultProps = require("../../default-props");
 
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5;
+
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
 
 var sizeStyle = function sizeStyle(props) {
   // size is a combination of the level and size properties
@@ -21,7 +25,7 @@ var sizeStyle = function sizeStyle(props) {
 
   if (levelStyle) {
     var data = levelStyle[size];
-    var styles = [(0, _styledComponents.css)(["font-size:", ";line-height:", ";max-width:", ";font-weight:", ";"], data ? data.size : size, data ? data.height : 'normal', props.fillProp && 'none' || data && data.maxWidth || levelStyle.medium.maxWidth, levelStyle.font.weight || headingTheme.weight)];
+    var styles = [(0, _styledComponents.css)(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n        font-size: ", ";\n        line-height: ", ";\n        max-width: ", ";\n        font-weight: ", ";\n      "])), data ? data.size : size, data ? data.height : 'normal', props.fillProp && 'none' || data && data.maxWidth || levelStyle.medium.maxWidth, levelStyle.font.weight || headingTheme.weight)];
 
     if (props.responsive && headingTheme.responsiveBreakpoint) {
       var breakpoint = props.theme.global.breakpoints[headingTheme.responsiveBreakpoint];
@@ -47,21 +51,18 @@ var fontFamily = function fontFamily(props) {
       font = _ref.font;
 
   if (font && font.family) {
-    return (0, _styledComponents.css)(["font-family:", ";"], font.family);
+    return (0, _styledComponents.css)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteralLoose(["\n      font-family: ", ";\n    "])), font.family);
   }
 
-  return props.theme.heading.font ? (0, _styledComponents.css)(["font-family:", ";"], props.theme.heading.font.family) : '';
+  return props.theme.heading.font ? (0, _styledComponents.css)(_templateObject3 || (_templateObject3 = _taggedTemplateLiteralLoose(["\n        font-family: ", ";\n      "])), props.theme.heading.font.family) : '';
 };
 
 var truncateStyle = "\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n";
-var colorStyle = (0, _styledComponents.css)(["color:", ";"], function (props) {
+var colorStyle = (0, _styledComponents.css)(_templateObject4 || (_templateObject4 = _taggedTemplateLiteralLoose(["\n  color: ", ";\n"])), function (props) {
   return (0, _utils.normalizeColor)(props.colorProp || props.theme.heading.color, props.theme);
 });
 
-var StyledHeading = _styledComponents["default"].h1.withConfig({
-  displayName: "StyledHeading",
-  componentId: "sc-1rdh4aw-0"
-})(["", " ", " ", " ", " ", " ", " ", ""], _utils.genericStyles, function (props) {
+var StyledHeading = _styledComponents["default"].h1(_templateObject5 || (_templateObject5 = _taggedTemplateLiteralLoose(["\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n"])), _utils.genericStyles, function (props) {
   return fontFamily(props);
 }, function (props) {
   return sizeStyle(props);

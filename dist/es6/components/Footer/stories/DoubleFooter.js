@@ -1,14 +1,15 @@
+var _templateObject;
+
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
 
 import React from 'react';
 import styled from 'styled-components';
 import { Grommet as GrommetIcon } from 'grommet-icons';
 import { Anchor, Box, Footer, grommet, Grommet, Main, Text } from 'grommet';
 import { fiveColumns as data } from './data';
-var StyledAnchor = styled(Anchor).withConfig({
-  displayName: "DoubleFooter__StyledAnchor",
-  componentId: "hzr4m1-0"
-})(["font-weight:200;"]);
+var StyledAnchor = styled(Anchor)(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n  font-weight: 200;\n"])));
 
 var FooterAnchor = function FooterAnchor(_ref) {
   var rest = _extends({}, _ref);

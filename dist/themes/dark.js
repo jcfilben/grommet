@@ -9,6 +9,10 @@ var _object = require("../utils/object");
 
 var _colors = require("../utils/colors");
 
+var _templateObject;
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
 var accentColors = ['#FD6FFF', '#60EB9F', '#60EBE1', '#FFCA58'];
 var neutralColors = ['#EB6060', '#01C781', '#6095EB', '#FFB200'];
 var statusColors = {
@@ -61,7 +65,7 @@ var dark = (0, _object.deepFreeze)({
     },
     focus: {
       border: {
-        color: (0, _styledComponents.css)(["", ";"], function (props) {
+        color: (0, _styledComponents.css)(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n          ", ";\n        "])), function (props) {
           return (0, _colors.normalizeColor)('focus', props.theme);
         }),
         width: '2px'

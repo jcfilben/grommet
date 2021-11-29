@@ -1,3 +1,7 @@
+var _templateObject;
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
 import React, { forwardRef, useContext, useEffect, useMemo, useRef, useState } from 'react';
 import styled, { ThemeContext } from 'styled-components';
 import { useLayoutEffect } from '../../utils/use-isomorphic-layout-effect';
@@ -5,10 +9,7 @@ import { defaultProps } from '../../default-props';
 import { useForwardedRef } from '../../utils';
 import { Box } from '../Box';
 import { CollapsiblePropTypes } from './propTypes';
-var AnimatedBox = styled(Box).withConfig({
-  displayName: "Collapsible__AnimatedBox",
-  componentId: "sc-15kniua-0"
-})(["", ""], function (props) {
+var AnimatedBox = styled(Box)(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n  ", "\n"])), function (props) {
   return props.shouldOpen ? "visibility: hidden;\n      position: absolute;\n      pointer-events: none;" : // eslint-disable-next-line max-len
   "transition: " + ("max-" + props.dimension + " " + props.speedProp + "ms, opacity " + props.speedProp + "ms") + ";\n      opacity: " + (props.open ? 1 : 0) + ";\n      overflow: " + (props.animate || !props.open ? 'hidden' : 'visible') + ";";
 });

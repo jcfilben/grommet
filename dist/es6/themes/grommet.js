@@ -1,3 +1,7 @@
+var _templateObject;
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
 import { css } from 'styled-components';
 import { deepFreeze } from '../utils/object';
 export var grommet = deepFreeze({
@@ -13,7 +17,7 @@ export var grommet = deepFreeze({
     }
   },
   button: {
-    extend: css(["", ""], function (props) {
+    extend: css(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n      ", "\n    "])), function (props) {
       return !props.plain && 'font-weight: bold;';
     })
   }

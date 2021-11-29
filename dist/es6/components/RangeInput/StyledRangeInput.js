@@ -1,3 +1,7 @@
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7;
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
 import styled, { css } from 'styled-components';
 import { disabledStyle, edgeStyle, focusStyle, normalizeColor, parseMetricToNum, getRGBA } from '../../utils';
 import { defaultProps } from '../../default-props'; // opacity of the bound trumps the track opacity
@@ -81,10 +85,10 @@ var trackColorStyle = function trackColorStyle(props) {
 var disabledRangeInputStyle = function disabledRangeInputStyle(props, context) {
   var _props$theme$rangeInp3;
 
-  return css(["", " ", ""], disabledStyle(props.theme.rangeInput.disabled.opacity), ((_props$theme$rangeInp3 = props.theme.rangeInput.disabled[context]) == null ? void 0 : _props$theme$rangeInp3.color) && "background: " + normalizeColor(props.theme.rangeInput.disabled[context].color, props.theme) + ";");
+  return css(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n  ", "\n  ", "\n"])), disabledStyle(props.theme.rangeInput.disabled.opacity), ((_props$theme$rangeInp3 = props.theme.rangeInput.disabled[context]) == null ? void 0 : _props$theme$rangeInp3.color) && "background: " + normalizeColor(props.theme.rangeInput.disabled[context].color, props.theme) + ";");
 };
 
-var rangeTrackStyle = css(["box-sizing:border-box;width:100%;height:", ";", ";", " ", ";"], function (props) {
+var rangeTrackStyle = css(_templateObject2 || (_templateObject2 = _taggedTemplateLiteralLoose(["\n  box-sizing: border-box;\n  width: 100%;\n  height: ", ";\n  ", ";\n  ", "\n  ", ";\n"])), function (props) {
   return props.theme.rangeInput.track.height;
 }, function (props) {
   return trackColorStyle(props);
@@ -95,7 +99,7 @@ var rangeTrackStyle = css(["box-sizing:border-box;width:100%;height:", ";", ";",
 
   return props.disabled && ((_props$theme = props.theme) == null ? void 0 : (_props$theme$rangeInp4 = _props$theme.rangeInput) == null ? void 0 : _props$theme$rangeInp4.disabled) && disabledRangeInputStyle(props, 'track');
 });
-var rangeThumbStyle = css(["box-sizing:border-box;position:relative;border-radius:", ";height:", ";width:", ";overflow:visible;background:", ";-webkit-appearance:none;cursor:pointer;", " ", ";"], function (props) {
+var rangeThumbStyle = css(_templateObject3 || (_templateObject3 = _taggedTemplateLiteralLoose(["\n  box-sizing: border-box;\n  position: relative;\n  border-radius: ", ";\n  height: ", ";\n  width: ", ";\n  overflow: visible;\n  background: ", ";\n  -webkit-appearance: none;\n  cursor: pointer;\n  ", "\n  ", ";\n"])), function (props) {
   return props.theme.global.spacing;
 }, function (props) {
   return props.theme.global.spacing;
@@ -110,7 +114,7 @@ var rangeThumbStyle = css(["box-sizing:border-box;position:relative;border-radiu
 
   return props.disabled && ((_props$theme2 = props.theme) == null ? void 0 : (_props$theme2$rangeIn = _props$theme2.rangeInput) == null ? void 0 : _props$theme2$rangeIn.disabled) && disabledRangeInputStyle(props, 'thumb');
 });
-var firefoxMicrosoftThumbStyle = css(["", " margin-top:0px;height:", ";width:", ";", " ", ""], rangeThumbStyle, function (props) {
+var firefoxMicrosoftThumbStyle = css(_templateObject4 || (_templateObject4 = _taggedTemplateLiteralLoose(["\n  ", " margin-top: 0px;\n  height: ", ";\n  width: ", ";\n  ", "\n  ", "\n"])), rangeThumbStyle, function (props) {
   return props.theme.global.spacing;
 }, function (props) {
   return props.theme.global.spacing;
@@ -121,10 +125,7 @@ var firefoxMicrosoftThumbStyle = css(["", " margin-top:0px;height:", ";width:", 
 });
 /* eslint-disable max-len */
 
-var StyledRangeInput = styled.input.withConfig({
-  displayName: "StyledRangeInput",
-  componentId: "sc-15st9ck-0"
-})(["box-sizing:border-box;position:relative;-webkit-appearance:none;border-color:transparent;height:", ";width:100%;padding:0px;cursor:", ";background:transparent;", " &::-moz-focus-inner{border:none;}&::-moz-focus-outer{border:none;}&::-webkit-slider-runnable-track{", "}&::-webkit-slider-thumb{margin-top:-", "px;", " ", "}&::-moz-range-track{", "}&::-moz-range-thumb{", "}&::-ms-thumb{", "}", " &::-ms-track{", " border-color:transparent;color:transparent;}&::-ms-fill-lower{", ";border-color:transparent;}&::-ms-fill-upper{", ";border-color:transparent;}&:focus::-webkit-slider-thumb{", "}&:focus-visible{outline:0;}&:focus{outline:none;}", ""], function (props) {
+var StyledRangeInput = styled.input(_templateObject5 || (_templateObject5 = _taggedTemplateLiteralLoose(["\n  box-sizing: border-box;\n  position: relative;\n  -webkit-appearance: none;\n  border-color: transparent;\n  height: ", ";\n  width: 100%;\n  padding: 0px;\n  cursor: ", ";\n  background: transparent;\n\n  ", "\n\n  &::-moz-focus-inner {\n    border: none;\n  }\n\n  &::-moz-focus-outer {\n    border: none;\n  }\n\n  &::-webkit-slider-runnable-track {\n    ", "\n  }\n\n  &::-webkit-slider-thumb {\n    margin-top: -", "px;\n    ", "\n    ", "\n  }\n\n  &::-moz-range-track {\n    ", "\n  }\n\n  &::-moz-range-thumb {\n    ", "\n  }\n\n  &::-ms-thumb {\n    ", "\n  }\n\n  ", "\n\n  &::-ms-track {\n    ", "\n    border-color: transparent;\n    color: transparent;\n  }\n\n  &::-ms-fill-lower {\n    ", ";\n    border-color: transparent;\n  }\n\n  &::-ms-fill-upper {\n    ", ";\n    border-color: transparent;\n  }\n\n  &:focus::-webkit-slider-thumb {\n    ", "\n  }\n\n  &:focus-visible {\n    outline: 0;\n  }\n  // to remove browser default on safari\n  &:focus {\n    outline: none;\n  }\n\n  ", "\n"])), function (props) {
   return props.theme.global.spacing;
 }, function (props) {
   return props.disabled ? 'default' : 'pointer';
@@ -133,9 +134,9 @@ var StyledRangeInput = styled.input.withConfig({
 }, rangeTrackStyle, function (props) {
   return (parseMetricToNum(props.theme.global.spacing) - parseMetricToNum(props.theme.rangeInput.track.height || 0)) * 0.5;
 }, rangeThumbStyle, function (props) {
-  return !props.disabled && css(["&:hover{box-shadow:0px 0px 0px 2px ", ";}"], normalizeColor(props.theme.rangeInput.thumb.color || 'control', props.theme));
+  return !props.disabled && css(_templateObject6 || (_templateObject6 = _taggedTemplateLiteralLoose(["\n        &:hover {\n          box-shadow: 0px 0px 0px 2px\n            ", ";\n        }\n      "])), normalizeColor(props.theme.rangeInput.thumb.color || 'control', props.theme));
 }, rangeTrackStyle, firefoxMicrosoftThumbStyle, firefoxMicrosoftThumbStyle, function (props) {
-  return !props.disabled && css(["&:hover::-moz-range-thumb{box-shadow:0px 0px 0px 2px ", ";}&:hover::-ms-thumb{box-shadow:0px 0px 0px 2px ", ";}"], normalizeColor(props.theme.rangeInput.thumb.color || 'control', props.theme), normalizeColor(props.theme.rangeInput.thumb.color || 'control', props.theme));
+  return !props.disabled && css(_templateObject7 || (_templateObject7 = _taggedTemplateLiteralLoose(["\n      &:hover::-moz-range-thumb {\n        box-shadow: 0px 0px 0px 2px\n          ", ";\n      }\n\n      &:hover::-ms-thumb {\n        box-shadow: 0px 0px 0px 2px\n          ", ";\n      }\n    "])), normalizeColor(props.theme.rangeInput.thumb.color || 'control', props.theme), normalizeColor(props.theme.rangeInput.thumb.color || 'control', props.theme));
 }, rangeTrackStyle, function (props) {
   return trackColorStyle(props, 'lower');
 }, function (props) {

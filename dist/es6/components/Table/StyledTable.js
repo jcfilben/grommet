@@ -1,3 +1,7 @@
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8;
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
 import styled, { css } from 'styled-components';
 import { backgroundStyle, borderStyle, edgeStyle, genericStyles } from '../../utils';
 import { defaultProps } from '../../default-props';
@@ -9,7 +13,7 @@ var SIZE_MAP = {
   '1/3': '33.33%',
   '2/3': '66.66%'
 };
-var sizeStyle = css(["width:", ";max-width:", ";overflow:hidden;"], function (props) {
+var sizeStyle = css(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n  width: ", ";\n  max-width: ", ";\n  overflow: hidden;\n"])), function (props) {
   return props.size === 'auto' ? // setting width to a small value will allow
   // the cell to fit width of its content. this
   // is a commonly implemented CSS pattern to
@@ -20,10 +24,7 @@ var sizeStyle = css(["width:", ";max-width:", ";overflow:hidden;"], function (pr
 }, function (props) {
   return props.size !== 'auto' ? SIZE_MAP[props.size] || props.theme.global.size[props.size] || props.size : undefined;
 });
-var StyledTableCell = styled.td.withConfig({
-  displayName: "StyledTable__StyledTableCell",
-  componentId: "sc-1m3u5g-0"
-})(["margin:0;padding:0;font-weight:inherit;text-align:inherit;", " ", " ", " ", " ", " ", " ", ""], function (props) {
+var StyledTableCell = styled.td(_templateObject2 || (_templateObject2 = _taggedTemplateLiteralLoose(["\n  margin: 0;\n  padding: 0;\n  font-weight: inherit;\n  text-align: inherit;\n\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n"])), function (props) {
   return props.size && sizeStyle;
 }, function (props) {
   return props.verticalAlign && "vertical-align: " + props.verticalAlign + ";";
@@ -40,42 +41,24 @@ var StyledTableCell = styled.td.withConfig({
 });
 StyledTableCell.defaultProps = {};
 Object.setPrototypeOf(StyledTableCell.defaultProps, defaultProps);
-var StyledTableDataCaption = styled.caption.withConfig({
-  displayName: "StyledTable__StyledTableDataCaption",
-  componentId: "sc-1m3u5g-1"
-})(["margin-bottom:", ";"], function (props) {
+var StyledTableDataCaption = styled.caption(_templateObject3 || (_templateObject3 = _taggedTemplateLiteralLoose(["\n  margin-bottom: ", ";\n"])), function (props) {
   return props.theme.global.edgeSize.xxsmall;
 });
 StyledTableDataCaption.defaultProps = {};
 Object.setPrototypeOf(StyledTableDataCaption.defaultProps, defaultProps);
-var StyledTableRow = styled.tr.withConfig({
-  displayName: "StyledTable__StyledTableRow",
-  componentId: "sc-1m3u5g-2"
-})([""]);
+var StyledTableRow = styled.tr(_templateObject4 || (_templateObject4 = _taggedTemplateLiteralLoose([""])));
 StyledTableRow.defaultProps = {};
 Object.setPrototypeOf(StyledTableRow.defaultProps, defaultProps);
-var StyledTableBody = styled.tbody.withConfig({
-  displayName: "StyledTable__StyledTableBody",
-  componentId: "sc-1m3u5g-3"
-})([""]);
+var StyledTableBody = styled.tbody(_templateObject5 || (_templateObject5 = _taggedTemplateLiteralLoose([""])));
 StyledTableBody.defaultProps = {};
 Object.setPrototypeOf(StyledTableBody.defaultProps, defaultProps);
-var StyledTableHeader = styled.thead.withConfig({
-  displayName: "StyledTable__StyledTableHeader",
-  componentId: "sc-1m3u5g-4"
-})([""]);
+var StyledTableHeader = styled.thead(_templateObject6 || (_templateObject6 = _taggedTemplateLiteralLoose([""])));
 StyledTableHeader.defaultProps = {};
 Object.setPrototypeOf(StyledTableHeader.defaultProps, defaultProps);
-var StyledTableFooter = styled.tfoot.withConfig({
-  displayName: "StyledTable__StyledTableFooter",
-  componentId: "sc-1m3u5g-5"
-})([""]);
+var StyledTableFooter = styled.tfoot(_templateObject7 || (_templateObject7 = _taggedTemplateLiteralLoose([""])));
 StyledTableFooter.defaultProps = {};
 Object.setPrototypeOf(StyledTableFooter.defaultProps, defaultProps);
-var StyledTable = styled.table.withConfig({
-  displayName: "StyledTable",
-  componentId: "sc-1m3u5g-6"
-})(["border-spacing:0;border-collapse:collapse;width:inherit;@media all and (min--moz-device-pixel-ratio:0){table-layout:fixed;}", " ", ";"], genericStyles, function (props) {
+var StyledTable = styled.table(_templateObject8 || (_templateObject8 = _taggedTemplateLiteralLoose(["\n  border-spacing: 0;\n  border-collapse: collapse;\n  width: inherit;\n  @media all and (min--moz-device-pixel-ratio: 0) {\n    table-layout: fixed;\n  }\n  ", " ", ";\n"])), genericStyles, function (props) {
   return props.theme.table && props.theme.table.extend;
 });
 StyledTable.defaultProps = {};

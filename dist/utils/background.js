@@ -7,6 +7,10 @@ var _styledComponents = require("styled-components");
 
 var _colors = require("./colors");
 
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7;
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
 // evalStyle() converts a styled-components item into a string
 var evalStyle = function evalStyle(arg, theme) {
   if (arg && Array.isArray(arg) && typeof arg[0] === 'function') {
@@ -135,7 +139,7 @@ var backgroundStyle = function backgroundStyle(backgroundArg, theme, textColorAr
   var background = normalizeBackground(backgroundArg, theme);
 
   if (typeof background === 'string' && background.lastIndexOf('url', 0) === 0) {
-    return (0, _styledComponents.css)(["background:", " no-repeat center center;background-size:cover;"], background);
+    return (0, _styledComponents.css)(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n      background: ", " no-repeat center center;\n      background-size: cover;\n    "])), background);
   }
 
   var _backgroundAndTextCol = backgroundAndTextColors(background, textColorArg, theme),
@@ -148,25 +152,25 @@ var backgroundStyle = function backgroundStyle(backgroundArg, theme, textColorAr
     // to ensure that only image and background color are affected by opacity
     // but not the container contents
 
-    return (0, _styledComponents.css)(["", " ", ""], textColor ? "color: " + textColor + ";" : '', !background.opacity ? backgroundStyles : "position: relative;\n        z-index: 0;\n        &:before {\n          content: '';\n          position: absolute;\n          top: 0;\n          right: 0;\n          left: 0;\n          bottom: 0;\n          z-index: -1;\n          " + backgroundStyles + "\n          opacity: " + (background.opacity === true ? theme.global.opacity.medium : theme.global.opacity[background.opacity] || background.opacity) + ";\n        }");
+    return (0, _styledComponents.css)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteralLoose(["\n      ", "\n      ", "\n    "])), textColor ? "color: " + textColor + ";" : '', !background.opacity ? backgroundStyles : "position: relative;\n        z-index: 0;\n        &:before {\n          content: '';\n          position: absolute;\n          top: 0;\n          right: 0;\n          left: 0;\n          bottom: 0;\n          z-index: -1;\n          " + backgroundStyles + "\n          opacity: " + (background.opacity === true ? theme.global.opacity.medium : theme.global.opacity[background.opacity] || background.opacity) + ";\n        }");
   }
 
   if (backgroundColor) {
-    return (0, _styledComponents.css)(["background-color:", ";", ""], backgroundColor, textColor ? "color: " + textColor + ";" : '');
+    return (0, _styledComponents.css)(_templateObject3 || (_templateObject3 = _taggedTemplateLiteralLoose(["\n      background-color: ", ";\n      ", "\n    "])), backgroundColor, textColor ? "color: " + textColor + ";" : '');
   }
 
   if (typeof background === 'string') // This case takes care of gradients
     // or theme colors that use CSS names like 'crimson' that we don't parse
-    return (0, _styledComponents.css)(["background:", ";"], (0, _colors.normalizeColor)(background, theme));
+    return (0, _styledComponents.css)(_templateObject4 || (_templateObject4 = _taggedTemplateLiteralLoose(["\n      background: ", ";\n    "])), (0, _colors.normalizeColor)(background, theme));
   return undefined;
 };
 
 exports.backgroundStyle = backgroundStyle;
-var activeStyle = (0, _styledComponents.css)(["", ""], function (props) {
+var activeStyle = (0, _styledComponents.css)(_templateObject5 || (_templateObject5 = _taggedTemplateLiteralLoose(["\n  ", "\n"])), function (props) {
   return backgroundStyle((0, _colors.normalizeColor)(props.theme.global.active.background, props.theme), props.theme, props.theme.global.active.color);
 });
 exports.activeStyle = activeStyle;
-var selectedStyle = (0, _styledComponents.css)(["", ""], function (props) {
+var selectedStyle = (0, _styledComponents.css)(_templateObject6 || (_templateObject6 = _taggedTemplateLiteralLoose(["\n  ", "\n"])), function (props) {
   return backgroundStyle((0, _colors.normalizeColor)(props.theme.global.selected.background, props.theme), props.theme, props.theme.global.selected.color);
 });
 exports.selectedStyle = selectedStyle;
@@ -186,7 +190,7 @@ var getHoverIndicatorStyle = function getHoverIndicatorStyle(hoverIndicator, the
     background = hoverIndicator;
   }
 
-  return (0, _styledComponents.css)(["", " ", ""], backgroundStyle(background, theme, theme.global.hover.color), elevation && "box-shadow: " + theme.global.elevation[theme.dark ? 'dark' : 'light'][elevation] + ";");
+  return (0, _styledComponents.css)(_templateObject7 || (_templateObject7 = _taggedTemplateLiteralLoose(["\n    ", "\n    ", "\n  "])), backgroundStyle(background, theme, theme.global.hover.color), elevation && "box-shadow: " + theme.global.elevation[theme.dark ? 'dark' : 'light'][elevation] + ";");
 };
 
 exports.getHoverIndicatorStyle = getHoverIndicatorStyle;

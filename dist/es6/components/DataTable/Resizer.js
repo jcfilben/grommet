@@ -1,14 +1,15 @@
+var _templateObject;
+
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
 
 import React, { useCallback, useContext, useEffect, useRef, useState } from 'react';
 import styled, { ThemeContext } from 'styled-components';
 import { defaultProps } from '../../default-props';
 import { Box } from '../Box';
 import { Stack } from '../Stack';
-var InteractionBox = styled(Box).withConfig({
-  displayName: "Resizer__InteractionBox",
-  componentId: "sc-8l808w-0"
-})(["cursor:col-resize;> *{opacity:0;}", " &:hover{> *{opacity:1;}}"], function (props) {
+var InteractionBox = styled(Box)(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n  cursor: col-resize;\n  > * {\n    opacity: 0;\n  }\n\n  // when mouse down, we want to continue to display styling\n  ", "\n\n  &:hover {\n    > * {\n      opacity: 1;\n    }\n  }\n"])), function (props) {
   return props.active && '> * { opacity: 1; }';
 });
 

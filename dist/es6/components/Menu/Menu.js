@@ -1,9 +1,13 @@
 var _excluded = ["a11yTitle", "aria-label", "children", "disabled", "dropAlign", "dropBackground", "dropProps", "dropTarget", "justifyContent", "icon", "items", "label", "messages", "onKeyDown", "open", "plain", "size"],
     _excluded2 = ["align"];
 
+var _templateObject;
+
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
 
 import React, { forwardRef, useCallback, useContext, useMemo, useState } from 'react';
 import styled, { ThemeContext } from 'styled-components';
@@ -16,10 +20,7 @@ import { Text } from '../Text';
 import { normalizeColor } from '../../utils';
 import { MessageContext } from '../../contexts/MessageContext';
 import { MenuPropTypes } from './propTypes';
-var ContainerBox = styled(Box).withConfig({
-  displayName: "Menu__ContainerBox",
-  componentId: "sc-17fcys9-0"
-})(["max-height:inherit;@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){width:100%;}", ";"], function (props) {
+var ContainerBox = styled(Box)(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n  max-height: inherit;\n\n  /* IE11 hack to get drop contents to not overflow */\n  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {\n    width: 100%;\n  }\n\n  ", ";\n"])), function (props) {
   return props.theme.menu.extend;
 });
 /* Notes on keyboard interactivity (based on W3) // For details reference: https://www.w3.org/TR/wai-aria-practices/#menu

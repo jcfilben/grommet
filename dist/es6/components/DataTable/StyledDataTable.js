@@ -1,3 +1,7 @@
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9;
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
 import styled, { css } from 'styled-components';
 import { backgroundStyle, fillStyle, focusStyle, unfocusStyle, genericStyles, normalizeColor } from '../../utils';
 import { defaultProps } from '../../default-props';
@@ -9,10 +13,7 @@ import { TableCell } from '../TableCell';
 import { TableHeader } from '../TableHeader';
 import { TableFooter } from '../TableFooter'; // border-collapse: separate is needed so pinned header/footer borders work
 
-var StyledDataTable = styled(Table).withConfig({
-  displayName: "StyledDataTable",
-  componentId: "xrlyjm-0"
-})(["position:relative;border-spacing:0;border-collapse:separate;height:auto;", " ", " ", ";"], genericStyles, function (props) {
+var StyledDataTable = styled(Table)(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n  position: relative;\n  border-spacing: 0;\n  border-collapse: separate;\n  height: auto; /* helps Firefox to get table contents to not overflow */\n\n  ", "\n  ", "\n  ", ";\n"])), genericStyles, function (props) {
   return props.fillProp && fillStyle(props.fillProp);
 }, function (props) {
   return props.theme.dataTable && props.theme.dataTable.body && props.theme.dataTable.body.extend;
@@ -20,23 +21,17 @@ var StyledDataTable = styled(Table).withConfig({
 StyledDataTable.defaultProps = {};
 Object.setPrototypeOf(StyledDataTable.defaultProps, defaultProps); // when paginated, this wraps the data table and pagination component
 
-var StyledContainer = styled(Box).withConfig({
-  displayName: "StyledDataTable__StyledContainer",
-  componentId: "xrlyjm-1"
-})(["", ";"], function (props) {
+var StyledContainer = styled(Box)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteralLoose(["\n  ", ";\n"])), function (props) {
   return props.theme.dataTable && props.theme.dataTable.container && props.theme.dataTable.container.extend;
 });
 StyledContainer.defaultProps = {};
 Object.setPrototypeOf(StyledContainer.defaultProps, defaultProps);
-var hoverStyle = css(["", " color:", ";"], function (props) {
+var hoverStyle = css(_templateObject3 || (_templateObject3 = _taggedTemplateLiteralLoose(["\n  ", "\n  color: ", ";\n"])), function (props) {
   return backgroundStyle(normalizeColor(props.theme.table && props.theme.table.row && props.theme.table.row.hover && props.theme.table.row.hover.background || props.theme.global.hover.background, props.theme), props.theme);
 }, function (props) {
   return normalizeColor(props.theme.table && props.theme.table.row && props.theme.table.row.hover && props.theme.table.row.hover.color || props.theme.global.hover.color, props.theme);
 });
-var StyledDataTableRow = styled(TableRow).withConfig({
-  displayName: "StyledDataTable__StyledDataTableRow",
-  componentId: "xrlyjm-2"
-})(["", " ", " ", ""], function (props) {
+var StyledDataTableRow = styled(TableRow)(_templateObject4 || (_templateObject4 = _taggedTemplateLiteralLoose(["\n  ", "\n  ", "\n  ", "\n"])), function (props) {
   return props.size && "\n    display: table;\n    width: 100%;\n    table-layout: fixed;\n  ";
 }, function (props) {
   return props.onClick && "\n    cursor: pointer;\n  ";
@@ -46,10 +41,7 @@ var StyledDataTableRow = styled(TableRow).withConfig({
 StyledDataTableRow.defaultProps = {};
 Object.setPrototypeOf(StyledDataTableRow.defaultProps, defaultProps); // focus styling other than outline doesn't work on <tbody />
 
-var StyledDataTableBody = styled(TableBody).withConfig({
-  displayName: "StyledDataTable__StyledDataTableBody",
-  componentId: "xrlyjm-3"
-})(["", " &:focus{", "}&:focus:not(:focus-visible){", "}"], function (props) {
+var StyledDataTableBody = styled(TableBody)(_templateObject5 || (_templateObject5 = _taggedTemplateLiteralLoose(["\n  ", "\n\n  &:focus {\n    ", "\n  }\n\n  &:focus:not(:focus-visible) {\n    ", "\n  }\n"])), function (props) {
   return props.size && "\n    display: block;\n    width: 100%;\n    max-height: " + props.theme.global.size[props.size] + ";\n    overflow: auto;\n  ";
 }, focusStyle({
   skipSvgChildren: true,
@@ -60,28 +52,19 @@ var StyledDataTableBody = styled(TableBody).withConfig({
 }));
 StyledDataTableBody.defaultProps = {};
 Object.setPrototypeOf(StyledDataTableBody.defaultProps, defaultProps);
-var StyledDataTableHeader = styled(TableHeader).withConfig({
-  displayName: "StyledDataTable__StyledDataTableHeader",
-  componentId: "xrlyjm-4"
-})(["", ""], function (props) {
+var StyledDataTableHeader = styled(TableHeader)(_templateObject6 || (_templateObject6 = _taggedTemplateLiteralLoose(["\n  ", "\n"])), function (props) {
   return props.size && "\n    display: table;\n    width: calc(100% - " + props.scrollOffset + "px);\n    table-layout: fixed;\n  ";
 });
 StyledDataTableHeader.defaultProps = {};
 Object.setPrototypeOf(StyledDataTableHeader.defaultProps, defaultProps);
-var StyledDataTableFooter = styled(TableFooter).withConfig({
-  displayName: "StyledDataTable__StyledDataTableFooter",
-  componentId: "xrlyjm-5"
-})(["", " ", ""], function (props) {
+var StyledDataTableFooter = styled(TableFooter)(_templateObject7 || (_templateObject7 = _taggedTemplateLiteralLoose(["\n  ", "\n  ", "\n"])), function (props) {
   return props.size && "\n    display: table;\n    width: calc(100% - " + props.scrollOffset + "px);\n    table-layout: fixed;\n  ";
 }, function (props) {
   return props.pin && "\n      /* Safari needs the relative positioning of tfoot specified */\n      position: sticky;\n      bottom: 0;\n      z-index: 1;\n  ";
 });
 StyledDataTableFooter.defaultProps = {};
 Object.setPrototypeOf(StyledDataTableFooter.defaultProps, defaultProps);
-var StyledDataTableCell = styled(TableCell).withConfig({
-  displayName: "StyledDataTable__StyledDataTableCell",
-  componentId: "xrlyjm-6"
-})(["", ";", " ", ""], function (props) {
+var StyledDataTableCell = styled(TableCell)(_templateObject8 || (_templateObject8 = _taggedTemplateLiteralLoose(["\n  ", ";\n  ", "\n  ", "\n"])), function (props) {
   return props.context === 'header' && props.theme.dataTable && props.theme.dataTable.header && props.theme.dataTable.header.extend;
 }, function (props) {
   return props.pin && props.pin.length > 0 && "position: sticky;\n    " + props.pin.map(function (p) {
@@ -92,10 +75,7 @@ var StyledDataTableCell = styled(TableCell).withConfig({
 });
 StyledDataTableCell.defaultProps = {};
 Object.setPrototypeOf(StyledDataTableCell.defaultProps, defaultProps);
-var StyledPlaceholder = styled('caption').withConfig({
-  displayName: "StyledDataTable__StyledPlaceholder",
-  componentId: "xrlyjm-7"
-})(["position:absolute;", " ", " left:0;right:0;"], function (props) {
+var StyledPlaceholder = styled('caption')(_templateObject9 || (_templateObject9 = _taggedTemplateLiteralLoose(["\n  position: absolute;\n  ", "\n  ", "\n  left: 0;\n  right: 0;\n"])), function (props) {
   return "top: " + (props.top || 0) + "px;";
 }, function (props) {
   return "bottom: " + (props.bottom || 0) + "px;";

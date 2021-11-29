@@ -1,15 +1,16 @@
+var _templateObject, _templateObject2, _templateObject3;
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
 import styled, { css } from 'styled-components';
 import { genericStyles } from '../../utils';
 import { defaultProps } from '../../default-props';
-var fillStyle = css(["", " ", " flex-grow:1;display:flex;"], function (props) {
+var fillStyle = css(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n  ", "\n  ", "\n  flex-grow: 1;\n  display: flex;\n"])), function (props) {
   return props.fillContainer === true || props.fillContainer === 'horizontal' ? "\n        width: 100%;\n        max-width: none;\n      " : '';
 }, function (props) {
   return props.fillContainer === true || props.fillContainer === 'vertical' ? 'height: 100%;' : '';
 });
-var StyledStack = styled.div.withConfig({
-  displayName: "StyledStack",
-  componentId: "ajspsk-0"
-})(["position:relative;", " ", " ", ""], genericStyles, function (props) {
+var StyledStack = styled.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteralLoose(["\n  position: relative;\n  ", "\n  ", "\n  ", "\n"])), genericStyles, function (props) {
   return props.fillContainer && fillStyle;
 }, function (props) {
   return props.theme.stack && props.theme.stack.extend;
@@ -28,10 +29,7 @@ var styleMap = {
   'top-right': "\n    top: 0;\n    right: 0;\n  ",
   'bottom-right': "\n    bottom: 0;\n    right: 0;\n  "
 };
-var StyledStackLayer = styled.div.withConfig({
-  displayName: "StyledStack__StyledStackLayer",
-  componentId: "ajspsk-1"
-})(["position:", ";", " ", " ", " ", ""], function (props) {
+var StyledStackLayer = styled.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteralLoose(["\n  position: ", ";\n  ", "\n  ", "\n  ", "\n  ", "\n"])), function (props) {
   return props.guiding ? 'relative' : 'absolute';
 }, function (props) {
   return props.guiding && 'display: block;';

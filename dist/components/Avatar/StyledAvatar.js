@@ -11,12 +11,13 @@ var _Box = require("../Box");
 
 var _Text = require("../Text");
 
+var _templateObject, _templateObject2;
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-var StyledAvatarText = (0, _styledComponents["default"])(_Text.Text).withConfig({
-  displayName: "StyledAvatar__StyledAvatarText",
-  componentId: "sc-1suyamb-0"
-})(["", " ", ""], function (props) {
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
+var StyledAvatarText = (0, _styledComponents["default"])(_Text.Text)(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n  ", "\n  ", "\n"])), function (props) {
   return props.theme.avatar && props.theme.avatar.text && props.theme.avatar.text.fontWeight && "font-weight: " + props.theme.avatar.text.fontWeight + ";";
 }, function (props) {
   return props.theme.avatar.text && props.theme.avatar.text.extend;
@@ -24,10 +25,7 @@ var StyledAvatarText = (0, _styledComponents["default"])(_Text.Text).withConfig(
 exports.StyledAvatarText = StyledAvatarText;
 StyledAvatarText.defaultProps = {};
 Object.setPrototypeOf(StyledAvatarText.defaultProps, _defaultProps.defaultProps);
-var StyledAvatar = (0, _styledComponents["default"])(_Box.Box).withConfig({
-  displayName: "StyledAvatar",
-  componentId: "sc-1suyamb-1"
-})(["", ""], function (props) {
+var StyledAvatar = (0, _styledComponents["default"])(_Box.Box)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteralLoose(["\n  ", "\n"])), function (props) {
   return props.theme.avatar && props.theme.avatar.extend;
 });
 exports.StyledAvatar = StyledAvatar;

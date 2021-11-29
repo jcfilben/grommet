@@ -9,9 +9,13 @@ var _defaultProps = require("../../default-props");
 
 var _utils = require("../../utils");
 
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8;
+
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
 
 var fillStyle = function fillStyle(fill) {
   if (!fill) {
@@ -35,7 +39,7 @@ var JUSTIFY_MAP = {
   start: 'flex-start',
   stretch: 'stretch'
 };
-var justifyStyle = (0, _styledComponents.css)(["justify-items:", ";"], function (props) {
+var justifyStyle = (0, _styledComponents.css)(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n  justify-items: ", ";\n"])), function (props) {
   return JUSTIFY_MAP[props.justify];
 });
 var JUSTIFY_CONTENT_MAP = {
@@ -46,7 +50,7 @@ var JUSTIFY_CONTENT_MAP = {
   start: 'flex-start',
   stretch: 'stretch'
 };
-var justifyContentStyle = (0, _styledComponents.css)(["justify-content:", ";"], function (props) {
+var justifyContentStyle = (0, _styledComponents.css)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteralLoose(["\n  justify-content: ", ";\n"])), function (props) {
   return JUSTIFY_CONTENT_MAP[props.justifyContent];
 });
 
@@ -145,7 +149,7 @@ var getRepeatSize = function getRepeatSize(size, props) {
 
 var columnsStyle = function columnsStyle(props) {
   if (Array.isArray(props.columns)) {
-    return (0, _styledComponents.css)(["grid-template-columns:", ";"], props.columns.map(function (s) {
+    return (0, _styledComponents.css)(_templateObject3 || (_templateObject3 = _taggedTemplateLiteralLoose(["\n      grid-template-columns: ", ";\n    "])), props.columns.map(function (s) {
       if (Array.isArray(s)) {
         return "minmax(" + normalizeSize(s[0], props) + ", " + normalizeSize(s[1], props) + ")";
       }
@@ -155,15 +159,15 @@ var columnsStyle = function columnsStyle(props) {
   }
 
   if (typeof props.columns === 'object') {
-    return (0, _styledComponents.css)(["grid-template-columns:repeat( ", ",", " );"], getRepeatCount(props.columns.count), getRepeatSize(props.columns.size, props));
+    return (0, _styledComponents.css)(_templateObject4 || (_templateObject4 = _taggedTemplateLiteralLoose(["\n      grid-template-columns: repeat(\n        ", ",\n        ", "\n      );\n    "])), getRepeatCount(props.columns.count), getRepeatSize(props.columns.size, props));
   }
 
-  return (0, _styledComponents.css)(["grid-template-columns:repeat( auto-fill,", " );"], getRepeatSize(props.columns, props));
+  return (0, _styledComponents.css)(_templateObject5 || (_templateObject5 = _taggedTemplateLiteralLoose(["\n    grid-template-columns: repeat(\n      auto-fill,\n      ", "\n    );\n  "])), getRepeatSize(props.columns, props));
 };
 
 var rowsStyle = function rowsStyle(props) {
   if (Array.isArray(props.rowsProp)) {
-    return (0, _styledComponents.css)(["grid-template-rows:", ";"], props.rowsProp.map(function (s) {
+    return (0, _styledComponents.css)(_templateObject6 || (_templateObject6 = _taggedTemplateLiteralLoose(["\n      grid-template-rows: ", ";\n    "])), props.rowsProp.map(function (s) {
       if (Array.isArray(s)) {
         return "minmax(" + normalizeSize(s[0], props) + ", " + normalizeSize(s[1], props) + ")";
       }
@@ -172,7 +176,7 @@ var rowsStyle = function rowsStyle(props) {
     }).join(' '));
   }
 
-  return (0, _styledComponents.css)(["grid-auto-rows:", ";"], props.theme.global.size[props.rowsProp]);
+  return (0, _styledComponents.css)(_templateObject7 || (_templateObject7 = _taggedTemplateLiteralLoose(["\n    grid-auto-rows: ", ";\n  "])), props.theme.global.size[props.rowsProp]);
 };
 
 var areasStyle = function areasStyle(props) {
@@ -210,10 +214,7 @@ var StyledGrid = _styledComponents["default"].div.attrs(function (props) {
   return {
     'aria-label': props.a11yTitleProp
   };
-}).withConfig({
-  displayName: "StyledGrid",
-  componentId: "sc-1wofa1l-0"
-})(["display:grid;box-sizing:border-box;", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", ""], _utils.genericStyles, function (props) {
+})(_templateObject8 || (_templateObject8 = _taggedTemplateLiteralLoose(["\n  display: grid;\n  box-sizing: border-box;\n\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n"])), _utils.genericStyles, function (props) {
   return props.border && (Array.isArray(props.border) ? props.border.map(function (border) {
     return (0, _utils.borderStyle)(border, props.responsive, props.theme);
   }) : (0, _utils.borderStyle)(props.border, props.responsive, props.theme));

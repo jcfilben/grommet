@@ -1,9 +1,10 @@
+var _templateObject, _templateObject2, _templateObject3;
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
 import styled from 'styled-components';
 import { disabledStyle, getInputPadBySide, inputStyle, plainInputStyle, textAlignStyle } from '../../utils';
-export var StyledMaskedInput = styled.input.withConfig({
-  displayName: "StyledMaskedInput",
-  componentId: "sc-99vkfa-0"
-})(["", " ", " ", " ", " ", " ", ";"], inputStyle, function (props) {
+export var StyledMaskedInput = styled.input(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", ";\n"])), inputStyle, function (props) {
   return props.plain && plainInputStyle;
 }, function (props) {
   return props.icon && (props.reverse ? "padding-right: " + props.theme.global.edgeSize.large + ";" : "padding-left: " + props.theme.global.edgeSize.large + ";");
@@ -14,15 +15,9 @@ export var StyledMaskedInput = styled.input.withConfig({
 }, function (props) {
   return props.theme.maskedInput && props.theme.maskedInput.extend;
 });
-export var StyledMaskedInputContainer = styled.div.withConfig({
-  displayName: "StyledMaskedInput__StyledMaskedInputContainer",
-  componentId: "sc-99vkfa-1"
-})(["position:relative;width:100%;", ";"], function (props) {
+export var StyledMaskedInputContainer = styled.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteralLoose(["\n  position: relative;\n  width: 100%;\n\n  ", ";\n"])), function (props) {
   return props.theme.maskedInput && props.theme.maskedInput.container && props.theme.maskedInput.container.extend;
 });
-export var StyledIcon = styled.div.withConfig({
-  displayName: "StyledMaskedInput__StyledIcon",
-  componentId: "sc-99vkfa-2"
-})(["position:absolute;display:flex;justify:center;top:50%;transform:translateY(-50%);pointer-events:none;", ""], function (props) {
+export var StyledIcon = styled.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteralLoose(["\n  position: absolute;\n  display: flex;\n  justify: center;\n  top: 50%;\n  transform: translateY(-50%);\n  pointer-events: none;\n  ", "\n"])), function (props) {
   return props.reverse ? "right: " + getInputPadBySide(props, 'right') + ";" : "left: " + getInputPadBySide(props, 'left') + ";";
 });

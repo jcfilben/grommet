@@ -11,12 +11,13 @@ var _utils = require("../../utils");
 
 var _Button = require("../Button");
 
+var _templateObject, _templateObject2;
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-var StyledTagButton = (0, _styledComponents["default"])(_Button.Button).withConfig({
-  displayName: "StyledTag__StyledTagButton",
-  componentId: "cb9fl2-0"
-})(["", " ", ""], function (props) {
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
+var StyledTagButton = (0, _styledComponents["default"])(_Button.Button)(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n  ", "\n  ", "\n"])), function (props) {
   return props.border && (0, _utils.borderStyle)(props.border, true, props.theme);
 }, function (props) {
   return props.round && (0, _utils.roundStyle)(props.round, true, props.theme);
@@ -24,10 +25,7 @@ var StyledTagButton = (0, _styledComponents["default"])(_Button.Button).withConf
 exports.StyledTagButton = StyledTagButton;
 StyledTagButton.defaultProps = {};
 Object.setPrototypeOf(StyledTagButton.defaultProps, _defaultProps.defaultProps);
-var StyledRemoveButton = (0, _styledComponents["default"])(_Button.Button).withConfig({
-  displayName: "StyledTag__StyledRemoveButton",
-  componentId: "cb9fl2-1"
-})(["", ""], function (props) {
+var StyledRemoveButton = (0, _styledComponents["default"])(_Button.Button)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteralLoose(["\n  ", "\n"])), function (props) {
   return props.round && (0, _utils.roundStyle)(props.round, true, props.theme);
 });
 exports.StyledRemoveButton = StyledRemoveButton;

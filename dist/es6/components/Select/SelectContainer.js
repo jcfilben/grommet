@@ -1,4 +1,8 @@
+var _templateObject, _templateObject2;
+
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
 
 import React, { forwardRef, useCallback, useContext, useEffect, useRef, useState } from 'react';
 import styled, { ThemeContext } from 'styled-components';
@@ -13,14 +17,8 @@ import { TextInput } from '../TextInput';
 import { StyledContainer } from './StyledSelect';
 import { applyKey } from './utils'; // position relative is so scroll can be managed correctly
 
-var OptionsBox = styled.div.withConfig({
-  displayName: "SelectContainer__OptionsBox",
-  componentId: "sc-1wi0ul8-0"
-})(["position:relative;scroll-behavior:smooth;overflow:auto;outline:none;"]);
-var SelectOption = styled(Button).withConfig({
-  displayName: "SelectContainer__SelectOption",
-  componentId: "sc-1wi0ul8-1"
-})(["", " display:block;width:100%;"], function (props) {
+var OptionsBox = styled.div(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n  position: relative;\n  scroll-behavior: smooth;\n  overflow: auto;\n  outline: none;\n"])));
+var SelectOption = styled(Button)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteralLoose(["\n  ", "\n  display: block;\n  width: 100%;\n"])), function (props) {
   return props.selected && props.textComponent && selectedStyle;
 });
 

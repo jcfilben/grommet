@@ -1,8 +1,12 @@
 var _excluded = ["a11yTitle", "aria-label", "alignSelf", "children", "clear", "closeOnChange", "defaultValue", "disabled", "disabledKey", "dropAlign", "dropHeight", "dropProps", "dropTarget", "emptySearchMessage", "focusIndicator", "gridArea", "id", "icon", "labelKey", "margin", "messages", "multiple", "name", "onBlur", "onChange", "onClick", "onClose", "onFocus", "onKeyDown", "onMore", "onOpen", "onSearch", "open", "options", "placeholder", "plain", "replace", "searchPlaceholder", "selected", "size", "value", "valueKey", "valueLabel"];
 
+var _templateObject, _templateObject2, _templateObject3;
+
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
 
 import React, { forwardRef, isValidElement, useCallback, useContext, useMemo, useState, useRef, useEffect } from 'react';
 import styled, { ThemeContext } from 'styled-components';
@@ -17,20 +21,11 @@ import { SelectContainer } from './SelectContainer';
 import { applyKey } from './utils';
 import { MessageContext } from '../../contexts/MessageContext';
 import { SelectPropTypes } from './propTypes';
-var SelectTextInput = styled(TextInput).withConfig({
-  displayName: "Select__SelectTextInput",
-  componentId: "sc-17idtfo-0"
-})(["cursor:", ";"], function (props) {
+var SelectTextInput = styled(TextInput)(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n  cursor: ", ";\n"])), function (props) {
   return props.defaultCursor ? 'default' : 'pointer';
 });
-var HiddenInput = styled.input.withConfig({
-  displayName: "Select__HiddenInput",
-  componentId: "sc-17idtfo-1"
-})(["display:none;"]);
-var StyledSelectDropButton = styled(DropButton).withConfig({
-  displayName: "Select__StyledSelectDropButton",
-  componentId: "sc-17idtfo-2"
-})(["", ";", ";", ";"], function (props) {
+var HiddenInput = styled.input(_templateObject2 || (_templateObject2 = _taggedTemplateLiteralLoose(["\n  display: none;\n"])));
+var StyledSelectDropButton = styled(DropButton)(_templateObject3 || (_templateObject3 = _taggedTemplateLiteralLoose(["\n  ", ";\n  ", ";\n  ", ";\n"])), function (props) {
   return !props.callerPlain && controlBorderStyle;
 }, function (props) {
   return props.theme.select && props.theme.select.control && props.theme.select.control.extend;

@@ -15,7 +15,11 @@ var _themes = require("grommet/themes");
 
 var _utils = require("../../../utils");
 
+var _templateObject;
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
 
 var customTheme = (0, _utils.deepMerge)(_themes.grommet, {
   formField: {
@@ -32,7 +36,7 @@ var customTheme = (0, _utils.deepMerge)(_themes.grommet, {
         pad: {
           horizontal: 'small'
         },
-        extend: (0, _styledComponents.css)(["svg{margin-top:10px;}"])
+        extend: (0, _styledComponents.css)(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n          svg {\n            margin-top: 10px;\n          }\n        "])))
       },
       color: 'white',
       icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Alert, {

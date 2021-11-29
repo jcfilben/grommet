@@ -1,16 +1,17 @@
+var _templateObject, _templateObject2, _templateObject3;
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
 import styled, { css } from 'styled-components';
 import { baseStyle } from '../../utils';
 import { defaultProps } from '../../default-props';
 
 var fullStyle = function fullStyle(full) {
-  if (full === 'min') return css(["min-height:100vh;"]);
-  return css(["width:100vw;height:100vh;overflow:auto;"]);
+  if (full === 'min') return css(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n      min-height: 100vh;\n    "])));
+  return css(_templateObject2 || (_templateObject2 = _taggedTemplateLiteralLoose(["\n    width: 100vw;\n    height: 100vh;\n    overflow: auto;\n  "])));
 };
 
-var StyledGrommet = styled.div.withConfig({
-  displayName: "StyledGrommet",
-  componentId: "sc-19lkkz7-0"
-})(["", " ", " ", " ", " ", ""], function (props) {
+var StyledGrommet = styled.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteralLoose(["\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n"])), function (props) {
   return !props.plain && baseStyle;
 }, function (props) {
   return props.full && fullStyle(props.full);

@@ -85,7 +85,6 @@
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^27.2.4",
     "babel-loader": "^8.2.2",
-    "babel-plugin-styled-components": "1.10.5",
     "babel-plugin-transform-imports": "^2.0.0",
     "bundlesize": "^0.18.1",
     "chromatic": "^5.10.2",

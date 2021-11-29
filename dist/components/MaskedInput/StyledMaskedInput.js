@@ -7,12 +7,13 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _utils = require("../../utils");
 
+var _templateObject, _templateObject2, _templateObject3;
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-var StyledMaskedInput = _styledComponents["default"].input.withConfig({
-  displayName: "StyledMaskedInput",
-  componentId: "sc-99vkfa-0"
-})(["", " ", " ", " ", " ", " ", ";"], _utils.inputStyle, function (props) {
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
+var StyledMaskedInput = _styledComponents["default"].input(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", ";\n"])), _utils.inputStyle, function (props) {
   return props.plain && _utils.plainInputStyle;
 }, function (props) {
   return props.icon && (props.reverse ? "padding-right: " + props.theme.global.edgeSize.large + ";" : "padding-left: " + props.theme.global.edgeSize.large + ";");
@@ -26,19 +27,13 @@ var StyledMaskedInput = _styledComponents["default"].input.withConfig({
 
 exports.StyledMaskedInput = StyledMaskedInput;
 
-var StyledMaskedInputContainer = _styledComponents["default"].div.withConfig({
-  displayName: "StyledMaskedInput__StyledMaskedInputContainer",
-  componentId: "sc-99vkfa-1"
-})(["position:relative;width:100%;", ";"], function (props) {
+var StyledMaskedInputContainer = _styledComponents["default"].div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteralLoose(["\n  position: relative;\n  width: 100%;\n\n  ", ";\n"])), function (props) {
   return props.theme.maskedInput && props.theme.maskedInput.container && props.theme.maskedInput.container.extend;
 });
 
 exports.StyledMaskedInputContainer = StyledMaskedInputContainer;
 
-var StyledIcon = _styledComponents["default"].div.withConfig({
-  displayName: "StyledMaskedInput__StyledIcon",
-  componentId: "sc-99vkfa-2"
-})(["position:absolute;display:flex;justify:center;top:50%;transform:translateY(-50%);pointer-events:none;", ""], function (props) {
+var StyledIcon = _styledComponents["default"].div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteralLoose(["\n  position: absolute;\n  display: flex;\n  justify: center;\n  top: 50%;\n  transform: translateY(-50%);\n  pointer-events: none;\n  ", "\n"])), function (props) {
   return props.reverse ? "right: " + (0, _utils.getInputPadBySide)(props, 'right') + ";" : "left: " + (0, _utils.getInputPadBySide)(props, 'left') + ";";
 });
 

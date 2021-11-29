@@ -1,3 +1,7 @@
+var _templateObject, _templateObject2, _templateObject3, _templateObject4;
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
 import styled, { css } from 'styled-components';
 import { focusStyle, genericStyles, normalizeColor } from '../../utils';
 import { defaultProps } from '../../default-props';
@@ -7,10 +11,10 @@ var sizeStyle = function sizeStyle(props) {
   if (props.size) {
     var size = props.size || 'medium';
     var data = props.theme.text[size];
-    return css(["font-size:", ";line-height:", ";"], data ? data.size : size, data ? data.height : 'normal');
+    return css(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n      font-size: ", ";\n      line-height: ", ";\n    "])), data ? data.size : size, data ? data.height : 'normal');
   }
 
-  return css(["font-size:inherit;line-height:inherit;"]);
+  return css(_templateObject2 || (_templateObject2 = _taggedTemplateLiteralLoose(["\n    font-size: inherit;\n    line-height: inherit;\n  "])));
 };
 
 var StyledAnchor = styled.a.withConfig({
@@ -19,10 +23,7 @@ var StyledAnchor = styled.a.withConfig({
   shouldForwardProp: function shouldForwardProp(prop, defaultValidatorFn) {
     return !['as', 'colorProp', 'focus', 'hasIcon', 'hasLabel', 'reverse'].includes(prop) && defaultValidatorFn(prop);
   }
-}).withConfig({
-  displayName: "StyledAnchor",
-  componentId: "sc-1rp7lwl-0"
-})(["box-sizing:border-box;", " color:", ";", " text-decoration:", ";cursor:pointer;", " ", " ", " ", " ", " ", ""], function (props) {
+})(_templateObject3 || (_templateObject3 = _taggedTemplateLiteralLoose(["\n  box-sizing: border-box;\n  ", "\n  color: ", ";\n  ", "\n  text-decoration: ", ";\n  cursor: pointer;\n  ", "\n\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n"])), function (props) {
   return sizeStyle(props);
 }, function (props) {
   return normalizeColor(props.colorProp || props.theme.anchor.color, props.theme);
@@ -31,7 +32,7 @@ var StyledAnchor = styled.a.withConfig({
 }, function (props) {
   return props.hasIcon ? 'none' : props.theme.anchor.textDecoration;
 }, genericStyles, function (props) {
-  return !props.disabled && props.theme.anchor.hover && css(["&:hover{", " ", " ", "}"], props.theme.anchor.hover.textDecoration && "text-decoration: " + props.theme.anchor.hover.textDecoration + ";", props.theme.anchor.hover.fontWeight && "font-weight: " + props.theme.anchor.hover.fontWeight + ";", props.theme.anchor.hover.extend);
+  return !props.disabled && props.theme.anchor.hover && css(_templateObject4 || (_templateObject4 = _taggedTemplateLiteralLoose(["\n      &:hover {\n        ", "\n        ", "\n      ", "\n      }\n    "])), props.theme.anchor.hover.textDecoration && "text-decoration: " + props.theme.anchor.hover.textDecoration + ";", props.theme.anchor.hover.fontWeight && "font-weight: " + props.theme.anchor.hover.fontWeight + ";", props.theme.anchor.hover.extend);
 }, function (props) {
   return props.hasIcon && !props.hasLabel && "\n    padding: " + props.theme.global.edgeSize.small + ";\n  ";
 }, function (props) {

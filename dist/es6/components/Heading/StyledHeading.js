@@ -1,3 +1,7 @@
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5;
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
 import styled, { css } from 'styled-components';
 import { breakpointStyle, genericStyles, normalizeColor, textAlignStyle } from '../../utils';
 import { defaultProps } from '../../default-props';
@@ -10,7 +14,7 @@ var sizeStyle = function sizeStyle(props) {
 
   if (levelStyle) {
     var data = levelStyle[size];
-    var styles = [css(["font-size:", ";line-height:", ";max-width:", ";font-weight:", ";"], data ? data.size : size, data ? data.height : 'normal', props.fillProp && 'none' || data && data.maxWidth || levelStyle.medium.maxWidth, levelStyle.font.weight || headingTheme.weight)];
+    var styles = [css(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n        font-size: ", ";\n        line-height: ", ";\n        max-width: ", ";\n        font-weight: ", ";\n      "])), data ? data.size : size, data ? data.height : 'normal', props.fillProp && 'none' || data && data.maxWidth || levelStyle.medium.maxWidth, levelStyle.font.weight || headingTheme.weight)];
 
     if (props.responsive && headingTheme.responsiveBreakpoint) {
       var breakpoint = props.theme.global.breakpoints[headingTheme.responsiveBreakpoint];
@@ -36,20 +40,17 @@ var fontFamily = function fontFamily(props) {
       font = _ref.font;
 
   if (font && font.family) {
-    return css(["font-family:", ";"], font.family);
+    return css(_templateObject2 || (_templateObject2 = _taggedTemplateLiteralLoose(["\n      font-family: ", ";\n    "])), font.family);
   }
 
-  return props.theme.heading.font ? css(["font-family:", ";"], props.theme.heading.font.family) : '';
+  return props.theme.heading.font ? css(_templateObject3 || (_templateObject3 = _taggedTemplateLiteralLoose(["\n        font-family: ", ";\n      "])), props.theme.heading.font.family) : '';
 };
 
 var truncateStyle = "\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n";
-var colorStyle = css(["color:", ";"], function (props) {
+var colorStyle = css(_templateObject4 || (_templateObject4 = _taggedTemplateLiteralLoose(["\n  color: ", ";\n"])), function (props) {
   return normalizeColor(props.colorProp || props.theme.heading.color, props.theme);
 });
-var StyledHeading = styled.h1.withConfig({
-  displayName: "StyledHeading",
-  componentId: "sc-1rdh4aw-0"
-})(["", " ", " ", " ", " ", " ", " ", ""], genericStyles, function (props) {
+var StyledHeading = styled.h1(_templateObject5 || (_templateObject5 = _taggedTemplateLiteralLoose(["\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n"])), genericStyles, function (props) {
   return fontFamily(props);
 }, function (props) {
   return sizeStyle(props);

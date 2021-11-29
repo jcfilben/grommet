@@ -13,14 +13,15 @@ var _grommet = require("grommet");
 
 var _data = require("./data");
 
+var _templateObject;
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
-var StyledAnchor = (0, _styledComponents["default"])(_grommet.Anchor).withConfig({
-  displayName: "DoubleFooter__StyledAnchor",
-  componentId: "hzr4m1-0"
-})(["font-weight:200;"]);
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
+var StyledAnchor = (0, _styledComponents["default"])(_grommet.Anchor)(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n  font-weight: 200;\n"])));
 
 var FooterAnchor = function FooterAnchor(_ref) {
   var rest = _extends({}, _ref);

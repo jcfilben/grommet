@@ -13,13 +13,15 @@ var _styles = require("../../utils/styles");
 
 var _animation = require("../../utils/animation");
 
-var _FLEX_MAP;
+var _templateObject, _templateObject2, _templateObject3, _FLEX_MAP, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12, _templateObject13, _templateObject14;
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
 
 var BASIS_MAP = {
   auto: 'auto',
@@ -31,7 +33,7 @@ var BASIS_MAP = {
   '1/3': '33.33%',
   '2/3': '66.66%'
 };
-var basisStyle = (0, _styledComponents.css)(["flex-basis:", ";"], function (props) {
+var basisStyle = (0, _styledComponents.css)(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n  flex-basis: ", ";\n"])), function (props) {
   return BASIS_MAP[props.basis] || props.theme.global.size[props.basis] || props.basis;
 }); // min-width and min-height needed because of this
 // https://stackoverflow.com/questions/36247140/why-doesnt-flex-item-shrink-past-content-size
@@ -39,7 +41,7 @@ var basisStyle = (0, _styledComponents.css)(["flex-basis:", ";"], function (prop
 // TODO: revisit this
 
 var directionStyle = function directionStyle(direction, theme) {
-  var styles = [(0, _styledComponents.css)(["min-width:0;min-height:0;flex-direction:", ";"], direction === 'row-responsive' ? 'row' : direction)];
+  var styles = [(0, _styledComponents.css)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteralLoose(["\n      min-width: 0;\n      min-height: 0;\n      flex-direction: ", ";\n    "])), direction === 'row-responsive' ? 'row' : direction)];
 
   if (direction === 'row-responsive' && theme.box.responsiveBreakpoint) {
     var breakpoint = (0, _utils.getBreakpointStyle)(theme, theme.box.responsiveBreakpoint);
@@ -53,7 +55,7 @@ var directionStyle = function directionStyle(direction, theme) {
 };
 
 var elevationStyle = function elevationStyle(elevation) {
-  return (0, _styledComponents.css)(["box-shadow:", ";"], function (props) {
+  return (0, _styledComponents.css)(_templateObject3 || (_templateObject3 = _taggedTemplateLiteralLoose(["\n  box-shadow: ", ";\n"])), function (props) {
     return props.theme.global.elevation[props.theme.dark ? 'dark' : 'light'][elevation];
   });
 };
@@ -68,7 +70,7 @@ var flexGrowShrinkProp = function flexGrowShrinkProp(flex) {
   return (flex.grow ? flex.grow : 0) + " " + (flex.shrink ? flex.shrink : 0);
 };
 
-var flexStyle = (0, _styledComponents.css)(["flex:", ";"], function (props) {
+var flexStyle = (0, _styledComponents.css)(_templateObject4 || (_templateObject4 = _taggedTemplateLiteralLoose(["\n  flex: ", ";\n"])), function (props) {
   return "" + flexGrowShrinkProp(props.flex) + (props.flex !== true && !props.basis ? ' auto' : '');
 });
 var JUSTIFY_MAP = {
@@ -79,14 +81,14 @@ var JUSTIFY_MAP = {
   evenly: 'space-evenly',
   start: 'flex-start'
 };
-var justifyStyle = (0, _styledComponents.css)(["justify-content:", ";"], function (props) {
+var justifyStyle = (0, _styledComponents.css)(_templateObject5 || (_templateObject5 = _taggedTemplateLiteralLoose(["\n  justify-content: ", ";\n"])), function (props) {
   return JUSTIFY_MAP[props.justify];
 });
 var WRAP_MAP = {
   "true": 'wrap',
   reverse: 'wrap-reverse'
 };
-var wrapStyle = (0, _styledComponents.css)(["flex-wrap:", ";"], function (props) {
+var wrapStyle = (0, _styledComponents.css)(_templateObject6 || (_templateObject6 = _taggedTemplateLiteralLoose(["\n  flex-wrap: ", ";\n"])), function (props) {
   return WRAP_MAP[props.wrapProp];
 });
 
@@ -99,7 +101,7 @@ var animationItemStyle = function animationItemStyle(item, theme) {
 
   if (Array.isArray(item)) {
     return item.reduce(function (style, a, index) {
-      return (0, _styledComponents.css)(["", "", " ", ""], style, index > 0 ? ',' : '', animationItemStyle(a, theme));
+      return (0, _styledComponents.css)(_templateObject7 || (_templateObject7 = _taggedTemplateLiteralLoose(["\n          ", "", " ", "\n        "])), style, index > 0 ? ',' : '', animationItemStyle(a, theme));
     }, '');
   }
 
@@ -150,10 +152,10 @@ var animationInitialStyle = function animationInitialStyle(item) {
   return '';
 };
 
-var animationStyle = (0, _styledComponents.css)(["", ";"], function (props) {
-  return (0, _styledComponents.css)(["", " animation:", ";"], animationInitialStyle(props.animation), animationItemStyle(props.animation, props.theme));
+var animationStyle = (0, _styledComponents.css)(_templateObject8 || (_templateObject8 = _taggedTemplateLiteralLoose(["\n  ", ";\n"])), function (props) {
+  return (0, _styledComponents.css)(_templateObject9 || (_templateObject9 = _taggedTemplateLiteralLoose(["\n    ", "\n    animation: ", ";\n  "])), animationInitialStyle(props.animation), animationItemStyle(props.animation, props.theme));
 });
-var interactiveStyle = (0, _styledComponents.css)(["cursor:pointer;&:hover{", " ", "}"], function (props) {
+var interactiveStyle = (0, _styledComponents.css)(_templateObject10 || (_templateObject10 = _taggedTemplateLiteralLoose(["\n  cursor: pointer;\n\n  &:hover {\n    ", "\n    ", "\n  }\n"])), function (props) {
   var _props$kindProp;
 
   return ((_props$kindProp = props.kindProp) == null ? void 0 : _props$kindProp.hover) && (0, _utils.getHoverIndicatorStyle)(props.kindProp.hover, props.theme);
@@ -161,10 +163,7 @@ var interactiveStyle = (0, _styledComponents.css)(["cursor:pointer;&:hover{", " 
   return props.hoverIndicator && (0, _utils.getHoverIndicatorStyle)(props.hoverIndicator, props.theme);
 }); // NOTE: basis must be after flex! Otherwise, flex overrides basis
 
-var StyledBox = _styledComponents["default"].div.withConfig({
-  displayName: "StyledBox",
-  componentId: "sc-13pk1d4-0"
-})(["display:flex;box-sizing:border-box;", ";", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", ""], function (props) {
+var StyledBox = _styledComponents["default"].div(_templateObject11 || (_templateObject11 = _taggedTemplateLiteralLoose(["\n  display: flex;\n  box-sizing: border-box;\n  ", ";\n\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n"])), function (props) {
   return !props.basis && 'max-width: 100%;';
 }, _utils.genericStyles, function (props) {
   return props.align && _utils.alignStyle;
@@ -249,7 +248,7 @@ var gapStyle = function gapStyle(directionProp, gap, responsive, border, theme) 
       var adjustedBorder = typeof border === 'string' ? 'top' : _extends({}, border, {
         side: 'top'
       });
-      styles.push((0, _styledComponents.css)(["position:relative;&:after{content:'';position:absolute;width:100%;top:", ";", "}"], borderOffset, (0, _utils.borderStyle)(adjustedBorder, responsive, theme)));
+      styles.push((0, _styledComponents.css)(_templateObject12 || (_templateObject12 = _taggedTemplateLiteralLoose(["\n        position: relative;\n        &:after {\n          content: '';\n          position: absolute;\n          width: 100%;\n          top: ", ";\n          ", "\n        }\n      "])), borderOffset, (0, _utils.borderStyle)(adjustedBorder, responsive, theme)));
 
       if (responsiveBorderOffset) {
         styles.push((0, _utils.breakpointStyle)(breakpoint, "\n            &:after {\n              content: '';\n              top: " + responsiveBorderOffset + ";\n            }"));
@@ -259,7 +258,7 @@ var gapStyle = function gapStyle(directionProp, gap, responsive, border, theme) 
         side: 'left'
       });
 
-      styles.push((0, _styledComponents.css)(["position:relative;&:after{content:'';position:absolute;height:100%;left:", ";", "}"], borderOffset, (0, _utils.borderStyle)(_adjustedBorder, directionProp !== 'row-responsive' && responsive, theme)));
+      styles.push((0, _styledComponents.css)(_templateObject13 || (_templateObject13 = _taggedTemplateLiteralLoose(["\n        position: relative;\n        &:after {\n          content: '';\n          position: absolute;\n          height: 100%;\n          left: ", ";\n          ", "\n        }\n      "])), borderOffset, (0, _utils.borderStyle)(_adjustedBorder, directionProp !== 'row-responsive' && responsive, theme)));
 
       if (responsiveBorderOffset) {
         if (directionProp === 'row' || directionProp === 'row-reverse') {
@@ -280,10 +279,7 @@ var gapStyle = function gapStyle(directionProp, gap, responsive, border, theme) 
 StyledBox.defaultProps = {};
 Object.setPrototypeOf(StyledBox.defaultProps, _defaultProps.defaultProps);
 
-var StyledBoxGap = _styledComponents["default"].div.withConfig({
-  displayName: "StyledBox__StyledBoxGap",
-  componentId: "sc-13pk1d4-1"
-})(["flex:0 0 auto;align-self:stretch;", ";"], function (props) {
+var StyledBoxGap = _styledComponents["default"].div(_templateObject14 || (_templateObject14 = _taggedTemplateLiteralLoose(["\n  flex: 0 0 auto;\n  align-self: stretch;\n  ", ";\n"])), function (props) {
   return props.gap && gapStyle(props.directionProp, props.gap, props.responsive, props.border, props.theme);
 });
 

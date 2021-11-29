@@ -1,3 +1,7 @@
+var _templateObject, _templateObject2, _templateObject3, _templateObject4;
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
 import { css } from 'styled-components';
 import { normalizeColor } from './colors';
 import { breakpointStyle } from './mixins';
@@ -35,26 +39,26 @@ export var borderStyle = function borderStyle(data, responsive, theme) {
       styles.push(breakpointStyle(breakpoint, responsiveStyle));
     }
   } else if (side === 'end' || side === 'start') {
-    styles.push(css(["border-inline-", ":", ";"], side, value));
+    styles.push(css(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["border-inline-", ": ", ";"])), side, value));
 
     if (responsiveStyle) {
       styles.push(breakpointStyle(breakpoint, responsiveStyle));
     }
   } else if (side === 'vertical') {
-    styles.push(css(["border-left:", ";border-right:", ";"], value, value));
+    styles.push(css(_templateObject2 || (_templateObject2 = _taggedTemplateLiteralLoose(["\n      border-left: ", ";\n      border-right: ", ";\n    "])), value, value));
 
     if (responsiveStyle) {
       styles.push(breakpointStyle(breakpoint, responsiveStyle));
     }
   } else if (side === 'horizontal') {
-    styles.push(css(["border-top:", ";border-bottom:", ";"], value, value));
+    styles.push(css(_templateObject3 || (_templateObject3 = _taggedTemplateLiteralLoose(["\n      border-top: ", ";\n      border-bottom: ", ";\n    "])), value, value));
 
     if (responsiveStyle) {
       styles.push(breakpointStyle(breakpoint, responsiveStyle));
     }
   } else if (side === 'between') {// no-op
   } else {
-    styles.push(css(["border:", ";"], value));
+    styles.push(css(_templateObject4 || (_templateObject4 = _taggedTemplateLiteralLoose(["\n        border: ", ";\n      "])), value));
 
     if (responsiveStyle) {
       styles.push(breakpointStyle(breakpoint, responsiveStyle));

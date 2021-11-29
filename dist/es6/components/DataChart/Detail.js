@@ -1,3 +1,7 @@
+var _templateObject;
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
 import React, { Fragment, useCallback, useMemo, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { Box } from '../Box';
@@ -7,10 +11,7 @@ import { Keyboard } from '../Keyboard';
 import { Text } from '../Text';
 import { focusStyle, unfocusStyle } from '../../utils';
 import { Swatch } from './Swatch';
-var DetailControl = styled(Box).withConfig({
-  displayName: "Detail__DetailControl",
-  componentId: "huiwg9-0"
-})(["&:focus{", "}&:focus:not(:focus-visible){", "}"], focusStyle(), unfocusStyle());
+var DetailControl = styled(Box)(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n  &:focus {\n    ", "\n  }\n  &:focus:not(:focus-visible) {\n    ", "\n  }\n"])), focusStyle(), unfocusStyle());
 
 var Detail = function Detail(_ref) {
   var activeProperty = _ref.activeProperty,

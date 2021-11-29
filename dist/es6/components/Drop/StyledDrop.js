@@ -1,3 +1,7 @@
+var _templateObject, _templateObject2;
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
 import styled, { keyframes } from 'styled-components';
 import { baseStyle, edgeStyle, roundStyle } from '../../utils/styles';
 import { backgroundStyle } from '../../utils/background';
@@ -19,7 +23,7 @@ function getTransformOriginStyle(align) {
   return vertical + " " + horizontal;
 }
 
-var dropKeyFrames = keyframes(["0%{opacity:0.5;transform:scale(0.8);}100%{opacity:1;transform:scale(1);}"]); // The desired margin may be adjusted depending on drops alignment
+var dropKeyFrames = keyframes(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n  0% {\n    opacity: 0.5;\n    transform: scale(0.8);\n  }\n  100% {\n    opacity: 1;\n    transform: scale(1);\n  }\n"]))); // The desired margin may be adjusted depending on drops alignment
 
 var marginStyle = function marginStyle(theme, align, data, responsive, marginProp) {
   var margin = theme.global.edgeSize[data] || data;
@@ -38,10 +42,7 @@ var marginStyle = function marginStyle(theme, align, data, responsive, marginPro
   return edgeStyle('margin', adjustedMargin, responsive, theme.global.edgeSize.responsiveBreakpoint, theme);
 };
 
-var StyledDrop = styled.div.withConfig({
-  displayName: "StyledDrop",
-  componentId: "sc-16s5rx8-0"
-})(["", " ", " position:fixed;z-index:", ";outline:none;", " ", " opacity:0;transform-origin:", ";animation:", " 0.1s forwards;animation-delay:0.01s;@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){display:flex;align-items:stretch;}", ""], baseStyle, function (props) {
+var StyledDrop = styled.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteralLoose(["\n  ", "\n\n  ", "\n\n  position: fixed;\n  z-index: ", ";\n  outline: none;\n\n  ", "\n\n  ", "\n\n  opacity: 0;\n  transform-origin: ", ";\n  animation: ", " 0.1s forwards;\n  animation-delay: 0.01s;\n\n  /* IE11 hack to get drop contents to not overflow */\n  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {\n    display: flex;\n    align-items: stretch;\n  }\n\n  ", "\n"])), baseStyle, function (props) {
   return !props.plain && (props.round && roundStyle(props.round, true, props.theme) || "border-radius: " + props.theme.global.drop.border.radius + ";");
 }, function (props) {
   return props.theme.global.drop.zIndex;

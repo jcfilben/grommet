@@ -1,8 +1,12 @@
 var _excluded = ["background", "children", "full", "id", "margin", "modal", "onClickOutside", "onEsc", "plain", "position", "responsive", "target"];
 
+var _templateObject;
+
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
 
 import React, { forwardRef, useContext, useEffect, useMemo, useRef } from 'react';
 import styled, { ThemeContext } from 'styled-components';
@@ -13,10 +17,7 @@ import { ResponsiveContext } from '../../contexts/ResponsiveContext';
 import { OptionsContext } from '../../contexts/OptionsContext';
 import { backgroundIsDark, findVisibleParent, PortalContext } from '../../utils';
 import { StyledLayer, StyledContainer, StyledOverlay } from './StyledLayer';
-var HiddenAnchor = styled.a.withConfig({
-  displayName: "LayerContainer__HiddenAnchor",
-  componentId: "sc-1srj14c-0"
-})(["width:0;height:0;overflow:hidden;position:absolute;"]);
+var HiddenAnchor = styled.a(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n  width: 0;\n  height: 0;\n  overflow: hidden;\n  position: absolute;\n"])));
 var defaultPortalContext = [];
 var LayerContainer = /*#__PURE__*/forwardRef(function (_ref, ref) {
   var background = _ref.background,

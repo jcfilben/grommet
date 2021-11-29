@@ -33,12 +33,16 @@ var _styles = require("../../utils/styles");
 
 var _colors = require("../../utils/colors");
 
+var _templateObject, _templateObject2, _templateObject3, _templateObject4;
+
 var _excluded = ["background", "border", "color", "font", "gap", "pad", "units"],
     _excluded2 = ["cellProps", "columns", "data", "fill", "filtering", "filters", "groupBy", "groups", "groupState", "onFilter", "onFiltering", "onResize", "onSelect", "onSort", "onToggle", "onWidths", "pin", "pinnedOffset", "primaryProperty", "selected", "rowDetails", "sort", "widths"];
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
@@ -96,27 +100,21 @@ var buttonStyle = function buttonStyle(_ref) {
   if (layoutProps.hover) {
     // CSS for this sub-object in the theme
     var partStyles = (0, _styles.kindPartStyles)(layoutProps.hover, theme);
-    if (partStyles.length > 0) styles.push((0, _styledComponents.css)(["&:hover{", "}"], partStyles));
+    if (partStyles.length > 0) styles.push((0, _styledComponents.css)(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n          &:hover {\n            ", "\n          }\n        "])), partStyles));
   }
 
   if (iconProps.color) {
-    styles.push((0, _styledComponents.css)(["svg{stroke:", ";fill:", ";}"], (0, _colors.normalizeColor)(iconProps.color, theme), (0, _colors.normalizeColor)(iconProps.color, theme)));
+    styles.push((0, _styledComponents.css)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteralLoose(["\n        svg {\n          stroke: ", ";\n          fill: ", ";\n        }\n      "])), (0, _colors.normalizeColor)(iconProps.color, theme), (0, _colors.normalizeColor)(iconProps.color, theme)));
   }
 
   return styles;
 };
 
-var StyledHeaderCellButton = (0, _styledComponents["default"])(_Button.Button).withConfig({
-  displayName: "Header__StyledHeaderCellButton",
-  componentId: "sc-1baku5q-0"
-})(["", ""], function (props) {
+var StyledHeaderCellButton = (0, _styledComponents["default"])(_Button.Button)(_templateObject3 || (_templateObject3 = _taggedTemplateLiteralLoose(["\n  ", "\n"])), function (props) {
   return buttonStyle(props);
 }); // allow extend to spread onto Box that surrounds column label
 
-var StyledContentBox = (0, _styledComponents["default"])(_Box.Box).withConfig({
-  displayName: "Header__StyledContentBox",
-  componentId: "sc-1baku5q-1"
-})(["", ""], function (props) {
+var StyledContentBox = (0, _styledComponents["default"])(_Box.Box)(_templateObject4 || (_templateObject4 = _taggedTemplateLiteralLoose(["\n  ", "\n"])), function (props) {
   return props.extend;
 });
 var Header = /*#__PURE__*/(0, _react.forwardRef)(function (_ref2, ref) {

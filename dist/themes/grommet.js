@@ -7,6 +7,10 @@ var _styledComponents = require("styled-components");
 
 var _object = require("../utils/object");
 
+var _templateObject;
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
 var grommet = (0, _object.deepFreeze)({
   global: {
     colors: {
@@ -20,7 +24,7 @@ var grommet = (0, _object.deepFreeze)({
     }
   },
   button: {
-    extend: (0, _styledComponents.css)(["", ""], function (props) {
+    extend: (0, _styledComponents.css)(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n      ", "\n    "])), function (props) {
       return !props.plain && 'font-weight: bold;';
     })
   }

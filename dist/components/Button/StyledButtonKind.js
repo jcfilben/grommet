@@ -9,24 +9,28 @@ var _utils = require("../../utils");
 
 var _defaultProps = require("../../default-props");
 
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10;
+
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
 
 var radiusStyle = function radiusStyle(props) {
   var size = props.sizeProp; // caller has specified a themeObj to use for styling
   // relevant for cases like pagination which looks to theme.pagination.button
 
   var themeObj = typeof props.kind === 'object' ? props.kind : props.theme.button;
-  if (size && themeObj.size && themeObj.size[size]) return (0, _styledComponents.css)(["border-radius:", ";"], themeObj.size[size].border.radius);
-  if (themeObj.border && themeObj.border.radius) return (0, _styledComponents.css)(["border-radius:", ";"], themeObj.border.radius);
+  if (size && themeObj.size && themeObj.size[size]) return (0, _styledComponents.css)(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n      border-radius: ", ";\n    "])), themeObj.size[size].border.radius);
+  if (themeObj.border && themeObj.border.radius) return (0, _styledComponents.css)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteralLoose(["\n      border-radius: ", ";\n    "])), themeObj.border.radius);
   return '';
 };
 
 var fontStyle = function fontStyle(props) {
   var size = props.sizeProp || 'medium';
   var data = props.theme.text[size];
-  return (0, _styledComponents.css)(["font-size:", ";line-height:", ";"], data.size, data.height);
+  return (0, _styledComponents.css)(_templateObject3 || (_templateObject3 = _taggedTemplateLiteralLoose(["\n    font-size: ", ";\n    line-height: ", ";\n  "])), data.size, data.height);
 };
 
 var padFromTheme = function padFromTheme(size, theme, themeObj) {
@@ -59,13 +63,13 @@ var padStyle = function padStyle(_ref) {
   // relevant for cases like pagination which looks to theme.pagination.button
   var themeObj = typeof kind === 'object' ? kind : theme.button;
   var pad = padFromTheme(size, theme, themeObj);
-  return pad ? (0, _styledComponents.css)(["padding:", " ", ";"], pad.vertical, pad.horizontal) : '';
+  return pad ? (0, _styledComponents.css)(_templateObject4 || (_templateObject4 = _taggedTemplateLiteralLoose(["\n        padding: ", " ", ";\n      "])), pad.vertical, pad.horizontal) : '';
 }; // The > svg rule is to ensure Buttons with just an icon don't add additional
 // vertical height internally.
 
 
 var basicStyle = function basicStyle(props) {
-  return (0, _styledComponents.css)(["border:none;", ";", " ", " ", ""], radiusStyle(props), padStyle(props), fontStyle(props), props.badge ? "\n  svg {\n    vertical-align: bottom;\n  }" : "> svg {\n    vertical-align: bottom;\n  }");
+  return (0, _styledComponents.css)(_templateObject5 || (_templateObject5 = _taggedTemplateLiteralLoose(["\n  border: none;\n  ", ";\n  ", "\n  ", "\n\n  // when button has badge, the SVG won't necessarily\n  // be the direct descendant\n  ", "\n"])), radiusStyle(props), padStyle(props), fontStyle(props), props.badge ? "\n  svg {\n    vertical-align: bottom;\n  }" : "> svg {\n    vertical-align: bottom;\n  }");
 };
 
 var getPath = function getPath(theme, path) {
@@ -85,7 +89,7 @@ var getPath = function getPath(theme, path) {
 
 var adjustPadStyle = function adjustPadStyle(pad, width) {
   var offset = (0, _utils.parseMetricToNum)(width);
-  return (0, _styledComponents.css)(["padding:", "px ", "px;"], Math.max((0, _utils.parseMetricToNum)(pad.vertical) - offset, 0), Math.max((0, _utils.parseMetricToNum)(pad.horizontal) - offset, 0));
+  return (0, _styledComponents.css)(_templateObject6 || (_templateObject6 = _taggedTemplateLiteralLoose(["\n    padding: ", "px\n      ", "px;\n  "])), Math.max((0, _utils.parseMetricToNum)(pad.vertical) - offset, 0), Math.max((0, _utils.parseMetricToNum)(pad.horizontal) - offset, 0));
 }; // build up CSS from basic to specific based on the supplied sub-object paths
 
 
@@ -145,7 +149,7 @@ var kindStyle = function kindStyle(_ref2) {
       }
 
       if (partStyles.length > 0) {
-        styles.push((0, _styledComponents.css)(["&:hover{", " ", "}"], partStyles, adjPadStyles));
+        styles.push((0, _styledComponents.css)(_templateObject7 || (_templateObject7 = _taggedTemplateLiteralLoose(["\n            &:hover {\n              ", "\n              ", "\n            }\n          "])), partStyles, adjPadStyles));
       }
     }
   });
@@ -161,7 +165,7 @@ var hoverIndicatorStyle = function hoverIndicatorStyle(_ref3) {
     if (hoverIndicator.color) themishObj.color = hoverIndicator.color;
   } else themishObj.background = hoverIndicator;
   var styles = (0, _utils.kindPartStyles)(themishObj, theme);
-  if (styles.length > 0) return (0, _styledComponents.css)(["&:hover{", "}"], styles);
+  if (styles.length > 0) return (0, _styledComponents.css)(_templateObject8 || (_templateObject8 = _taggedTemplateLiteralLoose(["\n      &:hover {\n        ", "\n      }\n    "])), styles);
   return '';
 };
 
@@ -184,7 +188,7 @@ var fillStyle = function fillStyle(fillContainer) {
 
 
 var plainStyle = function plainStyle() {
-  return (0, _styledComponents.css)(["outline:none;border:none;padding:0;text-align:inherit;color:inherit;> svg{vertical-align:bottom;}"]);
+  return (0, _styledComponents.css)(_templateObject9 || (_templateObject9 = _taggedTemplateLiteralLoose(["\n  outline: none;\n  border: none;\n  padding: 0;\n  text-align: inherit;\n  color: inherit;\n\n  > svg {\n    vertical-align: bottom;\n  }\n"])));
 };
 
 var StyledButtonKind = _styledComponents["default"].button.withConfig({
@@ -193,10 +197,7 @@ var StyledButtonKind = _styledComponents["default"].button.withConfig({
   shouldForwardProp: function shouldForwardProp(prop, defaultValidatorFn) {
     return !['kind'].includes(prop) && defaultValidatorFn(prop);
   }
-}).withConfig({
-  displayName: "StyledButtonKind",
-  componentId: "sc-1vhfpnt-0"
-})(["display:inline-block;box-sizing:border-box;cursor:pointer;font:inherit;text-decoration:none;margin:0;background:transparent;overflow:visible;text-transform:none;", " ", " ", " ", " ", " ", " ", " ", " &:focus{", "}&:focus:not(:focus-visible){", "}", " ", " ", ""], _utils.genericStyles, function (props) {
+})(_templateObject10 || (_templateObject10 = _taggedTemplateLiteralLoose(["\n  display: inline-block;\n  box-sizing: border-box;\n  cursor: pointer;\n  font: inherit;\n  text-decoration: none;\n  margin: 0;\n  background: transparent;\n  overflow: visible;\n  text-transform: none;\n\n  ", "\n  ", "\n  // set baseline activeStyle for all buttons including plain buttons\n  // buttons with kind will have active styling overridden by kindStyle\n  // if they have specific state styles\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n\n  &:focus {\n    ", "\n  }\n\n  &:focus:not(:focus-visible) {\n    ", "\n  }\n\n  ", "\n  ", "\n  ", "\n"])), _utils.genericStyles, function (props) {
   return props.plain && plainStyle(props);
 }, function (props) {
   return !props.disabled && props.active && _utils.activeStyle;

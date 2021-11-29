@@ -15,7 +15,11 @@ var _themes = require("grommet/themes");
 
 var _utils = require("grommet/utils");
 
+var _templateObject, _templateObject2, _templateObject3;
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
 
 var RichTabTitle = function RichTabTitle(_ref) {
   var icon = _ref.icon,
@@ -60,7 +64,7 @@ var customTheme = (0, _utils.deepMerge)(_themes.grommet, {
     },
     extend: function extend(_ref2) {
       var theme = _ref2.theme;
-      return (0, _styledComponents.css)(["border-radius:4px;box-shadow:0px 1px 5px rgba(0,0,0,0.5);"]);
+      return (0, _styledComponents.css)(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n      border-radius: 4px;\n      /* or 'border-radius: ", "' */\n      box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);\n      /* or 'box-shadow: ", "' */\n    "])), theme.global.control.border.radius, theme.global.elevation.light.small);
     }
   },
   tabs: {
@@ -70,13 +74,13 @@ var customTheme = (0, _utils.deepMerge)(_themes.grommet, {
       background: 'dark-2',
       extend: function extend(_ref3) {
         var theme = _ref3.theme;
-        return (0, _styledComponents.css)(["padding:10px;box-shadow:0px 3px 8px rgba(0,0,0,0.50);"]);
+        return (0, _styledComponents.css)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteralLoose(["\n      padding: 10px;\n      /* or 'padding: ", "' */\n      box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.50);\n      /* or 'box-shadow: ", "' */\n    "])), theme.global.edgeSize.small, theme.global.elevation.light.medium);
       }
     },
     panel: {
       extend: function extend(_ref4) {
         var theme = _ref4.theme;
-        return (0, _styledComponents.css)(["padding:48px;box-shadow:0px 3px 8px rgba(0,0,0,0.50);"]);
+        return (0, _styledComponents.css)(_templateObject3 || (_templateObject3 = _taggedTemplateLiteralLoose(["\n      padding: 48px;\n      /* or 'padding: ", "' */\n      box-shadow:  0px 3px 8px rgba(0, 0, 0, 0.50);\n       /* or 'box-shadow: ", "' */\n    "])), theme.global.edgeSize.large, theme.global.elevation.light.medium);
       }
     }
   }

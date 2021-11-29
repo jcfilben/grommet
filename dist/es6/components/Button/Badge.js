@@ -1,3 +1,7 @@
+var _templateObject;
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
 import React, { useContext, useRef, useState } from 'react';
 import styled, { ThemeContext } from 'styled-components';
 import { parseMetricToNum } from '../../utils';
@@ -5,10 +9,7 @@ import { useLayoutEffect } from '../../utils/use-isomorphic-layout-effect';
 import { Box } from '../Box';
 import { Stack } from '../Stack';
 import { Text } from '../Text';
-var StyledBadgeContainer = styled(Box).withConfig({
-  displayName: "Badge__StyledBadgeContainer",
-  componentId: "sc-1es4ws1-0"
-})(["", ""], function (props) {
+var StyledBadgeContainer = styled(Box)(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n  ", "\n"])), function (props) {
   return props.theme.button.badge.container.extend;
 });
 export var Badge = function Badge(_ref) {

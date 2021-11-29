@@ -1,3 +1,7 @@
+var _templateObject, _templateObject2, _templateObject3, _templateObject4;
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
 import styled, { css } from 'styled-components';
 import { defaultProps } from '../../default-props';
 import { animationObjectStyle } from '../../utils/animation';
@@ -32,10 +36,10 @@ var animationStyle = function animationStyle(props) {
   var animationType = animationCopy.type || animationCopy;
 
   if (animationType === 'draw' || animationType === true) {
-    return css(["path{stroke-dasharray:500;stroke-dashoffset:500;animation:", ";}"], animationItemStyle(animationCopy, props.theme));
+    return css(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n      path {\n        stroke-dasharray: 500;\n        stroke-dashoffset: 500;\n        animation: ", ";\n      }\n    "])), animationItemStyle(animationCopy, props.theme));
   }
 
-  return css(["animation:", ";"], animationItemStyle(animationCopy, props.theme));
+  return css(_templateObject2 || (_templateObject2 = _taggedTemplateLiteralLoose(["\n    animation: ", ";\n  "])), animationItemStyle(animationCopy, props.theme));
 };
 
 var connectionStyle = function connectionStyle(connection, index, theme) {
@@ -46,14 +50,11 @@ var connectionStyle = function connectionStyle(connection, index, theme) {
   }
 
   var animationType = type || connection.props.animation;
-  return css(["path:nth-child(", "){stroke-dasharray:", ";stroke-dashoffset:", ";animation:", ";}"], index + 1, animationType === 'draw' || animationType === true ? 500 : 0, animationType === 'draw' || animationType === true ? 500 : 0, animationItemStyle(connection.props.animation, theme));
+  return css(_templateObject3 || (_templateObject3 = _taggedTemplateLiteralLoose(["\n    path:nth-child(", ") {\n      stroke-dasharray: ", ";\n      stroke-dashoffset: ", ";\n      animation: ", ";\n    }\n  "])), index + 1, animationType === 'draw' || animationType === true ? 500 : 0, animationType === 'draw' || animationType === true ? 500 : 0, animationItemStyle(connection.props.animation, theme));
 };
 
 var availableAnimations = [true, 'draw', 'pulse'];
-var StyledDiagram = styled.svg.withConfig({
-  displayName: "StyledDiagram",
-  componentId: "sc-1vzeu9f-0"
-})(["max-width:100%;width:100%;height:100%;", " ", " ", ""], function (props) {
+var StyledDiagram = styled.svg(_templateObject4 || (_templateObject4 = _taggedTemplateLiteralLoose(["\n  max-width: 100%;\n  width: 100%;\n  height: 100%;\n\n  /* connection's animation comes first to override Diagram's animations */\n  ", "\n\n  ", "\n  ", "\n"])), function (props) {
   return props.connections && props.connections.map(function (connection, index) {
     if (connection !== undefined && connection.props.animation) {
       var animation = connection.props.animation; // setting type to 'draw' if user doesn't specify a type

@@ -1,7 +1,11 @@
+var _templateObject, _templateObject2;
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
 import styled, { css } from 'styled-components';
 import { disabledStyle, inputStyle } from '../../utils';
 import { defaultProps } from '../../default-props';
-var plainStyle = css(["outline:none;border:none;width:100%;-webkit-appearance:none;"]);
+var plainStyle = css(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n  outline: none;\n  border: none;\n  width: 100%;\n  -webkit-appearance: none;\n"])));
 
 var resizeStyle = function resizeStyle(resize) {
   if (resize === 'horizontal') {
@@ -19,10 +23,7 @@ var resizeStyle = function resizeStyle(resize) {
   return 'resize: none;';
 };
 
-var StyledTextArea = styled.textarea.withConfig({
-  displayName: "StyledTextArea",
-  componentId: "sc-17i3mwp-0"
-})(["", " ", " ", " ", " ", " ", ";"], inputStyle, function (props) {
+var StyledTextArea = styled.textarea(_templateObject2 || (_templateObject2 = _taggedTemplateLiteralLoose(["\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", ";\n"])), inputStyle, function (props) {
   return props.resize !== undefined && resizeStyle(props.resize);
 }, function (props) {
   return props.fillArg && 'height: 100%;';

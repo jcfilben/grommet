@@ -1,9 +1,13 @@
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12, _templateObject13, _templateObject14, _templateObject15, _templateObject16, _templateObject17, _templateObject18, _templateObject19, _templateObject20, _templateObject21, _templateObject22, _templateObject23, _templateObject24, _templateObject25, _templateObject26, _templateObject27, _templateObject28, _templateObject29, _templateObject30, _templateObject31, _templateObject32, _templateObject33, _templateObject34, _templateObject35, _templateObject36, _templateObject37, _templateObject38, _templateObject39, _templateObject40, _templateObject41, _templateObject42, _templateObject43, _templateObject44, _templateObject45, _templateObject46, _templateObject47;
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
 import { css } from 'styled-components';
 import { backgroundStyle } from './background';
 import { normalizeColor } from './colors';
 import { getBreakpointStyle } from './responsive';
 import { breakpointStyle, parseMetricToNum } from './mixins';
-export var baseStyle = css(["font-family:", ";font-size:", ";line-height:", ";font-weight:", ";", " box-sizing:border-box;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;"], function (props) {
+export var baseStyle = css(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n  font-family: ", ";\n  font-size: ", ";\n  line-height: ", ";\n  font-weight: ", ";\n  ", "\n  box-sizing: border-box;\n  -webkit-text-size-adjust: 100%;\n  -ms-text-size-adjust: 100%;\n  -moz-osx-font-smoothing: grayscale;\n  -webkit-font-smoothing: antialiased;\n"])), function (props) {
   return props.theme.global.font.family;
 }, function (props) {
   return props.theme.global.font.size;
@@ -14,7 +18,7 @@ export var baseStyle = css(["font-family:", ";font-size:", ";line-height:", ";fo
 }, function (props) {
   return !props.plain && backgroundStyle(props.theme.baseBackground, props.theme);
 });
-export var controlBorderStyle = css(["border:", " solid ", ";border-radius:", ";"], function (props) {
+export var controlBorderStyle = css(_templateObject2 || (_templateObject2 = _taggedTemplateLiteralLoose(["\n  border: ", " solid\n    ", ";\n  border-radius: ", ";\n"])), function (props) {
   return props.theme.global.control.border.width;
 }, function (props) {
   return normalizeColor(props.theme.global.control.border.color || 'border', props.theme);
@@ -25,7 +29,7 @@ export var edgeStyle = function edgeStyle(kind, data, responsive, responsiveBrea
   var breakpoint = responsiveBreakpoint && theme.global.breakpoints[responsiveBreakpoint];
 
   if (typeof data === 'string') {
-    return css(["", ":", ";", ";"], kind, theme.global.edgeSize[data] || data, responsive && breakpoint ? breakpointStyle(breakpoint, "\n        " + kind + ": " + (breakpoint.edgeSize[data] || data) + ";\n      ") : '');
+    return css(_templateObject3 || (_templateObject3 = _taggedTemplateLiteralLoose(["\n      ", ": ", ";\n      ", ";\n    "])), kind, theme.global.edgeSize[data] || data, responsive && breakpoint ? breakpointStyle(breakpoint, "\n        " + kind + ": " + (breakpoint.edgeSize[data] || data) + ";\n      ") : '');
   }
 
   var result = [];
@@ -45,39 +49,39 @@ export var edgeStyle = function edgeStyle(kind, data, responsive, responsiveBrea
     // since the values will be the same between vertical & horizontal OR
     // left, right, top, & bottom, we can just choose one
     var value = horizontalVerticalEqual ? horizontal : top;
-    return css(["", ":", ";", ";"], kind, theme.global.edgeSize[value] || value, responsive && breakpoint ? breakpointStyle(breakpoint, "\n        " + kind + ": " + (breakpoint.edgeSize[value] || value) + ";\n      ") : '');
+    return css(_templateObject4 || (_templateObject4 = _taggedTemplateLiteralLoose(["\n      ", ": ", ";\n      ", ";\n    "])), kind, theme.global.edgeSize[value] || value, responsive && breakpoint ? breakpointStyle(breakpoint, "\n        " + kind + ": " + (breakpoint.edgeSize[value] || value) + ";\n      ") : '');
   }
 
   if (horizontal) {
-    result.push(css(["", "-left:", ";", "-right:", ";", ";"], kind, theme.global.edgeSize[horizontal] || horizontal, kind, theme.global.edgeSize[horizontal] || horizontal, responsive && breakpoint ? breakpointStyle(breakpoint, "\n          " + kind + "-left: " + (breakpoint.edgeSize[horizontal] || horizontal) + ";\n          " + kind + "-right: " + (breakpoint.edgeSize[horizontal] || horizontal) + ";\n        ") : ''));
+    result.push(css(_templateObject5 || (_templateObject5 = _taggedTemplateLiteralLoose(["\n      ", "-left: ", ";\n      ", "-right: ", ";\n      ", ";\n    "])), kind, theme.global.edgeSize[horizontal] || horizontal, kind, theme.global.edgeSize[horizontal] || horizontal, responsive && breakpoint ? breakpointStyle(breakpoint, "\n          " + kind + "-left: " + (breakpoint.edgeSize[horizontal] || horizontal) + ";\n          " + kind + "-right: " + (breakpoint.edgeSize[horizontal] || horizontal) + ";\n        ") : ''));
   }
 
   if (vertical) {
-    result.push(css(["", "-top:", ";", "-bottom:", ";", ";"], kind, theme.global.edgeSize[vertical] || vertical, kind, theme.global.edgeSize[vertical] || vertical, responsive && breakpoint ? breakpointStyle(breakpoint, "\n          " + kind + "-top: " + (breakpoint.edgeSize[vertical] || vertical) + ";\n          " + kind + "-bottom: " + (breakpoint.edgeSize[vertical] || vertical) + ";\n        ") : ''));
+    result.push(css(_templateObject6 || (_templateObject6 = _taggedTemplateLiteralLoose(["\n      ", "-top: ", ";\n      ", "-bottom: ", ";\n      ", ";\n    "])), kind, theme.global.edgeSize[vertical] || vertical, kind, theme.global.edgeSize[vertical] || vertical, responsive && breakpoint ? breakpointStyle(breakpoint, "\n          " + kind + "-top: " + (breakpoint.edgeSize[vertical] || vertical) + ";\n          " + kind + "-bottom: " + (breakpoint.edgeSize[vertical] || vertical) + ";\n        ") : ''));
   }
 
   if (top) {
-    result.push(css(["", "-top:", ";", ";"], kind, theme.global.edgeSize[top] || top, responsive && breakpoint ? breakpointStyle(breakpoint, "\n          " + kind + "-top: " + (breakpoint.edgeSize[top] || top) + ";\n        ") : ''));
+    result.push(css(_templateObject7 || (_templateObject7 = _taggedTemplateLiteralLoose(["\n      ", "-top: ", ";\n      ", ";\n    "])), kind, theme.global.edgeSize[top] || top, responsive && breakpoint ? breakpointStyle(breakpoint, "\n          " + kind + "-top: " + (breakpoint.edgeSize[top] || top) + ";\n        ") : ''));
   }
 
   if (bottom) {
-    result.push(css(["", "-bottom:", ";", ";"], kind, theme.global.edgeSize[bottom] || bottom, responsive && breakpoint ? breakpointStyle(breakpoint, "\n          " + kind + "-bottom: " + (breakpoint.edgeSize[bottom] || bottom) + ";\n        ") : ''));
+    result.push(css(_templateObject8 || (_templateObject8 = _taggedTemplateLiteralLoose(["\n      ", "-bottom: ", ";\n      ", ";\n    "])), kind, theme.global.edgeSize[bottom] || bottom, responsive && breakpoint ? breakpointStyle(breakpoint, "\n          " + kind + "-bottom: " + (breakpoint.edgeSize[bottom] || bottom) + ";\n        ") : ''));
   }
 
   if (left) {
-    result.push(css(["", "-left:", ";", ";"], kind, theme.global.edgeSize[left] || left, responsive && breakpoint ? breakpointStyle(breakpoint, "\n          " + kind + "-left: " + (breakpoint.edgeSize[left] || left) + ";\n        ") : ''));
+    result.push(css(_templateObject9 || (_templateObject9 = _taggedTemplateLiteralLoose(["\n      ", "-left: ", ";\n      ", ";\n    "])), kind, theme.global.edgeSize[left] || left, responsive && breakpoint ? breakpointStyle(breakpoint, "\n          " + kind + "-left: " + (breakpoint.edgeSize[left] || left) + ";\n        ") : ''));
   }
 
   if (right) {
-    result.push(css(["", "-right:", ";", ";"], kind, theme.global.edgeSize[right] || right, responsive && breakpoint ? breakpointStyle(breakpoint, "\n          " + kind + "-right: " + (breakpoint.edgeSize[right] || right) + ";\n        ") : ''));
+    result.push(css(_templateObject10 || (_templateObject10 = _taggedTemplateLiteralLoose(["\n      ", "-right: ", ";\n      ", ";\n    "])), kind, theme.global.edgeSize[right] || right, responsive && breakpoint ? breakpointStyle(breakpoint, "\n          " + kind + "-right: " + (breakpoint.edgeSize[right] || right) + ";\n        ") : ''));
   }
 
   if (data.start) {
-    result.push(css(["", "-inline-start:", ";", ";"], kind, theme.global.edgeSize[data.start] || data.start, responsive && breakpoint ? breakpointStyle(breakpoint, "\n          " + kind + "-inline-start: " + (breakpoint.edgeSize[data.start] || data.start) + ";\n        ") : ''));
+    result.push(css(_templateObject11 || (_templateObject11 = _taggedTemplateLiteralLoose(["\n      ", "-inline-start: ", ";\n      ", ";\n    "])), kind, theme.global.edgeSize[data.start] || data.start, responsive && breakpoint ? breakpointStyle(breakpoint, "\n          " + kind + "-inline-start: " + (breakpoint.edgeSize[data.start] || data.start) + ";\n        ") : ''));
   }
 
   if (data.end) {
-    result.push(css(["", "-inline-end:", ";", ";"], kind, theme.global.edgeSize[data.end] || data.end, responsive && breakpoint ? breakpointStyle(breakpoint, "\n          " + kind + "-inline-end: " + (breakpoint.edgeSize[data.end] || data.end) + ";\n        ") : ''));
+    result.push(css(_templateObject12 || (_templateObject12 = _taggedTemplateLiteralLoose(["\n      ", "-inline-end: ", ";\n      ", ";\n    "])), kind, theme.global.edgeSize[data.end] || data.end, responsive && breakpoint ? breakpointStyle(breakpoint, "\n          " + kind + "-inline-end: " + (breakpoint.edgeSize[data.end] || data.end) + ";\n        ") : ''));
   }
 
   return result;
@@ -189,7 +193,7 @@ export var focusStyle = function focusStyle(_temp3) {
       justBorder = _ref3.justBorder,
       skipSvgChildren = _ref3.skipSvgChildren;
 
-  return css(["", " ", " ", ""], function (props) {
+  return css(_templateObject13 || (_templateObject13 = _taggedTemplateLiteralLoose(["\n  ", "\n  ", "\n  ", "\n"])), function (props) {
     return !skipSvgChildren && "\n  > circle,\n  > ellipse,\n  > line,\n  > path,\n  > polygon,\n  > polyline,\n  > rect {\n    " + focusStyles(props) + "\n  }";
   }, function (props) {
     return focusStyles(props, {
@@ -210,7 +214,7 @@ export var unfocusStyle = function unfocusStyle(_temp4) {
       justBorder = _ref4.justBorder,
       skipSvgChildren = _ref4.skipSvgChildren;
 
-  return css(["", " ", " ", ""], function (props) {
+  return css(_templateObject14 || (_templateObject14 = _taggedTemplateLiteralLoose(["\n  ", "\n  ", "\n  ", "\n"])), function (props) {
     return !skipSvgChildren && "\n  > circle,\n  > ellipse,\n  > line,\n  > path,\n  > polygon,\n  > polyline,\n  > rect {\n    " + unfocusStyles(props) + "\n  }";
   }, function (props) {
     return unfocusStyles(props, {
@@ -244,22 +248,22 @@ export var getInputPadBySide = function getInputPadBySide(props, side) {
   var adjustedPad = adjustPad(props, pad);
   return adjustedPad;
 };
-var placeholderColor = css(["color:", ";"], function (props) {
+var placeholderColor = css(_templateObject15 || (_templateObject15 = _taggedTemplateLiteralLoose(["\n  color: ", ";\n"])), function (props) {
   return normalizeColor(props.theme.global.colors.placeholder, props.theme);
 });
-var placeholderStyle = css(["&::-webkit-input-placeholder{", ";}&::-moz-placeholder{", ";}&:-ms-input-placeholder{", ";}"], placeholderColor, placeholderColor, placeholderColor);
+var placeholderStyle = css(_templateObject16 || (_templateObject16 = _taggedTemplateLiteralLoose(["\n  &::-webkit-input-placeholder {\n    ", ";\n  }\n\n  &::-moz-placeholder {\n    ", ";\n  }\n\n  &:-ms-input-placeholder {\n    ", ";\n  }\n"])), placeholderColor, placeholderColor, placeholderColor);
 
 var inputSizeStyle = function inputSizeStyle(props) {
   var data = props.theme.text[props.size];
 
   if (!data) {
-    return css(["font-size:", ";"], props.size);
+    return css(_templateObject17 || (_templateObject17 = _taggedTemplateLiteralLoose(["\n      font-size: ", ";\n    "])), props.size);
   }
 
-  return css(["font-size:", ";line-height:", ";"], data.size, data.height);
+  return css(_templateObject18 || (_templateObject18 = _taggedTemplateLiteralLoose(["\n    font-size: ", ";\n    line-height: ", ";\n  "])), data.size, data.height);
 };
 
-export var inputStyle = css(["box-sizing:border-box;", " font-family:inherit;border:none;-webkit-appearance:none;background:transparent;color:inherit;width:100%;", " ", " ", " margin:0;", " &:focus{", ";}", " ", "::-webkit-search-decoration{-webkit-appearance:none;}&::-moz-focus-inner{border:none;outline:none;}&:-moz-placeholder,&::-moz-placeholder{opacity:1;}", ""], function (props) {
+export var inputStyle = css(_templateObject19 || (_templateObject19 = _taggedTemplateLiteralLoose(["\n  box-sizing: border-box;\n  ", "\n  font-family: inherit;\n  border: none;\n  -webkit-appearance: none;\n  background: transparent;\n  color: inherit;\n  width: 100%;\n  ", "\n  ", "\n  ", " margin: 0;\n  ", "\n  &:focus {\n    ", ";\n  }\n  ", "\n  ", "\n\n  ::-webkit-search-decoration {\n    -webkit-appearance: none;\n  }\n\n  &::-moz-focus-inner {\n    border: none;\n    outline: none;\n  }\n\n  &:-moz-placeholder, // FF 18-\n  &::-moz-placeholder {\n    // FF 19+\n    opacity: 1;\n  }\n\n  ", "\n"])), function (props) {
   var _props$theme$text$pro;
 
   return "font-size: " + (props.theme.global.input.font.size ? ((_props$theme$text$pro = props.theme.text[props.theme.global.input.font.size]) == null ? void 0 : _props$theme$text$pro.size) || props.theme.global.input.font.size : 'inherit') + ";";
@@ -273,7 +277,7 @@ export var inputStyle = css(["box-sizing:border-box;", " font-family:inherit;bor
   "padding: " + (parseMetricToNum(props.theme.global.edgeSize[props.theme.global.input.padding] || props.theme.global.input.padding) - parseMetricToNum(props.theme.global.control.border.width)) + "px;" : edgeStyle('padding', props.theme.global.input.padding, props.responsive, props.theme.box.responsiveBreakpoint, props.theme);
 }, function (props) {
   return (// for backwards compatibility, check if props.theme.global.input.weight
-    (props.theme.global.input.weight || props.theme.global.input.font.weight) && css(["font-weight:", ";"], props.theme.global.input.weight || props.theme.global.input.font.weight)
+    (props.theme.global.input.weight || props.theme.global.input.font.weight) && css(_templateObject20 || (_templateObject20 = _taggedTemplateLiteralLoose(["\n      font-weight: ", ";\n    "])), props.theme.global.input.weight || props.theme.global.input.font.weight)
   );
 }, function (props) {
   return props.size && inputSizeStyle(props);
@@ -284,10 +288,10 @@ export var inputStyle = css(["box-sizing:border-box;", " font-family:inherit;bor
 });
 export var overflowStyle = function overflowStyle(overflowProp) {
   if (typeof overflowProp === 'string') {
-    return css(["overflow:", ";"], overflowProp);
+    return css(_templateObject21 || (_templateObject21 = _taggedTemplateLiteralLoose(["\n      overflow: ", ";\n    "])), overflowProp);
   }
 
-  return css(["", " ", ";"], overflowProp.horizontal && "overflow-x: " + overflowProp.horizontal + ";", overflowProp.vertical && "overflow-y: " + overflowProp.vertical + ";");
+  return css(_templateObject22 || (_templateObject22 = _taggedTemplateLiteralLoose(["\n    ", " ", ";\n  "])), overflowProp.horizontal && "overflow-x: " + overflowProp.horizontal + ";", overflowProp.vertical && "overflow-y: " + overflowProp.vertical + ";");
 };
 var ALIGN_SELF_MAP = {
   center: 'center',
@@ -295,7 +299,7 @@ var ALIGN_SELF_MAP = {
   start: 'flex-start',
   stretch: 'stretch'
 };
-export var genericStyles = css(["", " ", " ", ""], function (props) {
+export var genericStyles = css(_templateObject23 || (_templateObject23 = _taggedTemplateLiteralLoose(["\n  ", "\n  ", "\n  ", "\n"])), function (props) {
   return props.alignSelf && "align-self: " + ALIGN_SELF_MAP[props.alignSelf] + ";";
 }, function (props) {
   return props.gridArea && "grid-area: " + props.gridArea + ";";
@@ -303,14 +307,14 @@ export var genericStyles = css(["", " ", " ", ""], function (props) {
   return props.margin && props.theme.global && edgeStyle('margin', props.margin, props.responsive, props.theme.global.edgeSize.responsiveBreakpoint, props.theme);
 });
 export var disabledStyle = function disabledStyle(componentStyle) {
-  return css(["opacity:", ";cursor:default;"], function (props) {
+  return css(_templateObject24 || (_templateObject24 = _taggedTemplateLiteralLoose(["\n  opacity: ", ";\n  cursor: default;\n"])), function (props) {
     return componentStyle || props.theme.global.control.disabled.opacity;
   });
 };
 export var sizeStyle = function sizeStyle(name, value, theme) {
-  return css(["", ":", ";"], name, theme.global.size[value] || value);
+  return css(_templateObject25 || (_templateObject25 = _taggedTemplateLiteralLoose(["\n  ", ": ", ";\n"])), name, theme.global.size[value] || value);
 };
-export var plainInputStyle = css(["outline:none;border:none;"]); // CSS for this sub-object in the theme
+export var plainInputStyle = css(_templateObject26 || (_templateObject26 = _taggedTemplateLiteralLoose(["\n  outline: none;\n  border: none;\n"]))); // CSS for this sub-object in the theme
 
 export var kindPartStyles = function kindPartStyles(obj, theme, colorValue) {
   var styles = [];
@@ -324,9 +328,9 @@ export var kindPartStyles = function kindPartStyles(obj, theme, colorValue) {
   if (obj.background) styles.push(backgroundStyle(colorValue || obj.background, theme, obj.color || (Object.prototype.hasOwnProperty.call(obj, 'color') && obj.color === undefined ? false : undefined)));else if (obj.color) styles.push("color: " + normalizeColor(obj.color, theme) + ";");
 
   if (obj.border) {
-    if (obj.border.width) styles.push(css(["border-style:solid;border-width:", ";"], obj.border.width));
-    if (obj.border.color) styles.push(css(["border-color:", ";"], normalizeColor(!obj.background && colorValue || obj.border.color || 'border', theme)));
-    if (obj.border.radius) styles.push(css(["border-radius:", ";"], obj.border.radius));
+    if (obj.border.width) styles.push(css(_templateObject27 || (_templateObject27 = _taggedTemplateLiteralLoose(["\n        border-style: solid;\n        border-width: ", ";\n      "])), obj.border.width));
+    if (obj.border.color) styles.push(css(_templateObject28 || (_templateObject28 = _taggedTemplateLiteralLoose(["\n        border-color: ", ";\n      "])), normalizeColor(!obj.background && colorValue || obj.border.color || 'border', theme)));
+    if (obj.border.radius) styles.push(css(_templateObject29 || (_templateObject29 = _taggedTemplateLiteralLoose(["\n        border-radius: ", ";\n      "])), obj.border.radius));
   } else if (obj.border === false) styles.push('border: none;');
 
   if (colorValue && !obj.border && !obj.background) styles.push("color: " + normalizeColor(colorValue, theme) + ";");
@@ -365,37 +369,37 @@ export var roundStyle = function roundStyle(data, responsive, theme) {
     var responsiveSize = responsive && breakpoint && breakpoint.edgeSize[data.size] && (breakpoint.edgeSize[data.size] || data.size);
 
     if (data.corner === 'top') {
-      styles.push(css(["border-top-left-radius:", ";border-top-right-radius:", ";"], size, size));
+      styles.push(css(_templateObject30 || (_templateObject30 = _taggedTemplateLiteralLoose(["\n        border-top-left-radius: ", ";\n        border-top-right-radius: ", ";\n      "])), size, size));
 
       if (responsiveSize) {
         styles.push(breakpointStyle(breakpoint, "\n          border-top-left-radius: " + responsiveSize + ";\n          border-top-right-radius: " + responsiveSize + ";\n        "));
       }
     } else if (data.corner === 'bottom') {
-      styles.push(css(["border-bottom-left-radius:", ";border-bottom-right-radius:", ";"], size, size));
+      styles.push(css(_templateObject31 || (_templateObject31 = _taggedTemplateLiteralLoose(["\n        border-bottom-left-radius: ", ";\n        border-bottom-right-radius: ", ";\n      "])), size, size));
 
       if (responsiveSize) {
         styles.push(breakpointStyle(breakpoint, "\n          border-bottom-left-radius: " + responsiveSize + ";\n          border-bottom-right-radius: " + responsiveSize + ";\n        "));
       }
     } else if (data.corner === 'left') {
-      styles.push(css(["border-top-left-radius:", ";border-bottom-left-radius:", ";"], size, size));
+      styles.push(css(_templateObject32 || (_templateObject32 = _taggedTemplateLiteralLoose(["\n        border-top-left-radius: ", ";\n        border-bottom-left-radius: ", ";\n      "])), size, size));
 
       if (responsiveSize) {
         styles.push(breakpointStyle(breakpoint, "\n          border-top-left-radius: " + responsiveSize + ";\n          border-bottom-left-radius: " + responsiveSize + ";\n        "));
       }
     } else if (data.corner === 'right') {
-      styles.push(css(["border-top-right-radius:", ";border-bottom-right-radius:", ";"], size, size));
+      styles.push(css(_templateObject33 || (_templateObject33 = _taggedTemplateLiteralLoose(["\n        border-top-right-radius: ", ";\n        border-bottom-right-radius: ", ";\n      "])), size, size));
 
       if (responsiveSize) {
         styles.push(breakpointStyle(breakpoint, "\n          border-top-right-radius: " + responsiveSize + ";\n          border-bottom-right-radius: " + responsiveSize + ";\n        "));
       }
     } else if (data.corner) {
-      styles.push(css(["border-", "-radius:", ";"], data.corner, size));
+      styles.push(css(_templateObject34 || (_templateObject34 = _taggedTemplateLiteralLoose(["\n        border-", "-radius: ", ";\n      "])), data.corner, size));
 
       if (responsiveSize) {
         styles.push(breakpointStyle(breakpoint, "\n          border-" + data.corner + "-radius: " + responsiveSize + ";\n        "));
       }
     } else {
-      styles.push(css(["border-radius:", ";"], size));
+      styles.push(css(_templateObject35 || (_templateObject35 = _taggedTemplateLiteralLoose(["\n        border-radius: ", ";\n      "])), size));
 
       if (responsiveSize) {
         styles.push(breakpointStyle(breakpoint, "\n          border-radius: " + responsiveSize + ";\n        "));
@@ -404,7 +408,7 @@ export var roundStyle = function roundStyle(data, responsive, theme) {
   } else {
     var _size2 = data === true ? 'medium' : data;
 
-    styles.push(css(["border-radius:", ";"], ROUND_MAP[_size2] || theme.global.edgeSize[_size2] || _size2));
+    styles.push(css(_templateObject36 || (_templateObject36 = _taggedTemplateLiteralLoose(["\n      border-radius: ", ";\n    "])), ROUND_MAP[_size2] || theme.global.edgeSize[_size2] || _size2));
 
     var _responsiveSize = breakpoint && breakpoint.edgeSize[_size2];
 
@@ -421,7 +425,7 @@ var TEXT_ALIGN_MAP = {
   justify: 'justify',
   start: 'left'
 };
-export var textAlignStyle = css(["text-align:", ";"], function (props) {
+export var textAlignStyle = css(_templateObject37 || (_templateObject37 = _taggedTemplateLiteralLoose(["\n  text-align: ", ";\n"])), function (props) {
   return TEXT_ALIGN_MAP[props.textAlign];
 });
 var ALIGN_ITEMS_MAP = {
@@ -431,7 +435,7 @@ var ALIGN_ITEMS_MAP = {
   start: 'flex-start',
   stretch: 'stretch'
 };
-export var alignStyle = css(["align-items:", ";"], function (props) {
+export var alignStyle = css(_templateObject38 || (_templateObject38 = _taggedTemplateLiteralLoose(["\n  align-items: ", ";\n"])), function (props) {
   var _ALIGN_ITEMS_MAP$prop;
 
   return (_ALIGN_ITEMS_MAP$prop = ALIGN_ITEMS_MAP[props.align]) != null ? _ALIGN_ITEMS_MAP$prop : props.align;
@@ -446,7 +450,7 @@ var ALIGN_CONTENT_MAP = {
   start: 'flex-start',
   stretch: 'stretch'
 };
-export var alignContentStyle = css(["align-content:", ";"], function (props) {
+export var alignContentStyle = css(_templateObject39 || (_templateObject39 = _taggedTemplateLiteralLoose(["\n  align-content: ", ";\n"])), function (props) {
   var _ALIGN_CONTENT_MAP$pr;
 
   return (_ALIGN_CONTENT_MAP$pr = ALIGN_CONTENT_MAP[props.alignContent]) != null ? _ALIGN_CONTENT_MAP$pr : props.alignContent;
@@ -458,14 +462,14 @@ var getSize = function getSize(theme, size) {
 
 var widthObjectStyle = function widthObjectStyle(width, theme) {
   var result = [];
-  if (width.max) result.push(css(["max-width:", ";"], getSize(theme, width.max)));
-  if (width.min) result.push(css(["min-width:", ";"], getSize(theme, width.min)));
-  if (width.width) result.push(css(["width:", ";"], getSize(theme, width.width)));
+  if (width.max) result.push(css(_templateObject40 || (_templateObject40 = _taggedTemplateLiteralLoose(["\n        max-width: ", ";\n      "])), getSize(theme, width.max)));
+  if (width.min) result.push(css(_templateObject41 || (_templateObject41 = _taggedTemplateLiteralLoose(["\n        min-width: ", ";\n      "])), getSize(theme, width.min)));
+  if (width.width) result.push(css(_templateObject42 || (_templateObject42 = _taggedTemplateLiteralLoose(["\n        width: ", ";\n      "])), getSize(theme, width.width)));
   return result;
 };
 
 var widthStringStyle = function widthStringStyle(width, theme) {
-  return css(["width:", ";"], getSize(theme, width));
+  return css(_templateObject43 || (_templateObject43 = _taggedTemplateLiteralLoose(["\n    width: ", ";\n  "])), getSize(theme, width));
 };
 
 export var widthStyle = function widthStyle(width, theme) {
@@ -474,14 +478,14 @@ export var widthStyle = function widthStyle(width, theme) {
 
 var heightObjectStyle = function heightObjectStyle(height, theme) {
   var result = [];
-  if (height.max) result.push(css(["max-height:", ";"], getSize(theme, height.max)));
-  if (height.min) result.push(css(["min-height:", ";"], getSize(theme, height.min)));
-  if (height.width) result.push(css(["height:", ";"], getSize(theme, height.height)));
+  if (height.max) result.push(css(_templateObject44 || (_templateObject44 = _taggedTemplateLiteralLoose(["\n        max-height: ", ";\n      "])), getSize(theme, height.max)));
+  if (height.min) result.push(css(_templateObject45 || (_templateObject45 = _taggedTemplateLiteralLoose(["\n        min-height: ", ";\n      "])), getSize(theme, height.min)));
+  if (height.width) result.push(css(_templateObject46 || (_templateObject46 = _taggedTemplateLiteralLoose(["\n        height: ", ";\n      "])), getSize(theme, height.height)));
   return result;
 };
 
 var heightStringStyle = function heightStringStyle(height, theme) {
-  return css(["height:", ";"], getSize(theme, height));
+  return css(_templateObject47 || (_templateObject47 = _taggedTemplateLiteralLoose(["\n    height: ", ";\n  "])), getSize(theme, height));
 };
 
 export var heightStyle = function heightStyle(height, theme) {

@@ -1,3 +1,7 @@
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8;
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
 import styled, { css } from 'styled-components';
 import { defaultProps } from '../../default-props';
 import { alignContentStyle, alignStyle, borderStyle, edgeStyle, genericStyles, heightStyle, widthStyle } from '../../utils';
@@ -24,7 +28,7 @@ var JUSTIFY_MAP = {
   start: 'flex-start',
   stretch: 'stretch'
 };
-var justifyStyle = css(["justify-items:", ";"], function (props) {
+var justifyStyle = css(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n  justify-items: ", ";\n"])), function (props) {
   return JUSTIFY_MAP[props.justify];
 });
 var JUSTIFY_CONTENT_MAP = {
@@ -35,7 +39,7 @@ var JUSTIFY_CONTENT_MAP = {
   start: 'flex-start',
   stretch: 'stretch'
 };
-var justifyContentStyle = css(["justify-content:", ";"], function (props) {
+var justifyContentStyle = css(_templateObject2 || (_templateObject2 = _taggedTemplateLiteralLoose(["\n  justify-content: ", ";\n"])), function (props) {
   return JUSTIFY_CONTENT_MAP[props.justifyContent];
 });
 
@@ -134,7 +138,7 @@ var getRepeatSize = function getRepeatSize(size, props) {
 
 var columnsStyle = function columnsStyle(props) {
   if (Array.isArray(props.columns)) {
-    return css(["grid-template-columns:", ";"], props.columns.map(function (s) {
+    return css(_templateObject3 || (_templateObject3 = _taggedTemplateLiteralLoose(["\n      grid-template-columns: ", ";\n    "])), props.columns.map(function (s) {
       if (Array.isArray(s)) {
         return "minmax(" + normalizeSize(s[0], props) + ", " + normalizeSize(s[1], props) + ")";
       }
@@ -144,15 +148,15 @@ var columnsStyle = function columnsStyle(props) {
   }
 
   if (typeof props.columns === 'object') {
-    return css(["grid-template-columns:repeat( ", ",", " );"], getRepeatCount(props.columns.count), getRepeatSize(props.columns.size, props));
+    return css(_templateObject4 || (_templateObject4 = _taggedTemplateLiteralLoose(["\n      grid-template-columns: repeat(\n        ", ",\n        ", "\n      );\n    "])), getRepeatCount(props.columns.count), getRepeatSize(props.columns.size, props));
   }
 
-  return css(["grid-template-columns:repeat( auto-fill,", " );"], getRepeatSize(props.columns, props));
+  return css(_templateObject5 || (_templateObject5 = _taggedTemplateLiteralLoose(["\n    grid-template-columns: repeat(\n      auto-fill,\n      ", "\n    );\n  "])), getRepeatSize(props.columns, props));
 };
 
 var rowsStyle = function rowsStyle(props) {
   if (Array.isArray(props.rowsProp)) {
-    return css(["grid-template-rows:", ";"], props.rowsProp.map(function (s) {
+    return css(_templateObject6 || (_templateObject6 = _taggedTemplateLiteralLoose(["\n      grid-template-rows: ", ";\n    "])), props.rowsProp.map(function (s) {
       if (Array.isArray(s)) {
         return "minmax(" + normalizeSize(s[0], props) + ", " + normalizeSize(s[1], props) + ")";
       }
@@ -161,7 +165,7 @@ var rowsStyle = function rowsStyle(props) {
     }).join(' '));
   }
 
-  return css(["grid-auto-rows:", ";"], props.theme.global.size[props.rowsProp]);
+  return css(_templateObject7 || (_templateObject7 = _taggedTemplateLiteralLoose(["\n    grid-auto-rows: ", ";\n  "])), props.theme.global.size[props.rowsProp]);
 };
 
 var areasStyle = function areasStyle(props) {
@@ -199,10 +203,7 @@ var StyledGrid = styled.div.attrs(function (props) {
   return {
     'aria-label': props.a11yTitleProp
   };
-}).withConfig({
-  displayName: "StyledGrid",
-  componentId: "sc-1wofa1l-0"
-})(["display:grid;box-sizing:border-box;", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", ""], genericStyles, function (props) {
+})(_templateObject8 || (_templateObject8 = _taggedTemplateLiteralLoose(["\n  display: grid;\n  box-sizing: border-box;\n\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n"])), genericStyles, function (props) {
   return props.border && (Array.isArray(props.border) ? props.border.map(function (border) {
     return borderStyle(border, props.responsive, props.theme);
   }) : borderStyle(props.border, props.responsive, props.theme));

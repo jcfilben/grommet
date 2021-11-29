@@ -1,11 +1,12 @@
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7;
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
 import styled, { css } from 'styled-components';
 import { focusStyle, normalizeColor } from '../../utils';
 import { defaultProps } from '../../default-props';
 var disabledStyle = "\n  opacity: 0.5;\n  cursor: default;\n";
-var StyledRadioButtonContainer = styled.label.withConfig({
-  displayName: "StyledRadioButton__StyledRadioButtonContainer",
-  componentId: "g1f6ld-0"
-})(["display:flex;flex-direction:row;align-items:center;user-select:none;width:fit-content;", " ", ":hover input:not([disabled]) + div,:hover input:not([disabled]) + span{border-color:", ";}:hover{background-color:", ";}", " ", ";"], function (props) {
+var StyledRadioButtonContainer = styled.label(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  user-select: none;\n  width: fit-content;\n  ", " ", "\n\n  :hover input:not([disabled]) + div,\n  :hover input:not([disabled]) + span {\n    border-color: ", ";\n  }\n  :hover {\n    background-color: ", ";\n  }\n  // when the RadioButton has focus but there is no focusIndicator,\n  // apply the hover styling instead so that keyboard users know\n  // which RadioButton is active\n  ", "\n  ", ";\n"])), function (props) {
   return props.disabled && disabledStyle;
 }, function (props) {
   return !props.disabled && 'cursor: pointer;';
@@ -20,26 +21,17 @@ var StyledRadioButtonContainer = styled.label.withConfig({
 });
 StyledRadioButtonContainer.defaultProps = {};
 Object.setPrototypeOf(StyledRadioButtonContainer.defaultProps, defaultProps);
-var StyledRadioButtonInput = styled.input.withConfig({
-  displayName: "StyledRadioButton__StyledRadioButtonInput",
-  componentId: "g1f6ld-1"
-})(["opacity:0;-moz-appearance:none;width:0;height:0;margin:0;", ";"], function (props) {
+var StyledRadioButtonInput = styled.input(_templateObject2 || (_templateObject2 = _taggedTemplateLiteralLoose(["\n  opacity: 0;\n  -moz-appearance: none;\n  width: 0;\n  height: 0;\n  margin: 0;\n  ", ";\n"])), function (props) {
   return !props.disabled && 'cursor: pointer;';
 });
 StyledRadioButtonInput.defaultProps = {};
 Object.setPrototypeOf(StyledRadioButtonInput.defaultProps, defaultProps);
-var StyledRadioButtonLabel = styled.span.withConfig({
-  displayName: "StyledRadioButton__StyledRadioButtonLabel",
-  componentId: "g1f6ld-2"
-})(["", ""], function (props) {
-  return props.theme.radioButton.font.weight && css(["font-weight:", ";"], props.theme.radioButton.font.weight);
+var StyledRadioButtonLabel = styled.span(_templateObject3 || (_templateObject3 = _taggedTemplateLiteralLoose(["\n  ", "\n"])), function (props) {
+  return props.theme.radioButton.font.weight && css(_templateObject4 || (_templateObject4 = _taggedTemplateLiteralLoose(["\n      font-weight: ", ";\n    "])), props.theme.radioButton.font.weight);
 });
 StyledRadioButtonLabel.defaultProps = {};
 Object.setPrototypeOf(StyledRadioButtonLabel.defaultProps, defaultProps);
-var StyledRadioButtonIcon = styled.svg.withConfig({
-  displayName: "StyledRadioButton__StyledRadioButtonIcon",
-  componentId: "g1f6ld-3"
-})(["box-sizing:border-box;width:", ";height:", ";fill:", ";", ";"], function (props) {
+var StyledRadioButtonIcon = styled.svg(_templateObject5 || (_templateObject5 = _taggedTemplateLiteralLoose(["\n  box-sizing: border-box;\n  width: ", ";\n  height: ", ";\n  fill: ", ";\n  ", ";\n"])), function (props) {
   return props.theme.radioButton.icon.size || props.theme.radioButton.size;
 }, function (props) {
   return props.theme.radioButton.icon.size || props.theme.radioButton.size;
@@ -50,10 +42,7 @@ var StyledRadioButtonIcon = styled.svg.withConfig({
 });
 StyledRadioButtonIcon.defaultProps = {};
 Object.setPrototypeOf(StyledRadioButtonIcon.defaultProps, defaultProps);
-var StyledRadioButtonBox = styled.div.withConfig({
-  displayName: "StyledRadioButton__StyledRadioButtonBox",
-  componentId: "g1f6ld-4"
-})(["background-color:", ";", ";", ";"], function (props) {
+var StyledRadioButtonBox = styled.div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteralLoose(["\n  background-color: ", ";\n  ", ";\n  ", ";\n"])), function (props) {
   var _props$theme$radioBut;
 
   return normalizeColor((_props$theme$radioBut = props.theme.radioButton.check.background) == null ? void 0 : _props$theme$radioBut.color, props.theme);
@@ -64,10 +53,7 @@ var StyledRadioButtonBox = styled.div.withConfig({
 });
 StyledRadioButtonBox.defaultProps = {};
 Object.setPrototypeOf(StyledRadioButtonBox.defaultProps, defaultProps);
-var StyledRadioButton = styled.div.withConfig({
-  displayName: "StyledRadioButton",
-  componentId: "g1f6ld-5"
-})(["", ";"], function (props) {
+var StyledRadioButton = styled.div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteralLoose(["\n  ", ";\n"])), function (props) {
   return props.theme.radioButton && props.theme.radioButton.extend;
 });
 StyledRadioButton.defaultProps = {};

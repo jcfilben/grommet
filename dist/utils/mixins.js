@@ -5,6 +5,10 @@ exports.parseMetricToNum = exports.getAvailableAtBadge = exports.fontSize = expo
 
 var _styledComponents = require("styled-components");
 
+var _templateObject, _templateObject2;
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
 var parseMetricToNum = function parseMetricToNum(metric) {
   if (typeof metric === 'number') return metric;
 
@@ -18,7 +22,7 @@ var parseMetricToNum = function parseMetricToNum(metric) {
 exports.parseMetricToNum = parseMetricToNum;
 
 var fontSize = function fontSize(size, lineHeight) {
-  return (0, _styledComponents.css)(["font-size:", ";line-height:", ";"], function (props) {
+  return (0, _styledComponents.css)(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n  font-size: ", ";\n  line-height: ", ";\n"])), function (props) {
     return parseMetricToNum(size) / parseMetricToNum(props.theme.global.font.size) * 1 + "rem";
   }, function (props) {
     return lineHeight || Math.ceil(parseMetricToNum(size) / parseMetricToNum(props.theme.global.lineHeight)) * (parseMetricToNum(props.theme.global.lineHeight) / parseMetricToNum(size)) + "px";
@@ -28,7 +32,7 @@ var fontSize = function fontSize(size, lineHeight) {
 exports.fontSize = fontSize;
 
 var breakpointStyle = function breakpointStyle(breakpoint, content) {
-  return (0, _styledComponents.css)(["@media only screen ", "{", ";}"], breakpoint.value && "and (max-width: " + breakpoint.value + "px)", content);
+  return (0, _styledComponents.css)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteralLoose(["\n  @media only screen ", " {\n    ", ";\n  }\n"])), breakpoint.value && "and (max-width: " + breakpoint.value + "px)", content);
 };
 
 exports.breakpointStyle = breakpointStyle;

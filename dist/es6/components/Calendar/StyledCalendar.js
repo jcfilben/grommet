@@ -1,3 +1,7 @@
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12;
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
 import styled, { css, keyframes } from 'styled-components';
 import { backgroundStyle, focusStyle, genericStyles, kindPartStyles, parseMetricToNum } from '../../utils';
 import { defaultProps } from '../../default-props';
@@ -5,15 +9,12 @@ import { defaultProps } from '../../default-props';
 var sizeStyle = function sizeStyle(props) {
   var data = props.theme.calendar[props.sizeProp];
   var width = props.fillContainer ? '100%' : props.theme.global.size[props.sizeProp];
-  return css(["font-size:", ";line-height:", ";width:", ";", ""], data.fontSize, data.lineHeight, width, function (p) {
+  return css(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n    font-size: ", ";\n    line-height: ", ";\n    width: ", ";\n    ", "\n  "])), data.fontSize, data.lineHeight, width, function (p) {
     return p.fillContainer && 'height: 100%;';
   });
 };
 
-var StyledCalendar = styled.div.withConfig({
-  displayName: "StyledCalendar",
-  componentId: "sc-1y4xhmp-0"
-})(["", " ", " ", ""], genericStyles, function (props) {
+var StyledCalendar = styled.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteralLoose(["\n  ", "\n  ", "\n  ", "\n"])), genericStyles, function (props) {
   return sizeStyle(props);
 }, function (props) {
   return props.theme.calendar && props.theme.calendar.extend;
@@ -26,10 +27,7 @@ var weeksContainerSizeStyle = function weeksContainerSizeStyle(props) {
   return "\n    height: " + height + ";\n\n  ";
 };
 
-var StyledWeeksContainer = styled.div.withConfig({
-  displayName: "StyledCalendar__StyledWeeksContainer",
-  componentId: "sc-1y4xhmp-1"
-})(["overflow:hidden;", " ", ";"], function (props) {
+var StyledWeeksContainer = styled.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteralLoose(["\n  overflow: hidden;\n  ", "\n  ", ";\n"])), function (props) {
   return weeksContainerSizeStyle(props);
 }, function (props) {
   return props.focus && !props.plain && focusStyle();
@@ -49,38 +47,29 @@ var slideStyle = function slideStyle(props) {
   var amount = parseMetricToNum(daySize) * weeks;
   var translateYFrom = direction === 'down' ? "-" + amount + "px" : '0';
   var translateYTo = direction === 'up' ? "-" + amount + "px" : '0';
-  var slideTransition = css(["0%{transform:translateY(", ");}100%{transform:translateY(", ");}"], translateYFrom, translateYTo);
-  return css(["animation:", " ", " forwards;"], keyframes(["", ""], slideTransition), slideDuration);
+  var slideTransition = css(_templateObject4 || (_templateObject4 = _taggedTemplateLiteralLoose(["\n    0% {\n      transform: translateY(", ");\n    }\n    100% {\n      transform: translateY(", ");\n    }\n  "])), translateYFrom, translateYTo);
+  return css(_templateObject5 || (_templateObject5 = _taggedTemplateLiteralLoose(["\n    animation: ", " ", " forwards;\n  "])), keyframes(_templateObject6 || (_templateObject6 = _taggedTemplateLiteralLoose(["", ""])), slideTransition), slideDuration);
 };
 
 var weeksSizeStyle = function weeksSizeStyle() {
-  return css(["display:flex;flex-direction:column;height:100%;"]);
+  return css(_templateObject7 || (_templateObject7 = _taggedTemplateLiteralLoose(["\n  display: flex;\n  flex-direction: column;\n  height: 100%;\n"])));
 };
 
-var StyledWeeks = styled.div.withConfig({
-  displayName: "StyledCalendar__StyledWeeks",
-  componentId: "sc-1y4xhmp-2"
-})(["position:relative;", " ", ";"], function (props) {
+var StyledWeeks = styled.div(_templateObject8 || (_templateObject8 = _taggedTemplateLiteralLoose(["\n  position: relative;\n  ", "\n  ", ";\n"])), function (props) {
   return props.fillContainer && weeksSizeStyle();
 }, function (props) {
   return props.slide && slideStyle(props);
 });
 StyledWeeks.defaultProps = {};
 Object.setPrototypeOf(StyledWeeks.defaultProps, defaultProps);
-var StyledWeek = styled.div.withConfig({
-  displayName: "StyledCalendar__StyledWeek",
-  componentId: "sc-1y4xhmp-3"
-})(["display:flex;justify-content:space-between;", ""], function (props) {
+var StyledWeek = styled.div(_templateObject9 || (_templateObject9 = _taggedTemplateLiteralLoose(["\n  display: flex;\n  justify-content: space-between;\n  ", "\n"])), function (props) {
   return props.fillContainer && 'flex: 1;';
 });
 StyledWeek.defaultProps = {};
 Object.setPrototypeOf(StyledWeek.defaultProps, defaultProps); // The width of 14.3% is derived from dividing 100/7. We want the
 // widths of 7 days to equally fill 100% of the row.
 
-var StyledDayContainer = styled.div.withConfig({
-  displayName: "StyledCalendar__StyledDayContainer",
-  componentId: "sc-1y4xhmp-4"
-})(["flex:0 1 auto;", ""], function (props) {
+var StyledDayContainer = styled.div(_templateObject10 || (_templateObject10 = _taggedTemplateLiteralLoose(["\n  flex: 0 1 auto;\n  ", "\n"])), function (props) {
   return props.fillContainer && 'width: 14.3%;';
 });
 StyledDayContainer.defaultProps = {};
@@ -88,13 +77,10 @@ Object.setPrototypeOf(StyledDayContainer.defaultProps, defaultProps);
 
 var daySizeStyle = function daySizeStyle(props) {
   var data = props.theme.calendar[props.sizeProp];
-  return css(["width:", ";height:", ";"], props.fillContainer ? '100%' : data.daySize, props.fillContainer ? '100%' : data.daySize);
+  return css(_templateObject11 || (_templateObject11 = _taggedTemplateLiteralLoose(["\n    width: ", ";\n    height: ", ";\n  "])), props.fillContainer ? '100%' : data.daySize, props.fillContainer ? '100%' : data.daySize);
 };
 
-var StyledDay = styled.div.withConfig({
-  displayName: "StyledCalendar__StyledDay",
-  componentId: "sc-1y4xhmp-5"
-})(["display:flex;justify-content:center;align-items:center;", " ", " ", " ", " ", " ", ""], function (props) {
+var StyledDay = styled.div(_templateObject12 || (_templateObject12 = _taggedTemplateLiteralLoose(["\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n"])), function (props) {
   return daySizeStyle(props);
 }, function (props) {
   return props.isSelected && backgroundStyle('control', props.theme) || props.inRange && backgroundStyle({

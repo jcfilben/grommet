@@ -25,6 +25,8 @@ var _propTypes = require("./propTypes");
 
 var _excluded = ["action", "as", "background", "border", "children", "data", "defaultItemProps", "focus", "itemProps", "onOrder", "pad", "paginate", "primaryKey", "secondaryKey", "show", "step", "onClickItem", "onMore"];
 
+var _templateObject, _templateObject2, _templateObject3;
+
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -33,10 +35,9 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-var StyledList = _styledComponents["default"].ul.withConfig({
-  displayName: "List__StyledList",
-  componentId: "sc-130gdqg-0"
-})(["list-style:none;", " padding:0;", " &:focus{", "}", "}", "}"], function (props) {
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
+var StyledList = _styledComponents["default"].ul(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n  list-style: none;\n  ", "\n  padding: 0;\n  ", "\n\n  // Customizes to make list have a focus border color of green\n  &:focus {\n    ", "\n  }\n\n  // during the interim state when a user is holding down a click,\n  // the individual list item has focus in the DOM until the click\n  // completes and focus is placed back on the list container.\n  // for visual consistency, we want to keep the focus indicator on the\n  // list container the whole time.\n  ", "}\n  ", "}\n"])), function (props) {
   return !props.margin && 'margin: 0;';
 }, _utils.genericStyles, function (props) {
   return props.tabIndex >= 0 && (0, _utils.focusStyle)({
@@ -52,10 +53,7 @@ var StyledList = _styledComponents["default"].ul.withConfig({
   return props.theme.list && props.theme.list.extend;
 });
 
-var StyledItem = (0, _styledComponents["default"])(_Box.Box).withConfig({
-  displayName: "List__StyledItem",
-  componentId: "sc-130gdqg-1"
-})(["", " ", " &:focus{", "}", ""], function (props) {
+var StyledItem = (0, _styledComponents["default"])(_Box.Box)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteralLoose(["\n  ", "\n  ", "\n  // during the interim state when a user is holding down a click,\n  // the individual list item has focus in the DOM until the click\n  // completes and focus is placed back on the list container.\n  // for visual consistency, we are showing focus on the list container\n  // as opposed to the item itself.\n  &:focus {\n    ", "\n  }\n  ", "\n"])), function (props) {
   return props.onClick && "cursor: pointer;";
 }, function (props) {
   return props.draggable && "cursor: move;";
@@ -66,10 +64,7 @@ var StyledItem = (0, _styledComponents["default"])(_Box.Box).withConfig({
   return props.theme.list && props.theme.list.item && props.theme.list.item.extend;
 }); // when paginated, this wraps the data table and pagination component
 
-var StyledContainer = (0, _styledComponents["default"])(_Box.Box).withConfig({
-  displayName: "List__StyledContainer",
-  componentId: "sc-130gdqg-2"
-})(["", ";"], function (props) {
+var StyledContainer = (0, _styledComponents["default"])(_Box.Box)(_templateObject3 || (_templateObject3 = _taggedTemplateLiteralLoose(["\n  ", ";\n"])), function (props) {
   return props.theme.list && props.theme.list.container && props.theme.list.container.extend;
 });
 

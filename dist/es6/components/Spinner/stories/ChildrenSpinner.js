@@ -1,11 +1,12 @@
+var _templateObject;
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
 import React from 'react';
 import styled from 'styled-components';
 import { Favorite, Nodes } from 'grommet-icons';
 import { Box, Spinner, Text } from 'grommet';
-var FavoriteFilled = styled(Favorite).withConfig({
-  displayName: "ChildrenSpinner__FavoriteFilled",
-  componentId: "o9wy2d-0"
-})(["path[fill='none']{fill:red;}"]);
+var FavoriteFilled = styled(Favorite)(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n  path[fill='none'] {\n    fill: red;\n  }\n"])));
 export var Children = function Children() {
   return /*#__PURE__*/React.createElement(Box, {
     fill: true

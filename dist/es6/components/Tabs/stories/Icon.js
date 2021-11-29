@@ -1,3 +1,7 @@
+var _templateObject;
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
 import React from 'react';
 import { css } from 'styled-components';
 import { Attraction, Car, TreeOption } from 'grommet-icons';
@@ -28,7 +32,7 @@ var customTheme = deepMerge(grommet, {
     margin: 'none',
     extend: function extend(_ref) {
       var theme = _ref.theme;
-      return css(["border-top-left-radius:'4px';border-top-right-radius:'4px';font-weight:bold;"]);
+      return css(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n      border-top-left-radius: '4px';\n        /* or 'border-top-left-radius: ", "' */\n      border-top-right-radius: '4px';\n      /* or 'border-top-right-radius: ", " */\n      font-weight: bold;\n    "])), theme.global.control.border.radius, theme.global.control.border.radius);
     }
   }
 });

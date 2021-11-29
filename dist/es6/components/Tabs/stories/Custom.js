@@ -1,3 +1,7 @@
+var _templateObject, _templateObject2, _templateObject3;
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
 import React from 'react';
 import { css } from 'styled-components';
 import { CircleInformation, Currency } from 'grommet-icons';
@@ -48,7 +52,7 @@ var customTheme = deepMerge(grommet, {
     },
     extend: function extend(_ref2) {
       var theme = _ref2.theme;
-      return css(["border-radius:4px;box-shadow:0px 1px 5px rgba(0,0,0,0.5);"]);
+      return css(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n      border-radius: 4px;\n      /* or 'border-radius: ", "' */\n      box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);\n      /* or 'box-shadow: ", "' */\n    "])), theme.global.control.border.radius, theme.global.elevation.light.small);
     }
   },
   tabs: {
@@ -58,13 +62,13 @@ var customTheme = deepMerge(grommet, {
       background: 'dark-2',
       extend: function extend(_ref3) {
         var theme = _ref3.theme;
-        return css(["padding:10px;box-shadow:0px 3px 8px rgba(0,0,0,0.50);"]);
+        return css(_templateObject2 || (_templateObject2 = _taggedTemplateLiteralLoose(["\n      padding: 10px;\n      /* or 'padding: ", "' */\n      box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.50);\n      /* or 'box-shadow: ", "' */\n    "])), theme.global.edgeSize.small, theme.global.elevation.light.medium);
       }
     },
     panel: {
       extend: function extend(_ref4) {
         var theme = _ref4.theme;
-        return css(["padding:48px;box-shadow:0px 3px 8px rgba(0,0,0,0.50);"]);
+        return css(_templateObject3 || (_templateObject3 = _taggedTemplateLiteralLoose(["\n      padding: 48px;\n      /* or 'padding: ", "' */\n      box-shadow:  0px 3px 8px rgba(0, 0, 0, 0.50);\n       /* or 'box-shadow: ", "' */\n    "])), theme.global.edgeSize.large, theme.global.elevation.light.medium);
       }
     }
   }

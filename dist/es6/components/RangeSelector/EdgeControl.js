@@ -1,8 +1,12 @@
 var _excluded = ["color", "direction", "edge", "onDecrease", "onIncrease", "thickness"];
 
+var _templateObject;
+
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
 
 import React, { forwardRef, useContext, useState } from 'react';
 import styled, { ThemeContext } from 'styled-components';
@@ -20,10 +24,7 @@ var DIRECTION_PROPS = {
     fill: 'horizontal'
   }
 };
-var StyledBox = styled(Box).withConfig({
-  displayName: "EdgeControl__StyledBox",
-  componentId: "sc-1xo2yt9-0"
-})(["", ""], function (props) {
+var StyledBox = styled(Box)(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n  ", "\n"])), function (props) {
   return props.focus && focusStyle();
 });
 var EdgeControl = /*#__PURE__*/forwardRef(function (_ref, ref) {

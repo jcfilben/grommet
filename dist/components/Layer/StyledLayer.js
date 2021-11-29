@@ -9,18 +9,19 @@ var _utils = require("../../utils");
 
 var _defaultProps = require("../../default-props");
 
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12, _templateObject13, _templateObject14, _templateObject15, _templateObject16, _templateObject17, _templateObject18, _templateObject19, _templateObject20, _templateObject21, _templateObject22, _templateObject23, _templateObject24, _templateObject25, _templateObject26, _templateObject27, _templateObject28, _templateObject29, _templateObject30, _templateObject31, _templateObject32, _templateObject33, _templateObject34, _templateObject35, _templateObject36, _templateObject37, _templateObject38, _templateObject39, _templateObject40, _templateObject41, _templateObject42, _templateObject43, _templateObject44, _templateObject45, _templateObject46, _templateObject47, _templateObject48, _templateObject49, _templateObject50, _templateObject51, _templateObject52, _templateObject53, _templateObject54, _templateObject55, _templateObject56, _templateObject57, _templateObject58, _templateObject59, _templateObject60, _templateObject61, _templateObject62, _templateObject63, _templateObject64, _templateObject65, _templateObject66, _templateObject67, _templateObject68, _templateObject69, _templateObject70, _templateObject71, _templateObject72, _templateObject73, _templateObject74, _templateObject75, _templateObject76, _templateObject77, _templateObject78, _templateObject79, _templateObject80, _templateObject81, _templateObject82, _templateObject83, _templateObject84, _templateObject85, _templateObject86, _templateObject87, _templateObject88, _templateObject89, _templateObject90, _templateObject91, _templateObject92, _templateObject93, _templateObject94;
+
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-var hiddenPositionStyle = (0, _styledComponents.css)(["left:-100%;right:100%;z-index:-1;position:fixed;"]);
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
+var hiddenPositionStyle = (0, _styledComponents.css)(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n  left: -100%;\n  right: 100%;\n  z-index: -1;\n  position: fixed;\n"])));
 var desktopLayerStyle = "\n  position: fixed;\n  top: 0px;\n  left: 0px;\n  right: 0px;\n  bottom: 0px;\n";
 var responsiveLayerStyle = "\n  position: fixed;\n  width: 100%;\n  height: 100%;\n  min-height: 100vh;\n";
 
-var StyledLayer = _styledComponents["default"].div.withConfig({
-  displayName: "StyledLayer",
-  componentId: "rmtehz-0"
-})(["", " background:transparent;position:relative;z-index:", ";pointer-events:none;outline:none;", " ", ";"], _utils.baseStyle, function (props) {
+var StyledLayer = _styledComponents["default"].div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteralLoose(["\n  ", "\n  background: transparent;\n  position: relative;\n  z-index: ", ";\n  pointer-events: none;\n  outline: none;\n\n  ", "\n  ", ";\n"])), _utils.baseStyle, function (props) {
   return props.theme.layer.zIndex;
 }, function (props) {
   if (props.position === 'hidden') {
@@ -44,10 +45,7 @@ exports.StyledLayer = StyledLayer;
 StyledLayer.defaultProps = {};
 Object.setPrototypeOf(StyledLayer.defaultProps, _defaultProps.defaultProps);
 
-var StyledOverlay = _styledComponents["default"].div.withConfig({
-  displayName: "StyledLayer__StyledOverlay",
-  componentId: "rmtehz-1"
-})(["position:absolute;", " top:0px;left:0px;right:0px;bottom:0px;", " pointer-events:all;will-change:transform;"], function (props) {
+var StyledOverlay = _styledComponents["default"].div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteralLoose(["\n  position: absolute;\n  ", " top: 0px;\n  left: 0px;\n  right: 0px;\n  bottom: 0px;\n  ", " pointer-events: all;\n  // necessary so overlay doesn't get repainted on scroll\n  // improves scroll performance\n  // https://dev.opera.com/articles/css-will-change-property/\n  will-change: transform;\n"])), function (props) {
   if (props.responsive && props.theme.layer.responsiveBreakpoint) {
     var breakpoint = props.theme.global.breakpoints[props.theme.layer.responsiveBreakpoint];
     return (0, _utils.breakpointStyle)(breakpoint, 'position: relative;');
@@ -93,46 +91,46 @@ var getBounds = function getBounds(bounds, margin, theme, position) {
 
 var KEYFRAMES = {
   center: {
-    vertical: (0, _styledComponents.keyframes)(["0%{transform:translateX(-50%) scale(0.8);}100%{transform:translateX(-50%) scale(1);}"]),
-    horizontal: (0, _styledComponents.keyframes)(["0%{transform:translateY(-50%) scale(0.8);}100%{transform:translateY(-50) scale(1);}"]),
-    "true": (0, _styledComponents.keyframes)(["0%{transform:scale(0.8);}100%{transform:scale(1);}"]),
-    "false": (0, _styledComponents.keyframes)(["0%{transform:translate(-50%,-50%) scale(0.8);}100%{transform:translate(-50%,-50%) scale(1);}"])
+    vertical: (0, _styledComponents.keyframes)(_templateObject4 || (_templateObject4 = _taggedTemplateLiteralLoose(["\n      0% { transform: translateX(-50%) scale(0.8); }\n      100% { transform: translateX(-50%) scale(1); }\n    "]))),
+    horizontal: (0, _styledComponents.keyframes)(_templateObject5 || (_templateObject5 = _taggedTemplateLiteralLoose(["\n      0% { transform: translateY(-50%) scale(0.8); }\n      100% { transform: translateY(-50) scale(1); }\n    "]))),
+    "true": (0, _styledComponents.keyframes)(_templateObject6 || (_templateObject6 = _taggedTemplateLiteralLoose(["\n      0% { transform: scale(0.8); }\n      100% { transform: scale(1); }\n    "]))),
+    "false": (0, _styledComponents.keyframes)(_templateObject7 || (_templateObject7 = _taggedTemplateLiteralLoose(["\n      0% { transform: translate(-50%, -50%) scale(0.8); }\n      100% { transform: translate(-50%, -50%) scale(1); }\n    "])))
   },
   top: {
-    vertical: (0, _styledComponents.keyframes)(["0%{transform:translate(-50%,-100%);}100%{transform:translate(-50%,0);}"]),
-    horizontal: (0, _styledComponents.keyframes)(["0%{transform:translateY(-100%);}100%{transform:translateY(0);}"]),
-    "true": (0, _styledComponents.keyframes)(["0%{transform:translateY(-100%);}100%{transform:translateY(0);}"]),
-    "false": (0, _styledComponents.keyframes)(["0%{transform:translate(-50%,-100%);}100%{transform:translate(-50%,0);}"])
+    vertical: (0, _styledComponents.keyframes)(_templateObject8 || (_templateObject8 = _taggedTemplateLiteralLoose(["\n      0% { transform: translate(-50%, -100%); }\n      100% { transform: translate(-50%, 0); }\n    "]))),
+    horizontal: (0, _styledComponents.keyframes)(_templateObject9 || (_templateObject9 = _taggedTemplateLiteralLoose(["\n      0% { transform: translateY(-100%); }\n      100% { transform: translateY(0); }\n    "]))),
+    "true": (0, _styledComponents.keyframes)(_templateObject10 || (_templateObject10 = _taggedTemplateLiteralLoose(["\n      0% { transform: translateY(-100%); }\n      100% { transform: translateY(0); }\n    "]))),
+    "false": (0, _styledComponents.keyframes)(_templateObject11 || (_templateObject11 = _taggedTemplateLiteralLoose(["\n      0% { transform: translate(-50%, -100%); }\n      100% { transform: translate(-50%, 0); }\n    "])))
   },
   bottom: {
-    vertical: (0, _styledComponents.keyframes)(["0%{transform:translate(-50%,100%);}100%{transform:translate(-50%,0);}"]),
-    horizontal: (0, _styledComponents.keyframes)(["0%{transform:translateY(100%);}100%{transform:translateY(0);}"]),
-    "true": (0, _styledComponents.keyframes)(["0%{transform:translateY(100%);}100%{transform:translateY(0);}"]),
-    "false": (0, _styledComponents.keyframes)(["0%{transform:translate(-50%,100%);}100%{transform:translate(-50%,0);}"])
+    vertical: (0, _styledComponents.keyframes)(_templateObject12 || (_templateObject12 = _taggedTemplateLiteralLoose(["\n      0% { transform: translate(-50%, 100%); }\n      100% { transform: translate(-50%, 0); }\n    "]))),
+    horizontal: (0, _styledComponents.keyframes)(_templateObject13 || (_templateObject13 = _taggedTemplateLiteralLoose(["\n      0% { transform: translateY(100%); }\n      100% { transform: translateY(0); }\n    "]))),
+    "true": (0, _styledComponents.keyframes)(_templateObject14 || (_templateObject14 = _taggedTemplateLiteralLoose(["\n      0% { transform: translateY(100%); }\n      100% { transform: translateY(0); }\n    "]))),
+    "false": (0, _styledComponents.keyframes)(_templateObject15 || (_templateObject15 = _taggedTemplateLiteralLoose(["\n      0% { transform: translate(-50%, 100%); }\n      100% { transform: translate(-50%, 0); }\n    "])))
   },
   left: {
-    vertical: (0, _styledComponents.keyframes)(["0%{transform:translateX(-100%);}100%{transform:translateX(0);}"]),
-    horizontal: (0, _styledComponents.keyframes)(["0%{transform:translate(-100%,-50%);}100%{transform:translate(0,-50%);}"]),
-    "true": (0, _styledComponents.keyframes)(["0%{transform:translateX(-100%);}100%{transform:translateX(0);}"]),
-    "false": (0, _styledComponents.keyframes)(["0%{transform:translate(-100%,-50%);}100%{transform:translate(0,-50%);}"])
+    vertical: (0, _styledComponents.keyframes)(_templateObject16 || (_templateObject16 = _taggedTemplateLiteralLoose(["\n      0% { transform: translateX(-100%); }\n      100% { transform: translateX(0); }\n    "]))),
+    horizontal: (0, _styledComponents.keyframes)(_templateObject17 || (_templateObject17 = _taggedTemplateLiteralLoose(["\n      0% { transform: translate(-100%, -50%); }\n      100% { transform: translate(0, -50%); }\n    "]))),
+    "true": (0, _styledComponents.keyframes)(_templateObject18 || (_templateObject18 = _taggedTemplateLiteralLoose(["\n      0% { transform: translateX(-100%); }\n      100% { transform: translateX(0); }\n    "]))),
+    "false": (0, _styledComponents.keyframes)(_templateObject19 || (_templateObject19 = _taggedTemplateLiteralLoose(["\n      0% { transform: translate(-100%, -50%); }\n      100% { transform: translate(0, -50%); }\n    "])))
   },
   right: {
-    vertical: (0, _styledComponents.keyframes)(["0%{transform:translateX(100%);}100%{transform:translateX(0);}"]),
-    horizontal: (0, _styledComponents.keyframes)(["0%{transform:translate(100%,-50%);}100%{transform:translate(0,-50%);}"]),
-    "true": (0, _styledComponents.keyframes)(["0%{transform:translateX(100%);}100%{transform:translateX(0);}"]),
-    "false": (0, _styledComponents.keyframes)(["0%{transform:translate(100%,-50%);}100%{transform:translate(0,-50%);}"])
+    vertical: (0, _styledComponents.keyframes)(_templateObject20 || (_templateObject20 = _taggedTemplateLiteralLoose(["\n      0% { transform: translateX(100%); }\n      100% { transform: translateX(0); }\n    "]))),
+    horizontal: (0, _styledComponents.keyframes)(_templateObject21 || (_templateObject21 = _taggedTemplateLiteralLoose(["\n      0% { transform: translate(100%, -50%); }\n      100% { transform: translate(0, -50%); }\n    "]))),
+    "true": (0, _styledComponents.keyframes)(_templateObject22 || (_templateObject22 = _taggedTemplateLiteralLoose(["\n      0% { transform: translateX(100%); }\n      100% { transform: translateX(0); }\n    "]))),
+    "false": (0, _styledComponents.keyframes)(_templateObject23 || (_templateObject23 = _taggedTemplateLiteralLoose(["\n      0% { transform: translate(100%, -50%); }\n      100% { transform: translate(0, -50%); }\n    "])))
   },
   start: {
-    vertical: (0, _styledComponents.keyframes)(["0%{transform:translateX(-100%);}100%{transform:translateX(0);}"]),
-    horizontal: (0, _styledComponents.keyframes)(["0%{transform:translate(-100%,-50%);}100%{transform:translate(0,-50%);}"]),
-    "true": (0, _styledComponents.keyframes)(["0%{transform:translateX(-100%);}100%{transform:translateX(0);}"]),
-    "false": (0, _styledComponents.keyframes)(["0%{transform:translate(-100%,-50%);}100%{transform:translate(0,-50%);}"])
+    vertical: (0, _styledComponents.keyframes)(_templateObject24 || (_templateObject24 = _taggedTemplateLiteralLoose(["\n      0% { transform: translateX(-100%); }\n      100% { transform: translateX(0); }\n    "]))),
+    horizontal: (0, _styledComponents.keyframes)(_templateObject25 || (_templateObject25 = _taggedTemplateLiteralLoose(["\n      0% { transform: translate(-100%, -50%); }\n      100% { transform: translate(0, -50%); }\n    "]))),
+    "true": (0, _styledComponents.keyframes)(_templateObject26 || (_templateObject26 = _taggedTemplateLiteralLoose(["\n      0% { transform: translateX(-100%); }\n      100% { transform: translateX(0); }\n    "]))),
+    "false": (0, _styledComponents.keyframes)(_templateObject27 || (_templateObject27 = _taggedTemplateLiteralLoose(["\n      0% { transform: translate(-100%, -50%); }\n      100% { transform: translate(0, -50%); }\n    "])))
   },
   end: {
-    vertical: (0, _styledComponents.keyframes)(["0%{transform:translateX(100%);}100%{transform:translateX(0);}"]),
-    horizontal: (0, _styledComponents.keyframes)(["0%{transform:translate(100%,-50%);}100%{transform:translate(0,-50%);}"]),
-    "true": (0, _styledComponents.keyframes)(["0%{transform:translateX(100%);}100%{transform:translateX(0);}"]),
-    "false": (0, _styledComponents.keyframes)(["0%{transform:translate(100%,-50%);}100%{transform:translate(0,-50%);}"])
+    vertical: (0, _styledComponents.keyframes)(_templateObject28 || (_templateObject28 = _taggedTemplateLiteralLoose(["\n      0% { transform: translateX(100%); }\n      100% { transform: translateX(0); }\n    "]))),
+    horizontal: (0, _styledComponents.keyframes)(_templateObject29 || (_templateObject29 = _taggedTemplateLiteralLoose(["\n      0% { transform: translate(100%, -50%); }\n      100% { transform: translate(0, -50%); }\n    "]))),
+    "true": (0, _styledComponents.keyframes)(_templateObject30 || (_templateObject30 = _taggedTemplateLiteralLoose(["\n      0% { transform: translateX(100%); }\n      100% { transform: translateX(0); }\n    "]))),
+    "false": (0, _styledComponents.keyframes)(_templateObject31 || (_templateObject31 = _taggedTemplateLiteralLoose(["\n      0% { transform: translate(100%, -50%); }\n      100% { transform: translate(0, -50%); }\n    "])))
   }
 };
 var animationDuration = 200;
@@ -146,10 +144,10 @@ var getAnimationStyle = function getAnimationStyle(props, position, full) {
   if (animation === 'slide' || animation === true) {
     keys = KEYFRAMES[position][full];
   } else if (animation === 'fadeIn') {
-    keys = (0, _styledComponents.keyframes)(["0%{opacity:0}100%{opacity:1}"]);
+    keys = (0, _styledComponents.keyframes)(_templateObject32 || (_templateObject32 = _taggedTemplateLiteralLoose(["0% { opacity: 0 } 100% { opacity: 1 }"])));
   }
 
-  return keys ? (0, _styledComponents.css)(["animation:", " ", "s ease-in-out forwards;"], keys, animationDuration / 1000.0) : '';
+  return keys ? (0, _styledComponents.css)(_templateObject33 || (_templateObject33 = _taggedTemplateLiteralLoose(["\n        animation: ", " ", "s ease-in-out forwards;\n      "])), keys, animationDuration / 1000.0) : '';
 }; // POSITIONS combines 'position', 'full', and 'margin' properties, since
 // they are all interdependent.
 // Basically, non-full axes combine 50% position with -50% translation.
@@ -161,242 +159,242 @@ var getAnimationStyle = function getAnimationStyle(props, position, full) {
 var POSITIONS = {
   center: {
     vertical: function vertical(bounds) {
-      return (0, _styledComponents.css)(["top:", "px;bottom:", "px;left:50%;transform:translateX(-50%);", ""], bounds.top, bounds.bottom, function (props) {
+      return (0, _styledComponents.css)(_templateObject34 || (_templateObject34 = _taggedTemplateLiteralLoose(["\n      top: ", "px;\n      bottom: ", "px;\n      left: 50%;\n      transform: translateX(-50%);\n      ", "\n    "])), bounds.top, bounds.bottom, function (props) {
         return getAnimationStyle(props, 'center', 'vertical');
       });
     },
     horizontal: function horizontal(bounds) {
-      return (0, _styledComponents.css)(["left:", "px;right:", "px;top:50%;transform:translateY(-50%);", ""], bounds.left, bounds.right, function (props) {
+      return (0, _styledComponents.css)(_templateObject35 || (_templateObject35 = _taggedTemplateLiteralLoose(["\n      left: ", "px;\n      right: ", "px;\n      top: 50%;\n      transform: translateY(-50%);\n      ", "\n    "])), bounds.left, bounds.right, function (props) {
         return getAnimationStyle(props, 'center', 'horizontal');
       });
     },
     "true": function _true(bounds) {
-      return (0, _styledComponents.css)(["top:", "px;bottom:", "px;left:", "px;right:", "px;", ""], bounds.top, bounds.bottom, bounds.left, bounds.right, function (props) {
+      return (0, _styledComponents.css)(_templateObject36 || (_templateObject36 = _taggedTemplateLiteralLoose(["\n      top: ", "px;\n      bottom: ", "px;\n      left: ", "px;\n      right: ", "px;\n      ", "\n    "])), bounds.top, bounds.bottom, bounds.left, bounds.right, function (props) {
         return getAnimationStyle(props, 'center', 'true');
       });
     },
     "false": function _false() {
-      return (0, _styledComponents.css)(["top:50%;left:50%;transform:translate(-50%,-50%);", ""], function (props) {
+      return (0, _styledComponents.css)(_templateObject37 || (_templateObject37 = _taggedTemplateLiteralLoose(["\n      top: 50%;\n      left: 50%;\n      transform: translate(-50%, -50%);\n      ", "\n    "])), function (props) {
         return getAnimationStyle(props, 'center', 'false');
       });
     }
   },
   top: {
     vertical: function vertical(bounds) {
-      return (0, _styledComponents.css)(["top:", "px;bottom:", "px;left:50%;transform:translate(-50%,0%);", ""], bounds.top, bounds.bottom, function (props) {
+      return (0, _styledComponents.css)(_templateObject38 || (_templateObject38 = _taggedTemplateLiteralLoose(["\n      top: ", "px;\n      bottom: ", "px;\n      left: 50%;\n      transform: translate(-50%, 0%);\n      ", "\n    "])), bounds.top, bounds.bottom, function (props) {
         return getAnimationStyle(props, 'top', 'vertical');
       });
     },
     horizontal: function horizontal(bounds) {
-      return (0, _styledComponents.css)(["left:", "px;right:", "px;top:", "px;transform:translateY(0);", ""], bounds.left, bounds.right, bounds.top, function (props) {
+      return (0, _styledComponents.css)(_templateObject39 || (_templateObject39 = _taggedTemplateLiteralLoose(["\n      left: ", "px;\n      right: ", "px;\n      top: ", "px;\n      transform: translateY(0);\n      ", "\n    "])), bounds.left, bounds.right, bounds.top, function (props) {
         return getAnimationStyle(props, 'top', 'horizontal');
       });
     },
     "true": function _true(bounds) {
-      return (0, _styledComponents.css)(["top:", "px;bottom:", "px;left:", "px;right:", "px;transform:translateY(0);", ""], bounds.top, bounds.bottom, bounds.left, bounds.right, function (props) {
+      return (0, _styledComponents.css)(_templateObject40 || (_templateObject40 = _taggedTemplateLiteralLoose(["\n      top: ", "px;\n      bottom: ", "px;\n      left: ", "px;\n      right: ", "px;\n      transform: translateY(0);\n      ", "\n    "])), bounds.top, bounds.bottom, bounds.left, bounds.right, function (props) {
         return getAnimationStyle(props, 'top', 'true');
       });
     },
     "false": function _false(bounds) {
-      return (0, _styledComponents.css)(["top:", "px;left:50%;transform:translate(-50%,0);", ""], bounds.top, function (props) {
+      return (0, _styledComponents.css)(_templateObject41 || (_templateObject41 = _taggedTemplateLiteralLoose(["\n      top: ", "px;\n      left: 50%;\n      transform: translate(-50%, 0);\n      ", "\n    "])), bounds.top, function (props) {
         return getAnimationStyle(props, 'top', 'false');
       });
     }
   },
   bottom: {
     vertical: function vertical(bounds) {
-      return (0, _styledComponents.css)(["top:", "px;bottom:", "px;left:50%;transform:translate(-50%,0);", ""], bounds.top, bounds.bottom, function (props) {
+      return (0, _styledComponents.css)(_templateObject42 || (_templateObject42 = _taggedTemplateLiteralLoose(["\n      top: ", "px;\n      bottom: ", "px;\n      left: 50%;\n      transform: translate(-50%, 0);\n      ", "\n    "])), bounds.top, bounds.bottom, function (props) {
         return getAnimationStyle(props, 'bottom', 'vertical');
       });
     },
     horizontal: function horizontal(bounds) {
-      return (0, _styledComponents.css)(["left:", "px;right:", "px;bottom:", "px;transform:translateY(0);", ""], bounds.left, bounds.top, bounds.bottom, function (props) {
+      return (0, _styledComponents.css)(_templateObject43 || (_templateObject43 = _taggedTemplateLiteralLoose(["\n      left: ", "px;\n      right: ", "px;\n      bottom: ", "px;\n      transform: translateY(0);\n      ", "\n    "])), bounds.left, bounds.top, bounds.bottom, function (props) {
         return getAnimationStyle(props, 'bottom', 'horizontal');
       });
     },
     "true": function _true(bounds) {
-      return (0, _styledComponents.css)(["top:", "px;bottom:", "px;left:", "px;right:", "px;transform:translateY(0);", ""], bounds.top, bounds.bottom, bounds.left, bounds.right, function (props) {
+      return (0, _styledComponents.css)(_templateObject44 || (_templateObject44 = _taggedTemplateLiteralLoose(["\n      top: ", "px;\n      bottom: ", "px;\n      left: ", "px;\n      right: ", "px;\n      transform: translateY(0);\n      ", "\n    "])), bounds.top, bounds.bottom, bounds.left, bounds.right, function (props) {
         return getAnimationStyle(props, 'bottom', 'true');
       });
     },
     "false": function _false(bounds) {
-      return (0, _styledComponents.css)(["bottom:", "px;left:50%;transform:translate(-50%,0);", ""], bounds.bottom, function (props) {
+      return (0, _styledComponents.css)(_templateObject45 || (_templateObject45 = _taggedTemplateLiteralLoose(["\n      bottom: ", "px;\n      left: 50%;\n      transform: translate(-50%, 0);\n      ", "\n    "])), bounds.bottom, function (props) {
         return getAnimationStyle(props, 'bottom', 'false');
       });
     }
   },
   left: {
     vertical: function vertical(bounds) {
-      return (0, _styledComponents.css)(["top:", "px;bottom:", "px;left:", "px;transform:translateX(0);", ""], bounds.top, bounds.bottom, bounds.left, function (props) {
+      return (0, _styledComponents.css)(_templateObject46 || (_templateObject46 = _taggedTemplateLiteralLoose(["\n      top: ", "px;\n      bottom: ", "px;\n      left: ", "px;\n      transform: translateX(0);\n      ", "\n    "])), bounds.top, bounds.bottom, bounds.left, function (props) {
         return getAnimationStyle(props, 'left', 'vertical');
       });
     },
     horizontal: function horizontal(bounds) {
-      return (0, _styledComponents.css)(["left:", "px;right:", "px;top:50%;transform:translate(0,-50%);", ""], bounds.left, bounds.right, function (props) {
+      return (0, _styledComponents.css)(_templateObject47 || (_templateObject47 = _taggedTemplateLiteralLoose(["\n      left: ", "px;\n      right: ", "px;\n      top: 50%;\n      transform: translate(0, -50%);\n      ", "\n    "])), bounds.left, bounds.right, function (props) {
         return getAnimationStyle(props, 'left', 'horizontal');
       });
     },
     "true": function _true(bounds) {
-      return (0, _styledComponents.css)(["top:", "px;bottom:", "px;left:", "px;right:", "px;transform:translateX(0);", ""], bounds.top, bounds.bottom, bounds.left, bounds.right, function (props) {
+      return (0, _styledComponents.css)(_templateObject48 || (_templateObject48 = _taggedTemplateLiteralLoose(["\n      top: ", "px;\n      bottom: ", "px;\n      left: ", "px;\n      right: ", "px;\n      transform: translateX(0);\n      ", "\n    "])), bounds.top, bounds.bottom, bounds.left, bounds.right, function (props) {
         return getAnimationStyle(props, 'left', 'true');
       });
     },
     "false": function _false(bounds) {
-      return (0, _styledComponents.css)(["left:", "px;top:50%;transform:translate(0,-50%);", ""], bounds.left, function (props) {
+      return (0, _styledComponents.css)(_templateObject49 || (_templateObject49 = _taggedTemplateLiteralLoose(["\n      left: ", "px;\n      top: 50%;\n      transform: translate(0, -50%);\n      ", "\n    "])), bounds.left, function (props) {
         return getAnimationStyle(props, 'left', 'false');
       });
     }
   },
   right: {
     vertical: function vertical(bounds) {
-      return (0, _styledComponents.css)(["top:", "px;bottom:", "px;right:", "px;transform:translateX(0);", ""], bounds.top, bounds.bottom, bounds.right, function (props) {
+      return (0, _styledComponents.css)(_templateObject50 || (_templateObject50 = _taggedTemplateLiteralLoose(["\n      top: ", "px;\n      bottom: ", "px;\n      right: ", "px;\n      transform: translateX(0);\n      ", "\n    "])), bounds.top, bounds.bottom, bounds.right, function (props) {
         return getAnimationStyle(props, 'right', 'vertical');
       });
     },
     horizontal: function horizontal(bounds) {
-      return (0, _styledComponents.css)(["left:", "px;right:", "px;top:50%;transform:translate(0,-50%);", ""], bounds.left, bounds.right, function (props) {
+      return (0, _styledComponents.css)(_templateObject51 || (_templateObject51 = _taggedTemplateLiteralLoose(["\n      left: ", "px;\n      right: ", "px;\n      top: 50%;\n      transform: translate(0, -50%);\n      ", "\n    "])), bounds.left, bounds.right, function (props) {
         return getAnimationStyle(props, 'right', 'horizontal');
       });
     },
     "true": function _true(bounds) {
-      return (0, _styledComponents.css)(["top:", "px;bottom:", "px;left:", "px;right:", "px;transform:translateX(0);", ""], bounds.top, bounds.bottom, bounds.left, bounds.right, function (props) {
+      return (0, _styledComponents.css)(_templateObject52 || (_templateObject52 = _taggedTemplateLiteralLoose(["\n      top: ", "px;\n      bottom: ", "px;\n      left: ", "px;\n      right: ", "px;\n      transform: translateX(0);\n      ", "\n    "])), bounds.top, bounds.bottom, bounds.left, bounds.right, function (props) {
         return getAnimationStyle(props, 'right', 'true');
       });
     },
     "false": function _false(bounds) {
-      return (0, _styledComponents.css)(["right:", "px;top:50%;transform:translate(0,-50%);", ""], bounds.right, function (props) {
+      return (0, _styledComponents.css)(_templateObject53 || (_templateObject53 = _taggedTemplateLiteralLoose(["\n      right: ", "px;\n      top: 50%;\n      transform: translate(0, -50%);\n      ", "\n    "])), bounds.right, function (props) {
         return getAnimationStyle(props, 'right', 'false');
       });
     }
   },
   start: {
     vertical: function vertical(bounds) {
-      return (0, _styledComponents.css)(["top:", "px;bottom:", "px;inset-inline-start:", "px;transform:translateX(0);", ""], bounds.top, bounds.bottom, bounds.start, function (props) {
+      return (0, _styledComponents.css)(_templateObject54 || (_templateObject54 = _taggedTemplateLiteralLoose(["\n      top: ", "px;\n      bottom: ", "px;\n      inset-inline-start: ", "px;\n      transform: translateX(0);\n      ", "\n    "])), bounds.top, bounds.bottom, bounds.start, function (props) {
         return getAnimationStyle(props, 'start', 'vertical');
       });
     },
     horizontal: function horizontal(bounds) {
-      return (0, _styledComponents.css)(["inset-inline-start:", "px;inset-inline-end:", "px;top:50%;transform:translate(0,-50%);", ""], bounds.start, bounds.end, function (props) {
+      return (0, _styledComponents.css)(_templateObject55 || (_templateObject55 = _taggedTemplateLiteralLoose(["\n      inset-inline-start: ", "px;\n      inset-inline-end: ", "px;\n      top: 50%;\n      transform: translate(0, -50%);\n      ", "\n    "])), bounds.start, bounds.end, function (props) {
         return getAnimationStyle(props, 'start', 'horizontal');
       });
     },
     "true": function _true(bounds) {
-      return (0, _styledComponents.css)(["top:", "px;bottom:", "px;inset-inline-start:", "px;inset-inline-end:", "px;transform:translateX(0);", ""], bounds.top, bounds.bottom, bounds.start, bounds.end, function (props) {
+      return (0, _styledComponents.css)(_templateObject56 || (_templateObject56 = _taggedTemplateLiteralLoose(["\n      top: ", "px;\n      bottom: ", "px;\n      inset-inline-start: ", "px;\n      inset-inline-end: ", "px;\n      transform: translateX(0);\n      ", "\n    "])), bounds.top, bounds.bottom, bounds.start, bounds.end, function (props) {
         return getAnimationStyle(props, 'start', 'true');
       });
     },
     "false": function _false(bounds) {
-      return (0, _styledComponents.css)(["inset-inline-start:", "px;top:50%;transform:translate(0,-50%);", ""], bounds.start, function (props) {
+      return (0, _styledComponents.css)(_templateObject57 || (_templateObject57 = _taggedTemplateLiteralLoose(["\n      inset-inline-start: ", "px;\n      top: 50%;\n      transform: translate(0, -50%);\n      ", "\n    "])), bounds.start, function (props) {
         return getAnimationStyle(props, 'start', 'false');
       });
     }
   },
   end: {
     vertical: function vertical(bounds) {
-      return (0, _styledComponents.css)(["top:", "px;bottom:", "px;inset-inline-end:", "px;transform:translateX(0);", ""], bounds.top, bounds.bottom, bounds.end, function (props) {
+      return (0, _styledComponents.css)(_templateObject58 || (_templateObject58 = _taggedTemplateLiteralLoose(["\n      top: ", "px;\n      bottom: ", "px;\n      inset-inline-end: ", "px;\n      transform: translateX(0);\n      ", "\n    "])), bounds.top, bounds.bottom, bounds.end, function (props) {
         return getAnimationStyle(props, 'end', 'vertical');
       });
     },
     horizontal: function horizontal(bounds) {
-      return (0, _styledComponents.css)(["inset-inline-start:", "px;inset-inline-end:", "px;top:50%;transform:translate(0,-50%);", ""], bounds.start, bounds.end, function (props) {
+      return (0, _styledComponents.css)(_templateObject59 || (_templateObject59 = _taggedTemplateLiteralLoose(["\n      inset-inline-start: ", "px;\n      inset-inline-end: ", "px;\n      top: 50%;\n      transform: translate(0, -50%);\n      ", "\n    "])), bounds.start, bounds.end, function (props) {
         return getAnimationStyle(props, 'end', 'horizontal');
       });
     },
     "true": function _true(bounds) {
-      return (0, _styledComponents.css)(["top:", "px;bottom:", "px;inset-inline-start:", "px;inset-inline-end:", "px;transform:translateX(0);", ""], bounds.top, bounds.bottom, bounds.start, bounds.end, function (props) {
+      return (0, _styledComponents.css)(_templateObject60 || (_templateObject60 = _taggedTemplateLiteralLoose(["\n      top: ", "px;\n      bottom: ", "px;\n      inset-inline-start: ", "px;\n      inset-inline-end: ", "px;\n      transform: translateX(0);\n      ", "\n    "])), bounds.top, bounds.bottom, bounds.start, bounds.end, function (props) {
         return getAnimationStyle(props, 'end', 'true');
       });
     },
     "false": function _false(bounds) {
-      return (0, _styledComponents.css)(["inset-inline-end:", "px;top:50%;transform:translate(0,-50%);", ""], bounds.end, function (props) {
+      return (0, _styledComponents.css)(_templateObject61 || (_templateObject61 = _taggedTemplateLiteralLoose(["\n      inset-inline-end: ", "px;\n      top: 50%;\n      transform: translate(0, -50%);\n      ", "\n    "])), bounds.end, function (props) {
         return getAnimationStyle(props, 'end', 'false');
       });
     }
   },
   'top-right': {
     vertical: function vertical(bounds) {
-      return (0, _styledComponents.css)(["top:", "px;bottom:", "px;right:", "px;transform:translateX(0);", ";"], bounds.top, bounds.bottom, bounds.right, function (props) {
+      return (0, _styledComponents.css)(_templateObject62 || (_templateObject62 = _taggedTemplateLiteralLoose(["\n      top: ", "px;\n      bottom: ", "px;\n      right: ", "px;\n      transform: translateX(0);\n      ", ";\n    "])), bounds.top, bounds.bottom, bounds.right, function (props) {
         return getAnimationStyle(props, 'top', 'true');
       });
     },
     horizontal: function horizontal(bounds) {
-      return (0, _styledComponents.css)(["left:", "px;right:", "px;top:0;transform:translateX(0);", ";"], bounds.left, bounds.right, function (props) {
+      return (0, _styledComponents.css)(_templateObject63 || (_templateObject63 = _taggedTemplateLiteralLoose(["\n      left: ", "px;\n      right: ", "px;\n      top: 0;\n      transform: translateX(0);\n      ", ";\n    "])), bounds.left, bounds.right, function (props) {
         return getAnimationStyle(props, 'top', 'true');
       });
     },
     "true": function _true(bounds) {
-      return (0, _styledComponents.css)(["top:", "px;bottom:", "px;left:", "px;right:", "px;transform:translateX(0);", ";"], bounds.top, bounds.bottom, bounds.left, bounds.right, function (props) {
+      return (0, _styledComponents.css)(_templateObject64 || (_templateObject64 = _taggedTemplateLiteralLoose(["\n      top: ", "px;\n      bottom: ", "px;\n      left: ", "px;\n      right: ", "px;\n      transform: translateX(0);\n      ", ";\n    "])), bounds.top, bounds.bottom, bounds.left, bounds.right, function (props) {
         return getAnimationStyle(props, 'top', 'true');
       });
     },
     "false": function _false(bounds) {
-      return (0, _styledComponents.css)(["top:", "px;right:", "px;transform:translateY(0);", ";"], bounds.top, bounds.right, function (props) {
+      return (0, _styledComponents.css)(_templateObject65 || (_templateObject65 = _taggedTemplateLiteralLoose(["\n      top: ", "px;\n      right: ", "px;\n      transform: translateY(0);\n      ", ";\n    "])), bounds.top, bounds.right, function (props) {
         return getAnimationStyle(props, 'top', 'true');
       });
     }
   },
   'top-left': {
     vertical: function vertical(bounds) {
-      return (0, _styledComponents.css)(["top:", "px;bottom:", "px;left:", "px;transform:translateX(0);", ""], bounds.top, bounds.bottom, bounds.left, function (props) {
+      return (0, _styledComponents.css)(_templateObject66 || (_templateObject66 = _taggedTemplateLiteralLoose(["\n      top: ", "px;\n      bottom: ", "px;\n      left: ", "px;\n      transform: translateX(0);\n      ", "\n    "])), bounds.top, bounds.bottom, bounds.left, function (props) {
         return getAnimationStyle(props, 'top', 'true');
       });
     },
     horizontal: function horizontal(bounds) {
-      return (0, _styledComponents.css)(["left:", "px;right:", "px;top:0;transform:translateX(0);", ""], bounds.left, bounds.right, function (props) {
+      return (0, _styledComponents.css)(_templateObject67 || (_templateObject67 = _taggedTemplateLiteralLoose(["\n      left: ", "px;\n      right: ", "px;\n      top: 0;\n      transform: translateX(0);\n      ", "\n    "])), bounds.left, bounds.right, function (props) {
         return getAnimationStyle(props, 'top', 'true');
       });
     },
     "true": function _true(bounds) {
-      return (0, _styledComponents.css)(["top:", "px;bottom:", "px;left:", "px;right:", "px;transform:translateX(0);", ""], bounds.top, bounds.bottom, bounds.left, bounds.right, function (props) {
+      return (0, _styledComponents.css)(_templateObject68 || (_templateObject68 = _taggedTemplateLiteralLoose(["\n      top: ", "px;\n      bottom: ", "px;\n      left: ", "px;\n      right: ", "px;\n      transform: translateX(0);\n      ", "\n    "])), bounds.top, bounds.bottom, bounds.left, bounds.right, function (props) {
         return getAnimationStyle(props, 'top', 'true');
       });
     },
     "false": function _false(bounds) {
-      return (0, _styledComponents.css)(["top:", "px;left:", "px;transform:translateY(0);", ""], bounds.top, bounds.left, function (props) {
+      return (0, _styledComponents.css)(_templateObject69 || (_templateObject69 = _taggedTemplateLiteralLoose(["\n      top: ", "px;\n      left: ", "px;\n      transform: translateY(0);\n      ", "\n    "])), bounds.top, bounds.left, function (props) {
         return getAnimationStyle(props, 'top', 'true');
       });
     }
   },
   'bottom-right': {
     vertical: function vertical(bounds) {
-      return (0, _styledComponents.css)(["top:", "px;bottom:", "px;right:", "px;transform:translateX(0);", ""], bounds.top, bounds.bottom, bounds.right, function (props) {
+      return (0, _styledComponents.css)(_templateObject70 || (_templateObject70 = _taggedTemplateLiteralLoose(["\n      top: ", "px;\n      bottom: ", "px;\n      right: ", "px;\n      transform: translateX(0);\n      ", "\n    "])), bounds.top, bounds.bottom, bounds.right, function (props) {
         return getAnimationStyle(props, 'bottom', 'true');
       });
     },
     horizontal: function horizontal(bounds) {
-      return (0, _styledComponents.css)(["left:", "px;right:", "px;bottom:", "px;transform:translateY(0);", ""], bounds.left, bounds.right, bounds.bottom, function (props) {
+      return (0, _styledComponents.css)(_templateObject71 || (_templateObject71 = _taggedTemplateLiteralLoose(["\n      left: ", "px;\n      right: ", "px;\n      bottom: ", "px;\n      transform: translateY(0);\n      ", "\n    "])), bounds.left, bounds.right, bounds.bottom, function (props) {
         return getAnimationStyle(props, 'bottom', 'true');
       });
     },
     "true": function _true(bounds) {
-      return (0, _styledComponents.css)(["top:", "px;bottom:", "px;left:", "px;right:", "px;transform:translateX(0);", ""], bounds.top, bounds.bottom, bounds.left, bounds.right, function (props) {
+      return (0, _styledComponents.css)(_templateObject72 || (_templateObject72 = _taggedTemplateLiteralLoose(["\n      top: ", "px;\n      bottom: ", "px;\n      left: ", "px;\n      right: ", "px;\n      transform: translateX(0);\n      ", "\n    "])), bounds.top, bounds.bottom, bounds.left, bounds.right, function (props) {
         return getAnimationStyle(props, 'bottom', 'true');
       });
     },
     "false": function _false(bounds) {
-      return (0, _styledComponents.css)(["bottom:", "px;right:", "px;transform:translateY(0);", ""], bounds.bottom, bounds.right, function (props) {
+      return (0, _styledComponents.css)(_templateObject73 || (_templateObject73 = _taggedTemplateLiteralLoose(["\n      bottom: ", "px;\n      right: ", "px;\n      transform: translateY(0);\n      ", "\n    "])), bounds.bottom, bounds.right, function (props) {
         return getAnimationStyle(props, 'bottom', 'true');
       });
     }
   },
   'bottom-left': {
     vertical: function vertical(bounds) {
-      return (0, _styledComponents.css)(["top:", "px;bottom:", "px;left:", "px;transform:translateX(0);", ""], bounds.top, bounds.bottom, bounds.left, function (props) {
+      return (0, _styledComponents.css)(_templateObject74 || (_templateObject74 = _taggedTemplateLiteralLoose(["\n      top: ", "px;\n      bottom: ", "px;\n      left: ", "px;\n      transform: translateX(0);\n      ", "\n    "])), bounds.top, bounds.bottom, bounds.left, function (props) {
         return getAnimationStyle(props, 'bottom', 'true');
       });
     },
     horizontal: function horizontal(bounds) {
-      return (0, _styledComponents.css)(["left:", "px;right:", "px;bottom:", "px;transform:translateY(0);", ""], bounds.left, bounds.right, bounds.bottom, function (props) {
+      return (0, _styledComponents.css)(_templateObject75 || (_templateObject75 = _taggedTemplateLiteralLoose(["\n      left: ", "px;\n      right: ", "px;\n      bottom: ", "px;\n      transform: translateY(0);\n      ", "\n    "])), bounds.left, bounds.right, bounds.bottom, function (props) {
         return getAnimationStyle(props, 'bottom', 'true');
       });
     },
     "true": function _true(bounds) {
-      return (0, _styledComponents.css)(["top:", "px;bottom:", "px;left:", "px;right:", "px;transform:translateX(0);", ""], bounds.top, bounds.bottom, bounds.left, bounds.right, function (props) {
+      return (0, _styledComponents.css)(_templateObject76 || (_templateObject76 = _taggedTemplateLiteralLoose(["\n      top: ", "px;\n      bottom: ", "px;\n      left: ", "px;\n      right: ", "px;\n      transform: translateX(0);\n      ", "\n    "])), bounds.top, bounds.bottom, bounds.left, bounds.right, function (props) {
         return getAnimationStyle(props, 'bottom', 'true');
       });
     },
     "false": function _false(bounds) {
-      return (0, _styledComponents.css)(["bottom:", "px;left:", "px;transform:translateY(0);", ""], bounds.bottom, bounds.left, function (props) {
+      return (0, _styledComponents.css)(_templateObject77 || (_templateObject77 = _taggedTemplateLiteralLoose(["\n      bottom: ", "px;\n      left: ", "px;\n      transform: translateY(0);\n      ", "\n    "])), bounds.bottom, bounds.left, function (props) {
         return getAnimationStyle(props, 'bottom', 'true');
       });
     }
@@ -412,35 +410,35 @@ var roundStyle = function roundStyle(data, theme, position, margin) {
 
   if (margin === 'none' && !customCSS && theme.layer.border.intelligentRounding === true) {
     if (position === 'bottom') {
-      styles.push((0, _styledComponents.css)(["border-radius:", " ", " 0 0;"], round, round));
+      styles.push((0, _styledComponents.css)(_templateObject78 || (_templateObject78 = _taggedTemplateLiteralLoose(["\n          border-radius: ", " ", " 0 0;\n        "])), round, round));
     } else if (position === 'bottom-left') {
-      styles.push((0, _styledComponents.css)(["border-radius:0 ", " 0 0;"], round));
+      styles.push((0, _styledComponents.css)(_templateObject79 || (_templateObject79 = _taggedTemplateLiteralLoose(["\n          border-radius: 0 ", " 0 0;\n        "])), round));
     } else if (position === 'bottom-right') {
-      styles.push((0, _styledComponents.css)(["border-radius:", " 0 0 0;"], round));
+      styles.push((0, _styledComponents.css)(_templateObject80 || (_templateObject80 = _taggedTemplateLiteralLoose(["\n          border-radius: ", " 0 0 0;\n        "])), round));
     } else if (position === 'end') {
       // only works on Firefox, what should be fallback?
-      styles.push((0, _styledComponents.css)(["border-start-start-radius:", ";border-end-start-radius:", ";"], round, round));
+      styles.push((0, _styledComponents.css)(_templateObject81 || (_templateObject81 = _taggedTemplateLiteralLoose(["\n        border-start-start-radius: ", ";\n        border-end-start-radius: ", ";\n      "])), round, round));
     } else if (position === 'left') {
-      styles.push((0, _styledComponents.css)(["border-radius:0 ", " ", " 0;"], round, round));
+      styles.push((0, _styledComponents.css)(_templateObject82 || (_templateObject82 = _taggedTemplateLiteralLoose(["\n          border-radius: 0 ", " ", " 0;\n        "])), round, round));
     } else if (position === 'right') {
-      styles.push((0, _styledComponents.css)(["border-radius:", " 0 0 ", ";"], round, round));
+      styles.push((0, _styledComponents.css)(_templateObject83 || (_templateObject83 = _taggedTemplateLiteralLoose(["\n          border-radius: ", " 0 0 ", ";\n        "])), round, round));
     } else if (position === 'start') {
       // only works on Firefox, what should be fallback?
-      styles.push((0, _styledComponents.css)(["border-end-end-radius:", ";border-start-end-radius:", ";"], round, round));
+      styles.push((0, _styledComponents.css)(_templateObject84 || (_templateObject84 = _taggedTemplateLiteralLoose(["\n        border-end-end-radius: ", ";\n        border-start-end-radius: ", ";\n      "])), round, round));
     } else if (position === 'top') {
-      styles.push((0, _styledComponents.css)(["border-radius:0 0 ", " ", ";"], round, round));
+      styles.push((0, _styledComponents.css)(_templateObject85 || (_templateObject85 = _taggedTemplateLiteralLoose(["\n          border-radius: 0 0 ", " ", ";\n        "])), round, round));
     } else if (position === 'top-left') {
-      styles.push((0, _styledComponents.css)(["border-radius:0 0 ", " 0;"], round));
+      styles.push((0, _styledComponents.css)(_templateObject86 || (_templateObject86 = _taggedTemplateLiteralLoose(["\n          border-radius: 0 0 ", " 0;\n        "])), round));
     } else if (position === 'top-right') {
-      styles.push((0, _styledComponents.css)(["border-radius:0 0 0 ", ";"], round));
+      styles.push((0, _styledComponents.css)(_templateObject87 || (_templateObject87 = _taggedTemplateLiteralLoose(["\n          border-radius: 0 0 0 ", ";\n        "])), round));
     } else {
       // position is center, apply uniform border-radius
-      styles.push((0, _styledComponents.css)(["border-radius:", ";"], round));
+      styles.push((0, _styledComponents.css)(_templateObject88 || (_templateObject88 = _taggedTemplateLiteralLoose(["\n          border-radius: ", ";\n        "])), round));
     }
   } else {
     // if there's a margin apply uniform border-radius, or if user has supplied
     // a complex CSS string such as "50px 20px" apply this
-    styles.push((0, _styledComponents.css)(["border-radius:", ";"], round));
+    styles.push((0, _styledComponents.css)(_templateObject89 || (_templateObject89 = _taggedTemplateLiteralLoose(["\n      border-radius: ", ";\n    "])), round));
   }
 
   return styles;
@@ -452,12 +450,12 @@ var bounds = {
   top: 0,
   bottom: 0
 };
-var desktopContainerStyle = (0, _styledComponents.css)(["", " max-height:", ";max-width:", ";", ";", ";"], function (props) {
+var desktopContainerStyle = (0, _styledComponents.css)(_templateObject90 || (_templateObject90 = _taggedTemplateLiteralLoose(["\n  ", "\n  max-height: ", ";\n  max-width: ", ";\n  ", ";\n  ", ";\n"])), function (props) {
   if (!props.modal && props.position === 'hidden') {
     return hiddenPositionStyle;
   }
 
-  return (0, _styledComponents.css)(["position:", ";"], props.modal || props.layerTarget ? 'absolute' : 'fixed');
+  return (0, _styledComponents.css)(_templateObject91 || (_templateObject91 = _taggedTemplateLiteralLoose(["\n      // when there is a target (modal or non-modal) we need to position\n      // layer with respect to the target's position\n      // ensures positioning and animations stay aligned\n      position: ", ";\n    "])), props.modal || props.layerTarget ? 'absolute' : 'fixed');
 }, function (props) {
   return "calc(100% - " + getBounds(bounds, props.margin, props.theme, 'top') + "px - " + getBounds(bounds, props.margin, props.theme, 'bottom') + "px)";
 }, function (props) {
@@ -469,10 +467,10 @@ var desktopContainerStyle = (0, _styledComponents.css)(["", " max-height:", ";ma
 });
 
 var responsiveContainerStyle = function responsiveContainerStyle(props) {
-  return (0, _styledComponents.css)(["position:relative;max-height:none;max-width:none;border-radius:0;height:", ";width:", ";"], !props.layerTarget ? '100vh' : '100%', !props.layerTarget ? '100vw' : '100%');
+  return (0, _styledComponents.css)(_templateObject92 || (_templateObject92 = _taggedTemplateLiteralLoose(["\n  position: relative;\n  max-height: none;\n  max-width: none;\n  border-radius: 0;\n  height: ", ";\n  width: ", ";\n"])), !props.layerTarget ? '100vh' : '100%', !props.layerTarget ? '100vw' : '100%');
 };
 
-var elevationStyle = (0, _styledComponents.css)(["box-shadow:", ";"], function (props) {
+var elevationStyle = (0, _styledComponents.css)(_templateObject93 || (_templateObject93 = _taggedTemplateLiteralLoose(["\n  box-shadow: ", ";\n"])), function (props) {
   return props.theme.global.elevation[props.theme.dark ? 'dark' : 'light'][props.theme.layer.container.elevation];
 });
 
@@ -482,10 +480,7 @@ var StyledContainer = _styledComponents["default"].div.withConfig({
   shouldForwardProp: function shouldForwardProp(prop, defaultValidatorFn) {
     return !['elevation'].includes(prop) && defaultValidatorFn(prop);
   }
-}).withConfig({
-  displayName: "StyledLayer__StyledContainer",
-  componentId: "rmtehz-2"
-})(["", " display:flex;flex-direction:column;min-height:", ";", " outline:none;pointer-events:all;z-index:", ";", " ", " ", ";", ";"], function (props) {
+})(_templateObject94 || (_templateObject94 = _taggedTemplateLiteralLoose(["\n  ", "\n  display: flex;\n  flex-direction: column;\n  min-height: ", ";\n  ", " outline: none;\n  pointer-events: all;\n  z-index: ", ";\n  ", "\n  ", "\n  ", ";\n  ", ";\n"])), function (props) {
   return !props.modal ? _utils.baseStyle : '';
 }, function (props) {
   return props.theme.global.size.xxsmall;

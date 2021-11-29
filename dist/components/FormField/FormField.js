@@ -37,6 +37,8 @@ var _excluded = ["error", "info", "message", "type"],
     _excluded2 = ["component", "disabled", "invalid", "name", "onChange"],
     _excluded3 = ["children", "className", "component", "contentProps", "disabled", "error", "help", "htmlFor", "info", "label", "margin", "name", "onBlur", "onChange", "onFocus", "pad", "required", "style", "validate"];
 
+var _templateObject, _templateObject2, _templateObject3, _templateObject4;
+
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -45,6 +47,8 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
 var grommetInputNames = ['CheckBox', 'CheckBoxGroup', 'TextInput', 'Select', 'MaskedInput', 'TextArea', 'DateInput', 'FileInput', 'RadioButtonGroup'];
 var grommetInputPadNames = ['CheckBox', 'CheckBoxGroup', 'RadioButtonGroup', 'RangeInput'];
 
@@ -52,34 +56,22 @@ var isGrommetInput = function isGrommetInput(comp) {
   return comp && (grommetInputNames.indexOf(comp.displayName) !== -1 || grommetInputPadNames.indexOf(comp.displayName) !== -1);
 };
 
-var FormFieldBox = (0, _styledComponents["default"])(_Box.Box).withConfig({
-  displayName: "FormField__FormFieldBox",
-  componentId: "m9hood-0"
-})(["", " ", ""], function (props) {
+var FormFieldBox = (0, _styledComponents["default"])(_Box.Box)(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n  ", "\n  ", "\n"])), function (props) {
   return props.focus && (0, _styles.focusStyle)({
     justBorder: true
   });
 }, function (props) {
   return props.theme.formField && props.theme.formField.extend;
 });
-var FormFieldContentBox = (0, _styledComponents["default"])(_Box.Box).withConfig({
-  displayName: "FormField__FormFieldContentBox",
-  componentId: "m9hood-1"
-})(["", ""], function (props) {
+var FormFieldContentBox = (0, _styledComponents["default"])(_Box.Box)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteralLoose(["\n  ", "\n"])), function (props) {
   return props.focus && (0, _styles.focusStyle)({
     justBorder: true
   });
 });
-var StyledMessageContainer = (0, _styledComponents["default"])(_Box.Box).withConfig({
-  displayName: "FormField__StyledMessageContainer",
-  componentId: "m9hood-2"
-})(["", ""], function (props) {
+var StyledMessageContainer = (0, _styledComponents["default"])(_Box.Box)(_templateObject3 || (_templateObject3 = _taggedTemplateLiteralLoose(["\n  ", "\n"])), function (props) {
   return props.messageType && props.theme.formField[props.messageType].container && props.theme.formField[props.messageType].container.extend;
 });
-var RequiredText = (0, _styledComponents["default"])(_Text.Text).withConfig({
-  displayName: "FormField__RequiredText",
-  componentId: "m9hood-3"
-})(["color:inherit;font-weight:inherit;line-height:inherit;"]);
+var RequiredText = (0, _styledComponents["default"])(_Text.Text)(_templateObject4 || (_templateObject4 = _taggedTemplateLiteralLoose(["\n  color: inherit;\n  font-weight: inherit;\n  line-height: inherit;\n"])));
 
 var Message = function Message(_ref) {
   var error = _ref.error,

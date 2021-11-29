@@ -1,3 +1,7 @@
+var _templateObject, _templateObject2, _templateObject3;
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
 import { css, keyframes } from 'styled-components';
 var PULSE_SIZES = {
   xsmall: 1.001,
@@ -122,13 +126,13 @@ export var animationObjectStyle = function animationObjectStyle(animation, theme
   var animationTheme = themeObj && themeObj.animation || theme.global.animation;
 
   if (bounds) {
-    var animationTransition = css(["from{", ";}to{", ";}"], bounds[0], bounds[1]);
+    var animationTransition = css(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n      from {\n        ", ";\n      }\n      to {\n        ", ";\n      }\n    "])), bounds[0], bounds[1]);
 
     var defaultDuration = function defaultDuration() {
       return normalizeTiming(animationTheme[animation.type] ? animationTheme[animation.type].duration : animation.duration, animationTheme.duration);
     };
 
-    return css(["", " ", " ", " ", ""], keyframes(["", ""], animationTransition), normalizeTiming(animation.duration, defaultDuration()), normalizeTiming(animation.delay, '0s'), animationEnding(animation.type));
+    return css(_templateObject2 || (_templateObject2 = _taggedTemplateLiteralLoose(["\n      ", "\n      ", "\n    ", "\n    ", "\n    "])), keyframes(_templateObject3 || (_templateObject3 = _taggedTemplateLiteralLoose(["", ""])), animationTransition), normalizeTiming(animation.duration, defaultDuration()), normalizeTiming(animation.delay, '0s'), animationEnding(animation.type));
   }
 
   return '';

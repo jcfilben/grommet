@@ -1,3 +1,7 @@
+var _templateObject;
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
 import { css } from 'styled-components';
 import { deepFreeze } from '../utils/object';
 import { normalizeColor } from '../utils/colors';
@@ -53,7 +57,7 @@ export var dark = deepFreeze({
     },
     focus: {
       border: {
-        color: css(["", ";"], function (props) {
+        color: css(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n          ", ";\n        "])), function (props) {
           return normalizeColor('focus', props.theme);
         }),
         width: '2px'

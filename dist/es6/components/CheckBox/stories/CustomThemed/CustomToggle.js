@@ -1,11 +1,15 @@
+var _templateObject;
+
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
 
 import React, { useState } from 'react';
 import { css } from 'styled-components';
 import { Box, Grommet, CheckBox } from 'grommet';
 import { grommet } from 'grommet/themes';
 import { deepMerge } from 'grommet/utils';
-var checkboxCheckStyle = css(["background-color:#2196f3;border-color:#2196f3;"]);
+var checkboxCheckStyle = css(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n  background-color: #2196f3;\n  border-color: #2196f3;\n"])));
 var customToggleTheme = {
   global: {
     colors: {

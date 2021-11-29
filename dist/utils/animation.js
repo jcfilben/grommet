@@ -5,6 +5,10 @@ exports.normalizeTiming = exports.animationObjectStyle = exports.animationEnding
 
 var _styledComponents = require("styled-components");
 
+var _templateObject, _templateObject2, _templateObject3;
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
 var PULSE_SIZES = {
   xsmall: 1.001,
   small: 1.01,
@@ -138,13 +142,13 @@ var animationObjectStyle = function animationObjectStyle(animation, theme, theme
   var animationTheme = themeObj && themeObj.animation || theme.global.animation;
 
   if (bounds) {
-    var animationTransition = (0, _styledComponents.css)(["from{", ";}to{", ";}"], bounds[0], bounds[1]);
+    var animationTransition = (0, _styledComponents.css)(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n      from {\n        ", ";\n      }\n      to {\n        ", ";\n      }\n    "])), bounds[0], bounds[1]);
 
     var defaultDuration = function defaultDuration() {
       return normalizeTiming(animationTheme[animation.type] ? animationTheme[animation.type].duration : animation.duration, animationTheme.duration);
     };
 
-    return (0, _styledComponents.css)(["", " ", " ", " ", ""], (0, _styledComponents.keyframes)(["", ""], animationTransition), normalizeTiming(animation.duration, defaultDuration()), normalizeTiming(animation.delay, '0s'), animationEnding(animation.type));
+    return (0, _styledComponents.css)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteralLoose(["\n      ", "\n      ", "\n    ", "\n    ", "\n    "])), (0, _styledComponents.keyframes)(_templateObject3 || (_templateObject3 = _taggedTemplateLiteralLoose(["", ""])), animationTransition), normalizeTiming(animation.duration, defaultDuration()), normalizeTiming(animation.delay, '0s'), animationEnding(animation.type));
   }
 
   return '';

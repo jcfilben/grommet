@@ -1,3 +1,7 @@
+var _templateObject;
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
 import React from 'react';
 import { css } from 'styled-components';
 import { Alert, StatusInfo } from 'grommet-icons';
@@ -19,7 +23,7 @@ var customTheme = deepMerge(grommet, {
         pad: {
           horizontal: 'small'
         },
-        extend: css(["svg{margin-top:10px;}"])
+        extend: css(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n          svg {\n            margin-top: 10px;\n          }\n        "])))
       },
       color: 'white',
       icon: /*#__PURE__*/React.createElement(Alert, {

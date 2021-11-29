@@ -1,12 +1,13 @@
+var _templateObject, _templateObject2;
+
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
 /* eslint-disable max-len */
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { Box, DataChart, Stack } from 'grommet';
-var keyFrameExampleOne = keyframes(["0%{width:200px;background-color:#FFFFFF;}100%{width:0px;background-color:#FFFFFF;}"]);
-var AnimatedBox = styled(Box).withConfig({
-  displayName: "Prediction__AnimatedBox",
-  componentId: "sc-2m8o8b-0"
-})(["animation:", " 3s linear;"], keyFrameExampleOne);
+var keyFrameExampleOne = keyframes(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n0% {\n  width: 200px;\n  background-color: #FFFFFF;\n}\n\n100% {\n    width: 0px;\n    background-color: #FFFFFF;\n  }\n"])));
+var AnimatedBox = styled(Box)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteralLoose(["\n  animation: ", " 3s linear;\n"])), keyFrameExampleOne);
 var data = [];
 
 for (var i = 0; i < 13; i += 1) {
