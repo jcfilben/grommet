@@ -1,7 +1,21 @@
-"use strict";
+'use strict';
 
 exports.__esModule = true;
-exports.withinDates = exports.betweenDates = exports.formatToLocalYYYYMMDD = exports.localTimezoneToUTC = exports.daysApart = exports.sameDayOrBefore = exports.sameDayOrAfter = exports.sameDay = exports.endOfMonth = exports.startOfMonth = exports.subtractMonths = exports.addMonths = exports.subtractDays = exports.addDays = void 0;
+exports.withinDates =
+  exports.subtractMonths =
+  exports.subtractDays =
+  exports.startOfMonth =
+  exports.sameDayOrBefore =
+  exports.sameDayOrAfter =
+  exports.sameDay =
+  exports.localTimezoneToUTC =
+  exports.formatToLocalYYYYMMDD =
+  exports.endOfMonth =
+  exports.daysApart =
+  exports.betweenDates =
+  exports.addMonths =
+  exports.addDays =
+    void 0;
 // Utility functions for the Calendar.
 // Just what's needed to avoid having to include a dependency like momentjs.
 var DAY_MILLISECONDS = 24 * 60 * 60 * 1000;
@@ -68,19 +82,35 @@ var endOfMonth = function endOfMonth(date) {
 exports.endOfMonth = endOfMonth;
 
 var sameDay = function sameDay(date1, date2) {
-  return date1.getFullYear() === date2.getFullYear() && date1.getMonth() === date2.getMonth() && date1.getDate() === date2.getDate();
+  return (
+    date1.getFullYear() === date2.getFullYear() &&
+    date1.getMonth() === date2.getMonth() &&
+    date1.getDate() === date2.getDate()
+  );
 };
 
 exports.sameDay = sameDay;
 
 var sameDayOrAfter = function sameDayOrAfter(date1, date2) {
-  return date1.getFullYear() > date2.getFullYear() || date1.getFullYear() === date2.getFullYear() && (date1.getMonth() > date2.getMonth() || date1.getMonth() === date2.getMonth() && date1.getDate() >= date2.getDate());
+  return (
+    date1.getFullYear() > date2.getFullYear() ||
+    (date1.getFullYear() === date2.getFullYear() &&
+      (date1.getMonth() > date2.getMonth() ||
+        (date1.getMonth() === date2.getMonth() &&
+          date1.getDate() >= date2.getDate())))
+  );
 };
 
 exports.sameDayOrAfter = sameDayOrAfter;
 
 var sameDayOrBefore = function sameDayOrBefore(date1, date2) {
-  return date1.getFullYear() < date2.getFullYear() || date1.getFullYear() === date2.getFullYear() && (date1.getMonth() < date2.getMonth() || date1.getMonth() === date2.getMonth() && date1.getDate() <= date2.getDate());
+  return (
+    date1.getFullYear() < date2.getFullYear() ||
+    (date1.getFullYear() === date2.getFullYear() &&
+      (date1.getMonth() < date2.getMonth() ||
+        (date1.getMonth() === date2.getMonth() &&
+          date1.getDate() <= date2.getDate())))
+  );
 };
 
 exports.sameDayOrBefore = sameDayOrBefore;
@@ -88,7 +118,6 @@ exports.sameDayOrBefore = sameDayOrBefore;
 var daysApart = function daysApart(date1, date2) {
   return Math.floor((date1.getTime() - date2.getTime()) / DAY_MILLISECONDS);
 }; // account for timezone offset of user's local machine
-
 
 exports.daysApart = daysApart;
 
@@ -100,11 +129,14 @@ exports.localTimezoneToUTC = localTimezoneToUTC;
 
 var formatToLocalYYYYMMDD = function formatToLocalYYYYMMDD(date) {
   var adjustedDate = new Date(date);
-  return new Date(adjustedDate.getTime() - adjustedDate.getTimezoneOffset() * 60000).toISOString().split('T')[0];
+  return new Date(
+    adjustedDate.getTime() - adjustedDate.getTimezoneOffset() * 60000,
+  )
+    .toISOString()
+    .split('T')[0];
 }; // betweenDates takes an array of two elements and checks if the
 // supplied date lies between them, inclusive.
 // returns 2 if exact match to one end, 1 if between, undefined otherwise
-
 
 exports.formatToLocalYYYYMMDD = formatToLocalYYYYMMDD;
 
@@ -113,14 +145,19 @@ var betweenDates = function betweenDates(date, dates) {
 
   if (dates) {
     var _dates$map = dates.map(function (d) {
-      return d ? new Date(d) : undefined;
-    }),
-        from = _dates$map[0],
-        to = _dates$map[1];
+        return d ? new Date(d) : undefined;
+      }),
+      from = _dates$map[0],
+      to = _dates$map[1];
 
-    if (from && sameDay(date, from) || to && sameDay(date, to)) {
+    if ((from && sameDay(date, from)) || (to && sameDay(date, to))) {
       result = 2;
-    } else if (from && sameDayOrAfter(date, from) && to && sameDayOrBefore(date, to)) {
+    } else if (
+      from &&
+      sameDayOrAfter(date, from) &&
+      to &&
+      sameDayOrBefore(date, to)
+    ) {
       result = 1;
     }
   } else {
@@ -132,7 +169,6 @@ var betweenDates = function betweenDates(date, dates) {
 // checks whether the supplied date matches any string or is between
 // any dates in arrays.
 // returns 2 if exact match, 1 if between, undefined otherwise
-
 
 exports.betweenDates = betweenDates;
 

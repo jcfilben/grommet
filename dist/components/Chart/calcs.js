@@ -1,33 +1,33 @@
-"use strict";
+'use strict';
 
 exports.__esModule = true;
-exports.calcs = exports.calcBounds = exports.round = void 0;
+exports.round = exports.calcs = exports.calcBounds = void 0;
 
-var _utils = require("./utils");
+var _utils = require('./utils');
 
 var thicknessPad = {
   xlarge: 'large',
   large: 'medium',
   medium: 'small',
   small: 'xsmall',
-  xsmall: 'xxsmall'
+  xsmall: 'xxsmall',
 };
 
 var round = function round(value, decimals) {
-  return Number(Math.round(value + "e" + decimals) + "e-" + decimals);
+  return Number(Math.round(value + 'e' + decimals) + 'e-' + decimals);
 };
 
 exports.round = round;
 
 var alignMax = function alignMax(value, interval) {
-  if (value > 0) return value - value % interval + interval;
-  if (value < 0) return value + value % interval;
+  if (value > 0) return value - (value % interval) + interval;
+  if (value < 0) return value + (value % interval);
   return value;
 };
 
 var alignMin = function alignMin(value, interval) {
-  if (value > 0) return value - value % interval;
-  if (value < 0) return value - value % interval - interval;
+  if (value > 0) return value - (value % interval);
+  if (value < 0) return value - (value % interval) - interval;
   return value;
 };
 
@@ -39,7 +39,8 @@ var calcBounds = function calcBounds(values, options) {
   // coarseness influences the rounding of the bounds, the smaller the
   // number, the more the bounds will be rounded. e.g. 111 -> 110 -> 100
   // Normalize to an array. Backwards compatible has no coarseness for x-axis
-  var coarseness = Array.isArray(options.coarseness) && options.coarseness || options.coarseness && [undefined, options.coarseness] || [undefined, 5]; // the number of steps is one less than the number of labels
+  var coarseness = (Array.isArray(options.coarseness) && options.coarseness) ||
+    (options.coarseness && [undefined, options.coarseness]) || [undefined, 5]; // the number of steps is one less than the number of labels
 
   var steps = options.steps || [1, 1];
   var calcValues = (0, _utils.normalizeValues)(values || []); // min and max values
@@ -51,45 +52,47 @@ var calcBounds = function calcBounds(values, options) {
 
   if (calcValues.length) {
     // Calculate the max and min values.
-    calcValues.filter(function (value) {
-      return value !== undefined;
-    }).forEach(function (value) {
-      var x = value.value[0];
+    calcValues
+      .filter(function (value) {
+        return value !== undefined;
+      })
+      .forEach(function (value) {
+        var x = value.value[0];
 
-      if (x !== undefined) {
-        minX = minX === undefined ? x : Math.min(minX, x);
-        maxX = maxX === undefined ? x : Math.max(maxX, x);
-      }
+        if (x !== undefined) {
+          minX = minX === undefined ? x : Math.min(minX, x);
+          maxX = maxX === undefined ? x : Math.max(maxX, x);
+        }
 
-      var y = value.value[1];
+        var y = value.value[1];
 
-      if (y !== undefined) {
-        minY = minY === undefined ? y : Math.min(minY, y);
-        maxY = maxY === undefined ? y : Math.max(maxY, y);
-      } // handle ranges of values
+        if (y !== undefined) {
+          minY = minY === undefined ? y : Math.min(minY, y);
+          maxY = maxY === undefined ? y : Math.max(maxY, y);
+        } // handle ranges of values
 
+        var y2 = value.value[2];
 
-      var y2 = value.value[2];
-
-      if (y2 !== undefined) {
-        minY = Math.min(minY, y2);
-        maxY = Math.max(maxY, y2);
-      }
-    }); // when max === min, offset them so we can show something
+        if (y2 !== undefined) {
+          minY = Math.min(minY, y2);
+          maxY = Math.max(maxY, y2);
+        }
+      }); // when max === min, offset them so we can show something
 
     if (maxX === minX) {
-      if (maxX > 0) minX = maxX - 1;else maxX = minX + 1;
+      if (maxX > 0) minX = maxX - 1;
+      else maxX = minX + 1;
     }
 
     if (maxY === minY) {
-      if (maxY > 0) minY = maxY - 1;else maxY = minY + 1;
+      if (maxY > 0) minY = maxY - 1;
+      else maxY = minY + 1;
     } // Calculate some reasonable bounds based on the max and min values.
     // This is so values like 87342.12 don't end up being displayed as the
     // graph axis labels.
 
-
     var cX = coarseness[0],
-        cY = coarseness[1];
+      cY = coarseness[1];
 
     if (cX) {
       var deltaX = maxX - minX;
@@ -126,7 +129,12 @@ var calcBounds = function calcBounds(values, options) {
   }
 
   var bounds;
-  if (calcValues.length) bounds = [[minX, maxX], [minY, maxY]];else bounds = [[], []];
+  if (calcValues.length)
+    bounds = [
+      [minX, maxX],
+      [minY, maxY],
+    ];
+  else bounds = [[], []];
   return bounds;
 };
 
@@ -146,7 +154,10 @@ var calcs = function calcs(values, options) {
   var bounds = options.bounds || calcBounds(values, options);
   if (options.min !== undefined) bounds[1][0] = options.min;
   if (options.max !== undefined) bounds[1][1] = options.max;
-  var dimensions = [round(bounds[0][1] - bounds[0][0], 2), round(bounds[1][1] - bounds[1][0], 2)]; // Calculate x and y axis values across the specfied number of steps.
+  var dimensions = [
+    round(bounds[0][1] - bounds[0][0], 2),
+    round(bounds[1][1] - bounds[1][0], 2),
+  ]; // Calculate x and y axis values across the specfied number of steps.
 
   var yAxis = [];
   var y = bounds[1][1]; // To deal with javascript math limitations, round the step with 4 decimal
@@ -169,7 +180,7 @@ var calcs = function calcs(values, options) {
   }
 
   var _options = options,
-      thickness = _options.thickness;
+    thickness = _options.thickness;
 
   if (!thickness) {
     // Set bar thickness based on number of values being rendered.
@@ -197,7 +208,7 @@ var calcs = function calcs(values, options) {
     bounds: bounds,
     dimensions: dimensions,
     pad: pad,
-    thickness: thickness
+    thickness: thickness,
   };
 };
 

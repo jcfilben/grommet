@@ -1,9 +1,9 @@
-"use strict";
+'use strict';
 
 exports.__esModule = true;
-exports.defaultColor = exports.strokeProps = void 0;
+exports.strokeProps = exports.defaultColor = void 0;
 
-var _utils = require("../../utils");
+var _utils = require('../../utils');
 
 var strokeProps = function strokeProps(color, theme) {
   var result = {};
@@ -13,7 +13,11 @@ var strokeProps = function strokeProps(color, theme) {
       result.stroke = (0, _utils.normalizeColor)(color.color, theme);
 
       if (color.opacity) {
-        result.strokeOpacity = "" + (color.opacity === true ? theme.global.opacity.medium : theme.global.opacity[color.opacity] || color.opacity);
+        result.strokeOpacity =
+          '' +
+          (color.opacity === true
+            ? theme.global.opacity.medium
+            : theme.global.opacity[color.opacity] || color.opacity);
       }
     } else {
       result.stroke = (0, _utils.normalizeColor)(color, theme);
@@ -31,11 +35,11 @@ var defaultColor = function defaultColor(index, theme, valuesLength) {
     return theme.meter.color;
   } // We want the last value to have the first color
 
-
   var colorIndex = valuesLength - index - 1;
 
   if (theme.meter && theme.meter.colors) {
-    var _colors = theme.meter.colors[theme.dark ? 'dark' : 'light'] || theme.meter.colors;
+    var _colors =
+      theme.meter.colors[theme.dark ? 'dark' : 'light'] || theme.meter.colors;
 
     return _colors[colorIndex % _colors.length];
   }
@@ -47,7 +51,6 @@ var defaultColor = function defaultColor(index, theme, valuesLength) {
   if (colors.length > 0) {
     return colors[colorIndex % colors.length];
   } // Deprecate using "neutral-*" color names. Remove eventually.
-
 
   var neutralColors = Object.keys(theme.global.colors).filter(function (k) {
     return neutralExp.test(k);

@@ -1,9 +1,9 @@
-"use strict";
+'use strict';
 
 exports.__esModule = true;
-exports["default"] = exports.useLayoutEffect = void 0;
+exports.useLayoutEffect = exports['default'] = void 0;
 
-var _react = require("react");
+var _react = require('react');
 
 /* eslint-disable no-restricted-imports */
 
@@ -15,7 +15,8 @@ var _react = require("react");
  * @see https://medium.com/@alexandereardon/uselayouteffect-and-ssr-192986cdcf7a
  * @see https://github.com/grommet/grommet/issues/4765
  */
-var useLayoutEffect = typeof window !== 'undefined' ? _react.useLayoutEffect : _react.useEffect;
+var useLayoutEffect =
+  typeof window !== 'undefined' ? _react.useLayoutEffect : _react.useEffect;
 exports.useLayoutEffect = useLayoutEffect;
 var _default = useLayoutEffect;
-exports["default"] = _default;
+exports['default'] = _default;

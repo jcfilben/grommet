@@ -1,41 +1,51 @@
-"use strict";
+'use strict';
 
 exports.__esModule = true;
-exports.animationObjectStyle = exports.animationEnding = exports.normalizeTiming = exports.animationBounds = void 0;
+exports.normalizeTiming =
+  exports.animationObjectStyle =
+  exports.animationEnding =
+  exports.animationBounds =
+    void 0;
 
-var _styledComponents = require("styled-components");
+var _styledComponents = require('styled-components');
 
 var _templateObject, _templateObject2, _templateObject3;
 
-function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+function _taggedTemplateLiteralLoose(strings, raw) {
+  if (!raw) {
+    raw = strings.slice(0);
+  }
+  strings.raw = raw;
+  return strings;
+}
 
 var PULSE_SIZES = {
   xsmall: 1.001,
   small: 1.01,
   medium: 1.1,
   large: 1.5,
-  xlarge: 2
+  xlarge: 2,
 };
 var SLIDE_SIZES = {
   xsmall: 1,
   small: 5,
   medium: 10,
   large: 50,
-  xlarge: 200
+  xlarge: 200,
 };
 var JIGGLE_SIZES = {
   xsmall: 0.1,
   small: 1,
   medium: 5,
   large: 400,
-  xlarge: 1000
+  xlarge: 1000,
 };
 var ZOOM_SIZES = {
   xsmall: 0.001,
   small: 0.01,
   medium: 0.05,
   large: 0.1,
-  xlarge: 0.5
+  xlarge: 0.5,
 };
 
 var animationBounds = function animationBounds(type, size) {
@@ -44,7 +54,7 @@ var animationBounds = function animationBounds(type, size) {
   }
 
   if (type === 'draw') {
-    return ['', "stroke-dashoffset: 0"];
+    return ['', 'stroke-dashoffset: 0'];
   }
 
   if (type === 'fadeIn') {
@@ -57,19 +67,25 @@ var animationBounds = function animationBounds(type, size) {
 
   if (type === 'jiggle') {
     var deg = JIGGLE_SIZES[size];
-    return ["transform: rotate(-" + deg + "deg);", "transform: rotate(" + deg + "deg);"];
+    return [
+      'transform: rotate(-' + deg + 'deg);',
+      'transform: rotate(' + deg + 'deg);',
+    ];
   }
 
   if (type === 'pulse') {
-    return ['transform: scale(1);', "transform: scale(" + PULSE_SIZES[size] + ")"];
+    return [
+      'transform: scale(1);',
+      'transform: scale(' + PULSE_SIZES[size] + ')',
+    ];
   }
 
   if (type === 'rotateRight') {
-    return ["transform: rotate(0deg);", "transform: rotate(359deg);"];
+    return ['transform: rotate(0deg);', 'transform: rotate(359deg);'];
   }
 
   if (type === 'rotateLeft') {
-    return ["transform: rotate(0deg);", "transform: rotate(-359deg);"];
+    return ['transform: rotate(0deg);', 'transform: rotate(-359deg);'];
   }
 
   if (type === 'flipIn') {
@@ -81,27 +97,45 @@ var animationBounds = function animationBounds(type, size) {
   }
 
   if (type === 'slideDown') {
-    return ["transform: translateY(-" + SLIDE_SIZES[size] + "%);", 'transform: none;'];
+    return [
+      'transform: translateY(-' + SLIDE_SIZES[size] + '%);',
+      'transform: none;',
+    ];
   }
 
   if (type === 'slideLeft') {
-    return ["transform: translateX(" + SLIDE_SIZES[size] + "%);", 'transform: none;'];
+    return [
+      'transform: translateX(' + SLIDE_SIZES[size] + '%);',
+      'transform: none;',
+    ];
   }
 
   if (type === 'slideRight') {
-    return ["transform: translateX(-" + SLIDE_SIZES[size] + "%);", 'transform: none;'];
+    return [
+      'transform: translateX(-' + SLIDE_SIZES[size] + '%);',
+      'transform: none;',
+    ];
   }
 
   if (type === 'slideUp') {
-    return ["transform: translateY(" + SLIDE_SIZES[size] + "%);", 'transform: none;'];
+    return [
+      'transform: translateY(' + SLIDE_SIZES[size] + '%);',
+      'transform: none;',
+    ];
   }
 
   if (type === 'zoomIn') {
-    return ["transform: scale(" + (1 - ZOOM_SIZES[size]) + ");", 'transform: none;'];
+    return [
+      'transform: scale(' + (1 - ZOOM_SIZES[size]) + ');',
+      'transform: none;',
+    ];
   }
 
   if (type === 'zoomOut') {
-    return ["transform: scale(" + (1 + ZOOM_SIZES[size]) + ");", 'transform: none;'];
+    return [
+      'transform: scale(' + (1 + ZOOM_SIZES[size]) + ');',
+      'transform: none;',
+    ];
   }
 
   return [];
@@ -110,7 +144,7 @@ var animationBounds = function animationBounds(type, size) {
 exports.animationBounds = animationBounds;
 
 var normalizeTiming = function normalizeTiming(time, defaultTiming) {
-  return typeof time === 'number' ? time / 1000.0 + "s" : time || defaultTiming;
+  return typeof time === 'number' ? time / 1000.0 + 's' : time || defaultTiming;
 };
 
 exports.normalizeTiming = normalizeTiming;
@@ -137,18 +171,54 @@ var animationEnding = function animationEnding(type) {
 
 exports.animationEnding = animationEnding;
 
-var animationObjectStyle = function animationObjectStyle(animation, theme, themeObj) {
+var animationObjectStyle = function animationObjectStyle(
+  animation,
+  theme,
+  themeObj,
+) {
   var bounds = animationBounds(animation.type, animation.size);
-  var animationTheme = themeObj && themeObj.animation || theme.global.animation;
+  var animationTheme =
+    (themeObj && themeObj.animation) || theme.global.animation;
 
   if (bounds) {
-    var animationTransition = (0, _styledComponents.css)(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n      from {\n        ", ";\n      }\n      to {\n        ", ";\n      }\n    "])), bounds[0], bounds[1]);
+    var animationTransition = (0, _styledComponents.css)(
+      _templateObject ||
+        (_templateObject = _taggedTemplateLiteralLoose([
+          '\n      from {\n        ',
+          ';\n      }\n      to {\n        ',
+          ';\n      }\n    ',
+        ])),
+      bounds[0],
+      bounds[1],
+    );
 
     var defaultDuration = function defaultDuration() {
-      return normalizeTiming(animationTheme[animation.type] ? animationTheme[animation.type].duration : animation.duration, animationTheme.duration);
+      return normalizeTiming(
+        animationTheme[animation.type]
+          ? animationTheme[animation.type].duration
+          : animation.duration,
+        animationTheme.duration,
+      );
     };
 
-    return (0, _styledComponents.css)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteralLoose(["\n      ", "\n      ", "\n    ", "\n    ", "\n    "])), (0, _styledComponents.keyframes)(_templateObject3 || (_templateObject3 = _taggedTemplateLiteralLoose(["", ""])), animationTransition), normalizeTiming(animation.duration, defaultDuration()), normalizeTiming(animation.delay, '0s'), animationEnding(animation.type));
+    return (0, _styledComponents.css)(
+      _templateObject2 ||
+        (_templateObject2 = _taggedTemplateLiteralLoose([
+          '\n      ',
+          '\n      ',
+          '\n    ',
+          '\n    ',
+          '\n    ',
+        ])),
+      (0, _styledComponents.keyframes)(
+        _templateObject3 ||
+          (_templateObject3 = _taggedTemplateLiteralLoose(['', ''])),
+        animationTransition,
+      ),
+      normalizeTiming(animation.duration, defaultDuration()),
+      normalizeTiming(animation.delay, '0s'),
+      animationEnding(animation.type),
+    );
   }
 
   return '';

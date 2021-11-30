@@ -30,7 +30,10 @@ export var datumValue = function datumValue(datum, property) {
   return datumValue(datum[parts[0]], parts.slice(1).join('.'));
 }; // get the primary property name
 
-export var normalizePrimaryProperty = function normalizePrimaryProperty(columns, primaryKey) {
+export var normalizePrimaryProperty = function normalizePrimaryProperty(
+  columns,
+  primaryKey,
+) {
   var result;
   columns.forEach(function (column) {
     // remember the first key property
@@ -40,7 +43,9 @@ export var normalizePrimaryProperty = function normalizePrimaryProperty(columns,
   });
 
   if (!result) {
-    if (primaryKey === false) result = undefined;else if (primaryKey) result = primaryKey;else if (columns.length > 0) result = columns[0].property;
+    if (primaryKey === false) result = undefined;
+    else if (primaryKey) result = primaryKey;
+    else if (columns.length > 0) result = columns[0].property;
   }
 
   return result;
@@ -60,17 +65,23 @@ var escapeRegExp = function escapeRegExp(input) {
   return input.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }; // filter data based on filters then sort
 
-
-export var filterAndSortData = function filterAndSortData(data, filters, onSearch, sort) {
+export var filterAndSortData = function filterAndSortData(
+  data,
+  filters,
+  onSearch,
+  sort,
+) {
   var result = data;
 
   if (!onSearch) {
     var regexps = {};
-    Object.keys(filters).filter(function (n) {
-      return filters[n];
-    }).forEach(function (n) {
-      regexps[n] = new RegExp(escapeRegExp(filters[n]), 'i');
-    });
+    Object.keys(filters)
+      .filter(function (n) {
+        return filters[n];
+      })
+      .forEach(function (n) {
+        regexps[n] = new RegExp(escapeRegExp(filters[n]), 'i');
+      });
 
     if (Object.keys(regexps).length > 0) {
       result = data.filter(function (datum) {
@@ -83,7 +94,7 @@ export var filterAndSortData = function filterAndSortData(data, filters, onSearc
 
   if (sort && !sort.external) {
     var property = sort.property,
-        direction = sort.direction;
+      direction = sort.direction;
     result = result === data ? [].concat(data) : result; // don't sort caller's data
 
     var sortAsc = direction === 'asc';
@@ -95,7 +106,7 @@ export var filterAndSortData = function filterAndSortData(data, filters, onSearc
 
       if (typeof d1Val === 'string' && typeof d2Val === 'string') {
         var sortResult = d1Val.localeCompare(d2Val, undefined, {
-          sensitivity: 'base'
+          sensitivity: 'base',
         });
         return sortAsc ? sortResult : -sortResult;
       }
@@ -124,32 +135,35 @@ var maxReducer = function maxReducer(accumulated, next) {
 var reducers = {
   max: maxReducer,
   min: minReducer,
-  sum: sumReducer
+  sum: sumReducer,
 }; // aggregate reducers init values
 
 var reducersInitValues = {
   min: Number.MAX_VALUE,
   max: Number.MIN_VALUE,
-  sum: 0
+  sum: 0,
 }; // aggregate a single column
 
 var aggregateColumn = function aggregateColumn(column, data) {
   var value;
 
   if (column.aggregate === 'avg') {
-    value = data.map(function (d) {
-      return datumValue(d, column.property);
-    }).reduce(sumReducer);
+    value = data
+      .map(function (d) {
+        return datumValue(d, column.property);
+      })
+      .reduce(sumReducer);
     value /= data.length;
   } else {
-    value = data.map(function (d) {
-      return datumValue(d, column.property);
-    }).reduce(reducers[column.aggregate], reducersInitValues[column.aggregate]);
+    value = data
+      .map(function (d) {
+        return datumValue(d, column.property);
+      })
+      .reduce(reducers[column.aggregate], reducersInitValues[column.aggregate]);
   }
 
   return value;
 }; // aggregate all columns that can
-
 
 var aggregate = function aggregate(columns, data) {
   var result = {};
@@ -161,7 +175,6 @@ var aggregate = function aggregate(columns, data) {
   });
   return result;
 }; // build the values for the footer cells
-
 
 export var buildFooterValues = function buildFooterValues(columns, data) {
   var aggregateValues = aggregate(columns, data);
@@ -180,17 +193,26 @@ export var buildFooterValues = function buildFooterValues(columns, data) {
 }; // looks at the groupBy property of each data object and returns an
 // array with one item for each unique value of that property.
 
-export var buildGroups = function buildGroups(columns, data, groupBy, primaryProperty) {
+export var buildGroups = function buildGroups(
+  columns,
+  data,
+  groupBy,
+  primaryProperty,
+) {
   var result;
 
-  if (groupBy != null && groupBy.property || typeof groupBy === 'string') {
+  if ((groupBy != null && groupBy.property) || typeof groupBy === 'string') {
     result = [];
     var groupMap = {};
     data.forEach(function (datum) {
       var _groupBy$expandable;
 
       var key = datumValue(datum, primaryProperty);
-      var isGroup = key && ((_groupBy$expandable = groupBy.expandable) == null ? void 0 : _groupBy$expandable.includes(key));
+      var isGroup =
+        key &&
+        ((_groupBy$expandable = groupBy.expandable) == null
+          ? void 0
+          : _groupBy$expandable.includes(key));
       var groupByProperty = groupBy.property ? groupBy.property : groupBy;
       var groupValue = isGroup ? key : datumValue(datum, groupByProperty);
 
@@ -198,7 +220,7 @@ export var buildGroups = function buildGroups(columns, data, groupBy, primaryPro
         var group = {
           data: [],
           datum: isGroup ? datum : {},
-          key: groupValue
+          key: groupValue,
         };
         group.datum[groupByProperty] = groupValue;
         result.push(group);
@@ -225,7 +247,7 @@ export var buildGroups = function buildGroups(columns, data, groupBy, primaryPro
       return {
         data: [],
         datum: {},
-        key: key
+        key: key,
       };
     });
   }
@@ -239,16 +261,17 @@ export var buildGroupState = function buildGroupState(groups, groupBy) {
   if (groups) {
     groups.forEach(function (_ref) {
       var key = _ref.key;
-      if (key) result[key] = {
-        expanded: false
-      };
+      if (key)
+        result[key] = {
+          expanded: false,
+        };
     });
   }
 
   if (groupBy && groupBy.expand) {
     groupBy.expand.forEach(function (value) {
       result[value] = {
-        expanded: true
+        expanded: true,
       };
     });
   }
@@ -276,52 +299,141 @@ export var normalizeCellProps = function normalizeCellProps(props, theme) {
   var result = {};
   tableContextNames.forEach(function (context) {
     result[context] = {
-      pinned: {}
+      pinned: {},
     };
     cellPropertyNames.forEach(function (propName) {
-      var _props$propName, _theme$dataTable, _theme$dataTable$cont, _theme$table, _theme$table$context, _props$propName3, _props$propName3$pinn, _props$propName5, _theme$dataTable2, _theme$dataTable2$pin, _theme$dataTable2$pin2;
+      var _props$propName,
+        _theme$dataTable,
+        _theme$dataTable$cont,
+        _theme$table,
+        _theme$table$context,
+        _props$propName3,
+        _props$propName3$pinn,
+        _props$propName5,
+        _theme$dataTable2,
+        _theme$dataTable2$pin,
+        _theme$dataTable2$pin2;
 
-      var value = (props == null ? void 0 : (_props$propName = props[propName]) == null ? void 0 : _props$propName[context]) || tableContextNames.every(function (n) {
-        var _props$propName2;
+      var value =
+        (props == null
+          ? void 0
+          : (_props$propName = props[propName]) == null
+          ? void 0
+          : _props$propName[context]) || // if the propName is used without context, it applies to all contexts
+        (tableContextNames.every(function (n) {
+          var _props$propName2;
 
-        return !(props != null && (_props$propName2 = props[propName]) != null && _props$propName2[n]);
-      }) && (props == null ? void 0 : props[propName]) || (theme == null ? void 0 : (_theme$dataTable = theme.dataTable) == null ? void 0 : (_theme$dataTable$cont = _theme$dataTable[context]) == null ? void 0 : _theme$dataTable$cont[propName]) || (theme == null ? void 0 : (_theme$table = theme.table) == null ? void 0 : (_theme$table$context = _theme$table[context]) == null ? void 0 : _theme$table$context[propName]);
+          return !(
+            props != null &&
+            (_props$propName2 = props[propName]) != null &&
+            _props$propName2[n]
+          );
+        }) &&
+          (props == null ? void 0 : props[propName])) ||
+        (theme == null
+          ? void 0
+          : (_theme$dataTable = theme.dataTable) == null
+          ? void 0
+          : (_theme$dataTable$cont = _theme$dataTable[context]) == null
+          ? void 0
+          : _theme$dataTable$cont[propName]) ||
+        (theme == null
+          ? void 0
+          : (_theme$table = theme.table) == null
+          ? void 0
+          : (_theme$table$context = _theme$table[context]) == null
+          ? void 0
+          : _theme$table$context[propName]);
       if (value !== undefined) result[context][propName] = value; // pinned case
 
-      value = (props == null ? void 0 : (_props$propName3 = props[propName]) == null ? void 0 : (_props$propName3$pinn = _props$propName3.pinned) == null ? void 0 : _props$propName3$pinn[context]) || context === 'body' && tableContextNames.every(function (n) {
-        var _props$propName4, _props$propName4$pinn;
+      value =
+        (props == null
+          ? void 0
+          : (_props$propName3 = props[propName]) == null
+          ? void 0
+          : (_props$propName3$pinn = _props$propName3.pinned) == null
+          ? void 0
+          : _props$propName3$pinn[context]) ||
+        (context === 'body' &&
+          tableContextNames.every(function (n) {
+            var _props$propName4, _props$propName4$pinn;
 
-        return !(props != null && (_props$propName4 = props[propName]) != null && (_props$propName4$pinn = _props$propName4.pinned) != null && _props$propName4$pinn[n]);
-      }) && (props == null ? void 0 : (_props$propName5 = props[propName]) == null ? void 0 : _props$propName5.pinned) || (theme == null ? void 0 : (_theme$dataTable2 = theme.dataTable) == null ? void 0 : (_theme$dataTable2$pin = _theme$dataTable2.pinned) == null ? void 0 : (_theme$dataTable2$pin2 = _theme$dataTable2$pin[context]) == null ? void 0 : _theme$dataTable2$pin2[propName]);
+            return !(
+              props != null &&
+              (_props$propName4 = props[propName]) != null &&
+              (_props$propName4$pinn = _props$propName4.pinned) != null &&
+              _props$propName4$pinn[n]
+            );
+          }) &&
+          (props == null
+            ? void 0
+            : (_props$propName5 = props[propName]) == null
+            ? void 0
+            : _props$propName5.pinned)) ||
+        (theme == null
+          ? void 0
+          : (_theme$dataTable2 = theme.dataTable) == null
+          ? void 0
+          : (_theme$dataTable2$pin = _theme$dataTable2.pinned) == null
+          ? void 0
+          : (_theme$dataTable2$pin2 = _theme$dataTable2$pin[context]) == null
+          ? void 0
+          : _theme$dataTable2$pin2[propName]);
 
       if (value !== undefined) {
-        if (propName === 'background' && theme.background && value.opacity && !value.color) // theme context has an active background color but the
+        if (
+          propName === 'background' &&
+          theme.background &&
+          value.opacity &&
+          !value.color
+        )
+          // theme context has an active background color but the
           // theme doesn't set an explicit color, repeat the context
           // background explicitly
           value.color = normalizeBackgroundColor(theme);
-        if (context === 'body') // in case we have pinned columns, store the pinned stuff in
+        if (context === 'body')
+          // in case we have pinned columns, store the pinned stuff in
           // cellProps.body.pinned
-          result[context].pinned[propName] = value;else if (props.pin === true || props.pin === context) // this context is pinned, use the pinned value directly
+          result[context].pinned[propName] = value;
+        else if (props.pin === true || props.pin === context)
+          // this context is pinned, use the pinned value directly
           result[context][propName] = value;
       }
     });
   });
   return result;
 };
-export var normalizeRowCellProps = function normalizeRowCellProps(rowProps, cellProps, primaryKey, index) {
+export var normalizeRowCellProps = function normalizeRowCellProps(
+  rowProps,
+  cellProps,
+  primaryKey,
+  index,
+) {
   var result = {
-    pinned: {}
+    pinned: {},
   };
   ['background', 'border', 'pad'].forEach(function (propName) {
     var _rowProps$primaryKey;
 
-    var row = primaryKey && rowProps && (rowProps == null ? void 0 : (_rowProps$primaryKey = rowProps[primaryKey]) == null ? void 0 : _rowProps$primaryKey[propName]);
+    var row =
+      primaryKey &&
+      rowProps &&
+      (rowProps == null
+        ? void 0
+        : (_rowProps$primaryKey = rowProps[primaryKey]) == null
+        ? void 0
+        : _rowProps$primaryKey[propName]);
     var cell = cellProps[propName];
-    var value = row && (Array.isArray(row) ? row[index % row.length] : row) || (Array.isArray(cell) ? cell[index % cell.length] : cell);
+    var value =
+      (row && (Array.isArray(row) ? row[index % row.length] : row)) ||
+      (Array.isArray(cell) ? cell[index % cell.length] : cell);
     if (value !== undefined) result[propName] = value;
     var rowPin = rowProps && rowProps.pinned && rowProps.pinned[propName];
     var cellPin = cellProps.pinned[propName];
-    value = rowPin && (Array.isArray(rowPin) ? rowPin[index % rowPin.length] : rowPin) || (Array.isArray(cellPin) ? cellPin[index % cellPin.length] : cellPin);
+    value =
+      (rowPin &&
+        (Array.isArray(rowPin) ? rowPin[index % rowPin.length] : rowPin)) ||
+      (Array.isArray(cellPin) ? cellPin[index % cellPin.length] : cellPin);
     if (value !== undefined) result.pinned[propName] = value;
   });
   return result;

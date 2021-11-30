@@ -1,19 +1,26 @@
-"use strict";
+'use strict';
 
 exports.__esModule = true;
-exports.areNormalizedBoundsEquals = exports.areNormalizedValuesEquals = exports.normalizeBounds = exports.normalizeValues = void 0;
+exports.normalizeValues =
+  exports.normalizeBounds =
+  exports.areNormalizedValuesEquals =
+  exports.areNormalizedBoundsEquals =
+    void 0;
 
 var normalizeValues = function normalizeValues(values) {
   return (values || []).map(function (value, index) {
-    if (value === undefined) return {
-      value: [index, undefined]
-    };
-    if (typeof value === 'number') return {
-      value: [index, value]
-    };
-    if (Array.isArray(value)) return {
-      value: value
-    };
+    if (value === undefined)
+      return {
+        value: [index, undefined],
+      };
+    if (typeof value === 'number')
+      return {
+        value: [index, value],
+      };
+    if (Array.isArray(value))
+      return {
+        value: value,
+      };
     return value;
   });
 };
@@ -24,7 +31,10 @@ var normalizeBounds = function normalizeBounds(bounds, values) {
   var result = bounds;
 
   if (!result) {
-    result = [[0, 1], [0, 1]];
+    result = [
+      [0, 1],
+      [0, 1],
+    ];
     (values || []).forEach(function (value) {
       if (value.value[0] !== undefined) {
         result[0][0] = Math.min(result[0][0], value.value[0]);
@@ -48,8 +58,13 @@ var normalizeBounds = function normalizeBounds(bounds, values) {
 
 exports.normalizeBounds = normalizeBounds;
 
-var areNormalizedValuesEquals = function areNormalizedValuesEquals(valuesX, valuesY) {
-  console.warn("This function will be removed in the upcoming releases.\nPlease get in touch with us if you have concerns.");
+var areNormalizedValuesEquals = function areNormalizedValuesEquals(
+  valuesX,
+  valuesY,
+) {
+  console.warn(
+    'This function will be removed in the upcoming releases.\nPlease get in touch with us if you have concerns.',
+  );
   if (!valuesX || !valuesY) return false;
   if (valuesX.length !== valuesY.length) return false;
   if (valuesX.length === 0) return true;
@@ -63,8 +78,13 @@ var areNormalizedValuesEquals = function areNormalizedValuesEquals(valuesX, valu
 
 exports.areNormalizedValuesEquals = areNormalizedValuesEquals;
 
-var areNormalizedBoundsEquals = function areNormalizedBoundsEquals(boundsX, boundsY) {
-  console.warn("This function will be removed in the upcoming releases.\nPlease get in touch with us if you have concerns.");
+var areNormalizedBoundsEquals = function areNormalizedBoundsEquals(
+  boundsX,
+  boundsY,
+) {
+  console.warn(
+    'This function will be removed in the upcoming releases.\nPlease get in touch with us if you have concerns.',
+  );
   if (!boundsX || !boundsY) return false;
   if (boundsX.length !== boundsY.length || !(boundsX.length > 0)) return false;
   return boundsX.every(function (_, i) {
