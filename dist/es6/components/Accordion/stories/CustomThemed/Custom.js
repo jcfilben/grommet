@@ -5,7 +5,8 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 import React from 'react';
-import { SubtractCircle, AddCircle } from 'grommet-icons';
+import SubtractCircle from "grommet-icons/es6/icons/SubtractCircle";
+import AddCircle from "grommet-icons/es6/icons/AddCircle";
 import { Accordion, AccordionPanel, Box, Grommet, Text } from 'grommet';
 var customAccordionTheme = {
   global: {

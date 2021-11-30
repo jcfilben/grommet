@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormClose } from 'grommet-icons';
+import FormClose from "grommet-icons/es6/icons/FormClose";
 import { Box, Button, Grommet, Layer, Text } from 'grommet';
 import { grommet } from 'grommet/themes';
 export var ScrollBodyLayer = function ScrollBodyLayer() {

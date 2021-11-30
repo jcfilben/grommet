@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Box, Button, Calendar, Grommet, Heading } from 'grommet';
 import { grommet } from 'grommet/themes';
-import { Blank, Previous, Next } from 'grommet-icons';
+import Blank from "grommet-icons/es6/icons/Blank";
+import Previous from "grommet-icons/es6/icons/Previous";
+import Next from "grommet-icons/es6/icons/Next";
 export var Dual = function Dual() {
   var _useState = useState(),
       date = _useState[0],

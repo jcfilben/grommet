@@ -1,5 +1,5 @@
 import React from 'react';
-import { StatusGood } from 'grommet-icons';
+import StatusGood from "grommet-icons/es6/icons/StatusGood";
 import { Box, Button, Grommet, Form, FormField, TextInput } from 'grommet';
 import { grommet } from 'grommet/themes';
 export var ValidateOnBlur = function ValidateOnBlur() {

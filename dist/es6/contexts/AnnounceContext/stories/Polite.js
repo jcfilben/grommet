@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Announce } from 'grommet-icons';
+import Announce from "grommet-icons/es6/icons/Announce";
 import { grommet } from 'grommet/themes'; // used only for the grommet's font
 
 import { Anchor, AnnounceContext, Box, Button, Grommet, Paragraph } from 'grommet';

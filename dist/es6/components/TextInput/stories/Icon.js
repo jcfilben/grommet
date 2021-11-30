@@ -1,5 +1,5 @@
 import React from 'react';
-import { Search } from 'grommet-icons';
+import Search from "grommet-icons/es6/icons/Search";
 import { Box, Grommet, TextInput } from 'grommet';
 import { grommet } from 'grommet/themes';
 export var Icon = function Icon() {

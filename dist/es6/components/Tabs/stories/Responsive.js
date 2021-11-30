@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { Attraction, Car, TreeOption } from 'grommet-icons';
+import Attraction from "grommet-icons/es6/icons/Attraction";
+import Car from "grommet-icons/es6/icons/Car";
+import TreeOption from "grommet-icons/es6/icons/TreeOption";
 import { Box, Grommet, Tab, Tabs } from 'grommet';
 import { grommet } from 'grommet/themes';
 

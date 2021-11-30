@@ -1,5 +1,7 @@
 import React from 'react';
-import { Attraction, Car, TreeOption } from 'grommet-icons';
+import Attraction from "grommet-icons/es6/icons/Attraction";
+import Car from "grommet-icons/es6/icons/Car";
+import TreeOption from "grommet-icons/es6/icons/TreeOption";
 import { Grommet, Box, Button, Carousel, Text } from 'grommet';
 export var Controlled = function Controlled() {
   var _React$useState = React.useState(2),

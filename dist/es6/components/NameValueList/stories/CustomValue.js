@@ -1,7 +1,10 @@
 import React from 'react';
 import { Box, Grommet, NameValueList, NameValuePair, Text } from 'grommet';
 import { grommet } from 'grommet/themes';
-import { Language, StatusCriticalSmall, StatusGoodSmall, System } from 'grommet-icons';
+import Language from "grommet-icons/es6/icons/Language";
+import StatusCriticalSmall from "grommet-icons/es6/icons/StatusCriticalSmall";
+import StatusGoodSmall from "grommet-icons/es6/icons/StatusGoodSmall";
+import System from "grommet-icons/es6/icons/System";
 import { languageData, statusData } from './data';
 export var CustomValue = function CustomValue() {
   return /*#__PURE__*/React.createElement(Grommet, {

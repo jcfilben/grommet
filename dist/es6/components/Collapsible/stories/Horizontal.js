@@ -1,5 +1,5 @@
 import React from 'react';
-import { Notification } from 'grommet-icons';
+import Notification from "grommet-icons/es6/icons/Notification";
 import { Box, Button, Collapsible, Heading, Grommet, Text } from 'grommet';
 import { grommet } from 'grommet/themes';
 export var Horizontal = function Horizontal() {

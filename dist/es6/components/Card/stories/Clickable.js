@@ -5,7 +5,9 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 import React from 'react';
-import { Bluetooth as Memory, Storage, Trigger } from 'grommet-icons';
+import Memory from "grommet-icons/es6/icons/Bluetooth";
+import Storage from "grommet-icons/es6/icons/Storage";
+import Trigger from "grommet-icons/es6/icons/Trigger";
 import { Box, Card, CardBody, CardFooter, Chart, Grid, Grommet, Text } from 'grommet';
 var theme = {
   themeMode: 'dark',

@@ -1,5 +1,5 @@
 import React from 'react';
-import { TreeOption } from 'grommet-icons';
+import TreeOption from "grommet-icons/es6/icons/TreeOption";
 import { Box, Heading, Grommet, Tab, Tabs } from 'grommet';
 import { grommet } from 'grommet/themes';
 

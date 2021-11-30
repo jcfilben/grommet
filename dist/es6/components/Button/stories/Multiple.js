@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Button } from 'grommet';
-import { Add } from 'grommet-icons';
+import Add from "grommet-icons/es6/icons/Add";
 export var Multiple = function Multiple() {
   return /*#__PURE__*/React.createElement(Box, {
     align: "center",

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Grommet, FileInput, Text } from 'grommet';
-import { Trash } from 'grommet-icons';
+import Trash from "grommet-icons/es6/icons/Trash";
 var customTheme = {
   fileInput: {
     button: {

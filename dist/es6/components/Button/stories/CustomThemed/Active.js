@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grommet, Button, Box, Text } from 'grommet';
-import { Add } from 'grommet-icons';
+import Add from "grommet-icons/es6/icons/Add";
 export var Active = function Active() {
   return /*#__PURE__*/React.createElement(Grommet, {
     theme: {

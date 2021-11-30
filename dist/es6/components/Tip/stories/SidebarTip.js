@@ -1,6 +1,10 @@
 import React from 'react';
 import { Avatar, Button, Box, Grommet, Nav, Sidebar, Stack, Tip } from 'grommet';
-import { Analytics, Calculator, Gremlin, Notification, Stakeholder } from 'grommet-icons';
+import Analytics from "grommet-icons/es6/icons/Analytics";
+import Calculator from "grommet-icons/es6/icons/Calculator";
+import Gremlin from "grommet-icons/es6/icons/Gremlin";
+import Notification from "grommet-icons/es6/icons/Notification";
+import Stakeholder from "grommet-icons/es6/icons/Stakeholder";
 var src = '//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80';
 var customTheme = {
   global: {

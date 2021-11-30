@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { Box, Grommet, CheckBox } from 'grommet';
 import { grommet } from 'grommet/themes';
 import { normalizeColor, deepMerge } from 'grommet/utils';
-import { FormCheckmark } from 'grommet-icons';
+import FormCheckmark from "grommet-icons/es6/icons/FormCheckmark";
 var customCheckBoxTheme = {
   checkBox: {
     border: {

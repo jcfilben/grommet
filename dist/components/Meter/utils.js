@@ -1,7 +1,7 @@
 "use strict";
 
 exports.__esModule = true;
-exports.strokeProps = exports.defaultColor = void 0;
+exports.defaultColor = exports.strokeProps = void 0;
 
 var _utils = require("../../utils");
 

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { grommet, Anchor, Box, DataTable, Grommet, Heading, Paragraph, Text, Tip } from 'grommet';
-import { Trash, Refresh, Info } from 'grommet-icons'; // Source code for the data can be found here
+import Trash from "grommet-icons/es6/icons/Trash";
+import Refresh from "grommet-icons/es6/icons/Refresh";
+import Info from "grommet-icons/es6/icons/Info"; // Source code for the data can be found here
 // https://github.com/grommet/grommet/blob/master/src/js/components/DataTable/stories/data.js
 
 import { storageColumns, storageData } from '../../DataTable/stories/data';

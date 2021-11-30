@@ -1,5 +1,6 @@
 import React from 'react';
-import { Hide, View } from 'grommet-icons';
+import Hide from "grommet-icons/es6/icons/Hide";
+import View from "grommet-icons/es6/icons/View";
 import { Box, Button, Grommet, TextInput } from 'grommet';
 import { grommet } from 'grommet/themes';
 export var Password = function Password() {

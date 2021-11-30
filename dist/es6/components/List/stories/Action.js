@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, List, Menu } from 'grommet';
-import { More } from 'grommet-icons';
+import More from "grommet-icons/es6/icons/More";
 var data = [];
 
 for (var i = 0; i < 40; i += 1) {

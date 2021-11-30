@@ -1,7 +1,7 @@
 "use strict";
 
 exports.__esModule = true;
-exports.normalizeValues = exports.normalizeBounds = exports.areNormalizedValuesEquals = exports.areNormalizedBoundsEquals = void 0;
+exports.areNormalizedBoundsEquals = exports.areNormalizedValuesEquals = exports.normalizeBounds = exports.normalizeValues = void 0;
 
 var normalizeValues = function normalizeValues(values) {
   return (values || []).map(function (value, index) {

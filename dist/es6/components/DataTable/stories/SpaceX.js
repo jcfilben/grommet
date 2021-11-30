@@ -5,7 +5,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 import React, { useEffect, useMemo, useState } from 'react';
 import { Grommet, Box, DataTable, Text, Tip } from 'grommet';
 import { grommet } from 'grommet/themes';
-import { StatusCritical } from 'grommet-icons';
+import StatusCritical from "grommet-icons/es6/icons/StatusCritical";
 var columns = [{
   property: 'name',
   header: 'Name',

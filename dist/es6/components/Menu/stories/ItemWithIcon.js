@@ -1,7 +1,9 @@
 import React from 'react';
 import { Grommet, Box, Menu, Text } from 'grommet';
 import { grommet } from 'grommet/themes';
-import { FormDown, Github, Slack } from 'grommet-icons'; // This story offers a suggested workaround for issue #3209.
+import FormDown from "grommet-icons/es6/icons/FormDown";
+import Github from "grommet-icons/es6/icons/Github";
+import Slack from "grommet-icons/es6/icons/Slack"; // This story offers a suggested workaround for issue #3209.
 
 var IconItemsMenu = function IconItemsMenu() {
   return /*#__PURE__*/React.createElement(Grommet, {

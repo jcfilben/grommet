@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Button } from 'grommet';
-import { Next, Add } from 'grommet-icons';
+import Next from "grommet-icons/es6/icons/Next";
+import Add from "grommet-icons/es6/icons/Add";
 export var Sizes = function Sizes() {
   return /*#__PURE__*/React.createElement(Box, null, /*#__PURE__*/React.createElement(Box, {
     direction: "row"

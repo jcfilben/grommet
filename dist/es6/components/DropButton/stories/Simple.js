@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Close } from 'grommet-icons';
+import Close from "grommet-icons/es6/icons/Close";
 import { Grommet, Box, Button, DropButton, Heading, Text } from 'grommet';
 import { grommet } from 'grommet/themes';
 

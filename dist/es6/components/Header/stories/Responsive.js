@@ -1,6 +1,7 @@
 import React from 'react';
 import { Anchor, Box, Header, Menu, ResponsiveContext } from 'grommet';
-import { Grommet as GrommetIcon, Menu as MenuIcon } from 'grommet-icons';
+import GrommetIcon from "grommet-icons/es6/icons/Grommet";
+import MenuIcon from "grommet-icons/es6/icons/Menu";
 export var Responsive = function Responsive() {
   return (
     /*#__PURE__*/

@@ -4,7 +4,8 @@ function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.s
 
 import React from 'react';
 import styled from 'styled-components';
-import { Favorite, Nodes } from 'grommet-icons';
+import Favorite from "grommet-icons/es6/icons/Favorite";
+import Nodes from "grommet-icons/es6/icons/Nodes";
 import { Box, Spinner, Text } from 'grommet';
 var FavoriteFilled = styled(Favorite)(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n  path[fill='none'] {\n    fill: red;\n  }\n"])));
 export var Children = function Children() {

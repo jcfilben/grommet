@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Grommet, Menu } from 'grommet';
-import { User } from 'grommet-icons';
+import User from "grommet-icons/es6/icons/User";
 import { hpe } from 'grommet-theme-hpe';
 export var Justify = function Justify() {
   return /*#__PURE__*/React.createElement(Grommet, {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Trash } from 'grommet-icons';
+import Trash from "grommet-icons/es6/icons/Trash";
 import { Box, Button, Grommet, Heading, Layer, Select, Text } from 'grommet';
 import { grommet } from 'grommet/themes';
 export var CenterLayer = function CenterLayer() {

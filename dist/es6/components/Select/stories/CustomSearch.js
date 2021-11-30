@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { FormClose } from 'grommet-icons';
+import FormClose from "grommet-icons/es6/icons/FormClose";
 import { Box, Button, CheckBox, Grommet, Select, Text } from 'grommet'; // https://github.com/grommet/grommet/blob/master/src/js/components/Select/stories/theme.js
 
 import { theme as customSearchTheme } from './theme';

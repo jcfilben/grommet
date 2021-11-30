@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Box, Button, Chart, Stack, Text } from 'grommet';
-import { Next, Previous } from 'grommet-icons';
+import Next from "grommet-icons/es6/icons/Next";
+import Previous from "grommet-icons/es6/icons/Previous";
 import { calcs } from '../calcs';
 import { generateData } from './data';
 var intervalDays = {

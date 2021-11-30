@@ -5,7 +5,9 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 import React from 'react';
-import { Attraction, Car, TreeOption } from 'grommet-icons';
+import Attraction from "grommet-icons/es6/icons/Attraction";
+import Car from "grommet-icons/es6/icons/Car";
+import TreeOption from "grommet-icons/es6/icons/TreeOption";
 import { Grommet, Box, Carousel } from 'grommet';
 var customTheme = {
   carousel: {

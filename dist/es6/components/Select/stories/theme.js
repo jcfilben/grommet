@@ -1,4 +1,6 @@
-import { CaretDownFill, CaretUpFill, FormCheckmark } from 'grommet-icons';
+import CaretDownFill from "grommet-icons/es6/icons/CaretDownFill";
+import CaretUpFill from "grommet-icons/es6/icons/CaretUpFill";
+import FormCheckmark from "grommet-icons/es6/icons/FormCheckmark";
 import { normalizeColor } from '../../../utils';
 import { SearchInput } from './components/SearchInput';
 export var theme = {

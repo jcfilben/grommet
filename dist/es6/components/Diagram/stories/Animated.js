@@ -3,7 +3,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 import React, { useReducer, useEffect } from 'react';
 import { Box, Diagram, Grommet, Stack, Text } from 'grommet';
 import { grommet } from 'grommet/themes';
-import { Diamond } from 'grommet-icons';
+import Diamond from "grommet-icons/es6/icons/Diamond";
 import { data } from './data';
 
 var connection = function connection(fromTarget, toTarget, _temp) {

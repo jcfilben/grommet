@@ -1,5 +1,6 @@
 import React from 'react';
-import { Attraction, Car } from 'grommet-icons';
+import Attraction from "grommet-icons/es6/icons/Attraction";
+import Car from "grommet-icons/es6/icons/Car";
 import { Grommet, Anchor, Box, Button, Text } from 'grommet';
 import { grommet } from '../../../themes';
 export var SimpleBox = function SimpleBox() {

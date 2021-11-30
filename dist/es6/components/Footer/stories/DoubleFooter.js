@@ -6,7 +6,7 @@ function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.s
 
 import React from 'react';
 import styled from 'styled-components';
-import { Grommet as GrommetIcon } from 'grommet-icons';
+import GrommetIcon from "grommet-icons/es6/icons/Grommet";
 import { Anchor, Box, Footer, grommet, Grommet, Main, Text } from 'grommet';
 import { fiveColumns as data } from './data';
 var StyledAnchor = styled(Anchor)(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n  font-weight: 200;\n"])));

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FormClose } from 'grommet-icons';
+import FormClose from "grommet-icons/es6/icons/FormClose";
 import { Box, Button, Grommet, Select, Text } from 'grommet';
 import { grommet } from 'grommet/themes';
 var allSeasons = ['S01', 'S02', 'S03', 'S04', 'S05', 'S06', 'S07', 'S08', 'S09', 'S10'];

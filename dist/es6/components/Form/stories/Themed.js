@@ -4,7 +4,8 @@ function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.s
 
 import React from 'react';
 import { css } from 'styled-components';
-import { Alert, StatusInfo } from 'grommet-icons';
+import Alert from "grommet-icons/es6/icons/Alert";
+import StatusInfo from "grommet-icons/es6/icons/StatusInfo";
 import { Box, Form, FormField, Grommet, Heading, Text, TextInput } from 'grommet';
 import { grommet } from 'grommet/themes';
 import { deepMerge } from '../../../utils';

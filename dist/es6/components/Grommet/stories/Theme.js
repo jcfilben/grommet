@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grommet, Anchor, Box } from 'grommet';
-import { Add } from 'grommet-icons';
+import Add from "grommet-icons/es6/icons/Add";
 var customTheme = {
   global: {
     colors: {

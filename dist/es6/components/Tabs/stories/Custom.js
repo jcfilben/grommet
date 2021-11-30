@@ -4,7 +4,8 @@ function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.s
 
 import React from 'react';
 import { css } from 'styled-components';
-import { CircleInformation, Currency } from 'grommet-icons';
+import CircleInformation from "grommet-icons/es6/icons/CircleInformation";
+import Currency from "grommet-icons/es6/icons/Currency";
 import { Box, Grommet, FormField, Tab, Tabs, Text, TextInput } from 'grommet';
 import { grommet } from 'grommet/themes';
 import { deepMerge } from 'grommet/utils';

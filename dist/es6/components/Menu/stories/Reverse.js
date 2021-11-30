@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grommet, Box, Menu } from 'grommet';
-import { Power, User } from 'grommet-icons';
+import Power from "grommet-icons/es6/icons/Power";
+import User from "grommet-icons/es6/icons/User";
 import { grommet } from 'grommet/themes';
 
 var ReverseMenu = function ReverseMenu() {

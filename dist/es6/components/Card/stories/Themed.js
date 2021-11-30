@@ -5,7 +5,12 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 import React from 'react';
-import { Location, System, ShieldSecurity, Tasks, User, Wifi } from 'grommet-icons';
+import Location from "grommet-icons/es6/icons/Location";
+import System from "grommet-icons/es6/icons/System";
+import ShieldSecurity from "grommet-icons/es6/icons/ShieldSecurity";
+import Tasks from "grommet-icons/es6/icons/Tasks";
+import User from "grommet-icons/es6/icons/User";
+import Wifi from "grommet-icons/es6/icons/Wifi";
 import { Box, Card, CardBody, CardFooter, Grid, Grommet, Text } from 'grommet';
 var data = [{
   color: 'blue',

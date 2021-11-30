@@ -1,5 +1,8 @@
 import React from 'react';
-import { Grommet as GrommetIcon, FacebookOption, Instagram, Twitter } from 'grommet-icons';
+import GrommetIcon from "grommet-icons/es6/icons/Grommet";
+import FacebookOption from "grommet-icons/es6/icons/FacebookOption";
+import Instagram from "grommet-icons/es6/icons/Instagram";
+import Twitter from "grommet-icons/es6/icons/Twitter";
 import { Anchor, Box, Footer, grommet, Grommet, Main, Text } from 'grommet';
 
 var Media = function Media() {

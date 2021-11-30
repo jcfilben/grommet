@@ -1,5 +1,5 @@
 import React from 'react';
-import { Gremlin } from 'grommet-icons';
+import Gremlin from "grommet-icons/es6/icons/Gremlin";
 import { Box, List, Text, Tip } from 'grommet';
 var data = [{
   city: 'Boise',

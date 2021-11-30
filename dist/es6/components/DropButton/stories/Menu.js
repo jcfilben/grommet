@@ -1,5 +1,5 @@
 import React from 'react';
-import { Gremlin } from 'grommet-icons';
+import Gremlin from "grommet-icons/es6/icons/Gremlin";
 import { Grommet, Box, DropButton, Text } from 'grommet';
 import { grommet } from 'grommet/themes';
 

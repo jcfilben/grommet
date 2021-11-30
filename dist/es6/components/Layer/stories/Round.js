@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Button, Grommet, Layer, Select, Text } from 'grommet';
 import { grommet } from 'grommet/themes';
 import { deepMerge } from 'grommet/utils';
-import { FormClose } from 'grommet-icons';
+import FormClose from "grommet-icons/es6/icons/FormClose";
 var customTheme = deepMerge(grommet, {
   layer: {
     border: {

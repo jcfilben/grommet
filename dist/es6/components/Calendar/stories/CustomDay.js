@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Box, Calendar, DropButton, Grommet, Heading, Stack, Text } from 'grommet';
-import { Notification } from 'grommet-icons';
+import Notification from "grommet-icons/es6/icons/Notification";
 import { grommet } from 'grommet/themes';
 export var CustomDayCalendar = function CustomDayCalendar() {
   var calendarContent = [7, 8, 9];

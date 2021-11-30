@@ -1,6 +1,6 @@
 import React from 'react';
 import { grommet, Box, Button, Grommet, Heading, Text, Tip } from 'grommet';
-import { Trash } from 'grommet-icons';
+import Trash from "grommet-icons/es6/icons/Trash";
 
 var TipContent = function TipContent(_ref) {
   var message = _ref.message;

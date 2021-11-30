@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Button, Grommet, RangeInput } from 'grommet';
-import { Add, Subtract } from 'grommet-icons';
+import Add from "grommet-icons/es6/icons/Add";
+import Subtract from "grommet-icons/es6/icons/Subtract";
 var rangeInputTheme = {
   rangeInput: {
     track: {

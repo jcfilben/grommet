@@ -1,5 +1,5 @@
 import React from 'react';
-import { Attraction } from 'grommet-icons';
+import Attraction from "grommet-icons/es6/icons/Attraction";
 import { Grommet, Box, Text } from 'grommet';
 import { grommet } from '../../../themes';
 export var OnClickBox = function OnClickBox() {

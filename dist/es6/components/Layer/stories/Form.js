@@ -1,5 +1,6 @@
 import React from 'react';
-import { Add, Close } from 'grommet-icons';
+import Add from "grommet-icons/es6/icons/Add";
+import Close from "grommet-icons/es6/icons/Close";
 import { Box, Button, FormField, Grommet, Heading, Layer, Select, TextArea, TextInput } from 'grommet';
 import { grommet } from 'grommet/themes';
 var suggestions = ['alpha', 'beta'];

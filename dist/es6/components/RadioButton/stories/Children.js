@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Button, RadioButton } from 'grommet';
-import { Ascend } from 'grommet-icons';
+import Ascend from "grommet-icons/es6/icons/Ascend";
 export var Children = function Children() {
   var _React$useState = React.useState(),
       selected = _React$useState[0],

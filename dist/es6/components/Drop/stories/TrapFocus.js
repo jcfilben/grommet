@@ -1,6 +1,8 @@
 import React, { useRef, useState } from 'react';
 import { Grommet, grommet, Box, Button, Drop, Nav, Text } from 'grommet';
-import { Calculator, Bug, Achievement } from 'grommet-icons';
+import Calculator from "grommet-icons/es6/icons/Calculator";
+import Bug from "grommet-icons/es6/icons/Bug";
+import Achievement from "grommet-icons/es6/icons/Achievement";
 
 var TooltipButton = function TooltipButton(_ref) {
   var icon = _ref.icon,

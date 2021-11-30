@@ -5,7 +5,8 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 import React from 'react';
-import { FormDown, FormNext } from 'grommet-icons';
+import FormDown from "grommet-icons/es6/icons/FormDown";
+import FormNext from "grommet-icons/es6/icons/FormNext";
 import { Box, Button, Collapsible, Grommet, Text } from 'grommet';
 import { grommet } from 'grommet/themes';
 

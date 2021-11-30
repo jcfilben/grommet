@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Button, Grommet, Keyboard, Text, Calendar, MaskedInput, DropButton } from 'grommet';
 import { grommet } from 'grommet/themes';
-import { Schedule } from 'grommet-icons';
+import Schedule from "grommet-icons/es6/icons/Schedule";
 
 var DropContent = function DropContent(_ref) {
   var initialDate = _ref.date,

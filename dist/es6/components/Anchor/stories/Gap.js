@@ -1,5 +1,5 @@
 import React from 'react';
-import { Upload } from 'grommet-icons';
+import Upload from "grommet-icons/es6/icons/Upload";
 import { Anchor, Box, Grommet } from 'grommet';
 import { grommet } from 'grommet/themes';
 

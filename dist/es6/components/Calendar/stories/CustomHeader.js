@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Box, Button, Calendar, Grommet, Text } from 'grommet';
 import { grommet } from 'grommet/themes';
-import { FormPreviousLink, FormNextLink } from 'grommet-icons';
+import FormPreviousLink from "grommet-icons/es6/icons/FormPreviousLink";
+import FormNextLink from "grommet-icons/es6/icons/FormNextLink";
 export var CustomHeaderCalendar = function CustomHeaderCalendar() {
   var _useState = useState(),
       date = _useState[0],

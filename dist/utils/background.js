@@ -1,7 +1,7 @@
 "use strict";
 
 exports.__esModule = true;
-exports.selectedStyle = exports.normalizeBackground = exports.getHoverIndicatorStyle = exports.backgroundStyle = exports.backgroundIsDark = exports.backgroundAndTextColors = exports.activeStyle = void 0;
+exports.getHoverIndicatorStyle = exports.selectedStyle = exports.activeStyle = exports.backgroundStyle = exports.backgroundAndTextColors = exports.backgroundIsDark = exports.normalizeBackground = void 0;
 
 var _styledComponents = require("styled-components");
 
@@ -53,8 +53,7 @@ var backgroundIsDark = function backgroundIsDark(backgroundArg, theme) {
 
       if (typeof dark === 'boolean') {
         result = dark;
-      } else if (color && ( // weak opacity means we keep the existing darkness
-      !opacity || opacity !== 'weak')) {
+      } else if (color && (!opacity || opacity !== 'weak')) {
         var backgroundColor = (0, _colors.normalizeColor)(background.color, theme);
 
         if (backgroundColor) {

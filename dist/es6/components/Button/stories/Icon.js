@@ -1,5 +1,7 @@
 import React from 'react';
-import { Close, Send, User } from 'grommet-icons';
+import Close from "grommet-icons/es6/icons/Close";
+import Send from "grommet-icons/es6/icons/Send";
+import User from "grommet-icons/es6/icons/User";
 import { Box, Button, Text } from 'grommet';
 export var Icon = function Icon() {
   return /*#__PURE__*/React.createElement(Box, null, /*#__PURE__*/React.createElement(Box, {

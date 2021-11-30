@@ -6,7 +6,9 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 import React, { useState } from 'react';
 import { Box, Button, Grommet, Nav } from 'grommet';
-import { Dashboard, Device, SettingsOption } from 'grommet-icons';
+import Dashboard from "grommet-icons/es6/icons/Dashboard";
+import Device from "grommet-icons/es6/icons/Device";
+import SettingsOption from "grommet-icons/es6/icons/SettingsOption";
 var theme = {
   button: {
     padding: {

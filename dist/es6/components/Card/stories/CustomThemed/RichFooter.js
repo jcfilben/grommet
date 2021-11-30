@@ -2,7 +2,10 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 import React from 'react';
 import { Anchor, Box, Button, Card, CardBody, CardFooter, Collapsible, Heading, Grommet, Image, Paragraph } from 'grommet';
-import { FormDown, FormUp, Favorite, ShareOption } from 'grommet-icons';
+import FormDown from "grommet-icons/es6/icons/FormDown";
+import FormUp from "grommet-icons/es6/icons/FormUp";
+import Favorite from "grommet-icons/es6/icons/Favorite";
+import ShareOption from "grommet-icons/es6/icons/ShareOption";
 var theme = {
   global: {
     font: {

@@ -5,7 +5,8 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 import React, { useState } from 'react';
-import { Gremlin, Grommet as GrommetIcon } from 'grommet-icons';
+import Gremlin from "grommet-icons/es6/icons/Gremlin";
+import GrommetIcon from "grommet-icons/es6/icons/Grommet";
 import { Grommet, Box, RangeSelector, Stack, Text } from 'grommet';
 import { grommet } from 'grommet/themes';
 import { deepMerge } from 'grommet/utils';

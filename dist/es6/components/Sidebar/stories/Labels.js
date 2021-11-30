@@ -6,7 +6,14 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 import React from 'react';
 import { Avatar, Button, Box, grommet, Grommet, Nav, Stack, Text } from 'grommet';
-import { Analytics, Chat, Clock, Configure, Help, Projects, Split, StatusInfoSmall } from 'grommet-icons';
+import Analytics from "grommet-icons/es6/icons/Analytics";
+import Chat from "grommet-icons/es6/icons/Chat";
+import Clock from "grommet-icons/es6/icons/Clock";
+import Configure from "grommet-icons/es6/icons/Configure";
+import Help from "grommet-icons/es6/icons/Help";
+import Projects from "grommet-icons/es6/icons/Projects";
+import Split from "grommet-icons/es6/icons/Split";
+import StatusInfoSmall from "grommet-icons/es6/icons/StatusInfoSmall";
 import { Sidebar } from '../Sidebar';
 var src = '//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80';
 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Box, CheckBoxGroup } from 'grommet';
-import { Ascend, Descend } from 'grommet-icons';
+import Ascend from "grommet-icons/es6/icons/Ascend";
+import Descend from "grommet-icons/es6/icons/Descend";
 var optionsObjects = [{
   label: 'asc',
   disabled: true,

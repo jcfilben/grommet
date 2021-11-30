@@ -1,7 +1,7 @@
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 import React from 'react';
-import { User } from 'grommet-icons';
+import User from "grommet-icons/es6/icons/User";
 import { Box, Button, Heading, Text } from 'grommet';
 var darks = [false, true];
 var kinds = [{

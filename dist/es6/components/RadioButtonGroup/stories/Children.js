@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Box, RadioButtonGroup } from 'grommet';
-import { Ascend, Descend } from 'grommet-icons';
+import Ascend from "grommet-icons/es6/icons/Ascend";
+import Descend from "grommet-icons/es6/icons/Descend";
 export var Children = function Children() {
   var _useState = useState(),
       value = _useState[0],

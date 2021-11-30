@@ -1,6 +1,7 @@
 import React from 'react';
 import { grommet, Box, Button, Grommet, Text, Tip } from 'grommet';
-import { HelpOption, CircleInformation } from 'grommet-icons';
+import HelpOption from "grommet-icons/es6/icons/HelpOption";
+import CircleInformation from "grommet-icons/es6/icons/CircleInformation";
 export var Info = function Info() {
   return /*#__PURE__*/React.createElement(Grommet, {
     full: true,

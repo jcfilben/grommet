@@ -1,5 +1,7 @@
 import React from 'react';
-import { Add, FormClose, StatusGood } from 'grommet-icons';
+import Add from "grommet-icons/es6/icons/Add";
+import FormClose from "grommet-icons/es6/icons/FormClose";
+import StatusGood from "grommet-icons/es6/icons/StatusGood";
 import { Box, Button, Grommet, Layer, Text } from 'grommet';
 import { grommet } from 'grommet/themes';
 export var NotificationLayer = function NotificationLayer() {

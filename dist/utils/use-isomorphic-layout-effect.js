@@ -1,7 +1,7 @@
 "use strict";
 
 exports.__esModule = true;
-exports.useLayoutEffect = exports["default"] = void 0;
+exports["default"] = exports.useLayoutEffect = void 0;
 
 var _react = require("react");
 

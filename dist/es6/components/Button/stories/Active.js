@@ -1,5 +1,5 @@
 import React from 'react';
-import { Add } from 'grommet-icons';
+import Add from "grommet-icons/es6/icons/Add";
 import { Box, Button, Text } from 'grommet';
 export var Active = function Active() {
   return /*#__PURE__*/React.createElement(Box, {

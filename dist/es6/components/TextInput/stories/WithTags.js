@@ -6,7 +6,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 import React from 'react';
-import { FormClose } from 'grommet-icons';
+import FormClose from "grommet-icons/es6/icons/FormClose";
 import { Box, Button, Grommet, Keyboard, Text, TextInput } from 'grommet';
 import { grommet } from 'grommet/themes';
 var allSuggestions = ['sony', 'sonar', 'foo', 'bar'];

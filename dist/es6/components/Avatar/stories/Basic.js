@@ -1,5 +1,5 @@
 import React from 'react';
-import { Favorite } from 'grommet-icons';
+import Favorite from "grommet-icons/es6/icons/Favorite";
 import { Avatar, Box, Grommet } from 'grommet';
 import { grommet } from 'grommet/themes';
 export var Basic = function Basic() {
