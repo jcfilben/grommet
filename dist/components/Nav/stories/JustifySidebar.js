@@ -7,9 +7,15 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _grommet = require("grommet");
 
-var _grommetIcons = require("grommet-icons");
+var _Dashboard = _interopRequireDefault(require("grommet-icons/es6/icons/Dashboard"));
+
+var _Device = _interopRequireDefault(require("grommet-icons/es6/icons/Device"));
+
+var _SettingsOption = _interopRequireDefault(require("grommet-icons/es6/icons/SettingsOption"));
 
 var _excluded = ["label"];
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -56,15 +62,15 @@ var SidebarNav = function SidebarNav() {
     background: "neutral-1"
   }, [{
     label: 'Dashboard',
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Dashboard, null),
+    icon: /*#__PURE__*/_react["default"].createElement(_Dashboard["default"], null),
     justify: 'center'
   }, {
     label: 'Devices',
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Device, null),
+    icon: /*#__PURE__*/_react["default"].createElement(_Device["default"], null),
     justify: 'end'
   }, {
     label: 'Settings',
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.SettingsOption, null),
+    icon: /*#__PURE__*/_react["default"].createElement(_SettingsOption["default"], null),
     justify: 'between'
   }].map(function (item) {
     return /*#__PURE__*/_react["default"].createElement(SidebarButton, {

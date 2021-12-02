@@ -5,7 +5,9 @@ exports["default"] = exports.Password = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _grommetIcons = require("grommet-icons");
+var _Hide = _interopRequireDefault(require("grommet-icons/es6/icons/Hide"));
+
+var _View = _interopRequireDefault(require("grommet-icons/es6/icons/View"));
 
 var _grommet = require("grommet");
 
@@ -40,9 +42,9 @@ var Password = function Password() {
       return setValue(event.target.value);
     }
   }), /*#__PURE__*/_react["default"].createElement(_grommet.Button, {
-    icon: reveal ? /*#__PURE__*/_react["default"].createElement(_grommetIcons.View, {
+    icon: reveal ? /*#__PURE__*/_react["default"].createElement(_View["default"], {
       size: "medium"
-    }) : /*#__PURE__*/_react["default"].createElement(_grommetIcons.Hide, {
+    }) : /*#__PURE__*/_react["default"].createElement(_Hide["default"], {
       size: "medium"
     }),
     onClick: function onClick() {

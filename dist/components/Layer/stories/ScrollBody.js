@@ -5,7 +5,7 @@ exports["default"] = exports.ScrollBodyLayer = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _grommetIcons = require("grommet-icons");
+var _FormClose = _interopRequireDefault(require("grommet-icons/es6/icons/FormClose"));
 
 var _grommet = require("grommet");
 
@@ -35,7 +35,7 @@ var ScrollBodyLayer = function ScrollBodyLayer() {
       left: 'small'
     }
   }, "Header"), /*#__PURE__*/_react["default"].createElement(_grommet.Button, {
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.FormClose, null)
+    icon: /*#__PURE__*/_react["default"].createElement(_FormClose["default"], null)
   })), /*#__PURE__*/_react["default"].createElement(_grommet.Box, {
     flex: true,
     overflow: "auto",

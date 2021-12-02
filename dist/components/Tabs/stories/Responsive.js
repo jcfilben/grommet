@@ -5,11 +5,17 @@ exports["default"] = exports.Responsive = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _grommetIcons = require("grommet-icons");
+var _Attraction = _interopRequireDefault(require("grommet-icons/es6/icons/Attraction"));
+
+var _Car = _interopRequireDefault(require("grommet-icons/es6/icons/Car"));
+
+var _TreeOption = _interopRequireDefault(require("grommet-icons/es6/icons/TreeOption"));
 
 var _grommet = require("grommet");
 
 var _themes = require("grommet/themes");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -36,7 +42,7 @@ var ResponsiveTabs = function ResponsiveTabs() {
     pad: "large",
     align: "center",
     background: "accent-1"
-  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.Attraction, {
+  }, /*#__PURE__*/_react["default"].createElement(_Attraction["default"], {
     size: "xlarge"
   }))), /*#__PURE__*/_react["default"].createElement(_grommet.Tab, {
     title: "Tab 2"
@@ -45,7 +51,7 @@ var ResponsiveTabs = function ResponsiveTabs() {
     pad: "large",
     align: "center",
     background: "accent-2"
-  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.TreeOption, {
+  }, /*#__PURE__*/_react["default"].createElement(_TreeOption["default"], {
     size: "xlarge"
   }))), /*#__PURE__*/_react["default"].createElement(_grommet.Tab, {
     title: "Tab 3"
@@ -54,7 +60,7 @@ var ResponsiveTabs = function ResponsiveTabs() {
     pad: "large",
     align: "center",
     background: "accent-3"
-  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.Car, {
+  }, /*#__PURE__*/_react["default"].createElement(_Car["default"], {
     size: "xlarge"
   }))), /*#__PURE__*/_react["default"].createElement(_grommet.Tab, {
     title: "Tab 4"
@@ -63,7 +69,7 @@ var ResponsiveTabs = function ResponsiveTabs() {
     pad: "large",
     align: "center",
     background: "accent-1"
-  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.Attraction, {
+  }, /*#__PURE__*/_react["default"].createElement(_Attraction["default"], {
     size: "xlarge"
   }))), /*#__PURE__*/_react["default"].createElement(_grommet.Tab, {
     title: "Tab 5"
@@ -72,7 +78,7 @@ var ResponsiveTabs = function ResponsiveTabs() {
     pad: "large",
     align: "center",
     background: "accent-2"
-  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.TreeOption, {
+  }, /*#__PURE__*/_react["default"].createElement(_TreeOption["default"], {
     size: "xlarge"
   }))), /*#__PURE__*/_react["default"].createElement(_grommet.Tab, {
     title: "Tab 6"
@@ -81,7 +87,7 @@ var ResponsiveTabs = function ResponsiveTabs() {
     pad: "large",
     align: "center",
     background: "accent-3"
-  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.Car, {
+  }, /*#__PURE__*/_react["default"].createElement(_Car["default"], {
     size: "xlarge"
   }))), /*#__PURE__*/_react["default"].createElement(_grommet.Tab, {
     title: "Tab 7"
@@ -90,7 +96,7 @@ var ResponsiveTabs = function ResponsiveTabs() {
     pad: "large",
     align: "center",
     background: "accent-1"
-  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.Attraction, {
+  }, /*#__PURE__*/_react["default"].createElement(_Attraction["default"], {
     size: "xlarge"
   }))), /*#__PURE__*/_react["default"].createElement(_grommet.Tab, {
     title: "Tab 8"
@@ -99,7 +105,7 @@ var ResponsiveTabs = function ResponsiveTabs() {
     pad: "large",
     align: "center",
     background: "accent-2"
-  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.TreeOption, {
+  }, /*#__PURE__*/_react["default"].createElement(_TreeOption["default"], {
     size: "xlarge"
   }))), /*#__PURE__*/_react["default"].createElement(_grommet.Tab, {
     title: "Tab 9"
@@ -108,7 +114,7 @@ var ResponsiveTabs = function ResponsiveTabs() {
     pad: "large",
     align: "center",
     background: "accent-3"
-  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.Car, {
+  }, /*#__PURE__*/_react["default"].createElement(_Car["default"], {
     size: "xlarge"
   }))), /*#__PURE__*/_react["default"].createElement(_grommet.Tab, {
     title: "Tab 10"
@@ -117,7 +123,7 @@ var ResponsiveTabs = function ResponsiveTabs() {
     pad: "large",
     align: "center",
     background: "accent-1"
-  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.Attraction, {
+  }, /*#__PURE__*/_react["default"].createElement(_Attraction["default"], {
     size: "xlarge"
   }))), /*#__PURE__*/_react["default"].createElement(_grommet.Tab, {
     title: "Tab 11"
@@ -126,7 +132,7 @@ var ResponsiveTabs = function ResponsiveTabs() {
     pad: "large",
     align: "center",
     background: "accent-1"
-  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.Attraction, {
+  }, /*#__PURE__*/_react["default"].createElement(_Attraction["default"], {
     size: "xlarge"
   }))), /*#__PURE__*/_react["default"].createElement(_grommet.Tab, {
     title: "Tab 12"
@@ -135,7 +141,7 @@ var ResponsiveTabs = function ResponsiveTabs() {
     pad: "large",
     align: "center",
     background: "accent-2"
-  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.TreeOption, {
+  }, /*#__PURE__*/_react["default"].createElement(_TreeOption["default"], {
     size: "xlarge"
   }))), /*#__PURE__*/_react["default"].createElement(_grommet.Tab, {
     title: "Tab 13"
@@ -144,7 +150,7 @@ var ResponsiveTabs = function ResponsiveTabs() {
     pad: "large",
     align: "center",
     background: "accent-3"
-  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.Car, {
+  }, /*#__PURE__*/_react["default"].createElement(_Car["default"], {
     size: "xlarge"
   }))), /*#__PURE__*/_react["default"].createElement(_grommet.Tab, {
     title: "Tab 14"
@@ -153,7 +159,7 @@ var ResponsiveTabs = function ResponsiveTabs() {
     pad: "large",
     align: "center",
     background: "accent-1"
-  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.Attraction, {
+  }, /*#__PURE__*/_react["default"].createElement(_Attraction["default"], {
     size: "xlarge"
   }))), /*#__PURE__*/_react["default"].createElement(_grommet.Tab, {
     title: "Tab 15"
@@ -162,7 +168,7 @@ var ResponsiveTabs = function ResponsiveTabs() {
     pad: "large",
     align: "center",
     background: "accent-2"
-  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.TreeOption, {
+  }, /*#__PURE__*/_react["default"].createElement(_TreeOption["default"], {
     size: "xlarge"
   }))), /*#__PURE__*/_react["default"].createElement(_grommet.Tab, {
     title: "Tab 16"
@@ -171,7 +177,7 @@ var ResponsiveTabs = function ResponsiveTabs() {
     pad: "large",
     align: "center",
     background: "accent-3"
-  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.Car, {
+  }, /*#__PURE__*/_react["default"].createElement(_Car["default"], {
     size: "xlarge"
   }))), /*#__PURE__*/_react["default"].createElement(_grommet.Tab, {
     title: "Tab 17"
@@ -180,7 +186,7 @@ var ResponsiveTabs = function ResponsiveTabs() {
     pad: "large",
     align: "center",
     background: "accent-1"
-  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.Attraction, {
+  }, /*#__PURE__*/_react["default"].createElement(_Attraction["default"], {
     size: "xlarge"
   }))), /*#__PURE__*/_react["default"].createElement(_grommet.Tab, {
     title: "Tab 18"
@@ -189,7 +195,7 @@ var ResponsiveTabs = function ResponsiveTabs() {
     pad: "large",
     align: "center",
     background: "accent-2"
-  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.TreeOption, {
+  }, /*#__PURE__*/_react["default"].createElement(_TreeOption["default"], {
     size: "xlarge"
   }))), /*#__PURE__*/_react["default"].createElement(_grommet.Tab, {
     title: "Tab 19"
@@ -198,7 +204,7 @@ var ResponsiveTabs = function ResponsiveTabs() {
     pad: "large",
     align: "center",
     background: "accent-3"
-  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.Car, {
+  }, /*#__PURE__*/_react["default"].createElement(_Car["default"], {
     size: "xlarge"
   }))), /*#__PURE__*/_react["default"].createElement(_grommet.Tab, {
     title: "Tab 20"
@@ -207,7 +213,7 @@ var ResponsiveTabs = function ResponsiveTabs() {
     pad: "large",
     align: "center",
     background: "accent-1"
-  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.Attraction, {
+  }, /*#__PURE__*/_react["default"].createElement(_Attraction["default"], {
     size: "xlarge"
   })))));
 };

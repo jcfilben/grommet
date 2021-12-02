@@ -5,7 +5,7 @@ exports["default"] = exports.CenterLayer = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _grommetIcons = require("grommet-icons");
+var _Trash = _interopRequireDefault(require("grommet-icons/es6/icons/Trash"));
 
 var _grommet = require("grommet");
 
@@ -51,7 +51,7 @@ var CenterLayer = function CenterLayer() {
     align: "center",
     justify: "center"
   }, /*#__PURE__*/_react["default"].createElement(_grommet.Button, {
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Trash, null),
+    icon: /*#__PURE__*/_react["default"].createElement(_Trash["default"], null),
     label: /*#__PURE__*/_react["default"].createElement(_grommet.Text, null, /*#__PURE__*/_react["default"].createElement("strong", null, "Remove")),
     onClick: onOpen,
     plain: true

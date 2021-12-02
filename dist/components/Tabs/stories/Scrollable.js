@@ -5,7 +5,7 @@ exports["default"] = exports.Scrollable = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _grommetIcons = require("grommet-icons");
+var _TreeOption = _interopRequireDefault(require("grommet-icons/es6/icons/TreeOption"));
 
 var _grommet = require("grommet");
 
@@ -36,7 +36,7 @@ var ScrollableTabs = function ScrollableTabs() {
     pad: "large",
     align: "center",
     background: "accent-2"
-  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.TreeOption, {
+  }, /*#__PURE__*/_react["default"].createElement(_TreeOption["default"], {
     size: "xlarge"
   }))))));
 };

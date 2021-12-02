@@ -5,7 +5,7 @@ exports["default"] = exports.Color = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _grommetIcons = require("grommet-icons");
+var _Add = _interopRequireDefault(require("grommet-icons/es6/icons/Add"));
 
 var _grommet = require("grommet");
 
@@ -20,10 +20,10 @@ var ColorAnchor = function ColorAnchor() {
     pad: "medium",
     gap: "medium"
   }, /*#__PURE__*/_react["default"].createElement(_grommet.Anchor, {
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Add, null),
+    icon: /*#__PURE__*/_react["default"].createElement(_Add["default"], null),
     href: "#"
   }), /*#__PURE__*/_react["default"].createElement(_grommet.Anchor, {
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Add, null),
+    icon: /*#__PURE__*/_react["default"].createElement(_Add["default"], null),
     label: "Add",
     href: "#"
   }), /*#__PURE__*/_react["default"].createElement(_grommet.Anchor, {
@@ -34,14 +34,14 @@ var ColorAnchor = function ColorAnchor() {
     pad: "medium",
     gap: "medium"
   }, /*#__PURE__*/_react["default"].createElement(_grommet.Anchor, {
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Add, null),
+    icon: /*#__PURE__*/_react["default"].createElement(_Add["default"], null),
     href: "#"
   }), /*#__PURE__*/_react["default"].createElement(_grommet.Anchor, {
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Add, null),
+    icon: /*#__PURE__*/_react["default"].createElement(_Add["default"], null),
     label: "Add",
     href: "#"
   }), /*#__PURE__*/_react["default"].createElement(_grommet.Anchor, {
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Add, null),
+    icon: /*#__PURE__*/_react["default"].createElement(_Add["default"], null),
     label: "Add",
     href: "#"
   }), /*#__PURE__*/_react["default"].createElement(_grommet.Anchor, {

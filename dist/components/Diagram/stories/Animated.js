@@ -9,9 +9,11 @@ var _grommet = require("grommet");
 
 var _themes = require("grommet/themes");
 
-var _grommetIcons = require("grommet-icons");
+var _Diamond = _interopRequireDefault(require("grommet-icons/es6/icons/Diamond"));
 
 var _data = require("./data");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -48,7 +50,7 @@ var DiamondContainer = function DiamondContainer(_ref2) {
     direction: "row",
     gap: "medium",
     key: id
-  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.Diamond, {
+  }, /*#__PURE__*/_react["default"].createElement(_Diamond["default"], {
     id: id,
     size: "xlarge",
     color: "neutral-3"

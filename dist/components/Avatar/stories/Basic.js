@@ -5,7 +5,7 @@ exports["default"] = exports.Basic = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _grommetIcons = require("grommet-icons");
+var _Favorite = _interopRequireDefault(require("grommet-icons/es6/icons/Favorite"));
 
 var _grommet = require("grommet");
 
@@ -27,7 +27,7 @@ var Basic = function Basic() {
     src: src
   }), /*#__PURE__*/_react["default"].createElement(_grommet.Avatar, {
     background: "accent-4"
-  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.Favorite, {
+  }, /*#__PURE__*/_react["default"].createElement(_Favorite["default"], {
     color: "accent-2"
   })), /*#__PURE__*/_react["default"].createElement(_grommet.Avatar, {
     background: "dark-2"

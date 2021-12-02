@@ -7,7 +7,15 @@ var _react = _interopRequireDefault(require("react"));
 
 var _grommet = require("grommet");
 
-var _grommetIcons = require("grommet-icons");
+var _Analytics = _interopRequireDefault(require("grommet-icons/es6/icons/Analytics"));
+
+var _Calculator = _interopRequireDefault(require("grommet-icons/es6/icons/Calculator"));
+
+var _Gremlin = _interopRequireDefault(require("grommet-icons/es6/icons/Gremlin"));
+
+var _Notification = _interopRequireDefault(require("grommet-icons/es6/icons/Notification"));
+
+var _Stakeholder = _interopRequireDefault(require("grommet-icons/es6/icons/Stakeholder"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -61,7 +69,7 @@ var NotificationAlert = function NotificationAlert() {
     },
     icon: /*#__PURE__*/_react["default"].createElement(_grommet.Stack, {
       anchor: "top-right"
-    }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.Notification, null), /*#__PURE__*/_react["default"].createElement(_grommet.Box, {
+    }, /*#__PURE__*/_react["default"].createElement(_Notification["default"], null), /*#__PURE__*/_react["default"].createElement(_grommet.Box, {
       background: "accent-1",
       pad: "xsmall",
       round: true,
@@ -80,17 +88,17 @@ var SidebarHeader = function SidebarHeader() {
       size: 'small'
     },
     round: "medium"
-  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.Gremlin, {
+  }, /*#__PURE__*/_react["default"].createElement(_Gremlin["default"], {
     color: "white"
   })));
 };
 
 var iconsMap = function iconsMap(color) {
-  return [/*#__PURE__*/_react["default"].createElement(_grommetIcons.Analytics, {
+  return [/*#__PURE__*/_react["default"].createElement(_Analytics["default"], {
     color: color
-  }), /*#__PURE__*/_react["default"].createElement(_grommetIcons.Stakeholder, {
+  }), /*#__PURE__*/_react["default"].createElement(_Stakeholder["default"], {
     color: color
-  }), /*#__PURE__*/_react["default"].createElement(_grommetIcons.Calculator, {
+  }), /*#__PURE__*/_react["default"].createElement(_Calculator["default"], {
     color: color
   })];
 };

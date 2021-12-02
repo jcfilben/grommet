@@ -7,7 +7,9 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _grommetIcons = require("grommet-icons");
+var _CircleInformation = _interopRequireDefault(require("grommet-icons/es6/icons/CircleInformation"));
+
+var _Currency = _interopRequireDefault(require("grommet-icons/es6/icons/Currency"));
 
 var _grommet = require("grommet");
 
@@ -20,7 +22,7 @@ var RichTabs = function RichTabs() {
     theme: _themes.grommet
   }, /*#__PURE__*/_react["default"].createElement(_grommet.Tabs, null, /*#__PURE__*/_react["default"].createElement(_grommet.Tab, {
     title: /*#__PURE__*/_react["default"].createElement(RichTabTitle, {
-      icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.CircleInformation, {
+      icon: /*#__PURE__*/_react["default"].createElement(_CircleInformation["default"], {
         color: "accent-2"
       }),
       label: "Personal Data"
@@ -31,7 +33,7 @@ var RichTabs = function RichTabs() {
     placeholder: "Enter your name..."
   }))), /*#__PURE__*/_react["default"].createElement(_grommet.Tab, {
     title: /*#__PURE__*/_react["default"].createElement(RichTabTitle, {
-      icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Currency, {
+      icon: /*#__PURE__*/_react["default"].createElement(_Currency["default"], {
         color: "neutral-2"
       }),
       label: "Payment"

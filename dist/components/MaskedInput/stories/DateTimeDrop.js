@@ -9,7 +9,7 @@ var _grommet = require("grommet");
 
 var _themes = require("grommet/themes");
 
-var _grommetIcons = require("grommet-icons");
+var _Schedule = _interopRequireDefault(require("grommet-icons/es6/icons/Schedule"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -128,7 +128,7 @@ var DateTimeDropButton = function DateTimeDropButton() {
     pad: "small"
   }, /*#__PURE__*/_react["default"].createElement(_grommet.Text, {
     color: date ? undefined : 'dark-5'
-  }, date ? new Date(date).toLocaleDateString() + " " + time : 'Select date & time'), /*#__PURE__*/_react["default"].createElement(_grommetIcons.Schedule, null)))));
+  }, date ? new Date(date).toLocaleDateString() + " " + time : 'Select date & time'), /*#__PURE__*/_react["default"].createElement(_Schedule["default"], null)))));
 };
 
 exports.DateTimeDropButton = DateTimeDropButton;

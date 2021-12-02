@@ -5,7 +5,7 @@ exports["default"] = exports.OnClickBox = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _grommetIcons = require("grommet-icons");
+var _Attraction = _interopRequireDefault(require("grommet-icons/es6/icons/Attraction"));
 
 var _grommet = require("grommet");
 
@@ -35,7 +35,7 @@ var OnClickBox = function OnClickBox() {
     onClick: function onClick() {
       alert('clicked');
     }
-  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.Attraction, {
+  }, /*#__PURE__*/_react["default"].createElement(_Attraction["default"], {
     size: "large"
   }), /*#__PURE__*/_react["default"].createElement(_grommet.Text, null, "Party"))));
 };

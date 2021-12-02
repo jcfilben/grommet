@@ -7,7 +7,9 @@ var _react = _interopRequireDefault(require("react"));
 
 var _grommet = require("grommet");
 
-var _grommetIcons = require("grommet-icons");
+var _HelpOption = _interopRequireDefault(require("grommet-icons/es6/icons/HelpOption"));
+
+var _CircleInformation = _interopRequireDefault(require("grommet-icons/es6/icons/CircleInformation"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -41,7 +43,7 @@ var Info = function Info() {
       }
     }
   }, /*#__PURE__*/_react["default"].createElement(_grommet.Button, {
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.CircleInformation, {
+    icon: /*#__PURE__*/_react["default"].createElement(_CircleInformation["default"], {
       size: "large"
     })
   })), /*#__PURE__*/_react["default"].createElement(_grommet.Tip, {
@@ -66,7 +68,7 @@ var Info = function Info() {
       }
     }
   }, /*#__PURE__*/_react["default"].createElement(_grommet.Button, {
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.HelpOption, {
+    icon: /*#__PURE__*/_react["default"].createElement(_HelpOption["default"], {
       size: "large"
     })
   }))));

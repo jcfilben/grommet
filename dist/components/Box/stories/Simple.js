@@ -5,7 +5,9 @@ exports["default"] = exports.SimpleBox = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _grommetIcons = require("grommet-icons");
+var _Attraction = _interopRequireDefault(require("grommet-icons/es6/icons/Attraction"));
+
+var _Car = _interopRequireDefault(require("grommet-icons/es6/icons/Car"));
 
 var _grommet = require("grommet");
 
@@ -32,7 +34,7 @@ var SimpleBox = function SimpleBox() {
     },
     round: true,
     gap: "small"
-  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.Attraction, {
+  }, /*#__PURE__*/_react["default"].createElement(_Attraction["default"], {
     size: "large"
   }), /*#__PURE__*/_react["default"].createElement(_grommet.Text, null, "Party"), /*#__PURE__*/_react["default"].createElement(_grommet.Anchor, {
     href: "",
@@ -46,7 +48,7 @@ var SimpleBox = function SimpleBox() {
     background: "dark-3",
     round: true,
     gap: "small"
-  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.Car, {
+  }, /*#__PURE__*/_react["default"].createElement(_Car["default"], {
     size: "large",
     color: "light-2"
   }), /*#__PURE__*/_react["default"].createElement(_grommet.Text, null, "Travel"), /*#__PURE__*/_react["default"].createElement(_grommet.Anchor, {

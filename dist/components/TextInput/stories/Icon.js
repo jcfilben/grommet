@@ -5,7 +5,7 @@ exports["default"] = exports.Icon = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _grommetIcons = require("grommet-icons");
+var _Search = _interopRequireDefault(require("grommet-icons/es6/icons/Search"));
 
 var _grommet = require("grommet");
 
@@ -26,10 +26,10 @@ var Icon = function Icon() {
     width: "medium",
     gap: "medium"
   }, /*#__PURE__*/_react["default"].createElement(_grommet.TextInput, {
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Search, null),
+    icon: /*#__PURE__*/_react["default"].createElement(_Search["default"], null),
     placeholder: "search ..."
   }), /*#__PURE__*/_react["default"].createElement(_grommet.TextInput, {
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Search, null),
+    icon: /*#__PURE__*/_react["default"].createElement(_Search["default"], null),
     reverse: true,
     placeholder: "search ..."
   }))));

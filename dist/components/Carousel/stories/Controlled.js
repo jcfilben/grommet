@@ -5,7 +5,11 @@ exports["default"] = exports.Controlled = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _grommetIcons = require("grommet-icons");
+var _Attraction = _interopRequireDefault(require("grommet-icons/es6/icons/Attraction"));
+
+var _Car = _interopRequireDefault(require("grommet-icons/es6/icons/Car"));
+
+var _TreeOption = _interopRequireDefault(require("grommet-icons/es6/icons/TreeOption"));
 
 var _grommet = require("grommet");
 
@@ -39,17 +43,17 @@ var Controlled = function Controlled() {
   }, /*#__PURE__*/_react["default"].createElement(_grommet.Box, {
     pad: "xlarge",
     background: "accent-1"
-  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.Attraction, {
+  }, /*#__PURE__*/_react["default"].createElement(_Attraction["default"], {
     size: "xlarge"
   })), /*#__PURE__*/_react["default"].createElement(_grommet.Box, {
     pad: "xlarge",
     background: "accent-2"
-  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.TreeOption, {
+  }, /*#__PURE__*/_react["default"].createElement(_TreeOption["default"], {
     size: "xlarge"
   })), /*#__PURE__*/_react["default"].createElement(_grommet.Box, {
     pad: "xlarge",
     background: "accent-3"
-  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.Car, {
+  }, /*#__PURE__*/_react["default"].createElement(_Car["default"], {
     size: "xlarge"
   })))));
 };

@@ -7,7 +7,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-var _grommetIcons = require("grommet-icons");
+var _Grommet = _interopRequireDefault(require("grommet-icons/es6/icons/Grommet"));
 
 var _grommet = require("grommet");
 
@@ -74,7 +74,7 @@ var DoubleFooter = function DoubleFooter() {
   }, /*#__PURE__*/_react["default"].createElement(_grommet.Box, {
     direction: "row",
     gap: "small"
-  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.Grommet, {
+  }, /*#__PURE__*/_react["default"].createElement(_Grommet["default"], {
     color: "brand"
   }), /*#__PURE__*/_react["default"].createElement(_grommet.Text, {
     alignSelf: "center"

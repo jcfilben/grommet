@@ -7,7 +7,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _grommet = require("grommet");
 
-var _grommetIcons = require("grommet-icons");
+var _Add = _interopRequireDefault(require("grommet-icons/es6/icons/Add"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -26,7 +26,7 @@ var Multiple = function Multiple() {
   }), /*#__PURE__*/_react["default"].createElement(_grommet.Button, {
     color: "dark-1",
     primary: true,
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Add, {
+    icon: /*#__PURE__*/_react["default"].createElement(_Add["default"], {
       color: "accent-1"
     }),
     label: "Add",
@@ -42,7 +42,7 @@ var Multiple = function Multiple() {
   }), /*#__PURE__*/_react["default"].createElement(_grommet.Button, {
     color: "dark-1",
     primary: true,
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Add, null),
+    icon: /*#__PURE__*/_react["default"].createElement(_Add["default"], null),
     label: "Add",
     onClick: function onClick() {}
   })), /*#__PURE__*/_react["default"].createElement(_grommet.Box, {
@@ -55,7 +55,7 @@ var Multiple = function Multiple() {
     onClick: function onClick() {}
   }), /*#__PURE__*/_react["default"].createElement(_grommet.Button, {
     primary: true,
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Add, null),
+    icon: /*#__PURE__*/_react["default"].createElement(_Add["default"], null),
     label: "Add",
     onClick: function onClick() {}
   })), /*#__PURE__*/_react["default"].createElement(_grommet.Box, {
@@ -69,7 +69,7 @@ var Multiple = function Multiple() {
   }), /*#__PURE__*/_react["default"].createElement(_grommet.Button, {
     color: "light-2",
     primary: true,
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Add, null),
+    icon: /*#__PURE__*/_react["default"].createElement(_Add["default"], null),
     label: "Add",
     onClick: function onClick() {}
   })));

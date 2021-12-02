@@ -7,7 +7,9 @@ var _react = _interopRequireDefault(require("react"));
 
 var _grommet = require("grommet");
 
-var _grommetIcons = require("grommet-icons");
+var _Add = _interopRequireDefault(require("grommet-icons/es6/icons/Add"));
+
+var _Subtract = _interopRequireDefault(require("grommet-icons/es6/icons/Subtract"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -54,7 +56,7 @@ var Bounds = function Bounds() {
   }, /*#__PURE__*/_react["default"].createElement(_grommet.Button, {
     plain: false,
     disabled: isSubtractDisabled,
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Subtract, {
+    icon: /*#__PURE__*/_react["default"].createElement(_Subtract["default"], {
       color: "neutral-2"
     }),
     onClick: function onClick() {
@@ -75,7 +77,7 @@ var Bounds = function Bounds() {
   })), /*#__PURE__*/_react["default"].createElement(_grommet.Button, {
     plain: false,
     disabled: isAddDisabled,
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Add, {
+    icon: /*#__PURE__*/_react["default"].createElement(_Add["default"], {
       color: "neutral-2"
     }),
     onClick: function onClick() {

@@ -9,7 +9,13 @@ var _grommet = require("grommet");
 
 var _themes = require("grommet/themes");
 
-var _grommetIcons = require("grommet-icons");
+var _Blank = _interopRequireDefault(require("grommet-icons/es6/icons/Blank"));
+
+var _Previous = _interopRequireDefault(require("grommet-icons/es6/icons/Previous"));
+
+var _Next = _interopRequireDefault(require("grommet-icons/es6/icons/Next"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -77,7 +83,7 @@ var Dual = function Dual() {
         justify: "between"
       }, /*#__PURE__*/_react["default"].createElement(_grommet.Button, {
         disabled: !previousInBound,
-        icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Previous, null),
+        icon: /*#__PURE__*/_react["default"].createElement(_Previous["default"], null),
         onClick: onPreviousMonth
       }), /*#__PURE__*/_react["default"].createElement(_grommet.Heading, {
         level: 3,
@@ -85,7 +91,7 @@ var Dual = function Dual() {
       }, currentDate.toLocaleDateString(locale, {
         month: 'long',
         year: 'numeric'
-      })), /*#__PURE__*/_react["default"].createElement(_grommetIcons.Blank, null));
+      })), /*#__PURE__*/_react["default"].createElement(_Blank["default"], null));
     }
   }), /*#__PURE__*/_react["default"].createElement(_grommet.Calendar, {
     animate: false,
@@ -111,7 +117,7 @@ var Dual = function Dual() {
         direction: "row",
         align: "center",
         justify: "between"
-      }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.Blank, null), /*#__PURE__*/_react["default"].createElement(_grommet.Heading, {
+      }, /*#__PURE__*/_react["default"].createElement(_Blank["default"], null), /*#__PURE__*/_react["default"].createElement(_grommet.Heading, {
         level: 3,
         margin: "none"
       }, currentDate.toLocaleDateString(locale, {
@@ -119,7 +125,7 @@ var Dual = function Dual() {
         year: 'numeric'
       })), /*#__PURE__*/_react["default"].createElement(_grommet.Button, {
         disabled: !nextInBound,
-        icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Next, null),
+        icon: /*#__PURE__*/_react["default"].createElement(_Next["default"], null),
         onClick: onNextMonth
       }));
     }

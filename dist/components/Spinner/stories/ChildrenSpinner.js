@@ -7,7 +7,9 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-var _grommetIcons = require("grommet-icons");
+var _Favorite = _interopRequireDefault(require("grommet-icons/es6/icons/Favorite"));
+
+var _Nodes = _interopRequireDefault(require("grommet-icons/es6/icons/Nodes"));
 
 var _grommet = require("grommet");
 
@@ -17,7 +19,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
 function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
 
-var FavoriteFilled = (0, _styledComponents["default"])(_grommetIcons.Favorite)(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n  path[fill='none'] {\n    fill: red;\n  }\n"])));
+var FavoriteFilled = (0, _styledComponents["default"])(_Favorite["default"])(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n  path[fill='none'] {\n    fill: red;\n  }\n"])));
 
 var Children = function Children() {
   return /*#__PURE__*/_react["default"].createElement(_grommet.Box, {
@@ -34,7 +36,7 @@ var Children = function Children() {
     align: "center",
     justify: "center",
     size: "large"
-  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.Nodes, {
+  }, /*#__PURE__*/_react["default"].createElement(_Nodes["default"], {
     size: "large",
     color: "graph-0"
   })), /*#__PURE__*/_react["default"].createElement(_grommet.Text, null, " Spinner with an icon child")), /*#__PURE__*/_react["default"].createElement(_grommet.Box, {

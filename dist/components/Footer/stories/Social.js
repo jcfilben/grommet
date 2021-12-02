@@ -5,7 +5,13 @@ exports["default"] = exports.Social = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _grommetIcons = require("grommet-icons");
+var _Grommet = _interopRequireDefault(require("grommet-icons/es6/icons/Grommet"));
+
+var _FacebookOption = _interopRequireDefault(require("grommet-icons/es6/icons/FacebookOption"));
+
+var _Instagram = _interopRequireDefault(require("grommet-icons/es6/icons/Instagram"));
+
+var _Twitter = _interopRequireDefault(require("grommet-icons/es6/icons/Twitter"));
 
 var _grommet = require("grommet");
 
@@ -19,19 +25,19 @@ var Media = function Media() {
   }, /*#__PURE__*/_react["default"].createElement(_grommet.Anchor, {
     a11yTitle: "Share feedback on Github",
     href: "https://www.instagram.com/",
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Instagram, {
+    icon: /*#__PURE__*/_react["default"].createElement(_Instagram["default"], {
       color: "brand"
     })
   }), /*#__PURE__*/_react["default"].createElement(_grommet.Anchor, {
     a11yTitle: "Chat with us on Slack",
     href: "https://www.facebook.com/",
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.FacebookOption, {
+    icon: /*#__PURE__*/_react["default"].createElement(_FacebookOption["default"], {
       color: "brand"
     })
   }), /*#__PURE__*/_react["default"].createElement(_grommet.Anchor, {
     a11yTitle: "Follow us on Twitter",
     href: "https://twitter.com/",
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Twitter, {
+    icon: /*#__PURE__*/_react["default"].createElement(_Twitter["default"], {
       color: "brand"
     })
   }));
@@ -57,7 +63,7 @@ var Social = function Social() {
     align: "center",
     direction: "row",
     gap: "xsmall"
-  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.Grommet, {
+  }, /*#__PURE__*/_react["default"].createElement(_Grommet["default"], {
     color: "brand",
     size: "medium"
   }), /*#__PURE__*/_react["default"].createElement(_grommet.Text, {

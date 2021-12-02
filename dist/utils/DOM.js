@@ -1,18 +1,7 @@
-'use strict';
+"use strict";
 
 exports.__esModule = true;
-exports.setFocusWithoutScroll =
-  exports.makeNodeUnfocusable =
-  exports.makeNodeFocusable =
-  exports.isNodeBeforeScroll =
-  exports.isNodeAfterScroll =
-  exports.getNewContainer =
-  exports.getFirstFocusableDescendant =
-  exports.findVisibleParent =
-  exports.findScrollParents =
-  exports.findScrollParent =
-  exports.containsFocus =
-    void 0;
+exports.setFocusWithoutScroll = exports.makeNodeUnfocusable = exports.makeNodeFocusable = exports.isNodeBeforeScroll = exports.isNodeAfterScroll = exports.getNewContainer = exports.getFirstFocusableDescendant = exports.findVisibleParent = exports.findScrollParents = exports.findScrollParent = exports.containsFocus = void 0;
 
 var findScrollParent = function findScrollParent(element, horizontal) {
   var result;
@@ -34,6 +23,7 @@ var findScrollParent = function findScrollParent(element, horizontal) {
       parent = parent.parentNode;
     } // last scrollable element will be the document
     // if nothing else is scrollable in the page
+
 
     if (!result) {
       result = document;
@@ -68,12 +58,10 @@ var findScrollParents = function findScrollParents(element, horizontal) {
       parent = parent.parentNode;
     }
 
-    if (
-      result.length &&
-      documentTags.includes(result[0].tagName.toLowerCase())
-    ) {
+    if (result.length && documentTags.includes(result[0].tagName.toLowerCase())) {
       result.length = 0;
     } // last scrollable element will be the document
+
 
     result.push(document);
   }
@@ -96,9 +84,7 @@ var containsFocus = function containsFocus(node) {
 
 exports.containsFocus = containsFocus;
 
-var getFirstFocusableDescendant = function getFirstFocusableDescendant(
-  element,
-) {
+var getFirstFocusableDescendant = function getFirstFocusableDescendant(element) {
   var children = element.getElementsByTagName('*');
 
   for (var i = 0; i < children.length; i += 1) {
@@ -153,21 +139,19 @@ var makeNodeFocusable = function makeNodeFocusable(node) {
 
     var elements = node.getElementsByTagName('*'); // only reset elements we've changed in makeNodeUnfocusable()
 
-    Array.prototype.filter
-      .call(elements || [], function (element) {
-        return element.hasAttribute(TABINDEX_STATE);
-      })
-      .forEach(function (element) {
-        var prior = element.getAttribute(TABINDEX_STATE);
+    Array.prototype.filter.call(elements || [], function (element) {
+      return element.hasAttribute(TABINDEX_STATE);
+    }).forEach(function (element) {
+      var prior = element.getAttribute(TABINDEX_STATE);
 
-        if (prior >= 0) {
-          element.setAttribute(TABINDEX, element.getAttribute(TABINDEX_STATE));
-        } else if (prior === 'none') {
-          element.removeAttribute(TABINDEX);
-        }
+      if (prior >= 0) {
+        element.setAttribute(TABINDEX, element.getAttribute(TABINDEX_STATE));
+      } else if (prior === 'none') {
+        element.removeAttribute(TABINDEX);
+      }
 
-        element.removeAttribute(TABINDEX_STATE);
-      });
+      element.removeAttribute(TABINDEX_STATE);
+    });
   }
 };
 
@@ -181,29 +165,21 @@ var makeNodeUnfocusable = function makeNodeUnfocusable(node) {
 
     var elements = node.getElementsByTagName('*'); // first, save off the tabIndex of any element with one
 
-    Array.prototype.filter
-      .call(elements || [], function (element) {
-        return element.getAttribute(TABINDEX) !== null;
-      })
-      .forEach(function (element) {
-        element.setAttribute(TABINDEX_STATE, element.getAttribute(TABINDEX));
-        element.setAttribute(TABINDEX, -1);
-      }); // then, if any element is inherently focusable and not handled above,
+    Array.prototype.filter.call(elements || [], function (element) {
+      return element.getAttribute(TABINDEX) !== null;
+    }).forEach(function (element) {
+      element.setAttribute(TABINDEX_STATE, element.getAttribute(TABINDEX));
+      element.setAttribute(TABINDEX, -1);
+    }); // then, if any element is inherently focusable and not handled above,
     // give it a tabIndex of -1 so it can't receive focus
 
-    Array.prototype.filter
-      .call(elements || [], function (element) {
-        var currentTag = element.tagName.toLowerCase();
-        return (
-          currentTag.match(autoFocusingTags) &&
-          element.focus &&
-          element.getAttribute(TABINDEX_STATE) === null
-        );
-      })
-      .forEach(function (element) {
-        element.setAttribute(TABINDEX_STATE, 'none');
-        element.setAttribute(TABINDEX, -1);
-      });
+    Array.prototype.filter.call(elements || [], function (element) {
+      var currentTag = element.tagName.toLowerCase();
+      return currentTag.match(autoFocusingTags) && element.focus && element.getAttribute(TABINDEX_STATE) === null;
+    }).forEach(function (element) {
+      element.setAttribute(TABINDEX_STATE, 'none');
+      element.setAttribute(TABINDEX, -1);
+    });
   }
 };
 
@@ -212,9 +188,7 @@ exports.makeNodeUnfocusable = makeNodeUnfocusable;
 var findVisibleParent = function findVisibleParent(element) {
   if (element) {
     // Get the closest ancestor element that is positioned.
-    return element.offsetParent
-      ? element
-      : findVisibleParent(element.parentElement) || element;
+    return element.offsetParent ? element : findVisibleParent(element.parentElement) || element;
   }
 
   return undefined;
@@ -224,16 +198,15 @@ exports.findVisibleParent = findVisibleParent;
 
 var isNodeAfterScroll = function isNodeAfterScroll(node, target) {
   var _node$getBoundingClie = node.getBoundingClientRect(),
-    bottom = _node$getBoundingClie.bottom; // target will be the document from findScrollParent()
+      bottom = _node$getBoundingClie.bottom; // target will be the document from findScrollParent()
 
-  var _ref = target.getBoundingClientRect
-      ? target.getBoundingClientRect()
-      : {
-          height: 0,
-          top: 0,
-        },
-    height = _ref.height,
-    top = _ref.top;
+
+  var _ref = target.getBoundingClientRect ? target.getBoundingClientRect() : {
+    height: 0,
+    top: 0
+  },
+      height = _ref.height,
+      top = _ref.top;
 
   return bottom >= top + height;
 };
@@ -242,14 +215,13 @@ exports.isNodeAfterScroll = isNodeAfterScroll;
 
 var isNodeBeforeScroll = function isNodeBeforeScroll(node, target) {
   var _node$getBoundingClie2 = node.getBoundingClientRect(),
-    top = _node$getBoundingClie2.top; // target will be the document from findScrollParent()
+      top = _node$getBoundingClie2.top; // target will be the document from findScrollParent()
 
-  var _ref2 = target.getBoundingClientRect
-      ? target.getBoundingClientRect()
-      : {
-          top: 0,
-        },
-    targetTop = _ref2.top;
+
+  var _ref2 = target.getBoundingClientRect ? target.getBoundingClientRect() : {
+    top: 0
+  },
+      targetTop = _ref2.top;
 
   return top <= targetTop;
 };

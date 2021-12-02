@@ -11,7 +11,7 @@ var _themes = require("grommet/themes");
 
 var _utils = require("grommet/utils");
 
-var _grommetIcons = require("grommet-icons");
+var _FormClose = _interopRequireDefault(require("grommet-icons/es6/icons/FormClose"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -103,7 +103,7 @@ var RoundLayer = function RoundLayer() {
     fill: true
   }, /*#__PURE__*/_react["default"].createElement(_grommet.Button, {
     alignSelf: "end",
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.FormClose, null),
+    icon: /*#__PURE__*/_react["default"].createElement(_FormClose["default"], null),
     onClick: onClose
   }), /*#__PURE__*/_react["default"].createElement(_grommet.Text, null, "Hi, I am a Layer!"))));
 };

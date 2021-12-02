@@ -7,9 +7,15 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _grommet = require("grommet");
 
-var _grommetIcons = require("grommet-icons");
+var _Trash = _interopRequireDefault(require("grommet-icons/es6/icons/Trash"));
+
+var _Refresh = _interopRequireDefault(require("grommet-icons/es6/icons/Refresh"));
+
+var _Info = _interopRequireDefault(require("grommet-icons/es6/icons/Info"));
 
 var _data = require("../../DataTable/stories/data");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -23,7 +29,7 @@ var TipContent = function TipContent(_ref) {
   return /*#__PURE__*/_react["default"].createElement(_grommet.Box, {
     direction: "row",
     gap: "small"
-  }, icon && /*#__PURE__*/_react["default"].createElement(_grommetIcons.Info, {
+  }, icon && /*#__PURE__*/_react["default"].createElement(_Info["default"], {
     color: "accent-4"
   }), /*#__PURE__*/_react["default"].createElement(_grommet.Text, {
     color: "accent-1"
@@ -83,7 +89,7 @@ var HeaderActions = function HeaderActions() {
     })
   }, /*#__PURE__*/_react["default"].createElement(_grommet.Anchor, {
     disabled: !selected,
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Trash, null),
+    icon: /*#__PURE__*/_react["default"].createElement(_Trash["default"], null),
     onClick: removeRow
   })), /*#__PURE__*/_react["default"].createElement(_grommet.Tip, {
     dropProps: {
@@ -96,7 +102,7 @@ var HeaderActions = function HeaderActions() {
       icon: !selected
     })
   }, /*#__PURE__*/_react["default"].createElement(_grommet.Anchor, {
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Refresh, null),
+    icon: /*#__PURE__*/_react["default"].createElement(_Refresh["default"], null),
     onClick: function onClick() {
       return setData(_data.storageData);
     },

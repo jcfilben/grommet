@@ -5,11 +5,13 @@ exports["default"] = exports.Polite = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _grommetIcons = require("grommet-icons");
+var _Announce = _interopRequireDefault(require("grommet-icons/es6/icons/Announce"));
 
 var _themes = require("grommet/themes");
 
 var _grommet = require("grommet");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -31,7 +33,7 @@ var PageContent = function PageContent(_ref) {
     href: "https://www.codecademy.com/articles/how-to-setup-screen-reader#:~:text=(OS%20X)%20VoiceOver,Command%2DF5%20turns%20it%20off."
   }), ", hint: Command-F5 on OSX. Clicking the Button below will trigger an announcement."), /*#__PURE__*/_react["default"].createElement(_grommet.Button, {
     label: "Announce",
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Announce, null),
+    icon: /*#__PURE__*/_react["default"].createElement(_Announce["default"], null),
     a11yTitle: "Announce button",
     reverse: true,
     onClick: function onClick() {

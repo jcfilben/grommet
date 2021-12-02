@@ -1,68 +1,53 @@
-'use strict';
+"use strict";
 
 exports.__esModule = true;
 exports.generate = exports.base = void 0;
 
-var _Actions = require('grommet-icons/icons/Actions');
+var _Actions = require("grommet-icons/icons/Actions");
 
-var _ClosedCaption = require('grommet-icons/icons/ClosedCaption');
+var _ClosedCaption = require("grommet-icons/icons/ClosedCaption");
 
-var _Expand = require('grommet-icons/icons/Expand');
+var _Expand = require("grommet-icons/icons/Expand");
 
-var _FormClose = require('grommet-icons/icons/FormClose');
+var _FormClose = require("grommet-icons/icons/FormClose");
 
-var _FormDown = require('grommet-icons/icons/FormDown');
+var _FormDown = require("grommet-icons/icons/FormDown");
 
-var _FormNext = require('grommet-icons/icons/FormNext');
+var _FormNext = require("grommet-icons/icons/FormNext");
 
-var _FormPrevious = require('grommet-icons/icons/FormPrevious');
+var _FormPrevious = require("grommet-icons/icons/FormPrevious");
 
-var _FormUp = require('grommet-icons/icons/FormUp');
+var _FormUp = require("grommet-icons/icons/FormUp");
 
-var _Next = require('grommet-icons/icons/Next');
+var _Next = require("grommet-icons/icons/Next");
 
-var _Pause = require('grommet-icons/icons/Pause');
+var _Pause = require("grommet-icons/icons/Pause");
 
-var _Play = require('grommet-icons/icons/Play');
+var _Play = require("grommet-icons/icons/Play");
 
-var _Previous = require('grommet-icons/icons/Previous');
+var _Previous = require("grommet-icons/icons/Previous");
 
-var _StatusCriticalSmall = require('grommet-icons/icons/StatusCriticalSmall');
+var _StatusCriticalSmall = require("grommet-icons/icons/StatusCriticalSmall");
 
-var _StatusGoodSmall = require('grommet-icons/icons/StatusGoodSmall');
+var _StatusGoodSmall = require("grommet-icons/icons/StatusGoodSmall");
 
-var _StatusWarningSmall = require('grommet-icons/icons/StatusWarningSmall');
+var _StatusWarningSmall = require("grommet-icons/icons/StatusWarningSmall");
 
-var _StatusUnknownSmall = require('grommet-icons/icons/StatusUnknownSmall');
+var _StatusUnknownSmall = require("grommet-icons/icons/StatusUnknownSmall");
 
-var _Subtract = require('grommet-icons/icons/Subtract');
+var _Subtract = require("grommet-icons/icons/Subtract");
 
-var _Volume = require('grommet-icons/icons/Volume');
+var _Volume = require("grommet-icons/icons/Volume");
 
-var _VolumeLow = require('grommet-icons/icons/VolumeLow');
+var _VolumeLow = require("grommet-icons/icons/VolumeLow");
 
-var _base = require('grommet-icons/themes/base');
+var _base = require("grommet-icons/themes/base");
 
-var _object = require('../utils/object');
+var _object = require("../utils/object");
 
-var _mixins = require('../utils/mixins');
+var _mixins = require("../utils/mixins");
 
-function _extends() {
-  _extends =
-    Object.assign ||
-    function (target) {
-      for (var i = 1; i < arguments.length; i++) {
-        var source = arguments[i];
-        for (var key in source) {
-          if (Object.prototype.hasOwnProperty.call(source, key)) {
-            target[key] = source[key];
-          }
-        }
-      }
-      return target;
-    };
-  return _extends.apply(this, arguments);
-}
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 var brandColor = '#7D4CDB';
 var accentColors = ['#6FFFB0', '#FD6FFF', '#81FCED', '#FFCA58'];
@@ -73,50 +58,36 @@ var statusColors = {
   warning: '#FFAA15',
   ok: '#00C781',
   unknown: '#CCCCCC',
-  disabled: '#CCCCCC',
+  disabled: '#CCCCCC'
 };
-var darkColors = [
-  '#333333',
-  '#555555',
-  '#777777',
-  '#999999',
-  '#999999',
-  '#999999',
-];
-var lightColors = [
-  '#F8F8F8',
-  '#F2F2F2',
-  '#EDEDED',
-  '#DADADA',
-  '#DADADA',
-  '#DADADA',
-];
+var darkColors = ['#333333', '#555555', '#777777', '#999999', '#999999', '#999999'];
+var lightColors = ['#F8F8F8', '#F2F2F2', '#EDEDED', '#DADADA', '#DADADA', '#DADADA'];
 var focusColor = accentColors[0];
 var colors = {
   active: 'rgba(221, 221, 221, 0.5)',
   'background-back': {
     dark: '#33333308',
-    light: '#EDEDED',
+    light: '#EDEDED'
   },
   'background-front': {
     dark: '#444444',
-    light: '#FFFFFF',
+    light: '#FFFFFF'
   },
   'background-contrast': {
     light: '#33333310',
-    dark: '#FFFFFF18',
+    dark: '#FFFFFF18'
   },
   'active-background': 'background-contrast',
   'active-text': 'text-strong',
   black: '#000000',
   border: {
     dark: 'rgba(255, 255, 255, 0.33)',
-    light: 'rgba(0, 0, 0, 0.33)',
+    light: 'rgba(0, 0, 0, 0.33)'
   },
   brand: brandColor,
   control: {
     dark: 'accent-1',
-    light: 'brand',
+    light: 'brand'
   },
   focus: focusColor,
   'graph-0': 'accent-1',
@@ -128,32 +99,32 @@ var colors = {
   selected: 'brand',
   text: {
     dark: '#f8f8f8',
-    light: '#444444',
+    light: '#444444'
   },
   'text-strong': {
     dark: '#FFFFFF',
-    light: '#000000',
+    light: '#000000'
   },
   'text-weak': {
     dark: '#CCCCCC',
-    light: '#555555',
+    light: '#555555'
   },
   'text-xweak': {
     dark: '#BBBBBB',
-    light: '#666666',
+    light: '#666666'
   },
   icon: {
     dark: '#f8f8f8',
-    light: '#666666',
+    light: '#666666'
   },
   'selected-background': 'brand',
   'selected-text': 'text-strong',
-  white: '#FFFFFF',
+  white: '#FFFFFF'
 };
 
 var colorArray = function colorArray(array, prefix) {
   return array.forEach(function (color, index) {
-    colors[prefix + '-' + (index + 1)] = color;
+    colors[prefix + "-" + (index + 1)] = color;
   });
 };
 
@@ -162,7 +133,7 @@ colorArray(darkColors, 'dark');
 colorArray(lightColors, 'light');
 colorArray(neutralColors, 'neutral');
 Object.keys(statusColors).forEach(function (color) {
-  colors['status-' + color] = statusColors[color];
+  colors["status-" + color] = statusColors[color];
 });
 
 var generate = function generate(baseSpacing, scale) {
@@ -181,11 +152,11 @@ var generate = function generate(baseSpacing, scale) {
 
   var fontSizing = function fontSizing(factor) {
     return {
-      size: baseFontSize + factor * fontScale + 'px',
-      height: baseSpacing + factor * fontScale + 'px',
+      size: baseFontSize + factor * fontScale + "px",
+      height: baseSpacing + factor * fontScale + "px",
       // maxWidth chosen to be ~50 characters wide
       // see: https://ux.stackexchange.com/a/34125
-      maxWidth: baseSpacing * (baseFontSize + factor * fontScale) + 'px',
+      maxWidth: baseSpacing * (baseFontSize + factor * fontScale) + "px"
     };
   };
 
@@ -196,27 +167,28 @@ var generate = function generate(baseSpacing, scale) {
       active: {
         background: {
           color: 'active',
-          opacity: 'medium',
+          opacity: 'medium'
         },
         color: {
           dark: 'white',
-          light: 'black',
-        },
+          light: 'black'
+        }
       },
       animation: {
         duration: '1s',
         jiggle: {
-          duration: '0.1s',
-        },
+          duration: '0.1s'
+        }
       },
       borderSize: {
         xsmall: '1px',
         small: '2px',
-        medium: baseSpacing / 6 + 'px',
+        medium: baseSpacing / 6 + "px",
         // 4
-        large: baseSpacing / 2 + 'px',
+        large: baseSpacing / 2 + "px",
         // 12
-        xlarge: baseSpacing + 'px', // 24
+        xlarge: baseSpacing + "px" // 24
+
       },
       breakpoints: {
         small: {
@@ -225,65 +197,69 @@ var generate = function generate(baseSpacing, scale) {
           borderSize: {
             xsmall: '1px',
             small: '2px',
-            medium: baseSpacing / 6 + 'px',
+            medium: baseSpacing / 6 + "px",
             // 4
-            large: baseSpacing / 4 + 'px',
+            large: baseSpacing / 4 + "px",
             // 6
-            xlarge: baseSpacing / 2 + 'px', // 12
+            xlarge: baseSpacing / 2 + "px" // 12
+
           },
           edgeSize: {
             none: '0px',
             hair: '1px',
             // for Chart
             xxsmall: '2px',
-            xsmall: baseSpacing / 8 + 'px',
+            xsmall: baseSpacing / 8 + "px",
             // 3
-            small: baseSpacing / 4 + 'px',
+            small: baseSpacing / 4 + "px",
             // 6
-            medium: baseSpacing / 2 + 'px',
+            medium: baseSpacing / 2 + "px",
             // 12
-            large: baseSpacing + 'px',
+            large: baseSpacing + "px",
             // 24
-            xlarge: baseSpacing * 2 + 'px', // 48
+            xlarge: baseSpacing * 2 + "px" // 48
+
           },
           size: {
-            xxsmall: baseSpacing + 'px',
+            xxsmall: baseSpacing + "px",
             // 24
-            xsmall: baseSpacing * 2 + 'px',
+            xsmall: baseSpacing * 2 + "px",
             // 48
-            small: baseSpacing * 4 + 'px',
+            small: baseSpacing * 4 + "px",
             // 96
-            medium: baseSpacing * 8 + 'px',
+            medium: baseSpacing * 8 + "px",
             // 192
-            large: baseSpacing * 16 + 'px',
+            large: baseSpacing * 16 + "px",
             // 384
-            xlarge: baseSpacing * 32 + 'px',
+            xlarge: baseSpacing * 32 + "px",
             // 768
-            full: '100%',
-          },
+            full: '100%'
+          }
         },
         medium: {
-          value: baseSpacing * 64, // 1536
+          value: baseSpacing * 64 // 1536
+
         },
-        large: {}, // anything above 'medium'
+        large: {} // anything above 'medium'
+
       },
       // Breakpoints used at Server Side Rendering for the initial rendering
       // These values correspond to the theme breakpoints
       deviceBreakpoints: {
         phone: 'small',
         tablet: 'medium',
-        computer: 'large',
+        computer: 'large'
       },
       colors: colors,
       control: {
         border: {
-          width: controlBorderWidth + 'px',
+          width: controlBorderWidth + "px",
           radius: '4px',
-          color: 'border',
+          color: 'border'
         },
         disabled: {
-          opacity: 0.3,
-        },
+          opacity: 0.3
+        }
       },
       // The time to wait after the user stopped typing, measured in ms.
       debounceDelay: 300,
@@ -291,33 +267,33 @@ var generate = function generate(baseSpacing, scale) {
         // intelligentMargin: undefined,
         background: {
           dark: 'black',
-          light: 'white',
+          light: 'white'
         },
         border: {
-          radius: '0px',
+          radius: '0px'
         },
         // margin: undefined
         shadowSize: 'small',
         // shadowSize is deprecated, use 'elevation'
-        zIndex: '20',
+        zIndex: '20'
       },
       edgeSize: {
         none: '0px',
         hair: '1px',
         // for Chart
-        xxsmall: baseSpacing / 8 + 'px',
+        xxsmall: baseSpacing / 8 + "px",
         // 3
-        xsmall: baseSpacing / 4 + 'px',
+        xsmall: baseSpacing / 4 + "px",
         // 6
-        small: baseSpacing / 2 + 'px',
+        small: baseSpacing / 2 + "px",
         // 12
-        medium: baseSpacing + 'px',
+        medium: baseSpacing + "px",
         // 24
-        large: baseSpacing * 2 + 'px',
+        large: baseSpacing * 2 + "px",
         // 48
-        xlarge: baseSpacing * 4 + 'px',
+        xlarge: baseSpacing * 4 + "px",
         // 96
-        responsiveBreakpoint: 'small',
+        responsiveBreakpoint: 'small'
       },
       elevation: {
         light: {
@@ -326,7 +302,7 @@ var generate = function generate(baseSpacing, scale) {
           small: '0px 2px 4px rgba(0, 0, 0, 0.20)',
           medium: '0px 4px 8px rgba(0, 0, 0, 0.20)',
           large: '0px 8px 16px rgba(0, 0, 0, 0.20)',
-          xlarge: '0px 12px 24px rgba(0, 0, 0, 0.20)',
+          xlarge: '0px 12px 24px rgba(0, 0, 0, 0.20)'
         },
         dark: {
           none: 'none',
@@ -334,143 +310,142 @@ var generate = function generate(baseSpacing, scale) {
           small: '0px 4px 4px rgba(255, 255, 255, 0.40)',
           medium: '0px 6px 8px rgba(255, 255, 255, 0.40)',
           large: '0px 8px 16px rgba(255, 255, 255, 0.40)',
-          xlarge: '0px 12px 24px rgba(255, 255, 255, 0.40)',
-        },
+          xlarge: '0px 12px 24px rgba(255, 255, 255, 0.40)'
+        }
       },
       focus: {
         // shadow or outline are required for accessibility
         border: {
           // remove to only have shadow
-          color: 'focus',
+          color: 'focus'
         },
         // outline: { color: undefined, size: undefined },
         shadow: {
           color: 'focus',
-          size: '2px',
-        },
+          size: '2px'
+        }
       },
       font: _extends({}, fontSizing(0)),
       hover: {
         background: {
           color: 'active',
-          opacity: 'medium',
+          opacity: 'medium'
         },
         color: {
           dark: 'white',
-          light: 'black',
-        },
+          light: 'black'
+        }
       },
       input: {
         padding: {
-          horizontal:
-            (0, _mixins.parseMetricToNum)(baseSpacing / 2 + 'px') -
-            (0, _mixins.parseMetricToNum)(controlBorderWidth + 'px') +
-            'px',
-          vertical:
-            (0, _mixins.parseMetricToNum)(baseSpacing / 2 + 'px') -
-            (0, _mixins.parseMetricToNum)(controlBorderWidth + 'px') +
-            'px',
+          horizontal: (0, _mixins.parseMetricToNum)(baseSpacing / 2 + "px") - (0, _mixins.parseMetricToNum)(controlBorderWidth + "px") + "px",
+          vertical: (0, _mixins.parseMetricToNum)(baseSpacing / 2 + "px") - (0, _mixins.parseMetricToNum)(controlBorderWidth + "px") + "px"
         },
         font: {
           // size: undefined,
           // height: undefined,
-          weight: 600,
-        }, // deprecate in v3
+          weight: 600
+        } // deprecate in v3
         // weight: undefined,
+
       },
       opacity: {
         strong: 0.8,
         medium: 0.4,
-        weak: 0.1,
+        weak: 0.1
       },
       selected: {
         background: 'selected',
-        color: 'white',
+        color: 'white'
       },
-      spacing: baseSpacing + 'px',
+      spacing: baseSpacing + "px",
       size: {
-        xxsmall: baseSpacing * 2 + 'px',
+        xxsmall: baseSpacing * 2 + "px",
         // 48
-        xsmall: baseSpacing * 4 + 'px',
+        xsmall: baseSpacing * 4 + "px",
         // 96
-        small: baseSpacing * 8 + 'px',
+        small: baseSpacing * 8 + "px",
         // 192
-        medium: baseSpacing * 16 + 'px',
+        medium: baseSpacing * 16 + "px",
         // 384
-        large: baseSpacing * 32 + 'px',
+        large: baseSpacing * 32 + "px",
         // 768
-        xlarge: baseSpacing * 48 + 'px',
+        xlarge: baseSpacing * 48 + "px",
         // 1152
-        xxlarge: baseSpacing * 64 + 'px',
+        xxlarge: baseSpacing * 64 + "px",
         // 1536
-        full: '100%',
-      },
+        full: '100%'
+      }
     },
     accordion: {
-      panel: {
-        // border: {
+      panel: {// border: {
         //   side: 'bottom',
         //   color: 'border',
         // },
       },
       border: {
         side: 'bottom',
-        color: 'border',
+        color: 'border'
       },
       heading: {
-        level: '4', // level ranges from 1-6
+        level: '4' // level ranges from 1-6
         // margin: undefined
+
       },
       hover: {
         color: {
           dark: 'light-4',
-          light: 'dark-3',
+          light: 'dark-3'
         },
         // deprecated
         heading: {
           color: {
             dark: 'light-4',
-            light: 'dark-3',
-          },
-        },
+            light: 'dark-3'
+          }
+        }
       },
       icons: {
         collapse: _FormUp.FormUp,
-        expand: _FormDown.FormDown, // color: { dark: undefined, light: undefined },
-      },
+        expand: _FormDown.FormDown // color: { dark: undefined, light: undefined },
+
+      }
     },
     anchor: {
       textDecoration: 'none',
       fontWeight: 600,
       color: {
         dark: 'accent-1',
-        light: 'brand',
+        light: 'brand'
       },
       hover: {
-        textDecoration: 'underline', // fontWeight: undefined,
+        textDecoration: 'underline' // fontWeight: undefined,
         // extend: undefined,
-      }, // extend: undefined,
+
+      } // extend: undefined,
+
     },
     avatar: {
       // extend: undefined,
       size: {
-        xsmall: baseSpacing * 0.75 + 'px',
+        xsmall: baseSpacing * 0.75 + "px",
         // 18px
-        small: baseSpacing + 'px',
+        small: baseSpacing + "px",
         // 24px
-        medium: baseSpacing * 2 + 'px',
+        medium: baseSpacing * 2 + "px",
         // default 48px
-        large: baseSpacing * 3 + 'px',
+        large: baseSpacing * 3 + "px",
         // 72px
-        xlarge: baseSpacing * 4 + 'px',
+        xlarge: baseSpacing * 4 + "px",
         // 96px
-        '2xl': baseSpacing * 5 + 'px',
+        '2xl': baseSpacing * 5 + "px",
         // 120px
-        '3xl': baseSpacing * 6 + 'px',
+        '3xl': baseSpacing * 6 + "px",
         // 144px
-        '4xl': baseSpacing * 7 + 'px',
+        '4xl': baseSpacing * 7 + "px",
         // 168px
-        '5xl': baseSpacing * 8 + 'px', // 192px
+        '5xl': baseSpacing * 8 + "px" // 192px
+
       },
       text: {
         size: {
@@ -490,66 +465,77 @@ var generate = function generate(baseSpacing, scale) {
           // 54px
           '4xl': '5xl',
           // 70px
-          '5xl': '6xl', // 90px
-        }, // fontWeight: undefined,
+          '5xl': '6xl' // 90px
+
+        } // fontWeight: undefined,
         // extend: undefined
-      },
+
+      }
     },
     box: {
-      responsiveBreakpoint: 'small', // when we switch rows to columns
+      responsiveBreakpoint: 'small' // when we switch rows to columns
       // extend: undefined,
+
     },
     button: {
       badge: {
         container: {
-          background: 'brand', // pad: undefined,
+          background: 'brand' // pad: undefined,
           // extend: undefined,
+
         },
         size: {
-          medium: baseSpacing + 'px', // 24px
+          medium: baseSpacing + "px" // 24px
+
         },
         text: {
           size: {
-            medium: 'small', // 14px
-          },
-        },
+            medium: 'small' // 14px
+
+          }
+        }
       },
       size: {
         small: {
           border: {
-            radius: baseSpacing * 0.75 + 'px',
+            radius: baseSpacing * 0.75 + "px"
           },
           pad: {
-            vertical: baseSpacing / 4 - borderWidth + 'px',
+            vertical: baseSpacing / 4 - borderWidth + "px",
             // 4px
-            horizontal: baseSpacing - borderWidth * 2 + 'px', // 20px,
-          },
+            horizontal: baseSpacing - borderWidth * 2 + "px" // 20px,
+
+          }
         },
         medium: {
           border: {
-            radius: baseSpacing * 0.75 + 'px', // 18px
+            radius: baseSpacing * 0.75 + "px" // 18px
+
           },
           pad: {
-            vertical: baseSpacing / 4 - borderWidth + 'px',
+            vertical: baseSpacing / 4 - borderWidth + "px",
             // 4px
-            horizontal: baseSpacing - borderWidth + 'px', // 22px
-          },
+            horizontal: baseSpacing - borderWidth + "px" // 22px
+
+          }
         },
         large: {
           border: {
-            radius: baseSpacing + 'px', // 24px
+            radius: baseSpacing + "px" // 24px
+
           },
           pad: {
-            vertical: baseSpacing / 4 + borderWidth + 'px',
+            vertical: baseSpacing / 4 + borderWidth + "px",
             // 8px
-            horizontal: baseSpacing + borderWidth * 4 + 'px', // 32px,
-          },
-        },
+            horizontal: baseSpacing + borderWidth * 4 + "px" // 32px,
+
+          }
+        }
       },
       border: {
         // color: { dark: undefined, light: undefined }
-        width: borderWidth + 'px',
-        radius: baseSpacing * 0.75 + 'px',
+        width: borderWidth + "px",
+        radius: baseSpacing * 0.75 + "px"
       },
       // color: { dark: undefined, light: undefined }
       // default: {
@@ -604,19 +590,21 @@ var generate = function generate(baseSpacing, scale) {
       active: {
         background: 'active-background',
         //   border: undefined,
-        color: 'active-text', //   extend: undefined,
+        color: 'active-text' //   extend: undefined,
         //   default: {},
         //   primary: {},
         //   secondary: {},
+
       },
       disabled: {
         //   background: undefined,
         //   border: undefined,
         //   color: undefined,
-        opacity: 0.3, //   extend: undefined,
+        opacity: 0.3 //   extend: undefined,
         //   default: {},
         //   primary: {},
         //   secondary: {},
+
       },
       // hover: {
       //   background: undefined,
@@ -628,51 +616,53 @@ var generate = function generate(baseSpacing, scale) {
       //   secondary: {},
       // },
       padding: {
-        vertical: baseSpacing / 4 - borderWidth + 'px',
-        horizontal: baseSpacing - borderWidth + 'px',
+        vertical: baseSpacing / 4 - borderWidth + "px",
+        horizontal: baseSpacing - borderWidth + "px"
       },
       transition: {
         timing: 'ease-in-out',
         duration: 0.1,
-        properties: ['color', 'background-color', 'border-color', 'box-shadow'],
-      },
+        properties: ['color', 'background-color', 'border-color', 'box-shadow']
+      }
     },
     calendar: {
       // daySize must align with global.size
       small: {
-        fontSize: baseFontSize - fontScale + 'px',
+        fontSize: baseFontSize - fontScale + "px",
         lineHeight: 1.375,
-        daySize: (baseSpacing * 8) / 7 + 'px',
-        slideDuration: '0.2s',
+        daySize: baseSpacing * 8 / 7 + "px",
+        slideDuration: '0.2s'
       },
       medium: {
-        fontSize: baseFontSize + 'px',
+        fontSize: baseFontSize + "px",
         lineHeight: 1.45,
-        daySize: (baseSpacing * 16) / 7 + 'px',
-        slideDuration: '0.5s',
+        daySize: baseSpacing * 16 / 7 + "px",
+        slideDuration: '0.5s'
       },
       large: {
-        fontSize: baseFontSize + 3 * fontScale + 'px',
+        fontSize: baseFontSize + 3 * fontScale + "px",
         lineHeight: 1.11,
-        daySize: (baseSpacing * 32) / 7 + 'px',
-        slideDuration: '0.8s',
+        daySize: baseSpacing * 32 / 7 + "px",
+        slideDuration: '0.8s'
       },
       icons: {
         previous: _Previous.Previous,
         next: _Next.Next,
         small: {
           previous: _FormPrevious.FormPrevious,
-          next: _FormNext.FormNext,
-        },
+          next: _FormNext.FormNext
+        }
       },
       heading: {
-        level: '4',
-      }, // level ranges from 1-6
+        level: '4'
+      } // level ranges from 1-6
+
     },
     card: {
       container: {
         round: 'small',
-        elevation: 'small', // extend: undefined,
+        elevation: 'small' // extend: undefined,
+
       },
       // hover: {
       //   container: {
@@ -681,41 +671,42 @@ var generate = function generate(baseSpacing, scale) {
       // },
       header: {},
       body: {},
-      footer: {},
+      footer: {}
     },
     carousel: {
       icons: {
         current: _Subtract.Subtract,
         next: _Next.Next,
-        previous: _Previous.Previous, // color: { dark: undefined, light: undefined },
+        previous: _Previous.Previous // color: { dark: undefined, light: undefined },
+
       },
       animation: {
-        duration: 1000,
+        duration: 1000
       },
       disabled: {
-        icons: {
-          // color: { dark: undefined, light: undefined },
-        },
-      },
+        icons: {// color: { dark: undefined, light: undefined },
+        }
+      }
     },
     chart: {
-      color: 'graph-0', // extend: undefined,
+      color: 'graph-0' // extend: undefined,
+
     },
     checkBox: {
       border: {
         color: {
           dark: 'rgba(255, 255, 255, 0.5)',
-          light: 'rgba(0, 0, 0, 0.15)',
+          light: 'rgba(0, 0, 0, 0.15)'
         },
-        width: '2px',
+        width: '2px'
       },
       check: {
         // extend: undefined,
         radius: '4px',
-        thickness: '4px',
+        thickness: '4px'
       },
       label: {
-        align: 'center',
+        align: 'center'
       },
       // color: { dark: undefined, light: undefined },
       // extend: undefined,
@@ -724,35 +715,33 @@ var generate = function generate(baseSpacing, scale) {
         border: {
           color: {
             dark: 'white',
-            light: 'black',
-          },
-        }, // background: undefined,
+            light: 'black'
+          }
+        } // background: undefined,
+
       },
-      icon: {
-        // size: undefined,
+      icon: {// size: undefined,
         // extend: undefined,
       },
-      icons: {
-        // checked: undefined,
+      icons: {// checked: undefined,
         // indeterminate: undefined,
       },
       // pad: undefined,
-      size: baseSpacing + 'px',
+      size: baseSpacing + "px",
       toggle: {
         // background: undefined
         color: {
           dark: '#d9d9d9',
-          light: '#d9d9d9',
+          light: '#d9d9d9'
         },
-        knob: {
-          // extend: undefined,
+        knob: {// extend: undefined,
         },
-        radius: baseSpacing + 'px',
-        size: baseSpacing * 2 + 'px', // extend: undefined,
-      },
+        radius: baseSpacing + "px",
+        size: baseSpacing * 2 + "px" // extend: undefined,
+
+      }
     },
-    checkBoxGroup: {
-      // container: {
+    checkBoxGroup: {// container: {
       //   // any box props
       //   extend: undefined,
       // },
@@ -763,75 +752,75 @@ var generate = function generate(baseSpacing, scale) {
         hour: {
           color: {
             dark: 'light-2',
-            light: 'dark-3',
+            light: 'dark-3'
           },
-          width: baseSpacing / 3 + 'px',
-          size: baseSpacing + 'px',
-          shape: 'round',
+          width: baseSpacing / 3 + "px",
+          size: baseSpacing + "px",
+          shape: 'round'
         },
         minute: {
           color: {
             dark: 'light-4',
-            light: 'dark-3',
+            light: 'dark-3'
           },
-          width: baseSpacing / 6 + 'px',
-          size: Math.round(baseSpacing / 2) + 'px',
-          shape: 'round',
+          width: baseSpacing / 6 + "px",
+          size: Math.round(baseSpacing / 2) + "px",
+          shape: 'round'
         },
         second: {
           color: {
             dark: 'accent-1',
-            light: 'accent-1',
+            light: 'accent-1'
           },
-          width: baseSpacing / 8 + 'px',
-          size: Math.round(baseSpacing / 2.666) + 'px',
-          shape: 'round',
+          width: baseSpacing / 8 + "px",
+          size: Math.round(baseSpacing / 2.666) + "px",
+          shape: 'round'
         },
         size: {
-          xsmall: baseSpacing * 2 + 'px',
-          small: baseSpacing * 3 + 'px',
-          medium: baseSpacing * 4 + 'px',
-          large: baseSpacing * 6 + 'px',
-          xlarge: baseSpacing * 9 + 'px',
-          xxlarge: baseSpacing * 12 + 'px',
-          huge: baseSpacing * 12 + 'px', // kept for backwards compatibility
-        },
+          xsmall: baseSpacing * 2 + "px",
+          small: baseSpacing * 3 + "px",
+          medium: baseSpacing * 4 + "px",
+          large: baseSpacing * 6 + "px",
+          xlarge: baseSpacing * 9 + "px",
+          xxlarge: baseSpacing * 12 + "px",
+          huge: baseSpacing * 12 + "px" // kept for backwards compatibility
+
+        }
       },
       digital: {
         text: {
           xsmall: {
-            size: baseFontSize - 2 * fontScale + 'px',
-            height: 1.5,
+            size: baseFontSize - 2 * fontScale + "px",
+            height: 1.5
           },
           small: {
-            size: baseFontSize - fontScale + 'px',
-            height: 1.43,
+            size: baseFontSize - fontScale + "px",
+            height: 1.43
           },
           medium: {
-            size: baseFontSize + 'px',
-            height: 1.375,
+            size: baseFontSize + "px",
+            height: 1.375
           },
           large: {
-            size: baseFontSize + fontScale + 'px',
-            height: 1.167,
+            size: baseFontSize + fontScale + "px",
+            height: 1.167
           },
           xlarge: {
-            size: baseFontSize + 2 * fontScale + 'px',
-            height: 1.1875,
+            size: baseFontSize + 2 * fontScale + "px",
+            height: 1.1875
           },
           xxlarge: {
-            size: baseFontSize + 4 * fontScale + 'px',
-            height: 1.125,
-          },
-        },
-      },
+            size: baseFontSize + 4 * fontScale + "px",
+            height: 1.125
+          }
+        }
+      }
     },
     collapsible: {
       minSpeed: 200,
-      baseline: 500,
+      baseline: 500
     },
-    dateInput: {
-      // icon: {
+    dateInput: {// icon: {
       //   size: undefined,
       // },
     },
@@ -846,38 +835,41 @@ var generate = function generate(baseSpacing, scale) {
         // },
         header: {
           background: {
-            opacity: 'strong',
-          }, //  extend: undefined,
+            opacity: 'strong'
+          } //  extend: undefined,
+
         },
         footer: {
           background: {
-            opacity: 'strong',
-          }, //  extend: undefined,
-        },
+            opacity: 'strong'
+          } //  extend: undefined,
+
+        }
       },
       container: {
         // any box props
-        gap: 'xsmall', // extend: undefined,
+        gap: 'xsmall' // extend: undefined,
+
       },
       groupHeader: {
         background: {
           dark: 'dark-2',
-          light: 'light-2',
+          light: 'light-2'
         },
         border: {
           side: 'bottom',
-          size: 'xsmall',
+          size: 'xsmall'
         },
         pad: {
           horizontal: 'small',
-          vertical: 'xsmall',
-        },
+          vertical: 'xsmall'
+        }
       },
       groupEnd: {
         border: {
           side: 'bottom',
-          size: 'xsmall',
-        },
+          size: 'xsmall'
+        }
       },
       header: {
         // background: undefined,
@@ -896,37 +888,39 @@ var generate = function generate(baseSpacing, scale) {
         units: {
           color: 'text-xweak',
           margin: {
-            left: 'xsmall',
-          },
-        },
+            left: 'xsmall'
+          }
+        }
       },
       icons: {
         ascending: _FormDown.FormDown,
         contract: _FormUp.FormUp,
         descending: _FormUp.FormUp,
-        expand: _FormDown.FormDown, // sortable: undefined,
+        expand: _FormDown.FormDown // sortable: undefined,
+
       },
       primary: {
-        weight: 'bold',
+        weight: 'bold'
       },
       resize: {
         border: {
           color: 'border',
-          side: 'end',
-        }, // hover: {
+          side: 'end'
+        } // hover: {
         //   border: {
         //     color: undefined,
         //     side: undefined,
         //     size: undefined,
         //   },
         // },
-      },
+
+      }
     },
     diagram: {
       // extend: undefined,
       line: {
-        color: 'graph-0',
-      },
+        color: 'graph-0'
+      }
     },
     // drop: {
     //   extend: undefined,
@@ -938,28 +932,33 @@ var generate = function generate(baseSpacing, scale) {
         // color: undefined,
         side: 'all',
         size: 'small',
-        style: 'dashed',
+        style: 'dashed'
       },
       dragOver: {
         border: {
-          color: 'control',
-        }, // extend: undefined,
+          color: 'control'
+        } // extend: undefined,
+
       },
       hover: {
         border: {
-          color: 'brand',
-        }, // extend: undefined,
+          color: 'brand'
+        } // extend: undefined,
+
       },
       icons: {
-        remove: _FormClose.FormClose,
+        remove: _FormClose.FormClose
       },
       // pad: {},
       label: {
-        margin: 'small', // extend: undefined,
+        margin: 'small' // extend: undefined,
+
       },
       message: {
-        margin: 'small', // extend: undefined,
-      }, // extend: undefined,
+        margin: 'small' // extend: undefined,
+
+      } // extend: undefined,
+
     },
     formField: {
       border: {
@@ -967,26 +966,27 @@ var generate = function generate(baseSpacing, scale) {
         error: {
           color: {
             dark: 'white',
-            light: 'status-critical',
-          },
+            light: 'status-critical'
+          }
         },
         position: 'inner',
-        side: 'bottom',
+        side: 'bottom'
       },
       content: {
         // margin: undefined,
-        pad: 'small',
+        pad: 'small'
       },
       disabled: {
         background: {
           color: 'status-disabled',
-          opacity: 'medium',
-        }, // border: {
+          opacity: 'medium'
+        } // border: {
         //   color: undefined,
         // },
         // label: {
         //   color: undefined,
         // },
+
       },
       // focus: {
       //   background: {
@@ -1000,150 +1000,149 @@ var generate = function generate(baseSpacing, scale) {
         color: 'status-critical',
         margin: {
           vertical: 'xsmall',
-          horizontal: 'small',
-        }, // background: undefined,
+          horizontal: 'small'
+        } // background: undefined,
         // container: {}, // any Box props
         // icon: undefined,
+
       },
       // extend: undefined,
       help: {
         color: 'dark-3',
         margin: {
-          start: 'small',
-        },
+          start: 'small'
+        }
       },
       info: {
         color: 'text-xweak',
         margin: {
           vertical: 'xsmall',
-          horizontal: 'small',
-        }, // container: {}, // any Box props
+          horizontal: 'small'
+        } // container: {}, // any Box props
         // icon: undefined,
+
       },
       label: {
         margin: {
           vertical: 'xsmall',
-          horizontal: 'small',
-        }, // requiredIndicator: undefined,
+          horizontal: 'small'
+        } // requiredIndicator: undefined,
+
       },
       margin: {
-        bottom: 'small',
-      }, // round: undefined,
+        bottom: 'small'
+      } // round: undefined,
+
     },
-    grommet: {
-      // extend: undefined
+    grommet: {// extend: undefined
     },
     heading: {
       // color: undefined,
-      font: {
-        // family: undefined
+      font: {// family: undefined
       },
       level: {
         1: {
-          font: {
-            // family: undefined,
+          font: {// family: undefined,
             // weight: undefined,
           },
           small: _extends({}, fontSizing(4)),
           medium: _extends({}, fontSizing(8)),
           large: _extends({}, fontSizing(16)),
-          xlarge: _extends({}, fontSizing(24)),
+          xlarge: _extends({}, fontSizing(24))
         },
         2: {
-          font: {
-            // family: undefined,
+          font: {// family: undefined,
             // weight: undefined,
           },
           small: _extends({}, fontSizing(2)),
           medium: _extends({}, fontSizing(4)),
           large: _extends({}, fontSizing(8)),
-          xlarge: _extends({}, fontSizing(12)),
+          xlarge: _extends({}, fontSizing(12))
         },
         3: {
-          font: {
-            // family: undefined,
+          font: {// family: undefined,
             // weight: undefined,
           },
           small: _extends({}, fontSizing(1)),
           medium: _extends({}, fontSizing(2)),
           large: _extends({}, fontSizing(4)),
-          xlarge: _extends({}, fontSizing(6)),
+          xlarge: _extends({}, fontSizing(6))
         },
         4: {
-          font: {
-            // family: undefined,
+          font: {// family: undefined,
             // weight: undefined,
           },
           small: _extends({}, fontSizing(0)),
           medium: _extends({}, fontSizing(0)),
           large: _extends({}, fontSizing(0)),
-          xlarge: _extends({}, fontSizing(0)),
+          xlarge: _extends({}, fontSizing(0))
         },
         5: {
-          font: {
-            // family: undefined,
+          font: {// family: undefined,
             // weight: undefined,
           },
           small: _extends({}, fontSizing(-0.5)),
           medium: _extends({}, fontSizing(-0.5)),
           large: _extends({}, fontSizing(-0.5)),
-          xlarge: _extends({}, fontSizing(-0.5)),
+          xlarge: _extends({}, fontSizing(-0.5))
         },
         6: {
-          font: {
-            // family: undefined,
+          font: {// family: undefined,
             // weight: undefined,
           },
           small: _extends({}, fontSizing(-1)),
           medium: _extends({}, fontSizing(-1)),
           large: _extends({}, fontSizing(-1)),
-          xlarge: _extends({}, fontSizing(-1)),
-        },
+          xlarge: _extends({}, fontSizing(-1))
+        }
       },
       responsiveBreakpoint: 'small',
       // when we scale the font size down
-      weight: 600,
+      weight: 600
     },
     layer: {
       background: {
         dark: 'black',
-        light: 'white',
+        light: 'white'
       },
       border: {
-        radius: '4px', // intelligentRounding: undefined,
+        radius: '4px' // intelligentRounding: undefined,
+
       },
       container: {
         // elevation: undefined,
-        zIndex: '20',
+        zIndex: '20'
       },
       // extend: undefined,
       overlay: {
-        background: 'rgba(0, 0, 0, 0.5)',
+        background: 'rgba(0, 0, 0, 0.5)'
       },
       responsiveBreakpoint: 'small',
       // when Layer takes over the full screen
-      zIndex: '20',
+      zIndex: '20'
     },
     list: {
       container: {
         // any box props
-        gap: 'xsmall', // extend: undefined,
+        gap: 'xsmall' // extend: undefined,
+
       },
       item: {
         // background: undefined,
         border: 'horizontal',
         pad: {
           horizontal: 'medium',
-          vertical: 'small',
-        }, // extend: undefined,
+          vertical: 'small'
+        } // extend: undefined,
+
       },
       icons: {
         down: _FormDown.FormDown,
-        up: _FormUp.FormUp,
-      }, // extend: undefined,
+        up: _FormUp.FormUp
+      } // extend: undefined,
+
     },
-    maskedInput: {
-      // container: {
+    maskedInput: {// container: {
       //   extend: undefined,
       // },
       // extend: undefined,
@@ -1155,51 +1154,54 @@ var generate = function generate(baseSpacing, scale) {
       drop: {
         align: {
           top: 'top',
-          left: 'left',
-        }, // any drop props
+          left: 'left'
+        } // any drop props
+
       },
       icons: {
-        down: _FormDown.FormDown, // up: undefined,
+        down: _FormDown.FormDown // up: undefined,
         // color: { dark: undefined, light: undefined },
-      },
+
+      }
     },
     meter: {
-      color: 'graph-0', // colors: [] || colors: ['graph-0', 'graph-1', 'graph-2', 'graph-3'],
+      color: 'graph-0' // colors: [] || colors: ['graph-0', 'graph-1', 'graph-2', 'graph-3'],
       // extend: undefined,
+
     },
     nameValueList: {
       gap: {
         column: 'large',
-        row: 'small',
+        row: 'small'
       },
       pair: {
         column: {
           gap: {
             column: 'large',
-            row: 'medium',
-          },
-        },
+            row: 'medium'
+          }
+        }
       },
       name: {
-        width: 'small',
+        width: 'small'
       },
       value: {
-        width: 'medium',
-      },
+        width: 'medium'
+      }
     },
     nameValuePair: {
       column: {
-        gap: 'xxsmall',
+        gap: 'xxsmall'
       },
       name: {
         // any text props
         color: 'text',
-        weight: 'bold',
+        weight: 'bold'
       },
       value: {
         // any text props
-        color: 'text',
-      },
+        color: 'text'
+      }
     },
     notification: {
       time: 8000,
@@ -1207,124 +1209,124 @@ var generate = function generate(baseSpacing, scale) {
         // any box props
         pad: {
           horizontal: 'small',
-          vertical: 'xsmall',
+          vertical: 'xsmall'
         },
         background: {
-          color: 'background-front',
-        },
+          color: 'background-front'
+        }
       },
       toast: {
         container: {
           // any box props
           elevation: 'medium',
           round: 'xsmall',
-          width: 'medium',
+          width: 'medium'
         },
         layer: {
           position: 'top',
-          margin: 'medium',
-        },
+          margin: 'medium'
+        }
       },
       iconContainer: {
         // any box props
         pad: {
-          right: 'small',
-        },
+          right: 'small'
+        }
       },
       textContainer: {
         // any box props
-        gap: 'medium',
+        gap: 'medium'
       },
       title: {
         // any text props
-        weight: 'bold',
+        weight: 'bold'
       },
       message: {
         // any text props
-        margin: 'none',
+        margin: 'none'
       },
       close: {
-        icon: _FormClose.FormClose,
+        icon: _FormClose.FormClose
       },
       critical: {
         icon: _StatusCriticalSmall.StatusCriticalSmall,
-        color: 'status-critical',
+        color: 'status-critical'
       },
       warning: {
         icon: _StatusWarningSmall.StatusWarningSmall,
-        color: 'status-warning',
+        color: 'status-warning'
       },
       normal: {
         icon: _StatusGoodSmall.StatusGoodSmall,
-        color: 'status-ok',
+        color: 'status-ok'
       },
       unknown: {
         icon: _StatusUnknownSmall.StatusUnknownSmall,
-        color: 'status-unknown',
+        color: 'status-unknown'
       },
       undefined: {
         icon: _StatusUnknownSmall.StatusUnknownSmall,
-        color: 'status-unknown',
-      },
+        color: 'status-unknown'
+      }
     },
     pagination: {
       button: {
         active: {
           background: {
-            color: 'active-background',
-          },
+            color: 'active-background'
+          }
         },
         color: 'text-strong',
         hover: {
           background: {
-            color: 'background-contrast',
+            color: 'background-contrast'
           },
-          color: undefined,
+          color: undefined
         },
         size: {
           small: {
             border: {
-              radius: baseSpacing / 8 + 'px',
+              radius: baseSpacing / 8 + "px",
               // 3
-              width: '2px',
+              width: '2px'
             },
             pad: {
-              vertical: '4px',
-              horizontal: '4px',
+              vertical: "4px",
+              horizontal: "4px"
             },
             font: _extends({}, fontSizing(-1)),
-            height: baseSpacing * 1.25 + 'px',
-            width: baseSpacing * 1.25 + 'px',
+            height: baseSpacing * 1.25 + "px",
+            width: baseSpacing * 1.25 + "px"
           },
           medium: {
             border: {
-              radius: baseSpacing / 6 + 'px',
+              radius: baseSpacing / 6 + "px",
               // 4
-              width: '2px',
+              width: '2px'
             },
             pad: {
-              vertical: '4px',
-              horizontal: '4px',
+              vertical: "4px",
+              horizontal: "4px"
             },
             font: _extends({}, fontSizing(0)),
-            height: baseSpacing * 1.5 + 'px',
-            width: baseSpacing * 1.5 + 'px',
+            height: baseSpacing * 1.5 + "px",
+            width: baseSpacing * 1.5 + "px"
           },
           large: {
             border: {
-              radius: baseSpacing / 4 + 'px',
+              radius: baseSpacing / 4 + "px",
               // 6
-              width: '2px',
+              width: '2px'
             },
             pad: {
-              vertical: '4px',
-              horizontal: '4px',
+              vertical: "4px",
+              horizontal: "4px"
             },
             font: _extends({}, fontSizing(1)),
-            height: baseSpacing * 2 + 'px',
-            width: baseSpacing * 2 + 'px',
-          },
-        },
+            height: baseSpacing * 2 + "px",
+            width: baseSpacing * 2 + "px"
+          }
+        }
       },
       // container: {
       //   // any box props,
@@ -1335,23 +1337,22 @@ var generate = function generate(baseSpacing, scale) {
         direction: 'row',
         gap: 'xxsmall',
         margin: 'none',
-        pad: 'none',
+        pad: 'none'
       },
       icons: {
         // color: undefined,
         next: _Next.Next,
-        previous: _Previous.Previous,
-      },
+        previous: _Previous.Previous
+      }
     },
     paragraph: {
-      font: {
-        // family: undefined
+      font: {// family: undefined
       },
       small: _extends({}, fontSizing(-1)),
       medium: _extends({}, fontSizing(0)),
       large: _extends({}, fontSizing(1)),
       xlarge: _extends({}, fontSizing(2)),
-      xxlarge: _extends({}, fontSizing(4)),
+      xxlarge: _extends({}, fontSizing(4))
     },
     spinner: {
       container: {
@@ -1359,32 +1360,33 @@ var generate = function generate(baseSpacing, scale) {
         color: 'brand',
         pad: 'small',
         round: 'full',
-        size: 'small',
+        size: 'small'
       },
       // icon: undefined
       size: {
-        xsmall: baseSpacing * 0.75 + 'px',
-        small: baseSpacing + 'px',
+        xsmall: baseSpacing * 0.75 + "px",
+        small: baseSpacing + "px",
         // default 24
-        medium: baseSpacing * 2 + 'px',
-        large: baseSpacing * 3 + 'px',
-        xlarge: baseSpacing * 4 + 'px',
-      },
+        medium: baseSpacing * 2 + "px",
+        large: baseSpacing * 3 + "px",
+        xlarge: baseSpacing * 4 + "px"
+      }
     },
     radioButton: {
       border: {
         color: {
           dark: 'rgba(255, 255, 255, 0.5)',
-          light: 'rgba(0, 0, 0, 0.15)',
+          light: 'rgba(0, 0, 0, 0.15)'
         },
-        width: '2px',
+        width: '2px'
       },
       check: {
-        radius: '100%', // background: {
+        radius: '100%' // background: {
         //  color: undefined,
         // },
         // color: { dark: undefined, light: undefined },
         // extend: undefined,
+
       },
       // color: undefined,
       hover: {
@@ -1394,42 +1396,38 @@ var generate = function generate(baseSpacing, scale) {
         border: {
           color: {
             dark: 'white',
-            light: 'black',
-          },
-        },
+            light: 'black'
+          }
+        }
       },
-      icon: {
-        // size: undefined,
+      icon: {// size: undefined,
         // extend: undefined,
       },
-      icons: {
-        // circle: undefined,
+      icons: {// circle: undefined,
       },
       gap: 'small',
-      size: baseSpacing + 'px',
-      font: {
-        // weight: undefined,
+      size: baseSpacing + "px",
+      font: {// weight: undefined,
       },
-      container: {
-        // extend: undefined
-      },
+      container: {// extend: undefined
+      }
     },
-    radioButtonGroup: {
-      // container: {}, // any box props
+    radioButtonGroup: {// container: {}, // any box props
     },
     rangeInput: {
       disabled: {
-        opacity: 0.3, //   thumb: {
+        opacity: 0.3 //   thumb: {
         //     color: undefined,
         //   },
         //   track: {
         //     color: undefined,
         //   },
+
       },
       // extend: undefined
       track: {
         height: '4px',
-        color: 'border', // opacity: undefined,
+        color: 'border' // opacity: undefined,
         // lower: {
         //   color: 'undefined',
         //   opacity: undefined,
@@ -1439,76 +1437,78 @@ var generate = function generate(baseSpacing, scale) {
         //   opacity: undefined,
         // },
         // extend: undefined
+
       },
-      thumb: {
-        // color: { dark: undefined, light: undefined },
+      thumb: {// color: { dark: undefined, light: undefined },
         // extend: undefined
-      },
+      }
     },
     rangeSelector: {
       background: {
         invert: {
-          color: 'light-4',
-        },
-      }, // edge: {
+          color: 'light-4'
+        }
+      } // edge: {
       //   type: undefined,
       // },
+
     },
     select: {
       // background: undefined,
       clear: {
         container: {
           pad: 'small',
-          background: 'background-contrast',
+          background: 'background-contrast'
         },
         // any box props
         text: {
-          color: 'text-weak',
-        }, // any text props
+          color: 'text-weak'
+        } // any text props
+
       },
-      container: {
-        // extend: undefined,
+      container: {// extend: undefined,
       },
-      control: {
-        // extend: undefined,
+      control: {// extend: undefined,
         // open: undefined,
       },
       icons: {
         // color: { dark: undefined, light: undefined },
         margin: {
-          horizontal: 'small',
+          horizontal: 'small'
         },
-        down: _FormDown.FormDown, // up: undefined
+        down: _FormDown.FormDown // up: undefined
+
       },
       options: {
         container: {
           align: 'start',
-          pad: 'small',
+          pad: 'small'
         },
         text: {
-          margin: 'none',
-        },
+          margin: 'none'
+        }
       },
       // searchInput: undefined,
-      step: 20,
+      step: 20
     },
     skipLinks: {
       position: 'top',
       container: {
         elevation: 'large',
         round: 'small',
-        pad: 'medium',
+        pad: 'medium'
       },
       label: {
         margin: {
-          bottom: 'medium',
+          bottom: 'medium'
         },
-        size: 'medium',
-      },
+        size: 'medium'
+      }
     },
     tab: {
       active: {
-        color: 'text', // background: undefined,
+        color: 'text' // background: undefined,
+
       },
       // background: undefined,
       border: {
@@ -1516,23 +1516,23 @@ var generate = function generate(baseSpacing, scale) {
         size: 'small',
         color: {
           dark: 'accent-1',
-          light: 'brand',
+          light: 'brand'
         },
         active: {
           color: {
             dark: 'white',
-            light: 'black',
-          },
+            light: 'black'
+          }
         },
-        disabled: {
-          // color: undefined,
+        disabled: {// color: undefined,
         },
         hover: {
           color: {
             dark: 'white',
-            light: 'black',
-          }, // extend: undefined,
-        },
+            light: 'black'
+          } // extend: undefined,
+
+        }
       },
       color: 'control',
       // disabled: {
@@ -1544,23 +1544,22 @@ var generate = function generate(baseSpacing, scale) {
         // extend: undefined,
         color: {
           dark: 'white',
-          light: 'black',
-        },
+          light: 'black'
+        }
       },
       margin: {
         vertical: 'xxsmall',
-        horizontal: 'small',
+        horizontal: 'small'
       },
       pad: {
-        bottom: 'xsmall',
-      },
+        bottom: 'xsmall'
+      }
     },
     tabs: {
       // background: undefined,
       // extend: undefined,
       // gap: undefined,
-      header: {
-        // background: undefined,
+      header: {// background: undefined,
         // border: {
         //   side: undefined,
         //   size: undefined,
@@ -1569,29 +1568,30 @@ var generate = function generate(baseSpacing, scale) {
         // },
         // extend: undefined,
       },
-      panel: {
-        // extend: undefined,
-      },
+      panel: {// extend: undefined,
+      }
     },
     table: {
       header: {
         align: 'start',
         pad: {
           horizontal: 'small',
-          vertical: 'xsmall',
+          vertical: 'xsmall'
         },
-        border: 'bottom', // verticalAlign: undefined,
+        border: 'bottom' // verticalAlign: undefined,
         // background: undefined,
         // extend: undefined,
+
       },
       body: {
         align: 'start',
         pad: {
           horizontal: 'small',
-          vertical: 'xsmall',
-        }, // background: undefined,
+          vertical: 'xsmall'
+        } // background: undefined,
         // border: undefined,
         // extend: undefined,
+
       },
       // row: {
       //   hover: {
@@ -1603,12 +1603,13 @@ var generate = function generate(baseSpacing, scale) {
         align: 'start',
         pad: {
           horizontal: 'small',
-          vertical: 'xsmall',
+          vertical: 'xsmall'
         },
-        border: 'top', // verticalAlign: undefined,
+        border: 'top' // verticalAlign: undefined,
         // background: undefined,
         // extend: undefined,
-      },
+
+      }
     },
     tag: {
       // background: undefined,
@@ -1617,21 +1618,20 @@ var generate = function generate(baseSpacing, scale) {
       // name: undefined,
       pad: {
         horizontal: 'small',
-        vertical: 'xsmall',
+        vertical: 'xsmall'
       },
       remove: {
         margin: {
-          right: 'xsmall',
-        },
+          right: 'xsmall'
+        }
       },
       separator: ' : ',
       value: {
-        weight: 600,
-      },
+        weight: 600
+      }
     },
     text: {
-      font: {
-        // family: undefined
+      font: {// family: undefined
       },
       xsmall: _extends({}, fontSizing(-1.5)),
       small: _extends({}, fontSizing(-1)),
@@ -1645,14 +1645,12 @@ var generate = function generate(baseSpacing, scale) {
       '3xl': _extends({}, fontSizing(6)),
       '4xl': _extends({}, fontSizing(9)),
       '5xl': _extends({}, fontSizing(13)),
-      '6xl': _extends({}, fontSizing(18)),
+      '6xl': _extends({}, fontSizing(18))
     },
-    textArea: {
-      // extend: undefined,
+    textArea: {// extend: undefined,
       // disabled: { opacity: undefined },
     },
-    textInput: {
-      // extend: undefined,
+    textInput: {// extend: undefined,
       // disabled: { opacity: undefined },
     },
     tip: {
@@ -1663,24 +1661,24 @@ var generate = function generate(baseSpacing, scale) {
         margin: 'xsmall',
         pad: {
           vertical: 'xsmall',
-          horizontal: 'small',
+          horizontal: 'small'
         },
-        round: 'small',
+        round: 'small'
       },
       drop: {
         // any props for the drop
         align: {
-          top: 'bottom',
+          top: 'bottom'
         },
         // most common use case is Header with Buttons
         background: 'none',
         elevation: 'none',
-        margin: 'none',
-      },
+        margin: 'none'
+      }
     },
     video: {
       captions: {
-        background: 'rgba(0, 0, 0, 0.7)',
+        background: 'rgba(0, 0, 0, 0.7)'
       },
       // controls: { background: undefined },
       icons: {
@@ -1690,27 +1688,28 @@ var generate = function generate(baseSpacing, scale) {
         pause: _Pause.Pause,
         play: _Play.Play,
         reduceVolume: _VolumeLow.VolumeLow,
-        volume: _Volume.Volume, // color: { dark: undefined, light: undefined },
+        volume: _Volume.Volume // color: { dark: undefined, light: undefined },
+
       },
       // scrubber: { track: { color: undefined } },
       scrubber: {
-        color: 'light-4',
-      },
+        color: 'light-4'
+      }
     },
     worldMap: {
       color: 'light-3',
       continent: {
         active: '8px',
-        base: '6px',
+        base: '6px'
       },
       hover: {
-        color: 'light-4',
+        color: 'light-4'
       },
       place: {
         active: '20px',
-        base: '8px',
-      },
-    },
+        base: '8px'
+      }
+    }
   });
   return (0, _object.deepFreeze)(result);
 };

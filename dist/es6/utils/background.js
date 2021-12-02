@@ -1,18 +1,6 @@
-var _templateObject,
-  _templateObject2,
-  _templateObject3,
-  _templateObject4,
-  _templateObject5,
-  _templateObject6,
-  _templateObject7;
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7;
 
-function _taggedTemplateLiteralLoose(strings, raw) {
-  if (!raw) {
-    raw = strings.slice(0);
-  }
-  strings.raw = raw;
-  return strings;
-}
+function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
 
 import { css } from 'styled-components';
 import { colorIsDark, getRGBA, normalizeColor } from './colors'; // evalStyle() converts a styled-components item into a string
@@ -20,28 +8,21 @@ import { colorIsDark, getRGBA, normalizeColor } from './colors'; // evalStyle() 
 var evalStyle = function evalStyle(arg, theme) {
   if (arg && Array.isArray(arg) && typeof arg[0] === 'function') {
     return arg[0]({
-      theme: theme,
+      theme: theme
     });
   }
 
   return arg;
 };
 
-export var normalizeBackground = function normalizeBackground(
-  background,
-  theme,
-) {
+export var normalizeBackground = function normalizeBackground(background, theme) {
   // If the background has a light or dark object, use that
   var result = background;
 
   if (background) {
     if (theme.dark && background.dark && typeof background.dark !== 'boolean') {
       result = background.dark;
-    } else if (
-      !theme.dark &&
-      background.light &&
-      typeof background.light !== 'boolean'
-    ) {
+    } else if (!theme.dark && background.light && typeof background.light !== 'boolean') {
       result = background.light;
     }
 
@@ -57,15 +38,13 @@ export var backgroundIsDark = function backgroundIsDark(backgroundArg, theme) {
   if (background) {
     if (typeof background === 'object') {
       var color = background.color,
-        dark = background.dark,
-        opacity = background.opacity;
+          dark = background.dark,
+          opacity = background.opacity;
 
       if (typeof dark === 'boolean') {
         result = dark;
-      } else if (
-        color && // weak opacity means we keep the existing darkness
-        (!opacity || opacity !== 'weak')
-      ) {
+      } else if (color && ( // weak opacity means we keep the existing darkness
+      !opacity || opacity !== 'weak')) {
         var backgroundColor = normalizeColor(background.color, theme);
 
         if (backgroundColor) {
@@ -92,11 +71,8 @@ var darkContext = function darkContext(backgroundColor) {
 // Either could be undefined.
 // background could be a CSS gradient, like "linear-gradient(...)"
 
-export var backgroundAndTextColors = function backgroundAndTextColors(
-  backgroundArg,
-  textArg,
-  theme,
-) {
+
+export var backgroundAndTextColors = function backgroundAndTextColors(backgroundArg, textArg, theme) {
   if (!backgroundArg) return [undefined, textArg];
   var global = theme.global;
   var background = normalizeBackground(backgroundArg, theme);
@@ -113,17 +89,14 @@ export var backgroundAndTextColors = function backgroundAndTextColors(
 
     if (background.color) {
       var color = normalizeColor(background.color, theme, background.dark);
-      var opacity =
-        background.opacity === true
-          ? global.opacity.medium
-          : global.opacity[background.opacity] || background.opacity;
+      var opacity = background.opacity === true ? global.opacity.medium : global.opacity[background.opacity] || background.opacity;
       backgroundColor = getRGBA(color, opacity) || color; // If we don't have a textColor already, and we aren't too translucent,
       // set the textColor to have the best contrast against the background
       // color.
 
       if (!textColor && (opacity === undefined || opacity > 0.3)) {
         var shade = darkContext(backgroundColor, theme);
-        textColor = normalizeColor((shade && text[shade]) || text, theme);
+        textColor = normalizeColor(shade && text[shade] || text, theme);
       }
     }
   } else {
@@ -132,11 +105,7 @@ export var backgroundAndTextColors = function backgroundAndTextColors(
     var _shade = darkContext(backgroundColor, theme);
 
     if (_shade) {
-      textColor = normalizeColor(
-        text[_shade] || text,
-        theme,
-        _shade === 'dark',
-      );
+      textColor = normalizeColor(text[_shade] || text, theme, _shade === 'dark');
     } else {
       // If we can't determine the shade, we assume this isn't a simple color.
       // It could be a gradient. backgroundStyle() will take care of that case.
@@ -145,130 +114,48 @@ export var backgroundAndTextColors = function backgroundAndTextColors(
     }
   } // if textArg is false, we don't want the textColor, used for Button hover
 
+
   if (textArg === false) textColor = undefined;
   return [backgroundColor, textColor];
 };
-export var backgroundStyle = function backgroundStyle(
-  backgroundArg,
-  theme,
-  textColorArg,
-) {
+export var backgroundStyle = function backgroundStyle(backgroundArg, theme, textColorArg) {
   // for Grommet component, if the background isn't defined, don't set it
   if (backgroundArg === undefined) return undefined;
   var background = normalizeBackground(backgroundArg, theme);
 
-  if (
-    typeof background === 'string' &&
-    background.lastIndexOf('url', 0) === 0
-  ) {
-    return css(
-      _templateObject ||
-        (_templateObject = _taggedTemplateLiteralLoose([
-          '\n      background: ',
-          ' no-repeat center center;\n      background-size: cover;\n    ',
-        ])),
-      background,
-    );
+  if (typeof background === 'string' && background.lastIndexOf('url', 0) === 0) {
+    return css(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n      background: ", " no-repeat center center;\n      background-size: cover;\n    "])), background);
   }
 
-  var _backgroundAndTextCol = backgroundAndTextColors(
-      background,
-      textColorArg,
-      theme,
-    ),
-    backgroundColor = _backgroundAndTextCol[0],
-    textColor = _backgroundAndTextCol[1];
+  var _backgroundAndTextCol = backgroundAndTextColors(background, textColorArg, theme),
+      backgroundColor = _backgroundAndTextCol[0],
+      textColor = _backgroundAndTextCol[1];
 
   if (background.image) {
-    var backgroundStyles =
-      '\n      ' +
-      (backgroundColor ? 'background-color: ' + backgroundColor + ';' : '') +
-      '\n      background-image: ' +
-      background.image +
-      ';\n      background-repeat: ' +
-      (background.repeat || 'no-repeat') +
-      ';\n      background-position: ' +
-      (background.position || 'center center') +
-      ';\n      background-size: ' +
-      (background.size || 'cover') +
-      ';\n    '; // allow both background color and image, in case the image doesn't fill
+    var backgroundStyles = "\n      " + (backgroundColor ? "background-color: " + backgroundColor + ";" : '') + "\n      background-image: " + background.image + ";\n      background-repeat: " + (background.repeat || 'no-repeat') + ";\n      background-position: " + (background.position || 'center center') + ";\n      background-size: " + (background.size || 'cover') + ";\n    "; // allow both background color and image, in case the image doesn't fill
     // when image and opacity are used together, we need to use pseudo :before
     // to ensure that only image and background color are affected by opacity
     // but not the container contents
 
-    return css(
-      _templateObject2 ||
-        (_templateObject2 = _taggedTemplateLiteralLoose([
-          '\n      ',
-          '\n      ',
-          '\n    ',
-        ])),
-      textColor ? 'color: ' + textColor + ';' : '',
-      !background.opacity
-        ? backgroundStyles
-        : "position: relative;\n        z-index: 0;\n        &:before {\n          content: '';\n          position: absolute;\n          top: 0;\n          right: 0;\n          left: 0;\n          bottom: 0;\n          z-index: -1;\n          " +
-            backgroundStyles +
-            '\n          opacity: ' +
-            (background.opacity === true
-              ? theme.global.opacity.medium
-              : theme.global.opacity[background.opacity] ||
-                background.opacity) +
-            ';\n        }',
-    );
+    return css(_templateObject2 || (_templateObject2 = _taggedTemplateLiteralLoose(["\n      ", "\n      ", "\n    "])), textColor ? "color: " + textColor + ";" : '', !background.opacity ? backgroundStyles : "position: relative;\n        z-index: 0;\n        &:before {\n          content: '';\n          position: absolute;\n          top: 0;\n          right: 0;\n          left: 0;\n          bottom: 0;\n          z-index: -1;\n          " + backgroundStyles + "\n          opacity: " + (background.opacity === true ? theme.global.opacity.medium : theme.global.opacity[background.opacity] || background.opacity) + ";\n        }");
   }
 
   if (backgroundColor) {
-    return css(
-      _templateObject3 ||
-        (_templateObject3 = _taggedTemplateLiteralLoose([
-          '\n      background-color: ',
-          ';\n      ',
-          '\n    ',
-        ])),
-      backgroundColor,
-      textColor ? 'color: ' + textColor + ';' : '',
-    );
+    return css(_templateObject3 || (_templateObject3 = _taggedTemplateLiteralLoose(["\n      background-color: ", ";\n      ", "\n    "])), backgroundColor, textColor ? "color: " + textColor + ";" : '');
   }
 
-  if (typeof background === 'string')
-    // This case takes care of gradients
+  if (typeof background === 'string') // This case takes care of gradients
     // or theme colors that use CSS names like 'crimson' that we don't parse
-    return css(
-      _templateObject4 ||
-        (_templateObject4 = _taggedTemplateLiteralLoose([
-          '\n      background: ',
-          ';\n    ',
-        ])),
-      normalizeColor(background, theme),
-    );
+    return css(_templateObject4 || (_templateObject4 = _taggedTemplateLiteralLoose(["\n      background: ", ";\n    "])), normalizeColor(background, theme));
   return undefined;
 };
-export var activeStyle = css(
-  _templateObject5 ||
-    (_templateObject5 = _taggedTemplateLiteralLoose(['\n  ', '\n'])),
-  function (props) {
-    return backgroundStyle(
-      normalizeColor(props.theme.global.active.background, props.theme),
-      props.theme,
-      props.theme.global.active.color,
-    );
-  },
-);
-export var selectedStyle = css(
-  _templateObject6 ||
-    (_templateObject6 = _taggedTemplateLiteralLoose(['\n  ', '\n'])),
-  function (props) {
-    return backgroundStyle(
-      normalizeColor(props.theme.global.selected.background, props.theme),
-      props.theme,
-      props.theme.global.selected.color,
-    );
-  },
-);
-export var getHoverIndicatorStyle = function getHoverIndicatorStyle(
-  hoverIndicator,
-  theme,
-) {
+export var activeStyle = css(_templateObject5 || (_templateObject5 = _taggedTemplateLiteralLoose(["\n  ", "\n"])), function (props) {
+  return backgroundStyle(normalizeColor(props.theme.global.active.background, props.theme), props.theme, props.theme.global.active.color);
+});
+export var selectedStyle = css(_templateObject6 || (_templateObject6 = _taggedTemplateLiteralLoose(["\n  ", "\n"])), function (props) {
+  return backgroundStyle(normalizeColor(props.theme.global.selected.background, props.theme), props.theme, props.theme.global.selected.color);
+});
+export var getHoverIndicatorStyle = function getHoverIndicatorStyle(hoverIndicator, theme) {
   var background;
   var elevation;
 
@@ -283,17 +170,5 @@ export var getHoverIndicatorStyle = function getHoverIndicatorStyle(
     background = hoverIndicator;
   }
 
-  return css(
-    _templateObject7 ||
-      (_templateObject7 = _taggedTemplateLiteralLoose([
-        '\n    ',
-        '\n    ',
-        '\n  ',
-      ])),
-    backgroundStyle(background, theme, theme.global.hover.color),
-    elevation &&
-      'box-shadow: ' +
-        theme.global.elevation[theme.dark ? 'dark' : 'light'][elevation] +
-        ';',
-  );
+  return css(_templateObject7 || (_templateObject7 = _taggedTemplateLiteralLoose(["\n    ", "\n    ", "\n  "])), backgroundStyle(background, theme, theme.global.hover.color), elevation && "box-shadow: " + theme.global.elevation[theme.dark ? 'dark' : 'light'][elevation] + ";");
 };

@@ -5,7 +5,11 @@ exports["default"] = exports.NotificationLayer = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _grommetIcons = require("grommet-icons");
+var _Add = _interopRequireDefault(require("grommet-icons/es6/icons/Add"));
+
+var _FormClose = _interopRequireDefault(require("grommet-icons/es6/icons/FormClose"));
+
+var _StatusGood = _interopRequireDefault(require("grommet-icons/es6/icons/StatusGood"));
 
 var _grommet = require("grommet");
 
@@ -37,7 +41,7 @@ var NotificationLayer = function NotificationLayer() {
     align: "center",
     justify: "center"
   }, /*#__PURE__*/_react["default"].createElement(_grommet.Button, {
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Add, {
+    icon: /*#__PURE__*/_react["default"].createElement(_Add["default"], {
       color: "brand"
     }),
     label: /*#__PURE__*/_react["default"].createElement(_grommet.Text, null, /*#__PURE__*/_react["default"].createElement("strong", null, "Add")),
@@ -69,8 +73,8 @@ var NotificationLayer = function NotificationLayer() {
     align: "center",
     direction: "row",
     gap: "xsmall"
-  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.StatusGood, null), /*#__PURE__*/_react["default"].createElement(_grommet.Text, null, "A new virtual machine has been successfully added (this Layer will close after 3 seconds)")), /*#__PURE__*/_react["default"].createElement(_grommet.Button, {
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.FormClose, null),
+  }, /*#__PURE__*/_react["default"].createElement(_StatusGood["default"], null), /*#__PURE__*/_react["default"].createElement(_grommet.Text, null, "A new virtual machine has been successfully added (this Layer will close after 3 seconds)")), /*#__PURE__*/_react["default"].createElement(_grommet.Button, {
+    icon: /*#__PURE__*/_react["default"].createElement(_FormClose["default"], null),
     onClick: onClose,
     plain: true
   }))));

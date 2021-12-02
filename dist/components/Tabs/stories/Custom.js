@@ -7,7 +7,9 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styledComponents = require("styled-components");
 
-var _grommetIcons = require("grommet-icons");
+var _CircleInformation = _interopRequireDefault(require("grommet-icons/es6/icons/CircleInformation"));
+
+var _Currency = _interopRequireDefault(require("grommet-icons/es6/icons/Currency"));
 
 var _grommet = require("grommet");
 
@@ -91,7 +93,7 @@ var CustomTabs = function CustomTabs() {
     theme: customTheme
   }, /*#__PURE__*/_react["default"].createElement(_grommet.Tabs, null, /*#__PURE__*/_react["default"].createElement(_grommet.Tab, {
     title: /*#__PURE__*/_react["default"].createElement(RichTabTitle, {
-      icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.CircleInformation, {
+      icon: /*#__PURE__*/_react["default"].createElement(_CircleInformation["default"], {
         color: "accent-1"
       }),
       label: "Personal Data"
@@ -102,7 +104,7 @@ var CustomTabs = function CustomTabs() {
     placeholder: "Enter your name..."
   }))), /*#__PURE__*/_react["default"].createElement(_grommet.Tab, {
     title: /*#__PURE__*/_react["default"].createElement(RichTabTitle, {
-      icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Currency, {
+      icon: /*#__PURE__*/_react["default"].createElement(_Currency["default"], {
         color: "light-3"
       }),
       label: "Payment"

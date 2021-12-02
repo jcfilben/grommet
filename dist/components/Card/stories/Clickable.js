@@ -5,7 +5,11 @@ exports["default"] = exports.Clickable = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _grommetIcons = require("grommet-icons");
+var _Bluetooth = _interopRequireDefault(require("grommet-icons/es6/icons/Bluetooth"));
+
+var _Storage = _interopRequireDefault(require("grommet-icons/es6/icons/Storage"));
+
+var _Trigger = _interopRequireDefault(require("grommet-icons/es6/icons/Trigger"));
 
 var _grommet = require("grommet");
 
@@ -54,7 +58,7 @@ var gradient = [{
   color: 'status-critical'
 }];
 var data = [{
-  icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Bluetooth, {
+  icon: /*#__PURE__*/_react["default"].createElement(_Bluetooth["default"], {
     size: "large"
   }),
   title: 'Memory (EEC)',
@@ -62,7 +66,7 @@ var data = [{
   message: 'Past 24hrs',
   type: 'bar'
 }, {
-  icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Storage, {
+  icon: /*#__PURE__*/_react["default"].createElement(_Storage["default"], {
     size: "large"
   }),
   title: 'Storage',
@@ -70,7 +74,7 @@ var data = [{
   message: '36.8 TB available',
   type: 'line'
 }, {
-  icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Trigger, {
+  icon: /*#__PURE__*/_react["default"].createElement(_Trigger["default"], {
     size: "large"
   }),
   title: 'Power (Watts)',

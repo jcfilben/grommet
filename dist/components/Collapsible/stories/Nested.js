@@ -5,7 +5,9 @@ exports["default"] = exports.Nested = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _grommetIcons = require("grommet-icons");
+var _FormDown = _interopRequireDefault(require("grommet-icons/es6/icons/FormDown"));
+
+var _FormNext = _interopRequireDefault(require("grommet-icons/es6/icons/FormNext"));
 
 var _grommet = require("grommet");
 
@@ -25,7 +27,7 @@ var MenuButton = function MenuButton(_ref) {
       submenu = _ref.submenu,
       rest = _objectWithoutPropertiesLoose(_ref, _excluded);
 
-  var Icon = open ? _grommetIcons.FormDown : _grommetIcons.FormNext;
+  var Icon = open ? _FormDown["default"] : _FormNext["default"];
   return /*#__PURE__*/_react["default"].createElement(_grommet.Button, _extends({
     hoverIndicator: "background"
   }, rest), /*#__PURE__*/_react["default"].createElement(_grommet.Box, {

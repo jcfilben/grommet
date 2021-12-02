@@ -7,7 +7,9 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styledComponents = require("styled-components");
 
-var _grommetIcons = require("grommet-icons");
+var _Alert = _interopRequireDefault(require("grommet-icons/es6/icons/Alert"));
+
+var _StatusInfo = _interopRequireDefault(require("grommet-icons/es6/icons/StatusInfo"));
 
 var _grommet = require("grommet");
 
@@ -39,7 +41,7 @@ var customTheme = (0, _utils.deepMerge)(_themes.grommet, {
         extend: (0, _styledComponents.css)(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n          svg {\n            margin-top: 10px;\n          }\n        "])))
       },
       color: 'white',
-      icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Alert, {
+      icon: /*#__PURE__*/_react["default"].createElement(_Alert["default"], {
         size: "small"
       }),
       size: 'xsmall'
@@ -49,7 +51,7 @@ var customTheme = (0, _utils.deepMerge)(_themes.grommet, {
     },
     info: {
       size: 'xsmall',
-      icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.StatusInfo, {
+      icon: /*#__PURE__*/_react["default"].createElement(_StatusInfo["default"], {
         size: "small"
       }),
       container: {

@@ -11,7 +11,9 @@ var _themes = require("grommet/themes");
 
 var _utils = require("grommet/utils");
 
-var _grommetIcons = require("grommet-icons");
+var _FormCheckmark = _interopRequireDefault(require("grommet-icons/es6/icons/FormCheckmark"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -50,7 +52,7 @@ var customCheckBoxTheme = {
       extend: 'stroke: white;'
     },
     icons: {
-      checked: _grommetIcons.FormCheckmark
+      checked: _FormCheckmark["default"]
     },
     size: '18px',
     extend: "\n      color: #9C9C9C;\n    "

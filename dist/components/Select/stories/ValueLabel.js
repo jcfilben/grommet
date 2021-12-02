@@ -5,11 +5,13 @@ exports["default"] = exports.ValueLabel = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _grommetIcons = require("grommet-icons");
+var _CaretDown = _interopRequireDefault(require("grommet-icons/es6/icons/CaretDown"));
 
 var _grommet = require("grommet");
 
 var _themes = require("grommet/themes");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -52,7 +54,7 @@ var ValueLabel = function ValueLabel() {
         side: 'bottom'
       }
     }, value || 'Select...'),
-    icon: /*#__PURE__*/_react["default"].createElement(_grommet.Box, null, /*#__PURE__*/_react["default"].createElement(_grommetIcons.CaretDown, {
+    icon: /*#__PURE__*/_react["default"].createElement(_grommet.Box, null, /*#__PURE__*/_react["default"].createElement(_CaretDown["default"], {
       size: "small",
       color: "black"
     }))

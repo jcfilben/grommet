@@ -1,15 +1,13 @@
-'use strict';
+"use strict";
 
 exports.__esModule = true;
 exports.format = exports.MessageContext = void 0;
 
-var _react = _interopRequireDefault(require('react'));
+var _react = _interopRequireDefault(require("react"));
 
-var _default = _interopRequireDefault(require('../../languages/default.json'));
+var _default = _interopRequireDefault(require("../../languages/default.json"));
 
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 // options:
 //   id: message id
@@ -35,9 +33,7 @@ var _format = function format(options, messages) {
   // this format function to get the grommet messages from
   // their bundles that way and don't need to pass the messages
   // themselves in this property, just the format function.
-  var idParts =
-    ((_options$id = options.id) == null ? void 0 : _options$id.split('.')) ||
-    [];
+  var idParts = ((_options$id = options.id) == null ? void 0 : _options$id.split('.')) || [];
   var baseId = idParts[(idParts == null ? void 0 : idParts.length) - 1];
   var messageObj = messages;
   idParts.forEach(function (idPart) {
@@ -45,32 +41,26 @@ var _format = function format(options, messages) {
       messageObj = messageObj[idPart];
     }
   });
-  var message =
-    (options.messages ? options.messages[baseId] : undefined) ||
-    messageObj ||
-    options.defaultMessage;
+  var message = (options.messages ? options.messages[baseId] : undefined) || messageObj || options.defaultMessage;
   var values = options.values;
   var newMessage = message;
   var tokens = message == null ? void 0 : message.match(/\{(.+?)\}/g);
-  tokens == null
-    ? void 0
-    : tokens.forEach(function (token) {
-        var names = token.substr(1, token.length - 2);
-        var value = values[names];
-        newMessage = newMessage.replace(token, value);
-      });
+  tokens == null ? void 0 : tokens.forEach(function (token) {
+    var names = token.substr(1, token.length - 2);
+    var value = values[names];
+    newMessage = newMessage.replace(token, value);
+  });
   return values ? newMessage : message;
 };
 
 exports.format = _format;
 var defaultValue = {
-  messages: _default['default'],
+  messages: _default["default"],
   format: function format(options) {
-    return _format(options, _default['default']);
-  },
+    return _format(options, _default["default"]);
+  }
 };
 
-var MessageContext =
-  /*#__PURE__*/ _react['default'].createContext(defaultValue);
+var MessageContext = /*#__PURE__*/_react["default"].createContext(defaultValue);
 
 exports.MessageContext = MessageContext;

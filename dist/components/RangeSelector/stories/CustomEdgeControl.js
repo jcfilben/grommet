@@ -5,7 +5,9 @@ exports["default"] = exports.CustomEdgeControl = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _grommetIcons = require("grommet-icons");
+var _Gremlin = _interopRequireDefault(require("grommet-icons/es6/icons/Gremlin"));
+
+var _Grommet = _interopRequireDefault(require("grommet-icons/es6/icons/Grommet"));
 
 var _grommet = require("grommet");
 
@@ -14,6 +16,8 @@ var _themes = require("grommet/themes");
 var _utils = require("grommet/utils");
 
 var _excluded = ["direction"];
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -26,7 +30,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 var customEdge = (0, _utils.deepMerge)(_themes.grommet, {
   rangeSelector: {
     edge: {
-      type: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Gremlin, {
+      type: /*#__PURE__*/_react["default"].createElement(_Gremlin["default"], {
         size: "large",
         color: "neutral-2"
       }) // it is also possible to use an actual node
@@ -72,7 +76,7 @@ var CustomEdgeControl = function CustomEdgeControl(_ref) {
       align: "center",
       pad: "small",
       border: false
-    }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.Grommet, {
+    }, /*#__PURE__*/_react["default"].createElement(_Grommet["default"], {
       color: "brand",
       size: "small"
     }));

@@ -5,7 +5,17 @@ exports["default"] = exports.Themed = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _grommetIcons = require("grommet-icons");
+var _Location = _interopRequireDefault(require("grommet-icons/es6/icons/Location"));
+
+var _System = _interopRequireDefault(require("grommet-icons/es6/icons/System"));
+
+var _ShieldSecurity = _interopRequireDefault(require("grommet-icons/es6/icons/ShieldSecurity"));
+
+var _Tasks = _interopRequireDefault(require("grommet-icons/es6/icons/Tasks"));
+
+var _User = _interopRequireDefault(require("grommet-icons/es6/icons/User"));
+
+var _Wifi = _interopRequireDefault(require("grommet-icons/es6/icons/Wifi"));
 
 var _grommet = require("grommet");
 
@@ -19,7 +29,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 var data = [{
   color: 'blue',
-  icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Wifi, {
+  icon: /*#__PURE__*/_react["default"].createElement(_Wifi["default"], {
     size: "large"
   }),
   title: 'Remote Access',
@@ -27,7 +37,7 @@ var data = [{
   message: 'Connected'
 }, {
   color: 'green',
-  icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.System, {
+  icon: /*#__PURE__*/_react["default"].createElement(_System["default"], {
     size: "large"
   }),
   title: 'System',
@@ -35,7 +45,7 @@ var data = [{
   message: 'Composable System'
 }, {
   color: 'red',
-  icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.User, {
+  icon: /*#__PURE__*/_react["default"].createElement(_User["default"], {
     size: "large"
   }),
   title: 'User Sessions',
@@ -43,7 +53,7 @@ var data = [{
   message: '4 active sessions'
 }, {
   color: 'purple',
-  icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Tasks, {
+  icon: /*#__PURE__*/_react["default"].createElement(_Tasks["default"], {
     size: "large"
   }),
   title: 'Logs',
@@ -51,7 +61,7 @@ var data = [{
   message: '204,353'
 }, {
   color: 'orange',
-  icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Location, {
+  icon: /*#__PURE__*/_react["default"].createElement(_Location["default"], {
     size: "large"
   }),
   title: 'Beacons',
@@ -59,7 +69,7 @@ var data = [{
   message: '24 beacons connected'
 }, {
   color: 'teal',
-  icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.ShieldSecurity, {
+  icon: /*#__PURE__*/_react["default"].createElement(_ShieldSecurity["default"], {
     size: "large"
   }),
   title: 'Security',

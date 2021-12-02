@@ -7,7 +7,9 @@ var _react = _interopRequireDefault(require("react"));
 
 var _grommet = require("grommet");
 
-var _grommetIcons = require("grommet-icons");
+var _Next = _interopRequireDefault(require("grommet-icons/es6/icons/Next"));
+
+var _Add = _interopRequireDefault(require("grommet-icons/es6/icons/Add"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -55,21 +57,21 @@ var Sizes = function Sizes() {
   }, /*#__PURE__*/_react["default"].createElement(_grommet.Button, {
     size: "small",
     label: "Small",
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Next, null),
+    icon: /*#__PURE__*/_react["default"].createElement(_Next["default"], null),
     reverse: true
   }), /*#__PURE__*/_react["default"].createElement(_grommet.Button, {
     size: "medium",
     label: "Medium",
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Next, null),
+    icon: /*#__PURE__*/_react["default"].createElement(_Next["default"], null),
     reverse: true
   }), /*#__PURE__*/_react["default"].createElement(_grommet.Button, {
     label: "Default",
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Next, null),
+    icon: /*#__PURE__*/_react["default"].createElement(_Next["default"], null),
     reverse: true
   }), /*#__PURE__*/_react["default"].createElement(_grommet.Button, {
     size: "large",
     label: "Large",
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Next, null),
+    icon: /*#__PURE__*/_react["default"].createElement(_Next["default"], null),
     reverse: true
   })), /*#__PURE__*/_react["default"].createElement(_grommet.Box, {
     align: "start",
@@ -77,18 +79,18 @@ var Sizes = function Sizes() {
     gap: "large"
   }, /*#__PURE__*/_react["default"].createElement(_grommet.Button, {
     size: "small",
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Add, null),
+    icon: /*#__PURE__*/_react["default"].createElement(_Add["default"], null),
     primary: true
   }), /*#__PURE__*/_react["default"].createElement(_grommet.Button, {
     size: "medium",
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Add, null),
+    icon: /*#__PURE__*/_react["default"].createElement(_Add["default"], null),
     primary: true
   }), /*#__PURE__*/_react["default"].createElement(_grommet.Button, {
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Add, null),
+    icon: /*#__PURE__*/_react["default"].createElement(_Add["default"], null),
     primary: true
   }), /*#__PURE__*/_react["default"].createElement(_grommet.Button, {
     size: "large",
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Add, null),
+    icon: /*#__PURE__*/_react["default"].createElement(_Add["default"], null),
     primary: true
   }))));
 };

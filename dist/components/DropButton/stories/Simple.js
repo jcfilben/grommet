@@ -7,7 +7,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _grommetIcons = require("grommet-icons");
+var _Close = _interopRequireDefault(require("grommet-icons/es6/icons/Close"));
 
 var _grommet = require("grommet");
 
@@ -27,7 +27,7 @@ var DropContent = function DropContent(_ref) {
     level: 3,
     margin: "small"
   }, "Heading"), /*#__PURE__*/_react["default"].createElement(_grommet.Button, {
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Close, null),
+    icon: /*#__PURE__*/_react["default"].createElement(_Close["default"], null),
     onClick: onClose
   })), /*#__PURE__*/_react["default"].createElement(_grommet.Text, null, "Content"));
 };

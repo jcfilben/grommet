@@ -5,7 +5,7 @@ exports["default"] = exports.Sitemap = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _grommetIcons = require("grommet-icons");
+var _Grommet = _interopRequireDefault(require("grommet-icons/es6/icons/Grommet"));
 
 var _grommet = require("grommet");
 
@@ -64,7 +64,7 @@ var Sitemap = function Sitemap() {
   }, /*#__PURE__*/_react["default"].createElement(_grommet.Box, {
     align: "center",
     gap: "small"
-  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.Grommet, {
+  }, /*#__PURE__*/_react["default"].createElement(_Grommet["default"], {
     color: "brand",
     size: "large"
   }), /*#__PURE__*/_react["default"].createElement(_grommet.Text, {

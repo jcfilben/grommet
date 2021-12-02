@@ -5,11 +5,13 @@ exports["default"] = exports.CustomSearch = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _grommetIcons = require("grommet-icons");
+var _FormClose = _interopRequireDefault(require("grommet-icons/es6/icons/FormClose"));
 
 var _grommet = require("grommet");
 
 var _theme = require("./theme");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -151,7 +153,7 @@ var CustomSearch = function CustomSearch() {
     }, /*#__PURE__*/_react["default"].createElement(_grommet.Box, {
       background: "gray",
       round: "full"
-    }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.FormClose, {
+    }, /*#__PURE__*/_react["default"].createElement(_FormClose["default"], {
       style: {
         width: '12px',
         height: '12px'

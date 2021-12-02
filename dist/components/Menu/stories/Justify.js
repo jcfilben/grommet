@@ -7,7 +7,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _grommet = require("grommet");
 
-var _grommetIcons = require("grommet-icons");
+var _User = _interopRequireDefault(require("grommet-icons/es6/icons/User"));
 
 var _grommetThemeHpe = require("grommet-theme-hpe");
 
@@ -23,15 +23,15 @@ var Justify = function Justify() {
     label: "Actions",
     items: [{
       label: 'Hey',
-      icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.User, null),
+      icon: /*#__PURE__*/_react["default"].createElement(_User["default"], null),
       justify: 'center'
     }, {
       label: 'Hello',
-      icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.User, null),
+      icon: /*#__PURE__*/_react["default"].createElement(_User["default"], null),
       justify: 'end'
     }, {
       label: 'Hii',
-      icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.User, null)
+      icon: /*#__PURE__*/_react["default"].createElement(_User["default"], null)
     }]
   })));
 };

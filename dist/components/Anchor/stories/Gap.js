@@ -5,7 +5,7 @@ exports["default"] = exports.Gap = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _grommetIcons = require("grommet-icons");
+var _Upload = _interopRequireDefault(require("grommet-icons/es6/icons/Upload"));
 
 var _grommet = require("grommet");
 
@@ -20,22 +20,22 @@ var GapAnchor = function GapAnchor() {
     pad: "medium",
     gap: "medium"
   }, /*#__PURE__*/_react["default"].createElement(_grommet.Anchor, {
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Upload, null),
+    icon: /*#__PURE__*/_react["default"].createElement(_Upload["default"], null),
     label: "Small Gap",
     href: "#",
     gap: "small"
   }), /*#__PURE__*/_react["default"].createElement(_grommet.Anchor, {
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Upload, null),
+    icon: /*#__PURE__*/_react["default"].createElement(_Upload["default"], null),
     label: "Medium Gap",
     href: "#",
     gap: "medium"
   }), /*#__PURE__*/_react["default"].createElement(_grommet.Anchor, {
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Upload, null),
+    icon: /*#__PURE__*/_react["default"].createElement(_Upload["default"], null),
     label: "Large Gap",
     href: "#",
     gap: "large"
   }), /*#__PURE__*/_react["default"].createElement(_grommet.Anchor, {
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Upload, null),
+    icon: /*#__PURE__*/_react["default"].createElement(_Upload["default"], null),
     label: "5px Gap",
     href: "#",
     gap: "5px"

@@ -5,7 +5,7 @@ exports["default"] = exports.Menu = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _grommetIcons = require("grommet-icons");
+var _Gremlin = _interopRequireDefault(require("grommet-icons/es6/icons/Gremlin"));
 
 var _grommet = require("grommet");
 
@@ -22,7 +22,7 @@ var MenuItem = function MenuItem() {
     height: "36px",
     width: "36px",
     align: "center"
-  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.Gremlin, null));
+  }, /*#__PURE__*/_react["default"].createElement(_Gremlin["default"], null));
 };
 
 var GremlinDropButton = function GremlinDropButton() {

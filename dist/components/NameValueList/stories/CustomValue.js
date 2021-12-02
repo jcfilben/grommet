@@ -9,7 +9,13 @@ var _grommet = require("grommet");
 
 var _themes = require("grommet/themes");
 
-var _grommetIcons = require("grommet-icons");
+var _Language = _interopRequireDefault(require("grommet-icons/es6/icons/Language"));
+
+var _StatusCriticalSmall = _interopRequireDefault(require("grommet-icons/es6/icons/StatusCriticalSmall"));
+
+var _StatusGoodSmall = _interopRequireDefault(require("grommet-icons/es6/icons/StatusGoodSmall"));
+
+var _System = _interopRequireDefault(require("grommet-icons/es6/icons/System"));
 
 var _data = require("./data");
 
@@ -28,10 +34,10 @@ var CustomValue = function CustomValue() {
     var name = _ref[0],
         value = _ref[1];
     var icon;
-    if (value === 'Ok') icon = /*#__PURE__*/_react["default"].createElement(_grommetIcons.StatusGoodSmall, {
+    if (value === 'Ok') icon = /*#__PURE__*/_react["default"].createElement(_StatusGoodSmall["default"], {
       color: "green",
       size: "small"
-    });else if (value === 'Critical') icon = /*#__PURE__*/_react["default"].createElement(_grommetIcons.StatusCriticalSmall, {
+    });else if (value === 'Critical') icon = /*#__PURE__*/_react["default"].createElement(_StatusCriticalSmall["default"], {
       color: "red",
       size: "small"
     });
@@ -55,9 +61,9 @@ var CustomValue = function CustomValue() {
     var name = _ref2[0],
         value = _ref2[1];
     var icon;
-    if (name === 'Languages') icon = /*#__PURE__*/_react["default"].createElement(_grommetIcons.Language, {
+    if (name === 'Languages') icon = /*#__PURE__*/_react["default"].createElement(_Language["default"], {
       size: "small"
-    });else if (name === 'Operating System') icon = /*#__PURE__*/_react["default"].createElement(_grommetIcons.System, {
+    });else if (name === 'Operating System') icon = /*#__PURE__*/_react["default"].createElement(_System["default"], {
       size: "small"
     });
     return /*#__PURE__*/_react["default"].createElement(_grommet.NameValuePair, {

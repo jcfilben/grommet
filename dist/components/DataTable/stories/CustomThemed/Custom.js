@@ -7,7 +7,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _grommet = require("grommet");
 
-var _grommetIcons = require("grommet-icons");
+var _Blank = _interopRequireDefault(require("grommet-icons/es6/icons/Blank"));
 
 var _data = require("../data");
 
@@ -16,7 +16,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 // Source code for the data can be found here
 // https://github.com/grommet/grommet/blob/master/src/js/components/DataTable/stories/data.js
 var SortableIcon = function SortableIcon() {
-  return /*#__PURE__*/_react["default"].createElement(_grommetIcons.Blank, {
+  return /*#__PURE__*/_react["default"].createElement(_Blank["default"], {
     color: "text-xweak",
     opacity: "0.3"
   }, /*#__PURE__*/_react["default"].createElement("g", {

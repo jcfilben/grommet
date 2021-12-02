@@ -5,7 +5,7 @@ exports["default"] = exports.Children = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _grommetIcons = require("grommet-icons");
+var _Gremlin = _interopRequireDefault(require("grommet-icons/es6/icons/Gremlin"));
 
 var _grommet = require("grommet");
 
@@ -46,7 +46,7 @@ var Children = function Children() {
       direction: "row-responsive",
       gap: "medium",
       align: "center"
-    }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.Gremlin, {
+    }, /*#__PURE__*/_react["default"].createElement(_Gremlin["default"], {
       size: "large"
     }), /*#__PURE__*/_react["default"].createElement(_grommet.Text, {
       weight: "bold"

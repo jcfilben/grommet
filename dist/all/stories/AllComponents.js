@@ -7,7 +7,7 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _grommet = require("grommet");
 
-var _grommetIcons = require("grommet-icons");
+var _FormNext = _interopRequireDefault(require("grommet-icons/es6/icons/FormNext"));
 
 var _themes = require("grommet/themes");
 
@@ -25,6 +25,8 @@ var _grommetThemeDxc = require("grommet-theme-dxc");
 
 var _excluded = ["id"],
     _excluded2 = ["color"];
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -133,7 +135,7 @@ var Components = function Components() {
     items: [{
       label: 'One',
       onClick: function onClick() {},
-      icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.FormNext, null),
+      icon: /*#__PURE__*/_react["default"].createElement(_FormNext["default"], null),
       reverse: true
     }, {
       label: 'Two'

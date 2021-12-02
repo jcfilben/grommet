@@ -5,7 +5,7 @@ exports["default"] = exports.Kind = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _grommetIcons = require("grommet-icons");
+var _User = _interopRequireDefault(require("grommet-icons/es6/icons/User"));
 
 var _grommet = require("grommet");
 
@@ -42,11 +42,11 @@ var states = [{}, {
   hoverIndicator: 'teal'
 }];
 var contents = [{
-  icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.User, null)
+  icon: /*#__PURE__*/_react["default"].createElement(_User["default"], null)
 }, {
   label: 'label'
 }, {
-  icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.User, null),
+  icon: /*#__PURE__*/_react["default"].createElement(_User["default"], null),
   label: 'label'
 }, {
   plain: true,

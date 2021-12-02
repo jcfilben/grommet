@@ -7,9 +7,11 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _grommet = require("grommet");
 
-var _grommetIcons = require("grommet-icons");
+var _Notification = _interopRequireDefault(require("grommet-icons/es6/icons/Notification"));
 
 var _themes = require("grommet/themes");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -59,7 +61,7 @@ var CustomDayCalendar = function CustomDayCalendar() {
     }, /*#__PURE__*/_react["default"].createElement(_grommet.Text, {
       size: "large"
     }, day)), hasContent ? /*#__PURE__*/_react["default"].createElement(_grommet.DropButton, {
-      icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Notification, {
+      icon: /*#__PURE__*/_react["default"].createElement(_Notification["default"], {
         size: "small",
         color: "neutral-3"
       }),

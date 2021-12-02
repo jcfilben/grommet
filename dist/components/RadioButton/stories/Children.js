@@ -7,7 +7,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _grommet = require("grommet");
 
-var _grommetIcons = require("grommet-icons");
+var _Ascend = _interopRequireDefault(require("grommet-icons/es6/icons/Ascend"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -29,7 +29,7 @@ var Children = function Children() {
     }
   }, function (_ref) {
     var checked = _ref.checked;
-    return /*#__PURE__*/_react["default"].createElement(_grommetIcons.Ascend, {
+    return /*#__PURE__*/_react["default"].createElement(_Ascend["default"], {
       color: checked ? 'brand' : 'status-unknown'
     });
   }), /*#__PURE__*/_react["default"].createElement(_grommet.Button, {

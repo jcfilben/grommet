@@ -9,7 +9,11 @@ var _grommet = require("grommet");
 
 var _themes = require("grommet/themes");
 
-var _grommetIcons = require("grommet-icons");
+var _FormDown = _interopRequireDefault(require("grommet-icons/es6/icons/FormDown"));
+
+var _Github = _interopRequireDefault(require("grommet-icons/es6/icons/Github"));
+
+var _Slack = _interopRequireDefault(require("grommet-icons/es6/icons/Slack"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -30,7 +34,7 @@ var IconItemsMenu = function IconItemsMenu() {
       onClick: function onClick() {},
       icon: /*#__PURE__*/_react["default"].createElement(_grommet.Box, {
         pad: "medium"
-      }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.Github, {
+      }, /*#__PURE__*/_react["default"].createElement(_Github["default"], {
         size: "large"
       }))
     }, {
@@ -40,7 +44,7 @@ var IconItemsMenu = function IconItemsMenu() {
       onClick: function onClick() {},
       icon: /*#__PURE__*/_react["default"].createElement(_grommet.Box, {
         pad: "medium"
-      }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.Slack, {
+      }, /*#__PURE__*/_react["default"].createElement(_Slack["default"], {
         size: "large"
       }))
     }]
@@ -48,7 +52,7 @@ var IconItemsMenu = function IconItemsMenu() {
     direction: "row",
     gap: "small",
     pad: "large"
-  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.FormDown, null), /*#__PURE__*/_react["default"].createElement(_grommet.Text, null, "Menu with Icon on the left")))));
+  }, /*#__PURE__*/_react["default"].createElement(_FormDown["default"], null), /*#__PURE__*/_react["default"].createElement(_grommet.Text, null, "Menu with Icon on the left")))));
 };
 
 var ItemWithIcon = function ItemWithIcon() {

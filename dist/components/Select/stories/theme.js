@@ -3,11 +3,17 @@
 exports.__esModule = true;
 exports.theme = void 0;
 
-var _grommetIcons = require("grommet-icons");
+var _CaretDownFill = _interopRequireDefault(require("grommet-icons/es6/icons/CaretDownFill"));
+
+var _CaretUpFill = _interopRequireDefault(require("grommet-icons/es6/icons/CaretUpFill"));
+
+var _FormCheckmark = _interopRequireDefault(require("grommet-icons/es6/icons/FormCheckmark"));
 
 var _utils = require("../../../utils");
 
 var _SearchInput = require("./components/SearchInput");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var theme = {
   global: {
@@ -74,7 +80,7 @@ var theme = {
       extend: 'stroke: white;'
     },
     icons: {
-      checked: _grommetIcons.FormCheckmark
+      checked: _FormCheckmark["default"]
     },
     gap: 'small',
     size: '18px',
@@ -92,8 +98,8 @@ var theme = {
       }
     },
     icons: {
-      down: _grommetIcons.CaretDownFill,
-      up: _grommetIcons.CaretUpFill,
+      down: _CaretDownFill["default"],
+      up: _CaretUpFill["default"],
       color: 'dark-1',
       margin: 'small'
     },

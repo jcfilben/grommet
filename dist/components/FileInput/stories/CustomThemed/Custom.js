@@ -7,7 +7,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _grommet = require("grommet");
 
-var _grommetIcons = require("grommet-icons");
+var _Trash = _interopRequireDefault(require("grommet-icons/es6/icons/Trash"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -43,7 +43,7 @@ var customTheme = {
       size: 'large'
     },
     icons: {
-      remove: _grommetIcons.Trash
+      remove: _Trash["default"]
     },
     dragOver: {
       border: {

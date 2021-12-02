@@ -5,7 +5,7 @@ exports["default"] = exports.ValidateOnBlur = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _grommetIcons = require("grommet-icons");
+var _StatusGood = _interopRequireDefault(require("grommet-icons/es6/icons/StatusGood"));
 
 var _grommet = require("grommet");
 
@@ -45,7 +45,7 @@ var ValidateOnBlur = function ValidateOnBlur() {
       if (name === 'good') return {
         message: /*#__PURE__*/_react["default"].createElement(_grommet.Box, {
           align: "end"
-        }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.StatusGood, null)),
+        }, /*#__PURE__*/_react["default"].createElement(_StatusGood["default"], null)),
         status: 'info'
       };
       return undefined;

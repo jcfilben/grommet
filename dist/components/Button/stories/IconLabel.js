@@ -5,7 +5,7 @@ exports["default"] = exports.IconLabel = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _grommetIcons = require("grommet-icons");
+var _Add = _interopRequireDefault(require("grommet-icons/es6/icons/Add"));
 
 var _grommet = require("grommet");
 
@@ -20,7 +20,7 @@ var IconLabel = function IconLabel() {
     overflow: "hidden",
     background: "neutral-1"
   }, /*#__PURE__*/_react["default"].createElement(_grommet.Button, {
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Add, null),
+    icon: /*#__PURE__*/_react["default"].createElement(_Add["default"], null),
     hoverIndicator: true,
     onClick: function onClick() {}
   })), /*#__PURE__*/_react["default"].createElement(_grommet.Box, {
@@ -28,21 +28,21 @@ var IconLabel = function IconLabel() {
     pad: "large",
     gap: "small"
   }, /*#__PURE__*/_react["default"].createElement(_grommet.Button, {
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Add, null),
+    icon: /*#__PURE__*/_react["default"].createElement(_Add["default"], null),
     label: "Add",
     onClick: function onClick() {},
     primary: true
   }), /*#__PURE__*/_react["default"].createElement(_grommet.Button, {
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Add, null),
+    icon: /*#__PURE__*/_react["default"].createElement(_Add["default"], null),
     label: "Add",
     onClick: function onClick() {}
   }), /*#__PURE__*/_react["default"].createElement(_grommet.Button, {
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Add, null),
+    icon: /*#__PURE__*/_react["default"].createElement(_Add["default"], null),
     label: "Add",
     gap: "xlarge",
     onClick: function onClick() {}
   }), /*#__PURE__*/_react["default"].createElement(_grommet.Button, {
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Add, null),
+    icon: /*#__PURE__*/_react["default"].createElement(_Add["default"], null),
     label: "500px gap",
     gap: "500px",
     onClick: function onClick() {}

@@ -5,7 +5,9 @@ exports["default"] = exports.FormLayer = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _grommetIcons = require("grommet-icons");
+var _Add = _interopRequireDefault(require("grommet-icons/es6/icons/Add"));
+
+var _Close = _interopRequireDefault(require("grommet-icons/es6/icons/Close"));
 
 var _grommet = require("grommet");
 
@@ -40,7 +42,7 @@ var FormLayer = function FormLayer() {
     align: "center",
     justify: "center"
   }, /*#__PURE__*/_react["default"].createElement(_grommet.Button, {
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Add, null),
+    icon: /*#__PURE__*/_react["default"].createElement(_Add["default"], null),
     label: "Add",
     onClick: onOpen
   }), open && /*#__PURE__*/_react["default"].createElement(_grommet.Layer, {
@@ -64,7 +66,7 @@ var FormLayer = function FormLayer() {
     level: 2,
     margin: "none"
   }, "Add"), /*#__PURE__*/_react["default"].createElement(_grommet.Button, {
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Close, null),
+    icon: /*#__PURE__*/_react["default"].createElement(_Close["default"], null),
     onClick: onClose
   })), /*#__PURE__*/_react["default"].createElement(_grommet.Box, {
     flex: "grow",

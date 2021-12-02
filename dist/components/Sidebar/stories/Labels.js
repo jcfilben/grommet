@@ -7,7 +7,21 @@ var _react = _interopRequireDefault(require("react"));
 
 var _grommet = require("grommet");
 
-var _grommetIcons = require("grommet-icons");
+var _Analytics = _interopRequireDefault(require("grommet-icons/es6/icons/Analytics"));
+
+var _Chat = _interopRequireDefault(require("grommet-icons/es6/icons/Chat"));
+
+var _Clock = _interopRequireDefault(require("grommet-icons/es6/icons/Clock"));
+
+var _Configure = _interopRequireDefault(require("grommet-icons/es6/icons/Configure"));
+
+var _Help = _interopRequireDefault(require("grommet-icons/es6/icons/Help"));
+
+var _Projects = _interopRequireDefault(require("grommet-icons/es6/icons/Projects"));
+
+var _Split = _interopRequireDefault(require("grommet-icons/es6/icons/Split"));
+
+var _StatusInfoSmall = _interopRequireDefault(require("grommet-icons/es6/icons/StatusInfoSmall"));
 
 var _Sidebar = require("../Sidebar");
 
@@ -61,10 +75,10 @@ var SidebarButton = function SidebarButton(_ref) {
 
 var SidebarFooter = function SidebarFooter() {
   return /*#__PURE__*/_react["default"].createElement(_grommet.Nav, null, /*#__PURE__*/_react["default"].createElement(SidebarButton, {
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Chat, null),
+    icon: /*#__PURE__*/_react["default"].createElement(_Chat["default"], null),
     label: "Chat"
   }), /*#__PURE__*/_react["default"].createElement(SidebarButton, {
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Help, null),
+    icon: /*#__PURE__*/_react["default"].createElement(_Help["default"], null),
     label: "Support"
   }));
 };
@@ -74,22 +88,22 @@ var MainNavigation = function MainNavigation() {
     gap: "large",
     responsive: false
   }, /*#__PURE__*/_react["default"].createElement(SidebarButton, {
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.StatusInfoSmall, null),
+    icon: /*#__PURE__*/_react["default"].createElement(_StatusInfoSmall["default"], null),
     label: "Focus"
   }), /*#__PURE__*/_react["default"].createElement(SidebarButton, {
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Projects, null),
+    icon: /*#__PURE__*/_react["default"].createElement(_Projects["default"], null),
     label: "Services"
   }), /*#__PURE__*/_react["default"].createElement(SidebarButton, {
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Clock, null),
+    icon: /*#__PURE__*/_react["default"].createElement(_Clock["default"], null),
     label: "Glances"
   }), /*#__PURE__*/_react["default"].createElement(SidebarButton, {
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Split, null),
+    icon: /*#__PURE__*/_react["default"].createElement(_Split["default"], null),
     label: "Flows"
   }), /*#__PURE__*/_react["default"].createElement(SidebarButton, {
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Analytics, null),
+    icon: /*#__PURE__*/_react["default"].createElement(_Analytics["default"], null),
     label: "Analytics"
   }), /*#__PURE__*/_react["default"].createElement(SidebarButton, {
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Configure, null),
+    icon: /*#__PURE__*/_react["default"].createElement(_Configure["default"], null),
     label: "Configure"
   }));
 };

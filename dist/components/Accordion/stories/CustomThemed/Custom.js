@@ -5,7 +5,9 @@ exports["default"] = exports.Custom = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _grommetIcons = require("grommet-icons");
+var _SubtractCircle = _interopRequireDefault(require("grommet-icons/es6/icons/SubtractCircle"));
+
+var _AddCircle = _interopRequireDefault(require("grommet-icons/es6/icons/AddCircle"));
 
 var _grommet = require("grommet");
 
@@ -37,8 +39,8 @@ var customAccordionTheme = {
       }
     },
     icons: {
-      collapse: _grommetIcons.SubtractCircle,
-      expand: _grommetIcons.AddCircle,
+      collapse: _SubtractCircle["default"],
+      expand: _AddCircle["default"],
       color: 'hotpink'
     },
     border: undefined,

@@ -5,7 +5,7 @@ exports["default"] = exports.CornerLayer = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _grommetIcons = require("grommet-icons");
+var _Add = _interopRequireDefault(require("grommet-icons/es6/icons/Add"));
 
 var _grommet = require("grommet");
 
@@ -34,7 +34,7 @@ var CornerLayer = function CornerLayer() {
     align: "center",
     justify: "center"
   }, /*#__PURE__*/_react["default"].createElement(_grommet.Button, {
-    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Add, {
+    icon: /*#__PURE__*/_react["default"].createElement(_Add["default"], {
       color: "brand"
     }),
     label: /*#__PURE__*/_react["default"].createElement(_grommet.Text, null, /*#__PURE__*/_react["default"].createElement("strong", null, "Add Corner Layer")),

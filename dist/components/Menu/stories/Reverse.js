@@ -7,7 +7,9 @@ var _react = _interopRequireDefault(require("react"));
 
 var _grommet = require("grommet");
 
-var _grommetIcons = require("grommet-icons");
+var _Power = _interopRequireDefault(require("grommet-icons/es6/icons/Power"));
+
+var _User = _interopRequireDefault(require("grommet-icons/es6/icons/User"));
 
 var _themes = require("grommet/themes");
 
@@ -31,11 +33,11 @@ var ReverseMenu = function ReverseMenu() {
       label: 'Home'
     }, {
       label: 'Profile',
-      icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.User, null),
+      icon: /*#__PURE__*/_react["default"].createElement(_User["default"], null),
       gap: 'small'
     }, {
       label: 'Logout',
-      icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Power, null),
+      icon: /*#__PURE__*/_react["default"].createElement(_Power["default"], null),
       reverse: true,
       gap: 'small'
     }]
