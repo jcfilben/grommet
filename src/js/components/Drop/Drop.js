@@ -65,7 +65,7 @@ const Drop = forwardRef(
     );
 
     if (inline) return content;
-
+    console.log(dropContainer);
     if (dropContainer) return createPortal(content, dropContainer);
 
     return null;
