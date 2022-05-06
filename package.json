@@ -25,7 +25,7 @@
   },
   "engine-strict": true,
   "engines": {
-    "node": ">= 14"
+    "node": ">= 10"
   },
   "scripts": {
     "build": "webpack --mode production && babel ./src/js/ --out-dir ./dist --ignore '**/**/__tests__' --ignore 'src/**/portal.js' && copyfiles -u 2 \"src/js/**/**/*.*\" -e \"src/js/**/**/*.js\" -e \"src/js/**/**/*.js.snap\" \"./dist\" && cross-env BABEL_ENV=es6 babel ./src/js/ --out-dir ./dist/es6 --ignore '**/**/__tests__' --ignore 'src/**/portal.js' && copyfiles -u 2 \"src/js/**/**/*.*\" -e \"src/js/**/**/*.js\" -e \"src/js/**/**/*.js.snap\" \"./dist/es6\"",
@@ -48,7 +48,6 @@
     "styled-components": ">= 5.1"
   },
   "dependencies": {
-    "node": "14.3.0",
     "grommet-icons": "^4.7.0",
     "hoist-non-react-statics": "^3.2.0",
     "markdown-to-jsx": "^7.1.5",
