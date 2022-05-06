@@ -1,4 +1,4 @@
 {
-  "sandboxes": ["new", "vanilla"],
+  "sandboxes": ["new", "vanilla", "/dist"],
   "node": "14"
 }
