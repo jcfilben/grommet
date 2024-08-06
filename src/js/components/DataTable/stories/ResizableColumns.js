@@ -56,17 +56,30 @@ const DATA = [
 const columnsResize = [
   { property: 'location', header: 'Location', size: 'small' },
   { property: 'date', header: 'Date', size: 'small', align: 'end' },
-  { property: 'percent', header: 'Percent', size: 'xsmall', align: 'end' },
+  { property: 'percent', header: 'Percent', size: 'xsmall' },
   { property: 'paid', header: 'Paid', size: 'xsmall', align: 'end' },
+];
+
+const columnsResize1 = [
+  { property: 'location', header: 'Location', size: 'small' },
+  { property: 'date', header: 'Date', size: 'small' },
+  { property: 'percent', header: 'Percent', size: 'xsmall' },
+  { property: 'paid', header: 'Paid', size: 'xsmall' },
 ];
 
 export const ResizableDataTable = () => (
   // Uncomment <Grommet> lines when using outside of storybook
   // <Grommet theme={grommet}>
-  <Box align="center" pad="large">
+  <Box align="center" pad="large" gap="large">
     <Heading level="3">Table with resizable & column sizes</Heading>
     <DataTable
       columns={columnsResize}
+      data={DATA}
+      primaryKey={false}
+      resizeable
+    />
+    <DataTable
+      columns={columnsResize1}
       data={DATA}
       primaryKey={false}
       resizeable

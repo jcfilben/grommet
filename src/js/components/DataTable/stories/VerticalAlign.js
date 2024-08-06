@@ -23,11 +23,12 @@ export const VerticalAlign = () => (
       ]}
       data={DATA}
       step={10}
-      verticalAlign={{
-        header: 'bottom',
-        body: 'top',
-        footer: 'top',
-      }}
+      // verticalAlign={{
+      //   header: 'bottom',
+      //   body: 'top',
+      //   footer: 'top',
+      // }}
+      resizeable
     />
   </Box>
   // </Grommet>

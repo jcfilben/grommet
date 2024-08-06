@@ -365,6 +365,7 @@ const Header = forwardRef(
                       align="center"
                       gap="xsmall"
                       justify={align}
+                      width={align === 'end' ? '100%' : undefined}
                     >
                       {content}
                       {Icon && <Icon />}
@@ -383,15 +384,13 @@ const Header = forwardRef(
                   flex="grow"
                   fill={onResize || search ? 'vertical' : false}
                   justify={(!align && 'center') || align}
+                  width={align === 'end' ? '100%' : undefined}
                 >
                   {content}
                 </Box>
               );
 
-              if (search || onResize) {
-                const resizer = onResize ? (
-                  <Resizer property={property} onResize={onResize} />
-                ) : null;
+              if (search) {
                 const searcher =
                   search && filters ? (
                     <Searcher
@@ -409,10 +408,10 @@ const Header = forwardRef(
                     justify={!align || align === 'start' ? 'between' : align}
                     gap={theme.dataTable.header.gap}
                     fill="vertical"
-                    style={onResize ? { position: 'relative' } : undefined}
+                    // style={onResize ? { position: 'relative' } : undefined}
                   >
                     {content}
-                    {searcher && resizer ? (
+                    {/* {searcher && resizer ? (
                       <Box
                         flex="shrink"
                         direction="row"
@@ -424,7 +423,8 @@ const Header = forwardRef(
                       </Box>
                     ) : (
                       searcher || resizer
-                    )}
+                    )} */}
+                    {searcher}
                   </Box>
                 );
               }
@@ -453,7 +453,25 @@ const Header = forwardRef(
                       : undefined
                   }
                 >
-                  {content}
+                  <Box
+                    direction="row"
+                    style={{ 'justify-content': 'space-between' }}
+                  >
+                    {content}
+                    {onResize && (
+                      <Resizer
+                        property={property}
+                        onResize={onResize}
+                        right={
+                          align === 'end'
+                            ? '0px'
+                            : sortable === false || !onSort
+                            ? '-24px' // TODO replace with theme values
+                            : '-12px'
+                        }
+                      />
+                    )}
+                  </Box>
                 </StyledDataTableCell>
               );
             },

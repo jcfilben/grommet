@@ -1,39 +1,33 @@
-import React, {
-  useCallback,
-  useEffect,
-  useRef,
-  useState,
-} from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 
 import { Box } from '../Box';
 import { Stack } from '../Stack';
 import { useThemeValue } from '../../utils/useThemeValue';
 
+// > * {
+//   opacity: 0;
+// }
 const InteractionBox = styled(Box)`
   cursor: col-resize;
-  > * {
-    opacity: 0;
-  }
 
   // when mouse down, we want to continue to display styling
-  ${props => props.active && '> * { opacity: 1; }'}
-
-  &:hover {
-    > * {
-      opacity: 1;
-    }
-  }
+  ${(props) => props.active && '> * { opacity: 1; }'}
 `;
+// &:hover {
+//   > * {
+//     opacity: 1;
+//   }
+// }
 
-const Resizer = ({ onResize, property }) => {
+const Resizer = ({ onResize, property, right }) => {
   const theme = useThemeValue();
   const [active, setActive] = useState(false);
   const [start, setStart] = useState();
   const [width, setWidth] = useState();
   const ref = useRef();
 
-  const onMouseDown = useCallback(event => {
+  const onMouseDown = useCallback((event) => {
     if (ref.current) {
       let element = ref.current;
       // find TH parent
@@ -46,7 +40,7 @@ const Resizer = ({ onResize, property }) => {
   }, []);
 
   const onMouseMove = useCallback(
-    event => {
+    (event) => {
       // We determined 12 empirically as being wide enough to hit but
       // not too wide to cause false hits.
       const nextWidth = Math.max(12, width + (event.clientX - start));
@@ -86,28 +80,46 @@ const Resizer = ({ onResize, property }) => {
     };
   }
 
+  // return (
+  //   // <Stack anchor="right">
+  //   <>
+  //     {/* provides a wider, more accessible target to grab resizer */}
+  //     <InteractionBox
+  //       // background="pink"
+  //       active={active}
+  //       flex={false}
+  //       // pad={{ left: 'xsmall' }}
+  //       pad={{ horizontal: 'small' }}
+  //       ref={ref}
+  //       responsive={false}
+  //       onMouseDown={onMouseDown}
+  //       onMouseMove={start !== undefined ? onMouseMove : undefined}
+  //       onMouseUp={start !== undefined ? onMouseUp : undefined}
+  //     >
+  //       <Box pad={{ vertical: 'small' }} border {...theme.dataTable.resize} />
+  //       {/* <Box
+  //         flex={false}
+  //         responsive={false}
+  //         pad={{ vertical: 'small' }}
+  //         {...theme.dataTable.resize}
+  //       /> */}
+  //     </InteractionBox>
+  //     {/* </Stack> */}
+  //   </>
+  // );
+
   return (
-    <Stack anchor="right">
-      <Box
-        flex={false}
-        responsive={false}
-        pad={{ vertical: 'small' }}
-        {...theme.dataTable.resize}
-      />
-      {/* provides a wider, more accessible target to grab resizer */}
-      <InteractionBox
-        active={active}
-        flex={false}
-        pad={{ left: 'xsmall' }}
-        ref={ref}
-        responsive={false}
-        onMouseDown={onMouseDown}
-        onMouseMove={start !== undefined ? onMouseMove : undefined}
-        onMouseUp={start !== undefined ? onMouseUp : undefined}
-      >
-        <Box pad={{ vertical: 'small' }} border={border} />
-      </InteractionBox>
-    </Stack>
+    <InteractionBox
+      ref={ref}
+      onMouseDown={onMouseDown}
+      onMouseMove={start !== undefined ? onMouseMove : undefined}
+      onMouseUp={start !== undefined ? onMouseUp : undefined}
+      alignSelf="center"
+      pad={{ horizontal: 'small' }}
+      style={{ position: 'relative', right: right }}
+    >
+      |
+    </InteractionBox>
   );
 };
 

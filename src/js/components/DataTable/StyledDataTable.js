@@ -129,6 +129,7 @@ const StyledDataTableFooter = styled(TableFooter)`
 `;
 
 const StyledDataTableCell = styled(TableCell).attrs(withTheme)`
+  overflow: visible;
   ${(props) =>
     props.context === 'header' &&
     props.theme.dataTable &&
